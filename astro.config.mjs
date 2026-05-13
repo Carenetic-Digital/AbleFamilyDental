@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   // Set this to your production URL (updated during deployment)
-  site: 'https://example.com',
+  site: 'https://wildwooddentalclinic.com',
   output: 'static',
   integrations: [sitemap()],
   devToolbar: {

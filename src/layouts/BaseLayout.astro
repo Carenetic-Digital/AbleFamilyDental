@@ -2,27 +2,51 @@
 import '../styles/global.css';
 import SEOHead from '../components/SEOHead.astro';
 import StructuredData from '../components/StructuredData.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
   description?: string;
   image?: string;
   noindex?: boolean;
+  showMobileBar?: boolean;
 }
 
 const {
   title,
-  description = 'Site Factory generated website',
+  description = 'Wildwood Dental Clinic is a family-friendly general dentistry practice on 8th Street East in Saskatoon, serving Saskatoon families for over 35 years.',
   image,
   noindex = false,
+  showMobileBar = true,
 } = Astro.props;
 
-// Site-wide structured data (customize in intake/INTAKE.md)
-const organizationData = {
-  name: "[Business Name]",
-  url: Astro.site?.href,
-  logo: new URL('/images/logo.png', Astro.site).href,
-  // Add more fields from INTAKE.md: address, phone, email, social profiles
+const businessData = {
+  "@id": "https://wildwooddentalclinic.com/#dentist",
+  name: "Wildwood Dental Clinic",
+  url: Astro.site?.href ?? "https://wildwooddentalclinic.com/",
+  telephone: "+1-306-374-7272",
+  email: "reception@wildwooddentalclinic.com",
+  image: new URL('/images/og-default.jpg', Astro.site ?? 'https://wildwooddentalclinic.com/').href,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "105 - 1526 8th Street East",
+    addressLocality: "Saskatoon",
+    addressRegion: "SK",
+    postalCode: "S7H 0T3",
+    addressCountry: "CA",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 52.1132,
+    longitude: -106.6235,
+  },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Thursday"], opens: "07:30", closes: "16:30" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "07:30", closes: "20:30" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "07:30", closes: "16:00" },
+  ],
+  areaServed: { "@type": "City", name: "Saskatoon" },
 };
 ---
 
@@ -32,27 +56,21 @@ const organizationData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Preconnect to external origins (fonts, analytics) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Google Fonts with font-display: swap for performance -->
-    <!-- Update this URL based on intake/branding/fonts.md -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Complete Favicon Set -->
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
-    <!-- Theme color for browser UI -->
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#1e3352" />
 
-    <!-- SEO Meta Tags (includes Open Graph and Twitter Cards) -->
     <SEOHead
       title={title}
       description={description}
@@ -60,10 +78,31 @@ const organizationData = {
       noindex={noindex}
     />
 
-    <!-- Organization Structured Data (site-wide) -->
-    <StructuredData type="Organization" data={organizationData} />
+    <StructuredData type="LocalBusiness" data={businessData} />
   </head>
-  <body class="font-body text-neutral-900 bg-neutral-50 antialiased">
-    <slot />
+  <body class="font-body text-[var(--color-text)] bg-[var(--color-surface)] antialiased">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <Header />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer />
+
+    {showMobileBar && (
+      <div class="md:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-2 border-t border-[var(--color-border)] bg-white shadow-[0_-4px_16px_rgba(30,51,82,0.10)]" aria-label="Quick contact actions">
+        <a href="tel:+13063747272" class="flex items-center justify-center gap-2 py-3.5 text-[var(--color-brand-primary)] font-semibold border-r border-[var(--color-border)]">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call
+        </a>
+        <a href="/patients/book" class="flex items-center justify-center gap-2 py-3.5 bg-[var(--color-brand-accent)] text-white font-semibold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book
+        </a>
+      </div>
+      <div class="md:hidden h-16" aria-hidden="true"></div>
+    )}
   </body>
 </html>

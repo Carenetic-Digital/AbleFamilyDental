@@ -1,8 +1,8 @@
 {
-  "phase": "intake_complete",
+  "phase": "homepage_pending_approval",
   "created_at": "2026-05-13",
   "intake_processed_at": "2026-05-13",
-  "homepage_generated_at": null,
+  "homepage_generated_at": "2026-05-13",
   "homepage_approved_at": null,
   "pages_generated_at": null,
   "completed_at": null,

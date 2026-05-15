@@ -1,21 +1,532 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const serviceCategories = [
+  {
+    title: "Preventive",
+    href: "/services/preventive",
+    icon: "/images/icons/Preventative Dental Care.svg",
+    summary: "Cleanings, exams, and the everyday care that keeps small issues small.",
+  },
+  {
+    title: "Restorative",
+    href: "/services/restorative",
+    icon: "/images/icons/Restorative Dentistry.svg",
+    summary: "Bringing teeth back to full function — fillings, crowns, bridges, implants.",
+  },
+  {
+    title: "Cosmetic",
+    href: "/services/cosmetic",
+    icon: "/images/icons/Cosmetic Dentistry.svg",
+    summary: "Whitening, veneers, Invisalign, and refinements that suit your face.",
+  },
+  {
+    title: "Oral Surgery & Other",
+    href: "/services/oral-surgery",
+    icon: "/images/icons/Oral Surgery Sedation Dentistry.svg",
+    summary: "Extractions, TMJ and sleep guards, sedation, and emergency care.",
+  },
+];
+
+const whyWildwood = [
+  {
+    title: "35+ Years on 8th Street East",
+    href: "/about",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>`,
+    blurb: "Wildwood has been part of the east-side Saskatoon community from the same address since the practice was founded — not a new clinic, not a chain transplant.",
+    cta: "Our story",
+  },
+  {
+    title: "All Doctors Trained at U of S",
+    href: "/about/our-team",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.5 8 8 9 4.5-1 8-4.5 8-9V6z"/><polyline points="9 12 11 14 15 10"/></svg>`,
+    blurb: "All six dentists at Wildwood graduated from the University of Saskatchewan dental program. Dr. Dessouki serves on the College of Dental Surgeons of Saskatchewan Board of Directors.",
+    cta: "Meet the team",
+  },
+  {
+    title: "Canadian Dental Care Plan Accepted",
+    href: "/patients/canadiandentalcareplan",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="7" y1="15" x2="11" y2="15"/></svg>`,
+    blurb: "Wildwood accepts the CDCP and can help you understand whether you qualify and how to enrol. Clear, practical guidance — no runaround.",
+    cta: "Learn about CDCP",
+  },
+  {
+    title: "Complete Care, No Referrals",
+    href: "/services",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2v1.3h6V16.7c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>`,
+    blurb: "Preventive through oral surgery — including sedation and TMJ/sleep treatment — all provided in-house. Most Wildwood families never need to visit another specialist.",
+    cta: "All services",
+  },
+];
+
+// Insurance providers shown in the marquee strip below the hero.
+// Using text wordmarks for now — drop real logo SVG/PNG files into
+// /public/images/insurance/ and swap `name` for `<img />` markup to use actual logos.
+const insurers = [
+  "Sun Life",
+  "Manulife",
+  "Canada Life",
+  "Pacific Blue Cross",
+  "Green Shield Canada",
+  "Desjardins Insurance",
+  "iA Financial Group",
+  "Equitable Life",
+  "SSQ Insurance",
+  "Empire Life",
+  "Canadian Dental Care Plan",
+];
+
+const dentists = [
+  { name: "Dr. Adam Koob",        credential: "DMD, University of Saskatchewan", slug: "dr-adam-koob" },
+  { name: "Dr. James Dessouki",   credential: "DMD; Board of Directors, CDSS",   slug: "dr-james-dessouki" },
+  { name: "Dr. Jay Stevens",      credential: "DMD, University of Saskatchewan", slug: null },
+  { name: "Dr. Christy MacPherson", credential: "DMD, University of Saskatchewan", slug: null },
+  { name: "Dr. Richard Kerby",    credential: "DMD, University of Saskatchewan", slug: "dr-richard-kerby" },
+  { name: "Dr. Madyson Burgess",  credential: "DMD, University of Saskatchewan", slug: "dr-madyson-burgess" },
+];
+
+const reasons = [
+  {
+    title: "Family-focused care",
+    body: "Children, parents, grandparents — every age welcome at the same chair.",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  },
+  {
+    title: "Saskatchewan-trained dentists",
+    body: "All six of our dentists earned their DMD at the University of Saskatchewan.",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6"/><path d="m2 10 10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+  },
+  {
+    title: "Comfort-focused visits",
+    body: "Massage chairs, blankets, oral sedation, and a quiet operatory when you need it.",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+  },
+  {
+    title: "Evening &amp; weekend access",
+    body: "Wednesdays open until 8:30pm so working schedules aren't an obstacle.",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+  },
+  {
+    title: "Free parking, easy access",
+    body: "Ample free parking on 8th Street East — no meters, no garage to navigate.",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>`,
+  },
+  {
+    title: "Direct billing where possible",
+    body: "We submit insurance claims on your behalf to most major carriers.",
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>`,
+  },
+];
 ---
 
-<BaseLayout title="Site Factory">
-  <main class="min-h-screen flex items-center justify-center">
-    <div class="text-center p-8">
-      <h1 class="text-4xl font-display font-bold text-primary mb-4">
-        Site Factory Ready
-      </h1>
-      <p class="text-lg text-neutral-600 mb-8">
-        Run <code class="bg-neutral-200 px-2 py-1 rounded">/project:intake</code> to begin.
-      </p>
-      <div class="text-sm text-neutral-500">
-        <p>1. Edit <code>intake/INTAKE.md</code> with your project details</p>
-        <p>2. Edit <code>intake/sitemap.md</code> with your page structure</p>
-        <p>3. Run the intake command to start generation</p>
+<BaseLayout
+  title="Wildwood Dental Clinic | Family Dentistry on 8th Street East, Saskatoon"
+  description="A family-friendly general dentistry clinic on 8th Street East in Saskatoon. Saskatchewan-trained dentists offering preventive, restorative, cosmetic, oral surgery, sedation, and TMJ care for over 35 years."
+>
+  <!-- ============================================================
+       Hero
+       ============================================================ -->
+  <section class="relative overflow-hidden bg-[var(--color-surface-alt)]">
+    <!-- Decorative gold + navy shapes -->
+    <div class="absolute -top-32 -right-32 w-[36rem] h-[36rem] rounded-full bg-[var(--color-brand-accent)]/8 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute -bottom-40 -left-32 w-[30rem] h-[30rem] rounded-full bg-[var(--color-brand-primary)]/6 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+    <!-- Saskatoon skyline silhouette — pinned to bottom, gold-masked overlay -->
+    <div
+      aria-hidden="true"
+      class="hero-skyline absolute inset-x-0 bottom-0 w-full pointer-events-none"
+    ></div>
+
+    <div class="container-wide relative pt-12 pb-16 md:pt-20 md:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-7">
+        <p class="eyebrow">Saskatoon · 8th Street East · Since 1989</p>
+        <h1 class="mt-4 font-display font-semibold text-[var(--color-brand-primary)] text-[length:var(--text-6xl)] leading-[1.05] tracking-tight">
+          Your family's <em class="not-italic relative inline-block">
+            dentist
+            <svg class="absolute left-0 right-0 -bottom-1 w-full" viewBox="0 0 220 12" fill="none" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M2 8 C 60 2, 160 2, 218 8" stroke="#d59639" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </em>
+          <br class="hidden sm:block" />
+          on 8th Street East.
+        </h1>
+        <p class="mt-6 max-w-xl text-lg text-[var(--color-text)] leading-relaxed">
+          Wildwood Dental Clinic has cared for Saskatoon families for over 35 years.
+          Six Saskatchewan-trained dentists. Preventive, restorative, cosmetic, and surgical
+          care, all in one comfortable clinic.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="/patients/book" class="btn btn-primary btn-lg">
+            Book Appointment
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="tel:+13063747272" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            306.374.7272
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Hero image -->
+      <div class="lg:col-span-5">
+        <div class="relative rounded-2xl bg-white border border-[var(--color-border-soft)] shadow-[0_24px_60px_rgba(30,51,82,0.12)] overflow-hidden">
+          <div class="aspect-[4/5] relative">
+            <picture>
+              <source type="image/webp" srcset="/images/hero/wildwood-hero.webp" />
+              <img
+                src="/images/hero/wildwood-hero.jpg"
+                alt="Welcome to Wildwood Dental Clinic"
+                width="581"
+                height="642"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+            </picture>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- ============================================================
+       Insurance marquee — providers accepted at Wildwood
+       ============================================================ -->
+  <section
+    class="bg-white border-y border-[var(--color-border-soft)] py-6 md:py-7"
+    aria-label="Insurance providers accepted at Wildwood Dental Clinic"
+  >
+    <div class="container-wide flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+      <p class="eyebrow shrink-0 md:border-r md:border-[var(--color-border-soft)] md:pr-8">
+        Insurance accepted
+      </p>
+
+      <div class="insurance-marquee flex-1 relative overflow-hidden">
+        <div class="insurance-marquee__track">
+          {[...insurers, ...insurers].map((name, i) => (
+            <span
+              class="insurance-marquee__item font-display text-[var(--color-text-muted)]"
+              aria-hidden={i >= insurers.length ? "true" : undefined}
+            >
+              {name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Welcome / clinic intro
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-base grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-5">
+        <p class="eyebrow">Welcome to Wildwood</p>
+        <h2 class="mt-3 font-display text-[length:var(--text-5xl)] leading-tight text-[var(--color-brand-primary)]">
+          A Saskatoon clinic, not a corporate brand.
+        </h2>
+      </div>
+      <div class="lg:col-span-7 space-y-5 text-[var(--color-text)] text-lg leading-relaxed">
+        <p>
+          Wildwood Dental Clinic has been part of the 8th Street East neighborhood for more than three decades —
+          long enough to see patients we treated as kids bring their own kids to the same chair.
+        </p>
+        <p>
+          Our six dentists are general practitioners with a focus on comprehensive family dentistry.
+          You'll find preventive, restorative, cosmetic, oral surgery, sedation, and TMJ services under one roof — and
+          we'll keep your care coordinated across all of them.
+        </p>
+        <p class="pt-2">
+          <a href="/about" class="inline-flex items-center gap-1.5 font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+            More about the clinic
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Why Wildwood — what sets this practice apart (4 cards)
+       ============================================================ -->
+  <section class="section-y bg-[var(--color-surface-alt)]">
+    <div class="container-wide">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="eyebrow">Why Wildwood</p>
+        <h2 class="mt-3 font-display text-[length:var(--text-5xl)] leading-tight text-[var(--color-brand-primary)]">
+          What sets this practice apart
+        </h2>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {whyWildwood.map(item => (
+          <a href={item.href} class="card group relative flex flex-col bg-white">
+            <div class="w-12 h-12 rounded-full bg-[var(--color-brand-accent)]/15 flex items-center justify-center text-[var(--color-brand-accent)] mb-5" aria-hidden="true" set:html={item.icon}></div>
+            <h3 class="font-display text-xl font-semibold text-[var(--color-brand-primary)] leading-snug">{item.title}</h3>
+            <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">{item.blurb}</p>
+            <span class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-brand-accent)] group-hover:text-[var(--color-brand-accent-hover)]">
+              {item.cta}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Services overview (4 categories with brand icons)
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Services</p>
+        <h2 class="mt-3 font-display text-[length:var(--text-5xl)] leading-tight text-[var(--color-brand-primary)] heading-rule">
+          Comprehensive care, under one roof.
+        </h2>
+        <p class="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
+          Most of what you and your family will need can be handled in our clinic.
+          Browse by category, or call us and we'll help you figure out where to start.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {serviceCategories.map(svc => (
+          <a href={svc.href} class="group relative bg-[var(--color-surface-alt)] hover:bg-white hover:shadow-lg transition-all duration-200 rounded-xl p-7 border border-transparent hover:border-[var(--color-brand-secondary)] flex flex-col">
+            <img src={svc.icon} alt="" width="56" height="56" loading="lazy" decoding="async" class="w-14 h-14 rounded-lg" />
+            <h3 class="mt-5 font-display text-xl font-semibold text-[var(--color-brand-primary)]">{svc.title}</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">{svc.summary}</p>
+            <span class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-brand-accent)] group-hover:text-[var(--color-brand-accent-hover)]">
+              Explore
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-10">
+        <a href="/services" class="btn btn-outline">See the full services list</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       What to expect / reasons
+       ============================================================ -->
+  <section class="section-y bg-[var(--color-surface-alt)] relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-72 h-72 rounded-full bg-[var(--color-brand-accent)]/8 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="container-wide relative">
+      <div class="max-w-2xl">
+        <p class="eyebrow">What to expect</p>
+        <h2 class="mt-3 font-display text-[length:var(--text-5xl)] leading-tight text-[var(--color-brand-primary)] heading-rule">
+          Designed around how you actually visit a dentist.
+        </h2>
+      </div>
+
+      <ul class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+        {reasons.map(reason => (
+          <li class="flex gap-4">
+            <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-white border border-[var(--color-brand-secondary)] flex items-center justify-center text-[var(--color-brand-accent)]" aria-hidden="true" set:html={reason.icon}></div>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-[var(--color-brand-primary)]" set:html={reason.title}></h3>
+              <p class="mt-1.5 text-[15px] text-[var(--color-text-muted)] leading-relaxed" set:html={reason.body}></p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Meet the team strip
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-12">
+        <p class="eyebrow">Meet the dentists</p>
+        <h2 class="mt-3 font-display text-[length:var(--text-5xl)] leading-tight text-[var(--color-brand-primary)] heading-rule">
+          Six dentists. All Saskatchewan-trained.
+        </h2>
+        <p class="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
+          Every dentist on our team earned their DMD from the University of Saskatchewan.
+          That local training shows up in our care — and on the weekends we're at Emma Lake,
+          on the Meewasin trail, or coaching kids' sports right here in town.
+        </p>
+      </div>
+
+      <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8">
+        {dentists.map(dentist => (
+          <li class="text-center">
+            <div class="aspect-square rounded-full overflow-hidden bg-gradient-to-br from-[var(--color-surface-alt)] to-[var(--color-brand-secondary)]/40 border border-[var(--color-border-soft)] flex items-center justify-center">
+              {dentist.slug ? (
+                <picture>
+                  <source type="image/webp" srcset={`/images/team/${dentist.slug}.webp`} />
+                  <img
+                    src={`/images/team/${dentist.slug}.jpg`}
+                    alt={`Portrait of ${dentist.name}`}
+                    width="480"
+                    height="480"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                  />
+                </picture>
+              ) : (
+                <span class="font-display text-3xl font-semibold text-[var(--color-brand-primary)]" aria-hidden="true">
+                  {dentist.name.replace('Dr. ', '').split(' ').map(n => n[0]).join('')}
+                </span>
+              )}
+            </div>
+            <p class="mt-4 font-display font-semibold text-[var(--color-brand-primary)]">{dentist.name}</p>
+            <p class="mt-1 text-xs text-[var(--color-text-muted)] leading-snug">{dentist.credential}</p>
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-10 text-center">
+        <a href="/about/our-team" class="btn btn-outline">Read the full bios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CDCP + Insurance + Payment Options
+       ============================================================ -->
+  <section class="section-y bg-[var(--color-surface-alt)]">
+    <div class="container-base grid md:grid-cols-2 gap-6 lg:gap-8 items-start">
+
+      <!-- Left: CDCP card with dark navy header -->
+      <article class="rounded-[var(--radius-lg)] overflow-hidden border border-[var(--color-border-soft)] bg-[var(--color-surface)] shadow-sm h-full flex flex-col">
+        <header class="bg-[var(--color-brand-primary)] text-white px-7 py-7">
+          <div class="flex items-center gap-2 text-[var(--color-brand-accent)]">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span class="eyebrow !text-[var(--color-brand-accent)] !mt-0">Government Program</span>
+          </div>
+          <h2 class="mt-3 font-display text-2xl md:text-[1.75rem] leading-tight font-semibold text-white">
+            Canadian Dental Care Plan (CDCP) accepted at Wildwood
+          </h2>
+        </header>
+        <div class="px-7 py-7 flex-1 flex flex-col">
+          <p class="text-[var(--color-text-muted)] leading-relaxed">
+            The CDCP is a federal program providing dental coverage for Canadians without
+            access to private insurance, meeting certain income thresholds. Wildwood accepts
+            the CDCP — and we can help you understand whether you qualify and guide you
+            through the enrolment process.
+          </p>
+          <ul class="mt-5 space-y-3 text-[var(--color-text)]">
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 shrink-0 text-[var(--color-brand-accent)]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="8 12.5 11 15.5 16 9.5"/></svg>
+              <span>Verify your eligibility with Service Canada</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 shrink-0 text-[var(--color-brand-accent)]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="8 12.5 11 15.5 16 9.5"/></svg>
+              <span>Bring your CDCP coverage information to your appointment</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 shrink-0 text-[var(--color-brand-accent)]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="8 12.5 11 15.5 16 9.5"/></svg>
+              <span>We handle direct billing to the program on your behalf</span>
+            </li>
+          </ul>
+          <div class="mt-7">
+            <a href="/patients/canadiandentalcareplan" class="btn btn-primary">
+              Learn more about CDCP
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="ml-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right: two stacked cards -->
+      <div class="grid gap-6 lg:gap-8 h-full">
+
+        <!-- Insurance & Direct Billing -->
+        <article class="rounded-[var(--radius-lg)] border border-[var(--color-border-soft)] bg-[var(--color-surface)] shadow-sm px-7 py-7">
+          <h3 class="font-display text-2xl font-semibold text-[var(--color-brand-primary)]">
+            Insurance &amp; Direct Billing
+          </h3>
+          <p class="mt-3 text-[var(--color-text-muted)] leading-relaxed">
+            We accept most major dental insurance plans and offer direct billing — meaning
+            we submit your claim to your insurer and you pay only your portion at the
+            appointment.
+          </p>
+          <ul class="mt-5 space-y-2.5 text-[var(--color-text)]">
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 shrink-0 text-[var(--color-brand-accent)]" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+              <span>Most major dental insurance plans</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 shrink-0 text-[var(--color-brand-accent)]" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+              <span>Canadian Dental Care Plan (CDCP)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 shrink-0 text-[var(--color-brand-accent)]" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+              <span>Direct billing to your insurer</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 shrink-0 text-[var(--color-brand-accent)]" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+              <span>New-patient insurance verification on request</span>
+            </li>
+          </ul>
+          <a href="/patients/insurance-financing" class="mt-5 inline-flex items-center gap-1.5 font-medium text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+            Insurance &amp; financing details
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+
+        <!-- Payment Options -->
+        <article class="rounded-[var(--radius-lg)] border border-[var(--color-border-soft)] bg-[var(--color-surface)] shadow-sm px-7 py-7">
+          <h3 class="font-display text-2xl font-semibold text-[var(--color-brand-primary)]">
+            Payment Options
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {["Visa", "Mastercard", "Debit", "Cash", "Financing via LendCare"].map(method => (
+              <li class="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[var(--color-border)] text-sm text-[var(--color-text)] bg-[var(--color-surface)]">
+                {method}
+              </li>
+            ))}
+          </ul>
+          <p class="mt-5 text-[var(--color-text-muted)] leading-relaxed">
+            Financing through LendCare is available for patients who need to spread out
+            treatment costs over time. Ask a member of our administrative team for details
+            at your next visit.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Pre-footer CTA — light spotlight card (avoids navy-on-navy with footer)
+       ============================================================ -->
+  <section class="bg-white">
+    <div class="container-base section-y">
+      <div class="relative overflow-hidden rounded-2xl bg-[var(--color-surface-alt)] border border-[var(--color-border-soft)] shadow-[0_24px_60px_rgba(30,51,82,0.08)]">
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[var(--color-brand-accent)]/15 blur-3xl pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute -bottom-32 -left-24 w-[28rem] h-[28rem] rounded-full bg-[var(--color-brand-primary)]/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+        <div class="relative px-6 py-14 md:py-20 text-center">
+          <p class="eyebrow">Ready when you are</p>
+          <h2 class="mt-3 font-display text-[length:var(--text-5xl)] leading-tight text-[var(--color-brand-primary)] max-w-3xl mx-auto">
+            Book a new-patient appointment at Wildwood.
+          </h2>
+          <p class="mt-4 max-w-xl mx-auto text-[var(--color-text-muted)] leading-relaxed">
+            Tell us about your family and what you're looking for. We'll confirm a time within
+            one business day — usually faster.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href="/patients/book" class="btn btn-primary btn-lg">Book online</a>
+            <a href="tel:+13063747272" class="btn btn-outline btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call 306.374.7272
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

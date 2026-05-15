@@ -1,0 +1,270 @@
+---
+const servicesNav = [
+  {
+    title: "Preventive",
+    href: "/services/preventive",
+    blurb: "Cleanings, exams, and the everyday care that keeps small issues small.",
+    items: [
+      { label: "Cleanings & Check-ups", href: "/services/preventive/cleanings-checkups" },
+      { label: "Sealants", href: "/services/preventive/sealants" },
+      { label: "Fluoride", href: "/services/preventive/fluoride" },
+      { label: "X-Rays & 3D Imaging", href: "/services/preventive/x-rays" },
+      { label: "Periodontal Treatment", href: "/services/preventive/periodontal-treatment" },
+      { label: "Oral Cancer Screening", href: "/services/preventive/oral-cancer-screening" },
+    ],
+  },
+  {
+    title: "Restorative",
+    href: "/services/restorative",
+    blurb: "Bringing teeth back to full function — repairing, rebuilding, and replacing.",
+    items: [
+      { label: "Fillings", href: "/services/restorative/fillings" },
+      { label: "Bridges", href: "/services/restorative/bridges" },
+      { label: "Crowns", href: "/services/restorative/crowns" },
+      { label: "Dentures", href: "/services/restorative/dentures" },
+      { label: "Implants", href: "/services/restorative/implants" },
+      { label: "Root Canal Treatment", href: "/services/restorative/root-canal" },
+    ],
+  },
+  {
+    title: "Cosmetic",
+    href: "/services/cosmetic",
+    blurb: "Refining the appearance of your smile while keeping it healthy.",
+    items: [
+      { label: "Teeth Whitening", href: "/services/cosmetic/whitening" },
+      { label: "Porcelain Veneers", href: "/services/cosmetic/veneers" },
+      { label: "Dental Bonding", href: "/services/cosmetic/bonding" },
+      { label: "Tooth Reshaping", href: "/services/cosmetic/reshaping" },
+      { label: "Bite Correction", href: "/services/cosmetic/bite-correction" },
+      { label: "Invisalign & Clear Aligners", href: "/services/cosmetic/invisalign" },
+    ],
+  },
+  {
+    title: "Oral Surgery & Other",
+    href: "/services/oral-surgery",
+    blurb: "Comfort-focused care for extractions, TMJ, sleep apnea, and sedation.",
+    items: [
+      { label: "Children's Dentistry", href: "/services/oral-surgery/childrens-dentistry" },
+      { label: "Emergency Dental Care", href: "/services/oral-surgery/emergency-care" },
+      { label: "Wisdom Tooth Extraction", href: "/services/oral-surgery/wisdom-teeth" },
+      { label: "TMJ Treatment & Night Guards", href: "/services/oral-surgery/tmj-night-guards" },
+      { label: "Sports Guards", href: "/services/oral-surgery/sports-guards" },
+      { label: "Snoring & Sleep Apnea", href: "/services/oral-surgery/sleep-apnea" },
+      { label: "Sedation Dentistry", href: "/services/oral-surgery/sedation" },
+    ],
+  },
+];
+
+const primaryNav = [
+  { label: "About", href: "/about" },
+  { label: "Patients", href: "/patients" },
+  { label: "Learn", href: "/learn" },
+  { label: "Contact", href: "/contact" },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[var(--color-border)]" data-header>
+  <!-- Top strip: phone, hours (desktop only) -->
+  <div class="hidden md:block bg-[var(--color-brand-primary)] text-[var(--color-text-on-dark-muted)] text-sm">
+    <div class="container-wide flex items-center justify-between py-2">
+      <div class="flex items-center gap-6">
+        <span class="inline-flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon–Fri 7:30am · Wed open until 8:30pm
+        </span>
+      </div>
+      <a href="tel:+13063747272" class="inline-flex items-center gap-2 font-semibold text-white tabular-nums hover:text-[var(--color-brand-accent-soft)]">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        306.374.7272
+      </a>
+    </div>
+  </div>
+
+  <!-- Main nav -->
+  <div class="container-wide flex items-center justify-between gap-6 py-4">
+    <a href="/" class="inline-flex items-center" aria-label="Wildwood Dental Clinic home">
+      <picture>
+        <source type="image/webp" srcset="/images/brand/wildwood-dental-clinic-logo.webp" />
+        <img
+          src="/images/brand/wildwood-dental-clinic-logo.png"
+          alt="Wildwood Dental Clinic"
+          width="250"
+          height="92"
+          fetchpriority="high"
+          decoding="async"
+          class="h-11 sm:h-12 w-auto"
+        />
+      </picture>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+      <a href="/about" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">About</a>
+
+      <!-- Services mega-menu -->
+      <div class="relative" data-megamenu>
+        <button
+          type="button"
+          class="px-3 py-2 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]"
+          aria-expanded="false"
+          aria-controls="services-megamenu"
+          data-megamenu-trigger
+        >
+          Services
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+
+      <a href="/patients" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Patients</a>
+      <a href="/learn" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Learn</a>
+      <a href="/contact" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="/patients/book" class="hidden md:inline-flex btn btn-primary">
+        Book Appointment
+      </a>
+      <button
+        type="button"
+        class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md text-[var(--color-brand-primary)] hover:bg-[var(--color-surface-alt)]"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-mobile-toggle
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mega-menu panel (full-width, beneath nav) -->
+  <div
+    id="services-megamenu"
+    class="hidden lg:block absolute inset-x-0 top-full bg-white border-t border-b border-[var(--color-border)] shadow-lg"
+    data-megamenu-panel
+    hidden
+  >
+    <div class="container-wide py-10">
+      <div class="grid grid-cols-4 gap-8">
+        {servicesNav.map(cat => (
+          <div>
+            <a href={cat.href} class="block group">
+              <h3 class="font-display text-lg font-semibold text-[var(--color-brand-primary)] group-hover:text-[var(--color-brand-accent-hover)]">
+                {cat.title}
+              </h3>
+              <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">{cat.blurb}</p>
+            </a>
+            <ul class="mt-4 space-y-2 border-t border-[var(--color-border-soft)] pt-4">
+              {cat.items.map(item => (
+                <li>
+                  <a href={item.href} class="block text-sm text-[var(--color-text)] hover:text-[var(--color-brand-accent-hover)]">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 pt-6 border-t border-[var(--color-border-soft)] flex flex-wrap items-center justify-between gap-4">
+        <p class="text-sm text-[var(--color-text-muted)]">
+          Not sure which service you need? We'll help you sort it out at your first visit.
+        </p>
+        <a href="/patients/book" class="btn btn-primary">Book a new-patient appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="lg:hidden hidden border-t border-[var(--color-border)] bg-white" data-mobile-menu>
+    <div class="container-wide py-4">
+      <a href="tel:+13063747272" class="flex items-center justify-between py-3 border-b border-[var(--color-border-soft)] text-[var(--color-brand-primary)] font-semibold">
+        <span>306.374.7272</span>
+        <span class="text-xs text-[var(--color-text-muted)] font-normal">Tap to call</span>
+      </a>
+      <nav class="py-2" aria-label="Mobile primary">
+        <a href="/about" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">About</a>
+        <details class="border-b border-[var(--color-border-soft)]">
+          <summary class="py-3 flex items-center justify-between cursor-pointer list-none text-[var(--color-brand-primary)] font-medium">
+            Services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="pl-3 pb-3 space-y-3">
+            {servicesNav.map(cat => (
+              <div>
+                <a href={cat.href} class="block py-1.5 font-semibold text-[var(--color-brand-primary)]">{cat.title}</a>
+                <ul class="pl-3 space-y-1.5">
+                  {cat.items.map(item => (
+                    <li><a href={item.href} class="block py-1 text-sm text-[var(--color-text)]">{item.label}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </details>
+        <a href="/patients" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Patients</a>
+        <a href="/learn" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Learn</a>
+        <a href="/contact" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact</a>
+      </nav>
+      <a href="/patients/book" class="btn btn-primary w-full mt-3">Book Appointment</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mega-menu (hover + click + keyboard)
+  const trigger = document.querySelector<HTMLButtonElement>('[data-megamenu-trigger]');
+  const panel = document.querySelector<HTMLDivElement>('[data-megamenu-panel]');
+  const wrapper = document.querySelector<HTMLDivElement>('[data-megamenu]');
+
+  if (trigger && panel && wrapper) {
+    let closeTimer: number | undefined;
+
+    const open = () => {
+      if (closeTimer) { window.clearTimeout(closeTimer); closeTimer = undefined; }
+      panel.hidden = false;
+      trigger.setAttribute('aria-expanded', 'true');
+    };
+    const close = () => {
+      panel.hidden = true;
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+    const scheduleClose = () => {
+      closeTimer = window.setTimeout(close, 180);
+    };
+
+    trigger.addEventListener('click', () => {
+      if (panel.hidden) open(); else close();
+    });
+
+    // Hover (desktop)
+    wrapper.addEventListener('mouseenter', open);
+    wrapper.addEventListener('mouseleave', scheduleClose);
+    panel.addEventListener('mouseenter', open);
+    panel.addEventListener('mouseleave', scheduleClose);
+
+    // Keyboard close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !panel.hidden) {
+        close();
+        trigger.focus();
+      }
+    });
+
+    // Outside click
+    document.addEventListener('click', (e) => {
+      if (panel.hidden) return;
+      if (!wrapper.contains(e.target as Node) && !panel.contains(e.target as Node)) close();
+    });
+  }
+
+  // Mobile menu
+  const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-toggle]');
+  const mobileMenu = document.querySelector<HTMLDivElement>('[data-mobile-menu]');
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

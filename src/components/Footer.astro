@@ -79,23 +79,8 @@ const footerResources = [
 
       <!-- Col 4: Connect With Us + WDC logo (same row) -->
       <div class="pl-10 overflow-visible">
-        <div class="flex items-center gap-3 mb-2">
+        <div class="mb-2">
           <h3 class="font-body text-sm font-semibold tracking-[0.16em] uppercase text-white">Connect With Us</h3>
-          <!-- WDC logo inline with heading, may overflow column to the right -->
-          <a href="/" aria-label="Wildwood Dental Clinic home" class="inline-block bg-white rounded-lg p-1.5 shrink-0">
-            <picture>
-              <source type="image/webp" srcset="/images/brand/wildwood-dental-clinic-logo.webp" />
-              <img
-                src="/images/brand/wildwood-dental-clinic-logo.png"
-                alt="Wildwood Dental Clinic"
-                width="250"
-                height="92"
-                loading="lazy"
-                decoding="async"
-                class="h-10 w-auto block"
-              />
-            </picture>
-          </a>
         </div>
         <div class="w-8 h-0.5 bg-[var(--color-brand-accent)] mb-5"></div>
 
@@ -145,6 +130,21 @@ const footerResources = [
             </svg>
           </a>
         </div>
+
+        <a href="/" aria-label="Wildwood Dental Clinic home" class="inline-block bg-white rounded-lg p-1.5 mb-3">
+          <picture>
+            <source type="image/webp" srcset="/images/brand/wildwood-dental-clinic-logo.webp" />
+            <img
+              src="/images/brand/wildwood-dental-clinic-logo.png"
+              alt="Wildwood Dental Clinic"
+              width="250"
+              height="92"
+              loading="lazy"
+              decoding="async"
+              class="h-10 w-auto block"
+            />
+          </picture>
+        </a>
 
         <p class="text-xs text-[var(--color-text-on-dark-muted)] leading-relaxed">
           Read our Google reviews and see why patients choose Wildwood Dental Clinic for their family's dental care.

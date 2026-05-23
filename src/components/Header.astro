@@ -5,6 +5,16 @@ const aboutLinks = [
   { label: "Careers", href: "/about/careers" },
 ];
 
+const newPatientLinks = [
+  { label: "What to Expect", href: "/new-patients/what-to-expect" },
+  { label: "Patient Forms", href: "/new-patients/forms" },
+  { label: "Insurance & Payment", href: "/new-patients/insurance-payment" },
+];
+
+const existingPatientLinks = [
+  { label: "Post-Visit Instructions", href: "/existing-patients/post-visit" },
+];
+
 const col1 = [
   {
     title: "Emergency Services",
@@ -219,8 +229,55 @@ const allCols = [col1, col2, col3, col4];
         </button>
       </div>
 
-      <a href="/new-patients" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">New Patients</a>
-      <a href="/existing-patients" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Existing Patients</a>
+      <!-- New Patients dropdown -->
+      <div class="relative" data-dropdown="new-patients">
+        <button
+          type="button"
+          class="px-3 py-2 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]"
+          aria-expanded="false"
+          aria-controls="new-patients-dropdown"
+          data-dropdown-trigger="new-patients"
+        >
+          New Patients
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div
+          id="new-patients-dropdown"
+          class="absolute left-0 top-full mt-1 w-52 bg-white rounded-lg border border-[var(--color-border-soft)] shadow-lg py-1"
+          hidden
+          data-dropdown-panel="new-patients"
+        >
+          <a href="/new-patients" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">New Patients</a>
+          {newPatientLinks.map(link => (
+            <a href={link.href} class="block px-4 py-2 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-brand-primary)]">{link.label}</a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Existing Patients dropdown -->
+      <div class="relative" data-dropdown="existing-patients">
+        <button
+          type="button"
+          class="px-3 py-2 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]"
+          aria-expanded="false"
+          aria-controls="existing-patients-dropdown"
+          data-dropdown-trigger="existing-patients"
+        >
+          Existing Patients
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div
+          id="existing-patients-dropdown"
+          class="absolute left-0 top-full mt-1 w-52 bg-white rounded-lg border border-[var(--color-border-soft)] shadow-lg py-1"
+          hidden
+          data-dropdown-panel="existing-patients"
+        >
+          <a href="/existing-patients" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">Existing Patients</a>
+          {existingPatientLinks.map(link => (
+            <a href={link.href} class="block px-4 py-2 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-brand-primary)]">{link.label}</a>
+          ))}
+        </div>
+      </div>
       <a href="/contact" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Contact Us</a>
     </nav>
 
@@ -323,8 +380,30 @@ const allCols = [col1, col2, col3, col4];
             ))}
           </div>
         </details>
-        <a href="/new-patients" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">New Patients</a>
-        <a href="/existing-patients" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Existing Patients</a>
+        <details class="border-b border-[var(--color-border-soft)]">
+          <summary class="py-3 flex items-center justify-between cursor-pointer list-none text-[var(--color-brand-primary)] font-medium">
+            New Patients
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="pl-3 pb-3 space-y-1">
+            <a href="/new-patients" class="block py-1 text-sm text-[var(--color-text)]">New Patients</a>
+            {newPatientLinks.map(link => (
+              <a href={link.href} class="block py-1 text-sm text-[var(--color-text)]">{link.label}</a>
+            ))}
+          </div>
+        </details>
+        <details class="border-b border-[var(--color-border-soft)]">
+          <summary class="py-3 flex items-center justify-between cursor-pointer list-none text-[var(--color-brand-primary)] font-medium">
+            Existing Patients
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="pl-3 pb-3 space-y-1">
+            <a href="/existing-patients" class="block py-1 text-sm text-[var(--color-text)]">Existing Patients</a>
+            {existingPatientLinks.map(link => (
+              <a href={link.href} class="block py-1 text-sm text-[var(--color-text)]">{link.label}</a>
+            ))}
+          </div>
+        </details>
         <a href="/contact" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact Us</a>
       </nav>
       <a href="/book" class="btn btn-primary w-full mt-3">Book Appointment</a>
@@ -375,27 +454,27 @@ const allCols = [col1, col2, col3, col4];
     });
   }
 
-  // About dropdown
-  const aboutWrapper = document.querySelector<HTMLDivElement>('[data-dropdown="about"]');
-  const aboutTrigger = document.querySelector<HTMLButtonElement>('[data-dropdown-trigger="about"]');
-  const aboutPanel = document.querySelector<HTMLDivElement>('[data-dropdown-panel="about"]');
-  if (aboutWrapper && aboutTrigger && aboutPanel) {
-    let aboutTimer: number | undefined;
-    const openAbout = () => {
-      if (aboutTimer) { window.clearTimeout(aboutTimer); aboutTimer = undefined; }
-      aboutPanel.hidden = false;
-      aboutTrigger.setAttribute('aria-expanded', 'true');
-    };
-    const closeAbout = () => { aboutPanel.hidden = true; aboutTrigger.setAttribute('aria-expanded', 'false'); };
-    const scheduleCloseAbout = () => { aboutTimer = window.setTimeout(closeAbout, 180); };
-    aboutTrigger.addEventListener('click', () => { if (aboutPanel.hidden) openAbout(); else closeAbout(); });
-    aboutWrapper.addEventListener('mouseenter', openAbout);
-    aboutWrapper.addEventListener('mouseleave', scheduleCloseAbout);
-    aboutPanel.addEventListener('mouseenter', openAbout);
-    aboutPanel.addEventListener('mouseleave', scheduleCloseAbout);
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !aboutPanel.hidden) { closeAbout(); aboutTrigger.focus(); } });
-    document.addEventListener('click', (e) => { if (aboutPanel.hidden) return; if (!aboutWrapper.contains(e.target as Node) && !aboutPanel.contains(e.target as Node)) closeAbout(); });
+  // Generic simple dropdown factory
+  function initDropdown(key: string) {
+    const wrapper = document.querySelector<HTMLDivElement>(`[data-dropdown="${key}"]`);
+    const trigger = document.querySelector<HTMLButtonElement>(`[data-dropdown-trigger="${key}"]`);
+    const panel = document.querySelector<HTMLDivElement>(`[data-dropdown-panel="${key}"]`);
+    if (!wrapper || !trigger || !panel) return;
+    let timer: number | undefined;
+    const open = () => { if (timer) { window.clearTimeout(timer); timer = undefined; } panel.hidden = false; trigger.setAttribute('aria-expanded', 'true'); };
+    const close = () => { panel.hidden = true; trigger.setAttribute('aria-expanded', 'false'); };
+    const schedule = () => { timer = window.setTimeout(close, 180); };
+    trigger.addEventListener('click', () => { if (panel.hidden) open(); else close(); });
+    wrapper.addEventListener('mouseenter', open);
+    wrapper.addEventListener('mouseleave', schedule);
+    panel.addEventListener('mouseenter', open);
+    panel.addEventListener('mouseleave', schedule);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) { close(); trigger.focus(); } });
+    document.addEventListener('click', (e) => { if (panel.hidden) return; if (!wrapper.contains(e.target as Node) && !panel.contains(e.target as Node)) close(); });
   }
+  initDropdown('about');
+  initDropdown('new-patients');
+  initDropdown('existing-patients');
 
   const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-toggle]');
   const mobileMenu = document.querySelector<HTMLDivElement>('[data-mobile-menu]');

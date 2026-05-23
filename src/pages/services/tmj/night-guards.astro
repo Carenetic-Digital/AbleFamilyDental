@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "Bite Correction", href: "/services/tmj/bite-correction" },
+  { name: "TMJ Diagnosis", href: "/services/tmj/diagnosis" },
+  { name: "Botox® for TMJ & Facial Pain", href: "/services/tmj/botox" },
+  { name: "Custom Night Guards", href: "/services/tmj/night-guards", current: true },
+];
+---
+
+<BaseLayout
+  title="TMJ Treatment & Night Guards | TMJ/TMD Therapy | Wildwood Dental Clinic Saskatoon"
+  description="TMJ treatment and custom night guards at Wildwood Dental Clinic in Saskatoon. Learn about temporomandibular disorders, symptoms, causes, and treatment options including occlusal splints."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/tmj" class="hover:text-white transition-colors">TMJ / TMD Therapy</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">TMJ Treatment &amp; Night Guards</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">TMJ / TMD Therapy</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        TMJ Treatment &amp; Night Guards
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        Jaw pain, headaches, teeth clenching, and clicking joints can all be related to the temporomandibular joint. A range of treatment approaches — from custom appliances to therapeutic injections — can help manage these symptoms.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- Main content -->
+        <div class="space-y-10">
+
+          <!-- What is the TMJ -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              What is the temporomandibular joint?
+            </h2>
+            <div class="mt-4 space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                The temporomandibular joint (TMJ) is the hinge-like joint that connects your lower jaw to the skull, located just in front of each ear. It allows you to open and close your mouth, chew, and speak. You actually have two TMJs — one on each side — and they work in coordination.
+              </p>
+              <p>
+                When problems occur with the joint itself, the surrounding muscles, or both, they are collectively referred to as temporomandibular disorders (TMD). TMD is quite common and can range from mild and intermittent to persistent and disruptive.
+              </p>
+            </div>
+          </div>
+
+          <!-- Symptoms -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              Symptoms of TMD
+            </h2>
+            <p class="mt-4 text-[var(--color-text)] leading-relaxed">
+              Symptoms can vary significantly, and some may seem unrelated to the jaw at first. Common signs include:
+            </p>
+            <ul class="mt-5 space-y-3">
+              {[
+                "Jaw pain or soreness, particularly in the morning or after eating",
+                "Clicking, popping, or grating sounds when opening or closing the mouth",
+                "Difficulty opening the mouth fully, or the jaw locking open or closed",
+                "Headaches, particularly around the temples",
+                "Earaches or a feeling of fullness in the ears (without an ear infection)",
+                "Facial muscle tension or soreness",
+                "Worn, flattened, or sensitive teeth from clenching or grinding (bruxism)",
+                "Neck and shoulder tension",
+              ].map(item => (
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                  <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Causes -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              What causes TMD?
+            </h2>
+            <div class="mt-4 space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                TMD is often multifactorial — meaning it results from a combination of contributing factors rather than a single identifiable cause. Common contributing factors include:
+              </p>
+              <ul class="space-y-3 mt-3">
+                {[
+                  ["Bruxism (teeth clenching and grinding)", "Often occurs during sleep, placing sustained and significant force on the joint and jaw muscles."],
+                  ["Bite discrepancies", "Misalignment in how the upper and lower teeth come together can place uneven stress on the joint."],
+                  ["Stress and muscle tension", "Psychological stress often manifests as jaw clenching, which can aggravate or perpetuate symptoms."],
+                  ["Injury or trauma", "A direct blow to the jaw or a whiplash-type injury can affect the TMJ."],
+                  ["Joint changes", "Some patients develop changes in the joint's internal structure over time."],
+                ].map(([title, body]) => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <div>
+                      <span class="font-semibold text-[var(--color-text)]">{title}</span>
+                      <span class="text-[var(--color-text-muted)]"> — {body}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Treatment approaches -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              Treatment approaches
+            </h2>
+            <p class="mt-4 text-[var(--color-text)] leading-relaxed">
+              Treatment is tailored to the individual based on the nature and severity of symptoms. Options we discuss and provide include:
+            </p>
+            <div class="mt-6 space-y-5">
+              {[
+                {
+                  title: "Custom night guard (occlusal splint)",
+                  body: "A night guard is a custom-fabricated appliance worn over the teeth during sleep. It creates a protective barrier between the upper and lower teeth, preventing the tooth-to-tooth contact that occurs with grinding, and helps reduce the force transmitted to the jaw joint and muscles. Custom guards are fabricated from impressions taken in the clinic and fit far more accurately — and comfortably — than over-the-counter alternatives.",
+                },
+                {
+                  title: "Bite adjustment",
+                  body: "In some cases, minor reshaping of specific tooth surfaces can improve how the teeth come together and reduce uneven loading on the joint. This is assessed on a case-by-case basis.",
+                },
+                {
+                  title: "Physiotherapy referral",
+                  body: "For patients with significant muscle involvement, referral to a physiotherapist with experience in jaw and craniofacial conditions can complement dental treatment.",
+                },
+                {
+                  title: "Botox® (botulinum toxin) for jaw muscle tension",
+                  body: "Botox® injections into the masseter and temporalis muscles are used therapeutically to reduce the force of clenching and grinding and relieve associated muscle pain. This is an evolving area of dental practice, used here for therapeutic — not cosmetic — purposes. Injections are performed by clinicians trained in this procedure. Effects are temporary and repeat treatments are required to maintain results.",
+                },
+              ].map(item => (
+                <div class="rounded-2xl border border-[var(--color-border-soft)] p-6">
+                  <h3 class="font-display font-semibold text-[var(--color-brand-primary)]">{item.title}</h3>
+                  <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Custom vs OTC -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-7 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] leading-tight">
+              Custom night guards vs. over-the-counter options
+            </h2>
+            <div class="mt-4 space-y-3 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Pharmacy night guards — including boil-and-bite types — offer limited precision. Because they do not fit closely to your specific tooth anatomy, they can shift during sleep, create an uneven bite surface, and in some cases increase clenching rather than reduce it.
+              </p>
+              <p>
+                A custom appliance is fabricated from detailed impressions of your teeth and is designed to distribute force evenly across the dental arch. The result is a more stable, comfortable device that is more likely to be worn consistently.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)] leading-relaxed">Call us or book your appointment online.</p>
+            <a href="/patients/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">TMJ / TMD Therapy</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white">Have questions about your treatment?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book an appointment.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/patients/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  {
+    title: "Our Clinic",
+    href: "/about/our-clinic",
+    body: "Learn about our 35+ year history on 8th Street East, our approach to patient care, what to expect from a visit, and the professional standards we uphold.",
+    cta: "About Our Clinic",
+    icon: `<circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/>`,
+    highlights: [
+      "Family dentistry for all ages",
+      "Direct insurance billing",
+      "Extended Wednesday hours",
+      "Free on-site parking",
+    ],
+  },
+  {
+    title: "Our Team",
+    href: "/about/our-team",
+    body: "Meet our six dentists — all trained at the University of Saskatchewan and licensed by the College of Dental Surgeons of Saskatchewan — and learn about the clinical team that supports your care.",
+    cta: "Meet Our Team",
+    icon: `<path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`,
+    highlights: [
+      "Six general dentists",
+      "University of Saskatchewan trained",
+      "Dental hygienists, assistants & admin",
+      "Patient-centred care approach",
+    ],
+  },
+  {
+    title: "Careers",
+    href: "/about/careers",
+    body: "We're always interested in hearing from qualified dental professionals. Learn about the types of roles at our clinic and how to reach us about current or future opportunities.",
+    cta: "View Careers",
+    icon: `<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>`,
+    highlights: [
+      "Dentists & dental hygienists",
+      "Dental assistants",
+      "Administrative & reception",
+      "Established Saskatoon practice",
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="About Wildwood Dental Clinic | Saskatoon Family Dentistry"
+  description="Meet the team at Wildwood Dental Clinic — a Saskatoon family dental practice with over 35 years of experience serving patients on 8th Street East."
+>
+
+  <!-- ============================================================
+       HERO BANNER
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">About</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Serving Saskatoon for over 35 years</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        About Wildwood Dental Clinic
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        A family-oriented general dental practice on 8th Street East in Saskatoon — focused on comfortable, comprehensive care for patients of every age.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRO
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-brand-accent)]">Our Story</p>
+        <div class="mt-1 w-10 h-0.5 bg-[var(--color-brand-accent)]"></div>
+        <h2 class="mt-4 font-display font-semibold text-[length:var(--text-4xl)] leading-tight text-[var(--color-brand-primary)]">
+          A Saskatoon dental home for over 35 years
+        </h2>
+        <div class="mt-5 space-y-4 text-[var(--color-text)] leading-relaxed">
+          <p>
+            Wildwood Dental Clinic has been welcoming Saskatoon families from our 8th Street East location for over three decades. We're a general dental practice with a team of six dentists offering a full range of services — from routine checkups and cleanings to implants, Invisalign, sedation dentistry, and more.
+          </p>
+          <p>
+            We're a proud part of the Saskatoon community, and we take that responsibility seriously — from the training our dentists received right here in Saskatchewan to the standards we uphold through the College of Dental Surgeons of Saskatchewan, the Canadian Dental Association, and our Commitment to Clean designation.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/book" class="btn btn-primary">Book an Appointment</a>
+          <a href="/contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <img
+          src="/images/about/wildwood-exterior.png"
+          alt="Wildwood Dental Clinic exterior on 8th Street East, Saskatoon"
+          width="900"
+          height="700"
+          loading="lazy"
+          decoding="async"
+          class="w-full rounded-2xl shadow-xl object-cover"
+        />
+        <div class="absolute -bottom-6 -left-6 hidden lg:flex items-center gap-4 bg-[var(--color-brand-primary)] text-white rounded-xl px-6 py-4 shadow-xl">
+          <span class="font-display font-semibold text-4xl text-[var(--color-brand-accent)]">35+</span>
+          <span class="text-sm text-[var(--color-text-on-dark-muted)] leading-snug">Years serving<br/>Saskatoon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       THREE SECTION CARDS
+       ============================================================ -->
+  <section class="section-y bg-[var(--color-surface-cool)]">
+    <div class="container-wide">
+
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="eyebrow">Learn more</p>
+        <h2 class="mt-3 font-display font-semibold text-[length:var(--text-4xl)] leading-tight text-[var(--color-brand-primary)]">
+          Explore the About section
+        </h2>
+        <p class="mt-3 text-lg text-[var(--color-text-muted)] leading-relaxed">
+          Find out about our clinic, our team, and how to join us.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sections.map(section => (
+          <div class="bg-white rounded-2xl shadow-xl border border-[var(--color-border-soft)] flex flex-col overflow-hidden">
+            <div class="bg-[var(--color-brand-primary)] px-6 pt-6 pb-5 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={section.icon} />
+              </div>
+              <h3 class="font-display font-semibold text-xl text-white">{section.title}</h3>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{section.body}</p>
+              <ul class="mt-4 space-y-1.5">
+                {section.highlights.map(item => (
+                  <li class="flex items-center gap-2 text-xs text-[var(--color-text-muted)]">
+                    <svg class="shrink-0 text-[var(--color-brand-accent)]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href={section.href} class="mt-6 btn btn-outline w-full text-center text-sm">{section.cta} →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CREDENTIALS
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-brand-accent)]">Patient Care Standards</p>
+        <div class="mt-1 w-10 h-0.5 bg-[var(--color-brand-accent)]"></div>
+        <h2 class="mt-4 font-display font-semibold text-[length:var(--text-4xl)] leading-tight text-[var(--color-brand-primary)]">
+          Committed to Safe, Professional Dental Care
+        </h2>
+        <div class="mt-5 space-y-4 text-[var(--color-text)] leading-relaxed">
+          <p>
+            At Wildwood Dental Clinic, we are committed to providing patient-centred dental care in a professional, respectful, and compliant environment.
+          </p>
+          <p>
+            Our team follows the guidelines set by the College of Dental Surgeons of Saskatchewan and references trusted national dental resources to support patient education and professional awareness.
+          </p>
+          <p>
+            As part of the Canadian Dental Services Corp. network, we also support cleanliness, sterilization, and infection prevention standards through the Commitment to Clean program.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-[var(--color-border-soft)] rounded-2xl p-5 shadow-xl flex flex-col h-full">
+
+        <div class="flex items-center flex-1 min-h-0 pt-0 pb-2">
+          <div class="w-[60%] flex items-center justify-start">
+            <img src="/images/logos/college-of-dental-surgeons.png" alt="College of Dental Surgeons of Saskatchewan" width="300" height="216" loading="lazy" decoding="async" class="max-h-[100px] w-auto object-contain" />
+          </div>
+          <div class="w-[40%] flex items-center pl-4">
+            <p class="text-sm font-bold text-[var(--color-text)] text-left leading-snug line-clamp-2">Regulatory Standards</p>
+          </div>
+        </div>
+        <div class="h-px bg-[#b0bec8]"></div>
+
+        <div class="flex items-center flex-1 min-h-0 py-2">
+          <div class="w-[60%] flex items-center justify-start">
+            <img src="/images/logos/canadian-dental-association.png" alt="Canadian Dental Association" width="301" height="168" loading="lazy" decoding="async" class="max-h-[100px] w-auto object-contain" />
+          </div>
+          <div class="w-[40%] flex items-center pl-4">
+            <p class="text-sm font-bold text-[var(--color-text)] text-left leading-snug line-clamp-2">National Dental Resource</p>
+          </div>
+        </div>
+        <div class="h-px bg-[#b0bec8]"></div>
+
+        <div class="flex items-center flex-1 min-h-0 pt-2 pb-0">
+          <div class="w-[60%] flex items-center justify-start">
+            <img src="/images/logos/commitment-to-clean.png" alt="Commitment to Clean" width="200" height="200" loading="lazy" decoding="async" class="max-h-[100px] w-auto object-contain" />
+          </div>
+          <div class="w-[40%] flex items-center pl-4">
+            <p class="text-sm font-bold text-[var(--color-text)] text-left leading-snug line-clamp-2">Cleanliness and Infection Prevention</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <div class="flex items-center justify-center gap-5 mb-6">
+        <div class="w-14 h-px bg-[var(--color-brand-accent)]"></div>
+        <p class="font-body text-sm font-semibold tracking-[0.2em] uppercase text-white">New Patients Welcome</p>
+        <div class="w-14 h-px bg-[var(--color-brand-accent)]"></div>
+      </div>
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">
+        Ready to make Wildwood your dental home?
+      </h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto leading-relaxed">
+        Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online — we'll take it from there.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

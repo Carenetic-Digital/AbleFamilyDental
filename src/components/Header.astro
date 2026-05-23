@@ -1,76 +1,128 @@
 ---
-const servicesNav = [
+const col1 = [
   {
-    title: "Preventive",
-    href: "/services/preventive",
-    blurb: "Cleanings, exams, and the everyday care that keeps small issues small.",
+    title: "Emergency Services",
+    href: "/services/emergency",
     items: [
-      { label: "Cleanings & Check-ups", href: "/services/preventive/cleanings-checkups" },
-      { label: "Sealants", href: "/services/preventive/sealants" },
-      { label: "Fluoride", href: "/services/preventive/fluoride" },
-      { label: "X-Rays & 3D Imaging", href: "/services/preventive/x-rays" },
-      { label: "Periodontal Treatment", href: "/services/preventive/periodontal-treatment" },
-      { label: "Oral Cancer Screening", href: "/services/preventive/oral-cancer-screening" },
+      { label: "Emergency Appointments", href: "/services/emergency/appointments" },
+      { label: "Same-Day Emergency Care", href: "/services/emergency/same-day" },
+      { label: "Toothache Relief", href: "/services/emergency/toothache" },
+      { label: "Broken or Chipped Tooth", href: "/services/emergency/broken-tooth" },
     ],
   },
+  {
+    title: "Children's Dentistry",
+    href: "/services/childrens",
+    items: [
+      { label: "Exams & Cleanings", href: "/services/childrens/exams-cleanings" },
+      { label: "Infant Oral Care", href: "/services/childrens/infant-oral-care" },
+      { label: "Frenectomies — Tongue-Ties", href: "/services/childrens/frenectomies" },
+      { label: "Space Maintainers", href: "/services/childrens/space-maintainers" },
+    ],
+  },
+];
+
+const col2 = [
+  {
+    title: "Preventive Dentistry",
+    href: "/services/preventive",
+    items: [
+      { label: "Cleanings & Exams", href: "/services/preventive/cleanings-exams" },
+      { label: "Fluoride Treatments", href: "/services/preventive/fluoride" },
+      { label: "Dental Sealants", href: "/services/preventive/sealants" },
+      { label: "Mouthguards & Sport Guards", href: "/services/preventive/guards" },
+    ],
+  },
+  {
+    title: "Diagnostic Services",
+    href: "/services/diagnostic",
+    items: [
+      { label: "X-Rays & 3D Imaging", href: "/services/diagnostic/x-rays" },
+      { label: "Intraoral Cameras", href: "/services/diagnostic/intraoral-cameras" },
+      { label: "CBCT Scans", href: "/services/diagnostic/cbct" },
+      { label: "Oral Cancer Screening", href: "/services/diagnostic/oral-cancer-screening" },
+    ],
+  },
+];
+
+const col3 = [
   {
     title: "Restorative",
     href: "/services/restorative",
-    blurb: "Bringing teeth back to full function — repairing, rebuilding, and replacing.",
     items: [
-      { label: "Fillings", href: "/services/restorative/fillings" },
-      { label: "Bridges", href: "/services/restorative/bridges" },
-      { label: "Crowns", href: "/services/restorative/crowns" },
-      { label: "Dentures", href: "/services/restorative/dentures" },
-      { label: "Implants", href: "/services/restorative/implants" },
-      { label: "Root Canal Treatment", href: "/services/restorative/root-canal" },
+      { label: "Tooth-Colored Fillings", href: "/services/restorative/fillings" },
+      { label: "Crowns & Bridges", href: "/services/restorative/crowns-bridges" },
+      { label: "Inlays & Onlays", href: "/services/restorative/inlays-onlays" },
     ],
   },
   {
-    title: "Cosmetic",
+    title: "Oral Surgery",
+    href: "/services/oral-surgery",
+    items: [
+      { label: "Dental Implants", href: "/services/oral-surgery/implants" },
+      { label: "Wisdom Tooth Extraction", href: "/services/oral-surgery/wisdom-teeth" },
+      { label: "Tooth Extractions", href: "/services/oral-surgery/extractions" },
+    ],
+  },
+  {
+    title: "Orthodontics",
+    href: "/services/orthodontics",
+    items: [
+      { label: "Invisalign & Clear Aligners", href: "/services/orthodontics/invisalign" },
+    ],
+  },
+];
+
+const col4 = [
+  {
+    title: "Cosmetic Dentistry",
     href: "/services/cosmetic",
-    blurb: "Refining the appearance of your smile while keeping it healthy.",
     items: [
       { label: "Teeth Whitening", href: "/services/cosmetic/whitening" },
       { label: "Porcelain Veneers", href: "/services/cosmetic/veneers" },
       { label: "Dental Bonding", href: "/services/cosmetic/bonding" },
-      { label: "Tooth Reshaping", href: "/services/cosmetic/reshaping" },
-      { label: "Bite Correction", href: "/services/cosmetic/bite-correction" },
-      { label: "Invisalign & Clear Aligners", href: "/services/cosmetic/invisalign" },
     ],
   },
   {
-    title: "Oral Surgery & Other",
-    href: "/services/oral-surgery",
-    blurb: "Comfort-focused care for extractions, TMJ, sleep apnea, and sedation.",
+    title: "Periodontal Care",
+    href: "/services/periodontal",
     items: [
-      { label: "Children's Dentistry", href: "/services/oral-surgery/childrens-dentistry" },
-      { label: "Emergency Dental Care", href: "/services/oral-surgery/emergency-care" },
-      { label: "Wisdom Tooth Extraction", href: "/services/oral-surgery/wisdom-teeth" },
-      { label: "TMJ Treatment & Night Guards", href: "/services/oral-surgery/tmj-night-guards" },
-      { label: "Sports Guards", href: "/services/oral-surgery/sports-guards" },
-      { label: "Snoring & Sleep Apnea", href: "/services/oral-surgery/sleep-apnea" },
-      { label: "Sedation Dentistry", href: "/services/oral-surgery/sedation" },
+      { label: "Gum Disease Treatment", href: "/services/periodontal/gum-disease" },
+      { label: "Scaling & Root Planing", href: "/services/periodontal/scaling-root-planing" },
+      { label: "Gum Contouring", href: "/services/periodontal/gum-contouring" },
+    ],
+  },
+  {
+    title: "Endodontic Services",
+    href: "/services/endodontics",
+    items: [
+      { label: "Root Canal Treatment", href: "/services/endodontics/root-canal" },
+      { label: "Cracked Tooth Treatment", href: "/services/endodontics/cracked-tooth" },
+    ],
+  },
+  {
+    title: "TMJ / TMD Therapy",
+    href: "/services/tmj",
+    items: [
+      { label: "TMJ Diagnosis", href: "/services/tmj/diagnosis" },
+      { label: "Botox® for TMJ & Facial Pain", href: "/services/tmj/botox" },
+      { label: "Custom Night Guards", href: "/services/tmj/night-guards" },
+      { label: "Bite Correction", href: "/services/tmj/bite-correction" },
     ],
   },
 ];
 
-const primaryNav = [
-  { label: "About", href: "/about" },
-  { label: "Patients", href: "/patients" },
-  { label: "Learn", href: "/learn" },
-  { label: "Contact", href: "/contact" },
-];
+const allCols = [col1, col2, col3, col4];
 ---
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[var(--color-border)]" data-header>
-  <!-- Notification bar: centered, above utility bar -->
+  <!-- Notification bar -->
   <div class="hidden md:block text-xs" style="background-color: #f5f0e8;">
     <div class="container-wide flex items-center justify-center py-1.5 gap-3">
       <span class="font-medium tracking-wide text-[var(--color-brand-primary)]">Now accepting new patients</span>
       <span aria-hidden="true" class="w-px h-3 bg-[var(--color-brand-primary)]/25 inline-block align-middle"></span>
       <a
-        href="/book"
+        href="/patients/book"
         class="inline-flex items-center gap-1 font-bold tracking-widest uppercase text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors"
       >
         BOOK NOW
@@ -79,7 +131,7 @@ const primaryNav = [
     </div>
   </div>
 
-  <!-- Utility bar: hours left, phone right -->
+  <!-- Utility bar -->
   <div class="hidden md:block bg-[var(--color-brand-primary)] text-[var(--color-text-on-dark-muted)] text-sm">
     <div class="container-wide flex items-center justify-between py-2">
       <div class="flex items-center gap-1.5 text-xs text-[var(--color-text-on-dark-muted)]">
@@ -113,9 +165,9 @@ const primaryNav = [
     </a>
 
     <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
-      <a href="/about" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">About</a>
+      <a href="/about" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">About Us</a>
 
-      <!-- Services mega-menu -->
+      <!-- Services mega-menu trigger -->
       <div class="relative" data-megamenu>
         <button
           type="button"
@@ -129,9 +181,9 @@ const primaryNav = [
         </button>
       </div>
 
-      <a href="/patients" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Patients</a>
-      <a href="/learn" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Learn</a>
-      <a href="/contact" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Contact</a>
+      <a href="/new-patients" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">New Patients</a>
+      <a href="/existing-patients" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Existing Patients</a>
+      <a href="/contact" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Contact Us</a>
     </nav>
 
     <div class="flex items-center gap-3">
@@ -151,40 +203,46 @@ const primaryNav = [
     </div>
   </div>
 
-  <!-- Mega-menu panel (full-width, beneath nav) -->
+  <!-- Mega-menu panel -->
   <div
     id="services-megamenu"
     class="hidden lg:block absolute inset-x-0 top-full bg-white border-t border-b border-[var(--color-border)] shadow-lg"
     data-megamenu-panel
     hidden
   >
-    <div class="container-wide py-10">
+    <div class="container-wide py-8">
       <div class="grid grid-cols-4 gap-8">
-        {servicesNav.map(cat => (
-          <div>
-            <a href={cat.href} class="block group">
-              <h3 class="font-display text-lg font-semibold text-[var(--color-brand-primary)] group-hover:text-[var(--color-brand-accent-hover)]">
-                {cat.title}
-              </h3>
-              <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">{cat.blurb}</p>
-            </a>
-            <ul class="mt-4 space-y-2 border-t border-[var(--color-border-soft)] pt-4">
-              {cat.items.map(item => (
-                <li>
-                  <a href={item.href} class="block text-sm text-[var(--color-text)] hover:text-[var(--color-brand-accent-hover)]">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        {allCols.map(col => (
+          <div class="space-y-6">
+            {col.map((cat, catIdx) => (
+              <div class={catIdx > 0 ? "pt-5 border-t border-[var(--color-border-soft)]" : ""}>
+                <a href={cat.href} class="block group mb-3">
+                  <h3 class="font-display text-base font-semibold text-[var(--color-brand-primary)] group-hover:text-[var(--color-brand-accent-hover)] leading-tight">
+                    {cat.title}
+                  </h3>
+                </a>
+                <ul class="space-y-1.5">
+                  {cat.items.map(item => (
+                    <li>
+                      <a href={item.href} class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent-hover)] leading-snug">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         ))}
       </div>
-      <div class="mt-8 pt-6 border-t border-[var(--color-border-soft)] flex flex-wrap items-center justify-between gap-4">
+      <div class="mt-6 pt-5 border-t border-[var(--color-border-soft)] flex flex-wrap items-center justify-between gap-4">
         <p class="text-sm text-[var(--color-text-muted)]">
-          Not sure which service you need? We'll help you sort it out at your first visit.
+          Not sure which service you need? We'll help you figure it out at your first visit.
         </p>
-        <a href="/patients/book" class="btn btn-primary">Book a new-patient appointment</a>
+        <div class="flex items-center gap-3">
+          <a href="/services" class="text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">View all services →</a>
+          <a href="/patients/book" class="btn btn-primary">Book an appointment</a>
+        </div>
       </div>
     </div>
   </div>
@@ -197,28 +255,28 @@ const primaryNav = [
         <span class="text-xs text-[var(--color-text-muted)] font-normal">Tap to call</span>
       </a>
       <nav class="py-2" aria-label="Mobile primary">
-        <a href="/about" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">About</a>
+        <a href="/about" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">About Us</a>
         <details class="border-b border-[var(--color-border-soft)]">
           <summary class="py-3 flex items-center justify-between cursor-pointer list-none text-[var(--color-brand-primary)] font-medium">
             Services
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
-          <div class="pl-3 pb-3 space-y-3">
-            {servicesNav.map(cat => (
+          <div class="pl-3 pb-3 space-y-4">
+            {allCols.flat().map(cat => (
               <div>
-                <a href={cat.href} class="block py-1.5 font-semibold text-[var(--color-brand-primary)]">{cat.title}</a>
-                <ul class="pl-3 space-y-1.5">
+                <a href={cat.href} class="block py-1 font-semibold text-sm text-[var(--color-brand-primary)]">{cat.title}</a>
+                <ul class="pl-3 space-y-1">
                   {cat.items.map(item => (
-                    <li><a href={item.href} class="block py-1 text-sm text-[var(--color-text)]">{item.label}</a></li>
+                    <li><a href={item.href} class="block py-0.5 text-sm text-[var(--color-text)]">{item.label}</a></li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
         </details>
-        <a href="/patients" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Patients</a>
-        <a href="/learn" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Learn</a>
-        <a href="/contact" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact</a>
+        <a href="/new-patients" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">New Patients</a>
+        <a href="/existing-patients" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Existing Patients</a>
+        <a href="/contact" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact Us</a>
       </nav>
       <a href="/patients/book" class="btn btn-primary w-full mt-3">Book Appointment</a>
     </div>
@@ -226,7 +284,6 @@ const primaryNav = [
 </header>
 
 <script>
-  // Mega-menu (hover + click + keyboard)
   const trigger = document.querySelector<HTMLButtonElement>('[data-megamenu-trigger]');
   const panel = document.querySelector<HTMLDivElement>('[data-megamenu-panel]');
   const wrapper = document.querySelector<HTMLDivElement>('[data-megamenu]');
@@ -251,13 +308,11 @@ const primaryNav = [
       if (panel.hidden) open(); else close();
     });
 
-    // Hover (desktop)
     wrapper.addEventListener('mouseenter', open);
     wrapper.addEventListener('mouseleave', scheduleClose);
     panel.addEventListener('mouseenter', open);
     panel.addEventListener('mouseleave', scheduleClose);
 
-    // Keyboard close
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !panel.hidden) {
         close();
@@ -265,14 +320,12 @@ const primaryNav = [
       }
     });
 
-    // Outside click
     document.addEventListener('click', (e) => {
       if (panel.hidden) return;
       if (!wrapper.contains(e.target as Node) && !panel.contains(e.target as Node)) close();
     });
   }
 
-  // Mobile menu
   const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-toggle]');
   const mobileMenu = document.querySelector<HTMLDivElement>('[data-mobile-menu]');
   if (mobileToggle && mobileMenu) {

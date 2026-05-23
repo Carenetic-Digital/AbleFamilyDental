@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "TMJ Overview", href: "/services/tmj" },
+  { name: "Diagnosis", href: "/services/tmj/diagnosis" },
+  { name: "Botox for TMJ", href: "/services/tmj/botox", current: true },
+  { name: "Night Guards", href: "/services/tmj/night-guards" },
+  { name: "Bite Correction", href: "/services/tmj/bite-correction" },
+  { name: "Sleep Apnea Devices", href: "/services/tmj/sleep-apnea" },
+];
+---
+
+<BaseLayout
+  title="Botox for TMJ & Jaw Pain | Wildwood Dental Clinic Saskatoon"
+  description="Botulinum toxin (Botox) injections for jaw pain and bruxism at Wildwood Dental Clinic in Saskatoon. How it works, what it addresses, and what to expect."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/tmj" class="hover:text-white transition-colors">TMJ &amp; Jaw</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Botox for Jaw Pain</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">TMJ &amp; Jaw</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Botox for Jaw Pain &amp; Bruxism
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        Botulinum toxin injections into the jaw muscles are used therapeutically to reduce muscle overactivity associated with clenching and grinding. This is a management tool, considered on an individual basis when other conservative measures have not provided adequate relief.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- What botulinum toxin is -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What is botulinum toxin?
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Botulinum toxin is a prescription medication that, when injected in small amounts into a specific muscle, temporarily reduces the activity of that muscle. It works by blocking the nerve signals that cause the muscle to contract. The effect is not permanent — it wears off over several months, and the muscle gradually returns to its normal function.
+              </p>
+              <p>
+                In dentistry, botulinum toxin is used therapeutically — specifically to address overactivity in the muscles involved in jaw clenching and grinding.
+              </p>
+            </div>
+          </div>
+
+          <!-- How it may help -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              How it may help with jaw muscle concerns
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                The masseter muscle — located at the side of the jaw — is one of the primary muscles involved in chewing and is also a major contributor to the force generated during clenching and grinding. In patients with bruxism or chronic jaw muscle pain, the masseter can become hypertrophied (enlarged) and chronically tense from sustained overuse.
+              </p>
+              <p>
+                Injecting botulinum toxin into the masseter on each side can reduce its contractile force. This may:
+              </p>
+              <ul class="mt-3 space-y-3">
+                {[
+                  "Reduce jaw muscle pain and soreness associated with clenching",
+                  "Decrease the intensity of headaches that are related to jaw muscle tension",
+                  "Reduce the load placed on the teeth and jaw joint from grinding",
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="mt-3">
+                In some patients treated over time, the masseter muscle may also reduce somewhat in bulk — this is a secondary effect of reduced use, not the goal of treatment in this context.
+              </p>
+            </div>
+          </div>
+
+          <!-- What it does not address -->
+          <div class="bg-[var(--color-surface-alt)] rounded-2xl p-7 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] leading-tight">
+              What botulinum toxin does not address
+            </h2>
+            <div class="mt-4 space-y-3 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Botulinum toxin reduces muscle activity but does not address the underlying causes of bruxism. Bruxism may be related to stress, sleep disorders, bite discrepancies, or other factors — and these are not altered by the injection itself.
+              </p>
+              <p>
+                As such, this treatment is considered a management tool rather than a long-term resolution. It is typically used alongside other approaches — such as a night guard, physiotherapy, or stress management — rather than as a standalone solution.
+              </p>
+            </div>
+          </div>
+
+          <!-- The injection process -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What the treatment involves
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                The procedure involves a small number of injections into the masseter muscles on both sides of the jaw. The appointment is brief and does not require anesthetic, though the injections may cause a mild, temporary discomfort at the injection site.
+              </p>
+              <p>
+                The effect takes time to develop — most patients notice a change in muscle activity within one to two weeks of treatment. The effect then gradually wears off over several months. For patients who benefit from the treatment, repeat injections may be recommended to maintain the effect over time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Patient selection -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Is this treatment right for everyone?
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Botulinum toxin for jaw muscle pain is considered on a case-by-case basis. It may be appropriate for patients who:
+              </p>
+              <ul class="mt-3 space-y-3">
+                {[
+                  "Have documented jaw muscle pain or bruxism that has not responded adequately to other conservative measures",
+                  "Have been assessed and have a clinical finding consistent with masseter muscle hyperactivity",
+                  "Understand the temporary nature of the effect and are prepared to consider ongoing treatment if beneficial",
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="mt-3">
+                It is not suitable for all patients, and contraindications exist — including certain neuromuscular conditions and pregnancy. A thorough discussion and review of your medical history takes place before this treatment is offered.
+              </p>
+            </div>
+          </div>
+
+          <!-- Therapeutic note -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-7 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] leading-tight">
+              A note on the therapeutic context
+            </h2>
+            <div class="mt-4 space-y-3 text-[var(--color-text)] leading-relaxed">
+              <p>
+                When botulinum toxin is used at Wildwood Dental Clinic, it is used exclusively in a therapeutic context — to address jaw muscle pain and the effects of bruxism. It is not offered or administered for cosmetic purposes.
+              </p>
+              <p>
+                This treatment is performed by clinicians who have completed relevant training in its therapeutic use in the dental context.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)] leading-relaxed">Call us or book your appointment online.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sibling services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">TMJ &amp; Jaw Services</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Have questions about this treatment?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book an appointment.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,78 @@
+# ============================================================
+# Redirects from old site URLs → new URLs
+# ============================================================
+
+/about-us/ /about 301
+/meet-the-team/ /about/our-team 301
+/our-difference/ /about/our-clinic 301
+/office-tour/ /about/our-clinic 301
+/dental-technology/ /about/our-clinic 301
+/join-our-team/ /about/careers 301
+/dental-services/ /services 301
+/preventive-dental-care/ /services/preventive 301
+/dental-cleanings-and-checkups/ /services/preventive/cleanings-exams 301
+/dental-sealants/ /services/preventive/sealants 301
+/fluoride-treatment/ /services/preventive/fluoride 301
+/diagnostic-imaging-digital-x-rays/ /services/diagnostic/x-rays 301
+/periodontal-gum-disease-treatment/ /services/periodontal/gum-disease 301
+/oral-cancer-screening/ /services/diagnostic/oral-cancer-screening 301
+/restorative-dental-care/ /services/restorative 301
+/dental-fillings/ /services/restorative/fillings 301
+/dental-bridges/ /services/restorative/crowns-bridges 301
+/dental-crowns/ /services/restorative/crowns-bridges 301
+/ceramic-crowns/ /services/restorative/crowns-bridges 301
+/full-and-partial-dentures/ /services/restorative 301
+/dental-implants/ /services/oral-surgery/implants 301
+/root-canal-treatment/ /services/endodontics/root-canal 301
+/cosmetic-dentistry/ /services/cosmetic 301
+/teeth-whitening/ /services/cosmetic/whitening 301
+/porcelain-veneers/ /services/cosmetic/veneers 301
+/dental-bonding/ /services/cosmetic/bonding 301
+/tooth-reshaping-and-contouring/ /services/cosmetic 301
+/bite-correction/ /services/tmj/bite-correction 301
+/invisalign/ /services/orthodontics/invisalign 301
+/oral-surgery-and-other/ /services/oral-surgery 301
+/dental-care-for-children/ /services/childrens 301
+/emergency-dental-care/ /services/emergency 301
+/wisdom-tooth-extraction/ /services/oral-surgery/wisdom-teeth 301
+/tmj-tmjd-treatment-and-night-guards/ /services/tmj 301
+/mouth-and-sports-guards/ /services/preventive/guards 301
+/snoring-and-sleep-apnea-treatment/ /services/tmj/sleep-apnea 301
+/sedation-dentistry/ /services/preventive/comfort 301
+/schedule-a-dental-appointment/ /book 301
+/patient-forms/ /new-patients/forms 301
+/digital-patient-forms/ /new-patients/forms 301
+/financial-options/ /new-patients/insurance-payment 301
+/faqs/ /new-patients 301
+/covid-form/ /new-patients/forms 301
+/privacy-policy/ /privacy 301
+/learn/ /blog 301
+/patients/ /new-patients 301
+/patients/book/ /book 301
+/patients/new-patients/ /new-patients 301
+/patients/forms/ /new-patients/forms 301
+/patients/financial-options/ /new-patients/insurance-payment 301
+/patients/canadiandentalcareplan/ /new-patients/insurance-payment 301
+/patients/faqs/ /new-patients 301
+
+# ============================================================
+# Redirects from deleted/moved files
+# ============================================================
+
+/services/oral-surgery/childrens-dentistry /services/childrens 301
+/services/oral-surgery/emergency-care /services/emergency 301
+/services/oral-surgery/sedation /services/preventive/comfort 301
+/services/oral-surgery/sports-guards /services/preventive/guards 301
+/services/oral-surgery/tmj-night-guards /services/tmj/night-guards 301
+/services/oral-surgery/sleep-apnea /services/tmj/sleep-apnea 301
+/services/cosmetic/bite-correction /services/tmj/bite-correction 301
+/services/cosmetic/invisalign /services/orthodontics/invisalign 301
+/services/cosmetic/reshaping /services/cosmetic 301
+/services/preventive/cleanings-checkups /services/preventive/cleanings-exams 301
+/services/preventive/oral-cancer-screening /services/diagnostic/oral-cancer-screening 301
+/services/preventive/periodontal-treatment /services/periodontal/gum-disease 301
+/services/preventive/x-rays /services/diagnostic/x-rays 301
+/services/restorative/implants /services/oral-surgery/implants 301
+/services/restorative/root-canal /services/endodontics/root-canal 301
+/services/restorative/bridges /services/restorative/crowns-bridges 301
+/services/restorative/crowns /services/restorative/crowns-bridges 301

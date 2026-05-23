@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "Emergency Dental Care", href: "/services/emergency" },
+  { name: "Toothache & Dental Pain", href: "/services/emergency/toothache" },
+  { name: "Broken or Chipped Tooth", href: "/services/emergency/broken-tooth" },
+  { name: "Knocked-Out Tooth", href: "/services/emergency/knocked-out-tooth" },
+  { name: "Urgent Appointments", href: "/services/emergency/appointments", current: true },
+];
+---
+
+<BaseLayout
+  title="Booking an Urgent Appointment | Emergency Dental Care | Wildwood Dental Clinic"
+  description="Need to see a dentist urgently in Saskatoon? Call Wildwood Dental Clinic at 306.374.7272. We make every effort to accommodate urgent patients."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/emergency" class="hover:text-white transition-colors">Emergency</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Urgent Appointments</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Emergency Dental Care</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Booking an Urgent Appointment
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        If you need urgent dental care, calling us directly is the fastest way to be seen. We make every effort to accommodate patients with urgent needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- How to reach us -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              How to reach us for urgent care
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                <strong class="text-[var(--color-brand-primary)]">Call us directly at <a href="tel:+13063747272" class="text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">306.374.7272</a>.</strong> When you call, let us know your concern is urgent. Our team will assess the situation and advise on the appropriate next step — whether that is coming in the same day, later in the week, or in some cases, directing you to a hospital emergency department.
+              </p>
+              <p>
+                Online booking may not reflect same-day availability, and it does not allow our team to assess the urgency of your situation. For anything time-sensitive, please call rather than booking online.
+              </p>
+            </div>
+          </div>
+
+          <!-- What counts as a dental emergency -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What counts as a dental emergency?
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                If you are unsure whether your situation warrants urgent care, calling us is always the right move — our team can help you decide. The following situations generally do require prompt attention:
+              </p>
+              <ul class="space-y-3 mt-3">
+                {[
+                  "Severe toothache or dental pain that is not managed by over-the-counter pain relief",
+                  "Swelling of the face, jaw, or gum",
+                  "Dental trauma — a knocked-out, broken, or displaced tooth",
+                  "A lost crown or filling that is causing pain, sensitivity, or leaves a sharp edge",
+                  "Signs of a dental abscess, including throbbing pain, swelling, fever, or a bad taste",
+                  "Bleeding from the gum or tooth that does not stop with gentle pressure",
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- What may not require same-day care -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What may not require same-day care
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Some dental concerns are worth addressing but do not require immediate attention. These include:
+              </p>
+              <ul class="space-y-3 mt-3">
+                {[
+                  "A minor chip with no pain, sensitivity, or sharp edge",
+                  "A lost filling with no sensitivity or discomfort",
+                  "Cosmetic concerns such as a stained or slightly chipped tooth",
+                  "Mild gum sensitivity without swelling or signs of infection",
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-text-muted)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                    <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p>
+                If you are unsure which category your situation falls into, call us. We would rather help you figure it out than have you wait through something that needs prompt care.
+              </p>
+            </div>
+          </div>
+
+          <!-- After hours guidance -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] mb-3">After-hours guidance</h3>
+            <div class="space-y-3 text-[var(--color-text-muted)] leading-relaxed text-sm">
+              <p>
+                If you are unable to reach us and you have <strong class="text-[var(--color-text)]">facial swelling affecting your breathing or swallowing, or a fever alongside dental pain</strong>, go to the nearest hospital emergency department without delay. These signs can indicate a spreading infection that requires medical attention.
+              </p>
+              <p>
+                For dental pain after hours that does not involve those warning signs, over-the-counter pain relief (ibuprofen or acetaminophen, taken as directed) may help you manage until we open. Call us first thing in the morning and describe your situation — we will do our best to find an appropriate time to see you.
+              </p>
+            </div>
+          </div>
+
+          <!-- What to tell us when you call -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What to tell us when you call
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Having this information ready helps our team understand how urgently you need to be seen and how to prepare:
+              </p>
+              <ul class="space-y-3 mt-3">
+                {[
+                  "The nature of the issue — what is happening and which tooth or area is affected",
+                  "Your pain level and whether it is constant or comes and goes",
+                  "When the issue started or when the injury occurred",
+                  "Whether there is any swelling, fever, or difficulty swallowing",
+                  "Whether you are a current or new patient",
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Need Urgent Care?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us directly for urgent situations — don't rely on online booking for same-day needs.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sibling services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Emergency Services</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Ready to be seen?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online — new patients welcome.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

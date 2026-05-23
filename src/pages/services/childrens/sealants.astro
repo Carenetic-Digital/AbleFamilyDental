@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "Exams & Cleanings", href: "/services/childrens/exams-cleanings" },
+  { name: "Infant Oral Care", href: "/services/childrens/infant-oral-care" },
+  { name: "Fluoride", href: "/services/childrens/fluoride" },
+  { name: "Sealants", href: "/services/childrens/sealants", current: true },
+  { name: "X-Rays", href: "/services/childrens/x-rays" },
+  { name: "Frenectomies", href: "/services/childrens/frenectomies" },
+  { name: "Space Maintainers", href: "/services/childrens/space-maintainers" },
+  { name: "Comfort & Anxiety", href: "/services/childrens/comfort" },
+];
+---
+
+<BaseLayout
+  title="Dental Sealants for Children | Wildwood Dental Clinic Saskatoon"
+  description="Dental sealants for children at Wildwood Dental Clinic in Saskatoon — a thin protective coating applied to the chewing surfaces of back teeth."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/childrens" class="hover:text-white transition-colors">Children's Dentistry</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Sealants</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Children's Dentistry</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Dental Sealants
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        The chewing surfaces of back teeth have deep grooves that can trap food and bacteria. Sealants provide a smooth protective coating that makes these surfaces easier to keep clean.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- Specialty disclaimer -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                Dental services for children at Wildwood Dental Clinic are provided by our general dentist team. Our dentists are not licensed specialists in pediatric dentistry.
+              </p>
+            </div>
+          </div>
+
+          <!-- What sealants are -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What are dental sealants?
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Dental sealants are thin coatings — similar in texture to a plastic — applied to the chewing surfaces of the back teeth. They fill in the pits and fissures (the grooves and crevices) of molars, creating a smoother surface that is harder for food particles and bacteria to settle into.
+              </p>
+              <p>
+                Sealants do not replace regular brushing and flossing. They are a supplemental measure — one tool among several — aimed at reducing the risk of cavities developing in an area that can be difficult to clean thoroughly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Why molars are vulnerable -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Why back teeth are particularly cavity-prone
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Molars have irregular chewing surfaces with deep grooves that are often narrower than the bristles of a toothbrush. Food and bacteria can accumulate in these crevices even with attentive brushing. Over time, this creates conditions where decay can develop, sometimes without visible signs until it has progressed.
+              </p>
+              <p>
+                This is why molars — particularly the first and second permanent molars — account for a significant proportion of cavities in children and adolescents.
+              </p>
+            </div>
+          </div>
+
+          <!-- Who benefits -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Who may benefit from sealants
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Sealants are most commonly applied to children and adolescents after their permanent molars erupt. The first permanent molars typically come in around age 6, and the second permanent molars around age 12. Sealing these teeth shortly after they fully erupt — while there is no decay yet — allows the sealant to protect them through the years when cavity risk is often highest.
+              </p>
+              <p>
+                Whether sealants are recommended for a given child depends on factors including the depth of their molar grooves, their cavity history, their home care routine, and their diet. We discuss this individually with families.
+              </p>
+            </div>
+          </div>
+
+          <!-- The application process -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              The sealant application process
+            </h2>
+            <p class="text-[var(--color-text)] leading-relaxed mb-5">
+              Applying a sealant is quick and does not require any drilling or anesthetic. The steps involved are:
+            </p>
+            <ol class="space-y-4">
+              {[
+                ["Clean the tooth", "The chewing surface is cleaned and dried thoroughly."],
+                ["Apply acid etch", "A mild acidic solution is applied briefly to create a slightly rough surface that helps the sealant bond securely. It is then rinsed away and the tooth is dried again."],
+                ["Apply the sealant", "The liquid sealant material is painted onto the surface and flows into the grooves."],
+                ["Cure with light", "A curing light hardens the sealant in place within seconds."],
+                ["Check the bite", "The dentist checks that the sealant does not interfere with the bite and makes any minor adjustments needed."],
+              ].map(([title, text], i) => (
+                <li class="flex gap-4">
+                  <span class="shrink-0 w-8 h-8 rounded-full bg-[var(--color-brand-primary)] text-white text-sm font-semibold flex items-center justify-center mt-0.5" aria-hidden="true">{i + 1}</span>
+                  <div>
+                    <p class="font-semibold text-[var(--color-text)]">{title}</p>
+                    <p class="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">{text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <!-- How long they last -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] mb-4">
+              How long do sealants last?
+            </h2>
+            <div class="space-y-3 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Sealants can last several years with normal use, though they may chip or wear over time — particularly if a child grinds their teeth or chews very hard foods. We check the condition of existing sealants at each dental appointment and can reapply them if needed.
+              </p>
+              <p>
+                Regular checkups remain important even with sealants in place. Sealants cover the pits and fissures of molar surfaces, but they do not protect the sides of teeth or the spaces between teeth — areas where cavities can also develop.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or book online — new patients welcome.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sibling services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Children's Dentistry</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Questions about your child's dental care?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

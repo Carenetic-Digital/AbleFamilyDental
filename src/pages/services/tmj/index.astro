@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const subServices = [
+  { name: "TMJ Overview", href: "/services/tmj" },
+  { name: "Diagnosis", href: "/services/tmj/diagnosis" },
+  { name: "Botox for TMJ", href: "/services/tmj/botox" },
+  { name: "Night Guards", href: "/services/tmj/night-guards" },
+  { name: "Bite Correction", href: "/services/tmj/bite-correction" },
+  { name: "Sleep Apnea Devices", href: "/services/tmj/sleep-apnea" },
+];
+---
+
+<BaseLayout
+  title="TMJ & Jaw Pain | Wildwood Dental Clinic Saskatoon"
+  description="TMJ disorder assessment and treatment at Wildwood Dental Clinic in Saskatoon — night guards, bite evaluation, and care for jaw pain and headaches."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">TMJ &amp; Jaw</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Wildwood Dental Clinic</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        TMJ &amp; Jaw Conditions
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        The temporomandibular joint connects the jaw to the skull and plays a role in chewing, speaking, and mouth opening. Dysfunction in this joint or the surrounding muscles can cause a range of symptoms — from jaw pain and clicking to headaches and limited mouth opening.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- What is the TMJ -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              About the temporomandibular joint
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                The temporomandibular joint (TMJ) is the hinge-like joint located just in front of each ear, where the lower jaw connects to the skull. You have one on each side, and both must work in coordination to allow you to open and close your mouth, chew, and speak.
+              </p>
+              <p>
+                When problems develop with the joint itself, the disc within the joint, or the surrounding muscles, they are collectively described as temporomandibular disorders (TMD). TMD is quite common and can range from occasional mild discomfort to persistent symptoms that affect daily function.
+              </p>
+              <p>
+                The causes of TMD are often multifactorial — meaning multiple contributing factors are typically involved rather than a single identifiable cause. Management is therefore individualized, based on a careful assessment of each patient's symptoms, history, and findings on examination.
+              </p>
+            </div>
+          </div>
+
+          <!-- Common symptoms -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Common symptoms
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Symptoms associated with TMD can vary considerably from person to person, and some may seem unrelated to the jaw at first. They include:
+              </p>
+              <ul class="mt-3 space-y-3">
+                {[
+                  "Jaw pain or soreness, particularly in the morning or after eating",
+                  "Clicking, popping, or grating sounds when opening or closing the mouth",
+                  "Limited mouth opening, or the jaw locking open or closed",
+                  "Headaches, particularly around the temples or at the base of the skull",
+                  "Earaches or a feeling of fullness in the ears",
+                  "Facial muscle tension or fatigue",
+                  "Neck and shoulder tension",
+                  "Worn or sensitive teeth from clenching or grinding (bruxism)",
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Services we offer -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              TMJ services at Wildwood
+            </h2>
+            <div class="space-y-5">
+              {[
+                {
+                  title: "TMJ Diagnosis & Assessment",
+                  href: "/services/tmj/diagnosis",
+                  body: "A thorough assessment of your symptoms, jaw movement, bite, and joint — the starting point for understanding what is contributing to your condition and determining the most appropriate approach.",
+                },
+                {
+                  title: "Custom Night Guards",
+                  href: "/services/tmj/night-guards",
+                  body: "A custom-fabricated occlusal splint worn during sleep to reduce the effects of grinding and clenching on the teeth, jaw muscles, and joint. Custom guards fit accurately and are designed to distribute force evenly across the dental arch.",
+                },
+                {
+                  title: "Bite Correction",
+                  href: "/services/tmj/bite-correction",
+                  body: "In some cases, minor adjustments to how the teeth come together can reduce uneven loading on the jaw joint and muscles. This is assessed individually and is not appropriate for every patient.",
+                },
+                {
+                  title: "Botulinum Toxin for Jaw Muscle Pain",
+                  href: "/services/tmj/botox",
+                  body: "Injections of botulinum toxin into the jaw muscles may help reduce muscle overactivity associated with clenching and grinding, and can relieve related muscle pain. This is used therapeutically and is discussed on a case-by-case basis.",
+                },
+                {
+                  title: "Sleep Apnea Devices",
+                  href: "/services/tmj/sleep-apnea",
+                  body: "Mandibular advancement devices are an alternative to CPAP therapy for some patients with mild to moderate obstructive sleep apnea. These are custom-fabricated and require a sleep apnea diagnosis from a physician.",
+                },
+              ].map(svc => (
+                <div class="rounded-2xl border border-[var(--color-border-soft)] p-6">
+                  <h3 class="font-display font-semibold text-[var(--color-brand-primary)]">
+                    <a href={svc.href} class="hover:text-[var(--color-brand-accent)] transition-colors">{svc.title}</a>
+                  </h3>
+                  <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">{svc.body}</p>
+                  <a href={svc.href} class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Approach note -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-7 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] leading-tight">
+              A conservative approach
+            </h2>
+            <div class="mt-4 space-y-3 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Most TMJ conditions are managed conservatively in the first instance — with night guards, physiotherapy exercises, dietary modifications, and stress management guidance. More involved interventions are considered only when conservative measures have been tried and symptoms are not adequately controlled.
+              </p>
+              <p>
+                For complex or severe joint conditions, referral to an oral and maxillofacial surgeon or other specialist may be appropriate. We will advise you on this and help coordinate care if needed.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or book online — new patients welcome.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sub-services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">TMJ &amp; Jaw Services</h3>
+            <ul class="space-y-2">
+              {subServices.map(svc => (
+                <li>
+                  <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                    {svc.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Ready to get started?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

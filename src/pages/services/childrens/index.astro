@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Children's Dentistry | Wildwood Dental Clinic"
+  description="Gentle dental care for children at Wildwood Dental Clinic in Saskatoon. Learn when to book your child's first dental visit, what's included, and how we make every visit comfortable."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Children's Dentistry</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Wildwood Dental Clinic</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Children's Dentistry
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        Early dental visits help children develop a positive relationship with oral care and give our team the opportunity to monitor developing teeth and jaws from the very start.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="space-y-10 max-w-3xl">
+
+        <!-- When to start -->
+        <div>
+          <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+            When should my child first see a dentist?
+          </h2>
+          <div class="mt-4 space-y-4 text-[var(--color-text)] leading-relaxed">
+            <p>
+              The general recommendation is to bring your child in by their first birthday, or within six months of their first tooth appearing — whichever comes first. This may feel early, but the first visit serves a practical purpose: it establishes a baseline and lets our team check that primary teeth are coming in normally.
+            </p>
+            <p>
+              Just as importantly, early visits help children get comfortable in the dental environment. A child who has visited the dentist regularly since infancy is far less likely to develop dental anxiety later on. Each short, positive visit builds familiarity with the sounds, smells, and sensations — so that when more involved care is eventually needed, it feels routine rather than unfamiliar.
+            </p>
+          </div>
+        </div>
+
+        <!-- What's included -->
+        <div>
+          <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+            What's included in a children's dental exam?
+          </h2>
+          <p class="mt-4 text-[var(--color-text)] leading-relaxed">
+            Children's dental appointments are tailored to the child's age and cooperation level. A typical visit may include:
+          </p>
+          <ul class="mt-5 space-y-3">
+            {[
+              ["Examination of teeth, gums, and jaw development", "We check that primary teeth are erupting in the expected sequence and that the gums and jaw are developing normally."],
+              ["X-rays when appropriate", "Dental x-rays for children are taken based on age, risk level, and what can be seen clinically — not on a fixed schedule. When indicated, they help us detect decay between teeth that is not visible otherwise."],
+              ["Cleaning and polish", "Removing plaque and tartar accumulation and polishing teeth to leave them clean."],
+              ["Fluoride application if indicated", "A fluoride treatment to help strengthen developing enamel, if appropriate for the child's age and risk level."],
+              ["Home-care guidance for parents", "Practical guidance on brushing technique, diet, and habits — tailored to the child's age."],
+            ].map(([title, text]) => (
+              <li class="flex items-start gap-3">
+                <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                <div>
+                  <p class="font-semibold text-[var(--color-text)]">{title}</p>
+                  <p class="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">{text}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Preventive focus -->
+        <div class="bg-[var(--color-surface-cool)] rounded-2xl p-7 border border-[var(--color-border-soft)]">
+          <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] leading-tight">
+            Preventive care for developing teeth
+          </h2>
+          <div class="mt-4 space-y-3 text-[var(--color-text)] leading-relaxed">
+            <p>
+              Two preventive treatments are particularly valuable for children: sealants and fluoride applications.
+            </p>
+            <p>
+              <strong class="text-[var(--color-brand-primary)]">Dental sealants</strong> are thin protective coatings applied to the chewing surfaces of back teeth, where the grooves and pits can trap food and are difficult to clean. They are typically applied to permanent molars shortly after they erupt — usually between ages 6 and 12.
+            </p>
+            <p>
+              <strong class="text-[var(--color-brand-primary)]">Fluoride treatments</strong>, applied at the dental office, deliver a higher concentration of fluoride than toothpaste alone and can help strengthen enamel and reduce cavity risk in children who may benefit. Whether a fluoride treatment is appropriate will be discussed at each visit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Making visits comfortable -->
+        <div>
+          <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+            Making dental visits comfortable for children
+          </h2>
+          <div class="mt-4 space-y-4 text-[var(--color-text)] leading-relaxed">
+            <p>
+              Our team takes an unhurried approach with younger patients. Rushing a child through a dental visit rarely ends well — for the child or for the quality of care. We pace each appointment to the child's comfort level.
+            </p>
+            <p>
+              The <strong class="text-[var(--color-brand-primary)]">tell-show-do technique</strong> is a mainstay of paediatric dental care: we explain what we are about to do in simple terms, show the child the instrument or process, and then gently proceed. This reduces the element of surprise and helps children feel involved rather than passive.
+            </p>
+            <p>
+              For children who experience anxiety or have difficulty with dental procedures, <strong class="text-[var(--color-brand-primary)]">nitrous oxide</strong> (laughing gas) is available. It takes effect quickly, produces a relaxed and calm feeling, and wears off rapidly after the mask is removed — so children are fully alert before leaving the office.
+            </p>
+          </div>
+        </div>
+
+        <!-- Common children's dental issues -->
+        <div>
+          <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+            Common dental issues in children
+          </h2>
+          <div class="mt-5 space-y-5">
+            {[
+              {
+                title: "Early childhood caries (baby bottle tooth decay)",
+                body: "Cavities in primary teeth are not simply a cosmetic concern — untreated decay in baby teeth can cause pain, affect eating and speech development, and impact the spacing of permanent teeth. Primary teeth hold space for the adult teeth coming in behind them.",
+              },
+              {
+                title: "Thumb-sucking and pacifier habits",
+                body: "Prolonged thumb-sucking or pacifier use beyond age 3–4 can affect the development of the bite and the position of front teeth. Most children naturally stop on their own; if the habit continues, we can discuss whether any monitoring or intervention is appropriate.",
+              },
+              {
+                title: "Early tooth loss and space maintenance",
+                body: "If a primary tooth is lost prematurely — due to decay or injury — the surrounding teeth can drift into the empty space, reducing room for the permanent tooth. A space maintainer is a simple appliance that can hold the space open until the adult tooth is ready to erupt.",
+              },
+            ].map(item => (
+              <div class="border-l-4 border-[var(--color-brand-accent)] pl-5">
+                <h3 class="font-semibold text-[var(--color-brand-primary)]">{item.title}</h3>
+                <p class="mt-2 text-[var(--color-text-muted)] text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- How often -->
+        <div>
+          <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+            How often should children visit the dentist?
+          </h2>
+          <div class="mt-4 space-y-4 text-[var(--color-text)] leading-relaxed">
+            <p>
+              For most children, a check-up and cleaning every six months is a good starting point. However, some children — particularly those with a higher cavity risk or a history of dental issues — may benefit from more frequent visits.
+            </p>
+            <p>
+              Our team will recommend a recall interval that fits your child's individual needs, and that recommendation may change as their oral health and risk factors evolve over time.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white">Have questions about your treatment?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book an appointment.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/patients/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

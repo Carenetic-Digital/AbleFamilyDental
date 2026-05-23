@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "Emergency Dental Care", href: "/services/emergency" },
+  { name: "Toothache & Dental Pain", href: "/services/emergency/toothache" },
+  { name: "Broken or Chipped Tooth", href: "/services/emergency/broken-tooth", current: true },
+  { name: "Knocked-Out Tooth", href: "/services/emergency/knocked-out-tooth" },
+  { name: "Urgent Appointments", href: "/services/emergency/appointments" },
+];
+---
+
+<BaseLayout
+  title="Broken or Chipped Tooth | Emergency Dental Care | Wildwood Dental Clinic"
+  description="Broken or chipped tooth in Saskatoon? Call Wildwood Dental Clinic at 306.374.7272. We'll assess the damage and discuss repair options."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/emergency" class="hover:text-white transition-colors">Emergency</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Broken Tooth</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Emergency Dental Care</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Broken or Chipped Tooth
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        A broken or chipped tooth can range from a minor cosmetic issue to a situation requiring prompt care. Call us at <a href="tel:+13063747272" class="text-white font-semibold">306.374.7272</a> and we'll help you determine next steps.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- Types of fractures -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Types of tooth fractures
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Not all broken teeth are the same. The extent of the fracture and which structures are involved will influence what treatment, if any, is needed.
+              </p>
+              <div class="mt-5 space-y-5">
+                {[
+                  {
+                    type: "Minor chip",
+                    description: "A small piece of enamel breaks off, often with no pain. The tooth may have a rough edge but the inner structure is unaffected. This may not require urgent care, but it is worth having assessed to smooth the edge and prevent further damage."
+                  },
+                  {
+                    type: "Cracked tooth",
+                    description: "A crack runs through the enamel and into the tooth, which may or may not extend toward the root. Cracked teeth can cause pain when biting or sensitivity to temperature. The crack may not be visible on an x-ray, making diagnosis more involved."
+                  },
+                  {
+                    type: "Larger break",
+                    description: "A significant portion of the tooth breaks away. This may expose the inner dentin layer or even the tooth's nerve (pulp), causing sensitivity or pain. Prompt assessment is important to prevent infection and preserve as much of the tooth as possible."
+                  },
+                  {
+                    type: "Split tooth",
+                    description: "A tooth that has split — often the result of an untreated crack — may not be salvageable as a whole unit. Treatment depends on how far the split extends and whether the root is involved."
+                  },
+                ].map(item => (
+                  <div class="rounded-2xl border border-[var(--color-border-soft)] overflow-hidden">
+                    <div class="bg-[var(--color-brand-primary)] px-6 py-3">
+                      <h3 class="font-display font-semibold text-white">{item.type}</h3>
+                    </div>
+                    <p class="px-6 py-4 text-sm text-[var(--color-text)] leading-relaxed">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Immediate steps -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Immediate steps after breaking a tooth
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                While you arrange to come in, the following steps can help manage the situation:
+              </p>
+              <ol class="space-y-4 mt-2">
+                {[
+                  { step: "Rinse with warm water", detail: "Gently rinse your mouth with warm water to clean the area and remove any debris." },
+                  { step: "Apply gauze if bleeding", detail: "If there is any bleeding from the gum or soft tissue around the tooth, apply gentle pressure with a clean piece of gauze or cloth until it stops." },
+                  { step: "Cover any sharp edge", detail: "If the broken tooth has a sharp edge that is irritating your tongue or cheek, dental wax (available at most pharmacies) or a small piece of sugarless gum can be used to cover it temporarily." },
+                  { step: "Take over-the-counter pain relief if needed", detail: "Ibuprofen or acetaminophen, taken as directed, can help manage any discomfort while you wait for your appointment." },
+                  { step: "Save any fragments", detail: "If a piece of the tooth broke off, save it and bring it with you. In some cases, fragments can be used in the repair." },
+                  { step: "Call us", detail: "Contact us to describe what happened and arrange an assessment. We'll advise on urgency based on your symptoms." },
+                ].map((item, i) => (
+                  <li class="flex gap-4">
+                    <div class="w-8 h-8 rounded-full bg-[var(--color-brand-primary)] text-white flex items-center justify-center font-semibold text-sm shrink-0 mt-0.5">{i + 1}</div>
+                    <div>
+                      <p class="font-semibold text-[var(--color-brand-primary)]">{item.step}</p>
+                      <p class="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">{item.detail}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+
+          <!-- Treatment options -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Treatment options
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                The appropriate treatment depends on how much of the tooth is affected and whether the nerve has been involved. Your dentist will examine the tooth, take x-rays as needed, and explain your options.
+              </p>
+              <ul class="space-y-4 mt-2">
+                {[
+                  { label: "Dental bonding", detail: "For small chips or minor breaks, tooth-coloured composite resin can be applied and shaped to restore the tooth's appearance and smooth any rough edges. This is a relatively quick procedure done in a single visit." },
+                  { label: "Dental crown", detail: "A larger break may weaken the tooth to the point where a crown (a cap that covers the entire tooth) is the most appropriate way to protect and restore it. This typically involves two appointments." },
+                  { label: "Root canal treatment", detail: "If the fracture has exposed or affected the nerve of the tooth, root canal treatment may be recommended before placing a crown. This removes the affected tissue inside the tooth and allows the tooth to be retained." },
+                  { label: "Extraction", detail: "In cases where the fracture is severe — particularly if it extends below the gum line or into the root — the tooth may not be salvageable. If extraction is necessary, the dentist will discuss replacement options with you at the same appointment." },
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span><strong class="text-[var(--color-brand-primary)]">{item.label}:</strong> {item.detail}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="mt-4">
+                All options will be explained to you at your appointment, along with what each involves and what may happen if you choose to wait. There is no pressure — our role is to give you the information you need to make a decision that is right for you.
+              </p>
+            </div>
+          </div>
+
+          <!-- What to tell us -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)]">What to tell us when you call</h3>
+                <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  When you contact us, it helps to share: how the tooth was broken (accident, biting something hard, etc.), approximately when it happened, whether you are experiencing any pain or sensitivity, and whether there is visible bleeding or swelling. This information helps us understand the urgency and prepare for your appointment.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Need to Be Seen?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us to discuss your situation. We'll advise on next steps.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sibling services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Emergency Services</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Have a broken tooth? Let us help.</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online — we'll assess the damage and discuss your options.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

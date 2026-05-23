@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "Exams & Cleanings", href: "/services/childrens/exams-cleanings" },
+  { name: "Infant Oral Care", href: "/services/childrens/infant-oral-care" },
+  { name: "Fluoride", href: "/services/childrens/fluoride" },
+  { name: "Sealants", href: "/services/childrens/sealants" },
+  { name: "X-Rays", href: "/services/childrens/x-rays" },
+  { name: "Frenectomies", href: "/services/childrens/frenectomies" },
+  { name: "Space Maintainers", href: "/services/childrens/space-maintainers", current: true },
+  { name: "Comfort & Anxiety", href: "/services/childrens/comfort" },
+];
+---
+
+<BaseLayout
+  title="Space Maintainers | Wildwood Dental Clinic Saskatoon"
+  description="Space maintainers for children at Wildwood Dental Clinic in Saskatoon — when baby teeth are lost early, these devices hold space for permanent teeth."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/childrens" class="hover:text-white transition-colors">Children's Dentistry</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Space Maintainers</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Children's Dentistry</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Space Maintainers
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        When a primary tooth is lost earlier than expected, a space maintainer can hold the gap open so the permanent tooth has room to erupt in the correct position.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- Specialty disclaimer -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                Dental services for children at Wildwood Dental Clinic are provided by our general dentist team. Our dentists are not licensed specialists in pediatric dentistry.
+              </p>
+            </div>
+          </div>
+
+          <!-- Why space matters -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Why space matters when a primary tooth is lost early
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Primary (baby) teeth do more than allow children to chew — they act as placeholders that guide the developing permanent teeth into the correct position as they erupt. When a primary tooth is lost before its time, whether due to decay, injury, or extraction, the teeth on either side may gradually drift into the empty space.
+              </p>
+              <p>
+                If this happens, the permanent tooth that was meant to occupy that position may not have enough room to erupt normally. The result can be crowding, misalignment, or impaction of the incoming permanent tooth — issues that may require more involved treatment later.
+              </p>
+            </div>
+          </div>
+
+          <!-- What a space maintainer does -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What a space maintainer does
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                A space maintainer is a passive appliance — it does not move teeth, but simply holds the gap open so that adjacent teeth cannot drift. It is custom-made to fit the child's mouth and is removed once the permanent tooth is ready to erupt into that space.
+              </p>
+            </div>
+          </div>
+
+          <!-- Types -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Types of space maintainers
+            </h2>
+            <div class="space-y-4">
+              {[
+                {
+                  name: "Band and loop (fixed)",
+                  desc: "The most common type for children. A metal band is cemented around an adjacent tooth, and a wire loop holds the space open. Fixed maintainers stay in place without the child needing to manage them.",
+                },
+                {
+                  name: "Removable",
+                  desc: "Some older children may be candidates for a removable appliance, similar in concept to a retainer. These require the child to be cooperative about wearing and caring for it consistently.",
+                },
+              ].map(item => (
+                <div class="bg-[var(--color-surface-cool)] rounded-xl p-5 border border-[var(--color-border-soft)]">
+                  <p class="font-semibold text-[var(--color-brand-primary)]">{item.name}</p>
+                  <p class="mt-1.5 text-[var(--color-text-muted)] leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Who needs one -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Does every early tooth loss require a space maintainer?
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                No. Whether a space maintainer is needed depends on several factors: which tooth was lost, the child's age, how much of the jaw has already developed, and how close the permanent tooth is to erupting. We assess each situation with x-rays to see where the permanent tooth is and make a recommendation based on what we find.
+              </p>
+              <p>
+                For example, if a primary tooth is lost close to the natural time when it would have fallen out on its own, and the permanent tooth is close to the surface, a maintainer may not be necessary.
+              </p>
+            </div>
+          </div>
+
+          <!-- What to expect and care -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] mb-4">
+              What to expect and how to care for it
+            </h2>
+            <div class="space-y-3 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Space maintainers are checked at each regular dental appointment to confirm they remain properly positioned. They are removed once the permanent tooth begins to erupt into the space.
+              </p>
+              <p>
+                Care at home involves regular brushing around the appliance and avoiding sticky or chewy foods — caramel, gummy candies, and similar items can dislodge or distort the appliance. If the maintainer feels loose or uncomfortable, contact us promptly so we can assess it.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or book online — new patients welcome.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sibling services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Children's Dentistry</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Questions about your child's dental care?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

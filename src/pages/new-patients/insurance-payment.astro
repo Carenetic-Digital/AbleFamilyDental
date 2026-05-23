@@ -1,0 +1,249 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const newPatientsNav = [
+  { name: "New Patients Overview", href: "/new-patients" },
+  { name: "What to Expect", href: "/new-patients/what-to-expect" },
+  { name: "Patient Forms", href: "/new-patients/forms" },
+  { name: "Insurance & Payment", href: "/new-patients/insurance-payment", current: true },
+];
+
+const paymentMethods = [
+  "Credit card (Visa, Mastercard, American Express)",
+  "Debit (Interac)",
+  "Cash",
+];
+---
+
+<BaseLayout
+  title="Insurance & Payment | New Patients | Wildwood Dental Clinic Saskatoon"
+  description="Dental insurance and payment information at Wildwood Dental Clinic in Saskatoon. We direct bill most major insurance plans."
+>
+
+  <!-- ============================================================
+       HERO BANNER
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/new-patients" class="hover:text-white transition-colors">New Patients</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Insurance &amp; Payment</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">New Patients</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Insurance &amp; Payment Options
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        We work with most major Canadian dental insurance plans and aim to make the billing process as straightforward as possible for our patients.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- Direct billing -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Direct insurance billing
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                We direct bill most major Canadian dental insurance carriers. This means we submit your claim to your insurance company on your behalf, and you pay only any remaining balance at the time of your visit — rather than paying the full amount upfront and waiting for reimbursement.
+              </p>
+              <p>
+                Please bring your insurance card to every appointment. We'll need your plan number, member ID, and carrier information to process your claim.
+              </p>
+              <p>
+                Coverage varies widely by plan. If you're unsure whether your plan is accepted at Wildwood Dental Clinic, please call us before your appointment and we can confirm.
+              </p>
+            </div>
+          </div>
+
+          <!-- Treatment estimates -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Treatment estimates
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                For non-emergency treatment, we can provide a pre-treatment estimate to your insurance company upon request. This can give you a clearer picture of what your plan will cover before treatment is carried out, so there are no surprises.
+              </p>
+              <p>
+                If you'd like a pre-authorization estimate before proceeding with a recommended treatment, let us know and we'll arrange it. Keep in mind that insurance estimates are not guarantees of coverage — final benefit amounts are determined by your insurer based on your current plan details.
+              </p>
+            </div>
+          </div>
+
+          <!-- CDCP -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-8 text-white">
+            <div class="flex items-center gap-3 mb-5">
+              <svg class="shrink-0" width="36" height="36" viewBox="0 0 56 56" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M28 6 L10 13 L10 27 C10 38 18 47 28 50 C38 47 46 38 46 27 L46 13 Z" stroke-width="2.5" fill="none"/>
+                <polyline points="20,28 25,33 36,22" stroke-width="3"/>
+              </svg>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-accent-soft)]">Government Program</p>
+                <h3 class="font-display font-semibold text-xl text-white leading-snug">Canadian Dental Care Plan (CDCP)</h3>
+              </div>
+            </div>
+            <div class="space-y-4 text-[var(--color-text-on-dark-muted)] text-sm leading-relaxed">
+              <p>
+                The Canadian Dental Care Plan (CDCP) is a federally funded program providing dental coverage for eligible Canadians who do not have access to private dental insurance. We accept the CDCP at Wildwood Dental Clinic.
+              </p>
+              <div>
+                <p class="font-semibold text-white mb-2">Who may qualify:</p>
+                <ul class="space-y-1.5">
+                  {[
+                    "Canadian residents without private dental insurance coverage",
+                    "Individuals and families who meet the income thresholds set by the federal government",
+                    "Applicants who have applied and been approved through the Government of Canada",
+                  ].map(item => (
+                    <li class="flex items-start gap-2.5">
+                      <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent-soft)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p>
+                Eligibility for the CDCP is determined by the federal government. For information on how to apply and check your eligibility, visit <strong class="text-white">canada.ca</strong>.
+              </p>
+              <p class="text-[var(--color-text-on-dark-muted)]">
+                Our team can answer questions about how to use your CDCP benefit for treatment at our clinic. Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or ask at your next visit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Provincial programs -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Provincial programs
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Provincial dental coverage programs may also apply in some circumstances. If you believe you may qualify for provincial dental assistance, we recommend contacting the Government of Saskatchewan directly for current program details, eligibility criteria, and how to apply. Our team is happy to work with any applicable coverage once you have confirmed your eligibility with the province.
+              </p>
+            </div>
+          </div>
+
+          <!-- Payment methods -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Payment at the clinic
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                For any balance remaining after insurance, or for patients without coverage, we accept the following forms of payment:
+              </p>
+              <ul class="space-y-2 mt-2">
+                {paymentMethods.map(method => (
+                  <li class="flex items-center gap-2.5 text-sm text-[var(--color-text-muted)]">
+                    <svg class="shrink-0 text-[var(--color-brand-accent)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    {method}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Financial concerns -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)]">If cost is a concern</h3>
+                <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  If the cost of recommended treatment is a concern, please talk to us. We can provide information about treatment phasing — prioritizing the most time-sensitive care first and scheduling other work in stages — so that dental care fits within a manageable timeframe. We want to help you make informed decisions, not feel pressured into anything.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">New patients are welcome — call or book online.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- New Patients nav -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">New Patients</h3>
+            <ul class="space-y-2">
+              {newPatientsNav.map(item => (
+                <li>
+                  {item.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {item.name}
+                    </span>
+                  ) : (
+                    <a href={item.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {item.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Insurance quick tip -->
+          <div class="bg-[var(--color-surface-alt)] rounded-2xl p-5 border border-[var(--color-border-soft)]">
+            <h3 class="font-display font-semibold text-sm text-[var(--color-brand-primary)] mb-2">Tip</h3>
+            <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">
+              Bring your insurance card to every appointment — not just the first visit. We need your current plan information to submit claims accurately.
+            </p>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">
+        Questions about your coverage?
+      </h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto leading-relaxed">
+        Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> — our team is happy to help.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const subServices = [
+  { name: "Scaling & Root Planing", href: "/services/periodontal/scaling-root-planing" },
+  { name: "Gum Disease Treatment", href: "/services/periodontal/gum-disease" },
+  { name: "Gum Contouring", href: "/services/periodontal/gum-contouring" },
+];
+---
+
+<BaseLayout
+  title="Periodontal Care | Gum Health | Wildwood Dental Clinic Saskatoon"
+  description="Periodontal care for gum health at Wildwood Dental Clinic in Saskatoon — scaling and root planing, gum disease treatment, and gum contouring."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Periodontal Care</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Wildwood Dental Clinic</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Periodontal Care
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        Healthy gums are the foundation of a healthy mouth. Our team provides assessment and care for gum conditions at every stage — from early inflammation to more involved periodontal disease.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- Why gum health matters -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Why gum health matters
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                The gums, bone, and ligaments that surround and support your teeth are just as important as the teeth themselves. When these tissues are not healthy, the stability of the entire dentition can be affected over time.
+              </p>
+              <p>
+                Gum disease is one of the most common dental conditions affecting adults. In many cases, it progresses without significant pain, which means it can go unnoticed until it has reached a more advanced stage. Regular dental examinations allow us to identify early signs and address them before they become more complex.
+              </p>
+              <p>
+                Research has also documented links between periodontal health and systemic conditions including cardiovascular disease, diabetes, and respiratory health. While a causal relationship is still being studied, the connection is well established enough that we consider gum assessment an integral part of every comprehensive dental visit.
+              </p>
+            </div>
+          </div>
+
+          <!-- What triggers gum disease -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What contributes to gum disease?
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Gum disease begins with bacterial plaque — the soft film that forms continuously on teeth and along the gumline. When plaque is not adequately removed through brushing and flossing, it can harden into tartar and accumulate below the gumline, triggering an inflammatory response in the gum tissue.
+              </p>
+              <p>
+                Several factors can increase a person's susceptibility to gum disease or affect how quickly it progresses:
+              </p>
+              <ul class="mt-2 space-y-3">
+                {[
+                  ["Plaque buildup", "Inadequate or inconsistent oral hygiene allows bacteria to accumulate at and below the gumline."],
+                  ["Smoking and tobacco use", "Tobacco use is one of the most significant risk factors for periodontal disease and can also mask early symptoms such as gum bleeding."],
+                  ["Certain medications", "Some medications — including those for blood pressure, seizures, and depression — can affect gum tissue, causing overgrowth or dryness that changes the oral environment."],
+                  ["Genetics", "Some individuals are genetically predisposed to periodontal disease and may develop it despite good oral hygiene habits."],
+                  ["Systemic conditions", "Conditions such as diabetes can affect the body's ability to manage infection and inflammation, including in the gums. Hormonal changes during pregnancy can also temporarily affect gum sensitivity and response."],
+                ].map(([title, body]) => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <div>
+                      <span class="font-semibold text-[var(--color-text)]">{title}</span>
+                      <span class="text-[var(--color-text-muted)]"> — {body}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Periodontal services we offer -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Periodontal services at Wildwood
+            </h2>
+            <div class="space-y-5">
+              {[
+                {
+                  title: "Scaling & Root Planing",
+                  href: "/services/periodontal/scaling-root-planing",
+                  body: "A thorough cleaning of the root surfaces below the gumline, performed under local anesthetic. This is the standard non-surgical treatment for more advanced gum disease and is often done in sections over one or more appointments.",
+                },
+                {
+                  title: "Gum Disease Treatment",
+                  href: "/services/periodontal/gum-disease",
+                  body: "Gum disease treatment varies depending on the stage of disease — from improved home care and professional cleaning for early gingivitis, to more involved periodontal therapy and ongoing maintenance for more advanced conditions.",
+                },
+                {
+                  title: "Gum Contouring",
+                  href: "/services/periodontal/gum-contouring",
+                  body: "Reshaping or repositioning of gum tissue, which may be done for oral health reasons — such as when excess tissue affects cleaning — or to address gum line irregularities. We assess each case individually to determine whether contouring is appropriate.",
+                },
+              ].map(svc => (
+                <div class="rounded-2xl border border-[var(--color-border-soft)] p-6">
+                  <h3 class="font-display font-semibold text-[var(--color-brand-primary)]">
+                    <a href={svc.href} class="hover:text-[var(--color-brand-accent)] transition-colors">{svc.title}</a>
+                  </h3>
+                  <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">{svc.body}</p>
+                  <a href={svc.href} class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Specialty disclaimer -->
+          <div class="bg-[var(--color-surface-alt)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)]">About our periodontal services</h3>
+                <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  Periodontal services at Wildwood Dental Clinic are provided by our general dentist team. Our dentists are not licensed specialists in periodontics.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or book online — new patients welcome.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sub-services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Periodontal Services</h3>
+            <ul class="space-y-2">
+              {subServices.map(svc => (
+                <li>
+                  <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                    {svc.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Ready to get started?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

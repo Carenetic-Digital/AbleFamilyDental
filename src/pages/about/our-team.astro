@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const aboutNav = [
+  { name: "About Wildwood", href: "/about" },
+  { name: "Our Clinic", href: "/about/our-clinic" },
+  { name: "Our Team", href: "/about/our-team", current: true },
+  { name: "Careers", href: "/about/careers" },
+];
+
+const doctors = [
+  {
+    name: "Dr. Adam Koob",
+    credentials: "DMD",
+    education: "University of Saskatchewan, 2013",
+    bio: "Dr. Koob brings a patient-first approach to general and family dentistry, with a focus on preventive care and building long-term relationships with patients of all ages.",
+    photo: "/images/team/dr-adam-koob.jpg",
+    photoWebp: "/images/team/dr-adam-koob.webp",
+    initials: "AK",
+  },
+  {
+    name: "Dr. James Dessouki",
+    credentials: "DMD",
+    education: "University of Saskatchewan, 2004",
+    bio: "Dr. Dessouki holds a B.Sc with an Advanced Certificate in Anatomy and has completed continuing education in contemporary and esthetic dentistry at the University of Minnesota. He currently serves on the Board of Directors of the College of Dental Surgeons of Saskatchewan.",
+    photo: "/images/team/dr-james-dessouki.jpg",
+    photoWebp: "/images/team/dr-james-dessouki.webp",
+    initials: "JD",
+  },
+  {
+    name: "Dr. Jay Stevens",
+    credentials: "DMD",
+    education: "University of Saskatchewan, 2004",
+    bio: "Dr. Stevens brings over two decades of general dentistry experience to Wildwood Dental, with a commitment to comprehensive, comfortable care for patients and families across Saskatoon.",
+    photo: null,
+    photoWebp: null,
+    initials: "JS",
+  },
+  {
+    name: "Dr. Christy MacPherson",
+    credentials: "DMD",
+    education: "University of Saskatchewan, 2019",
+    bio: "Dr. MacPherson holds a B.Sc in Biology and a B.Ed from the University of Saskatchewan. She was a founding member of the DIRECT Dental student clinic and is passionate about patient education.",
+    photo: null,
+    photoWebp: null,
+    initials: "CM",
+  },
+  {
+    name: "Dr. Richard Kerby",
+    credentials: "DMD",
+    education: "University of Saskatchewan, 2021",
+    bio: "Dr. Kerby completed his B.Sc in Biochemistry with a medical specialization at UBC Okanagan before earning his DMD in Saskatoon. He brings a detail-oriented approach to restorative and preventive dentistry.",
+    photo: "/images/team/dr-richard-kerby.jpg",
+    photoWebp: "/images/team/dr-richard-kerby.webp",
+    initials: "RK",
+  },
+  {
+    name: "Dr. Madyson Burgess",
+    credentials: "DMD",
+    education: "University of Saskatchewan",
+    bio: "Dr. Burgess holds a B.Sc in Physiology and Pharmacology from the University of Saskatchewan. She is dedicated to delivering gentle, thorough dental care in a welcoming environment.",
+    photo: "/images/team/dr-madyson-burgess.jpg",
+    photoWebp: "/images/team/dr-madyson-burgess.webp",
+    initials: "MB",
+  },
+];
+---
+
+<BaseLayout
+  title="Meet Our Team | Wildwood Dental Clinic Saskatoon"
+  description="Meet the dental team at Wildwood Dental Clinic in Saskatoon — experienced dentists dedicated to comprehensive, patient-centred care."
+>
+
+  <!-- ============================================================
+       HERO BANNER
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/about" class="hover:text-white transition-colors">About</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Our Team</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Wildwood Dental Clinic</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Our Team
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        Each of our dentists trained right here in Saskatchewan and holds a Doctor of Dental Medicine (DMD) degree. They are licensed by the College of Dental Surgeons of Saskatchewan and committed to patient-centred care.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- Intro -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Our dentists
+            </h2>
+            <p class="text-[var(--color-text)] leading-relaxed">
+              Wildwood Dental Clinic is home to six general dentists, all trained at the University of Saskatchewan College of Dentistry. Together, they bring a broad range of experience and clinical interests across preventive, restorative, cosmetic, and family dentistry.
+            </p>
+          </div>
+
+          <!-- Doctor grid -->
+          <div class="grid sm:grid-cols-2 gap-8">
+            {doctors.map(doc => (
+              <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-[var(--color-border-soft)] flex flex-col">
+                {doc.photo ? (
+                  <picture>
+                    {doc.photoWebp && <source type="image/webp" srcset={doc.photoWebp} />}
+                    <img
+                      src={doc.photo}
+                      alt={doc.name}
+                      width="600"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                      class="w-full aspect-square object-cover object-top"
+                    />
+                  </picture>
+                ) : (
+                  <div class="w-full aspect-square bg-[var(--color-surface-cool)] flex items-center justify-center">
+                    <span class="font-display font-semibold text-[length:var(--text-4xl)] text-[var(--color-brand-primary)] opacity-30" aria-hidden="true">{doc.initials}</span>
+                  </div>
+                )}
+                <div class="p-6 flex flex-col flex-1">
+                  <div>
+                    <h3 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">{doc.name}</h3>
+                    <p class="text-sm font-medium text-[var(--color-brand-accent)]">{doc.credentials} &mdash; {doc.education}</p>
+                  </div>
+                  <div class="mt-3 h-px bg-[var(--color-border-soft)]"></div>
+                  <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">{doc.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Supporting staff note -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)]">Our full clinical team</h3>
+                <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  In addition to our dentists, Wildwood Dental Clinic is supported by a team of dental hygienists, dental assistants, and administrative staff who work together to ensure every visit runs smoothly. Our hygienists play a central role in preventive care, and our reception team is always happy to answer questions about appointments, insurance, and patient forms.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or book online — new patients welcome.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- About nav -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">About Wildwood</h3>
+            <ul class="space-y-2">
+              {aboutNav.map(item => (
+                <li>
+                  {item.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {item.name}
+                    </span>
+                  ) : (
+                    <a href={item.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {item.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Credentials -->
+          <div class="bg-white rounded-2xl p-6 shadow-xl border border-[var(--color-border-soft)]">
+            <h3 class="font-display font-semibold text-sm text-[var(--color-brand-primary)] mb-3">Professional Standards</h3>
+            <ul class="space-y-2 text-sm text-[var(--color-text-muted)]">
+              {[
+                "Licensed by the College of Dental Surgeons of Saskatchewan",
+                "Members of the Canadian Dental Association",
+                "Commitment to Clean designation",
+              ].map(item => (
+                <li class="flex items-start gap-2">
+                  <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">
+        Meet your dentist in person
+      </h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto leading-relaxed">
+        Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online — new patients are welcome.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

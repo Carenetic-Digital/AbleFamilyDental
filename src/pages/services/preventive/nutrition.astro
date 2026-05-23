@@ -1,0 +1,247 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "Cleanings & Exams", href: "/services/preventive/cleanings-exams" },
+  { name: "Fluoride Treatments", href: "/services/preventive/fluoride" },
+  { name: "Dental Sealants", href: "/services/preventive/sealants" },
+  { name: "Mouthguards & Sport Guards", href: "/services/preventive/guards" },
+  { name: "Diet & Oral Health", href: "/services/preventive/nutrition", current: true },
+  { name: "Patient Comfort Techniques", href: "/services/preventive/comfort" },
+];
+---
+
+<BaseLayout
+  title="Diet & Oral Health | Preventive Dentistry | Wildwood Dental Clinic"
+  description="How diet affects your oral health — information on sugar, acid, and nutrition from Wildwood Dental Clinic in Saskatoon."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/preventive" class="hover:text-white transition-colors">Preventive</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Diet &amp; Oral Health</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">Preventive Dentistry</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Diet &amp; Oral Health
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        What you eat and drink has a direct effect on the health of your teeth and gums. Understanding that relationship is one of the most practical tools for maintaining oral health between visits.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <!-- Sugar and decay -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              How sugar causes tooth decay
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Tooth decay begins with bacteria that naturally live in the mouth. When these bacteria come into contact with sugar — from food, drinks, or even natural sugars in fruit and starchy foods — they produce acid as a byproduct of fermentation. That acid then attacks the mineral structure of the tooth enamel, a process called demineralization.
+              </p>
+              <p>
+                Over time, repeated acid exposure wears away the enamel and allows decay to progress into the deeper layers of the tooth.
+              </p>
+              <p>
+                An important distinction: <strong class="text-[var(--color-brand-primary)]">it is not just the amount of sugar that matters, but how often you consume it.</strong> Each time you eat or drink something containing sugar, the bacteria in your mouth produce acid for approximately 20–30 minutes afterward. Someone who sips a sugary drink slowly over two hours is exposing their teeth to prolonged acid attack. Eating a similar amount of sugar in a single sitting and then rinsing with water is far less damaging to the enamel.
+              </p>
+            </div>
+          </div>
+
+          <!-- Acidic foods -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Acidic foods and enamel erosion
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Erosion and decay are related but distinct processes. Decay is caused by bacterial acid produced from sugar. Erosion is caused by direct acid from food and drink — such as citrus fruits, vinegar-based foods, carbonated beverages (including sparkling water), sports drinks, and wine — dissolving the enamel surface directly.
+              </p>
+              <p>
+                Erosion tends to affect the smooth surfaces of teeth, often creating a rounded, glassy appearance over time. It can also increase sensitivity as the enamel thins.
+              </p>
+              <p>
+                Frequent exposure to acidic drinks — especially when consumed slowly over long periods or first thing in the morning — can contribute to erosion over time. Rinsing with plain water after consuming acidic foods or drinks can help neutralize the oral environment.
+              </p>
+              <p>
+                One nuance worth knowing: <strong class="text-[var(--color-brand-primary)]">do not brush immediately after consuming acidic food or drink.</strong> The enamel is temporarily softened by acid and more vulnerable to abrasion in the minutes after exposure. Waiting 30–60 minutes before brushing, and rinsing with water in the meantime, is generally a better approach.
+              </p>
+            </div>
+          </div>
+
+          <!-- Foods that support oral health -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Foods that support oral health
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Just as some foods contribute to decay and erosion, others can support oral health:
+              </p>
+              <ul class="space-y-4 mt-2">
+                {[
+                  {
+                    label: "Calcium-rich foods",
+                    detail: "Dairy products, leafy greens, and fortified plant-based alternatives provide calcium, which is a key mineral in tooth structure. Adequate calcium intake supports the ongoing remineralization that helps repair early enamel damage."
+                  },
+                  {
+                    label: "Phosphorus",
+                    detail: "Found in meat, fish, eggs, and legumes, phosphorus works alongside calcium to support enamel remineralization. Most people who consume a varied diet get adequate phosphorus without supplementation."
+                  },
+                  {
+                    label: "Water",
+                    detail: "Plain water — particularly fluoridated water — is consistently one of the most beneficial things for oral health. It rinses away food particles and acids, supports saliva production, and when fluoridated, helps remineralize enamel."
+                  },
+                  {
+                    label: "Fibrous vegetables and fruits",
+                    detail: "Foods like celery, carrots, and apples require significant chewing, which stimulates saliva flow. Saliva plays a critical role in neutralizing acids, remineralizing enamel, and washing away food debris."
+                  },
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span><strong class="text-[var(--color-brand-primary)]">{item.label}:</strong> {item.detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timing and habits -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Timing and everyday habits
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Beyond what you eat, when and how you eat it matters:
+              </p>
+              <ul class="space-y-3 mt-2">
+                {[
+                  "Finish sugary or acidic foods at meals rather than as standalone snacks — the increased saliva produced during a meal helps buffer acids more effectively.",
+                  "Rinse with water after eating or drinking, particularly if brushing immediately is not practical.",
+                  "Avoid prolonged sipping of sugary or acidic drinks. A single glass consumed over 30 minutes is more damaging than the same drink consumed in five.",
+                  "Drink water between meals. This helps clear the mouth and supports saliva production.",
+                  "Choose water or plain milk over juice or soft drinks when possible, particularly for children.",
+                ].map(item => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Xylitol -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Xylitol
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Xylitol is a sugar alcohol used as a sweetener in some chewing gums, mints, and oral care products. The bacteria in the mouth that cause decay cannot ferment xylitol in the same way they ferment regular sugar, which means consuming xylitol does not produce the same acid response.
+              </p>
+              <p>
+                Some research suggests that regular xylitol use — particularly in gum form after meals — may reduce cavity-causing bacteria over time. It is not a substitute for brushing, flossing, or routine dental care, but it may be a useful addition for some patients. Your hygienist or dentist can advise whether it is a good fit for your situation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Systemic connection -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)]">Diet, oral health, and overall health</h3>
+                <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  The connection between oral health and general health is well-established in the research literature. Diets high in refined sugars and low in nutrients are associated with poorer oral health outcomes, and they are also linked to increased risk of a range of systemic conditions. Taking care of your diet for the sake of your teeth is rarely at odds with taking care of it for the rest of your body. If you have questions about how your diet may be affecting your oral health specifically, your hygienist is a good resource — they see the evidence in your mouth at every visit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or book online — new patients welcome.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+
+          <!-- Sibling services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Preventive Services</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Ready to get started?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

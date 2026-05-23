@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "TMJ Diagnosis", href: "/services/tmj/diagnosis" },
+  { name: "Night Guards", href: "/services/tmj/night-guards" },
+  { name: "Bite Correction", href: "/services/tmj/bite-correction" },
+  { name: "Snoring & Sleep Apnea", href: "/services/tmj/sleep-apnea", current: true },
+  { name: "Botox for TMJ", href: "/services/tmj/botox" },
+];
+---
+
+<BaseLayout
+  title="Snoring & Sleep Apnea Devices | Wildwood Dental Clinic Saskatoon"
+  description="Oral appliance therapy for snoring and diagnosed sleep apnea at Wildwood Dental Clinic in Saskatoon. Learn how mandibular advancement devices work and when they may be appropriate."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="container-wide relative py-16 lg:py-20">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/tmj" class="hover:text-white transition-colors">TMJ</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Snoring &amp; Sleep Apnea</span>
+      </nav>
+      <p class="eyebrow text-[var(--color-brand-accent-soft)]">TMJ &amp; Sleep Services</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Snoring &amp; Sleep Apnea Devices
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        For patients who have been diagnosed with mild to moderate obstructive sleep apnea or cannot tolerate CPAP therapy, a custom oral appliance may be an option worth discussing with your care team.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- Main content -->
+        <div class="space-y-10">
+
+          <!-- Important note: diagnosis first -->
+          <div class="bg-[var(--color-surface-alt)] rounded-2xl p-7 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">Start with your family doctor</h3>
+                <p class="mt-1.5 text-[var(--color-text-muted)] leading-relaxed">
+                  Sleep apnea is diagnosed by a physician or sleep specialist, typically through a sleep study — not by a dentist. If you suspect you may have sleep apnea, the first step is to speak with your family doctor, who can refer you for assessment. Once a diagnosis is in hand, we can discuss whether an oral appliance may be an appropriate option for your situation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What is sleep apnea -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              What is sleep apnea?
+            </h2>
+            <div class="mt-4 space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Sleep apnea is a condition in which breathing repeatedly stops and starts during sleep. There are different types, but obstructive sleep apnea (OSA) is the most common form. In OSA, the muscles at the back of the throat relax during sleep, causing the soft tissues to collapse and partially or fully block the airway. This interrupts breathing, often for seconds at a time, and typically causes the person to rouse briefly — sometimes without being aware of it.
+              </p>
+              <p>
+                These interruptions can occur many times per hour throughout the night, preventing restful sleep and placing ongoing strain on the cardiovascular system.
+              </p>
+            </div>
+          </div>
+
+          <!-- Symptoms -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              Common signs and symptoms
+            </h2>
+            <p class="mt-4 text-[var(--color-text)] leading-relaxed">
+              Many people with sleep apnea are unaware they have it — the symptoms are often first noticed by a bed partner. Common signs include:
+            </p>
+            <ul class="mt-5 space-y-3">
+              {[
+                "Loud, persistent snoring",
+                "Gasping, choking, or pausing in breathing during sleep (observed by a partner)",
+                "Waking unrefreshed despite a full night of sleep",
+                "Excessive daytime sleepiness or difficulty staying awake",
+                "Morning headaches",
+                "Difficulty concentrating or memory problems",
+                "Frequent nighttime awakening or insomnia",
+                "Irritability or mood changes",
+              ].map(item => (
+                <li class="flex items-start gap-3">
+                  <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                  <span class="text-[var(--color-text)] leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+              Snoring alone does not confirm sleep apnea — many people snore without having OSA — but persistent loud snoring combined with daytime fatigue warrants a conversation with your doctor.
+            </p>
+          </div>
+
+          <!-- Dental role: oral appliances -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              The role of dentistry: oral appliance therapy
+            </h2>
+            <div class="mt-4 space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Dentists can fabricate oral appliances — sometimes called mandibular advancement devices (MADs) — for patients who have been diagnosed with sleep apnea. These are custom-fitted devices worn during sleep.
+              </p>
+              <p>
+                The appliance works by repositioning the lower jaw slightly forward, which in turn keeps the airway more open during sleep. This can reduce the frequency and severity of obstructive events and, in many cases, also reduce snoring.
+              </p>
+            </div>
+          </div>
+
+          <!-- Who is it for -->
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+              Who is an oral appliance appropriate for?
+            </h2>
+            <div class="mt-5 space-y-5">
+              {[
+                {
+                  title: "Mild to moderate OSA",
+                  body: "Oral appliances are most commonly used for patients with mild to moderate obstructive sleep apnea. They can be an effective alternative to CPAP in this group and are often preferred for their simplicity and portability.",
+                },
+                {
+                  title: "CPAP intolerance",
+                  body: "CPAP (continuous positive airway pressure) therapy remains the standard of care for moderate to severe OSA. However, some patients find it difficult to tolerate — due to the mask, the noise, or other factors. For those patients, and with their physician's involvement, an oral appliance may be considered as an alternative or adjunct therapy.",
+                },
+                {
+                  title: "Severe OSA",
+                  body: "For patients with severe sleep apnea, CPAP is the primary recommended treatment. An oral appliance may be discussed only in consultation with the treating physician if CPAP is genuinely not tolerated and all alternatives have been considered.",
+                },
+              ].map(item => (
+                <div class="rounded-2xl border border-[var(--color-border-soft)] p-6">
+                  <h3 class="font-display font-semibold text-[var(--color-brand-primary)]">{item.title}</h3>
+                  <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Referral and process -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-7 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] leading-tight">
+              The referral pathway
+            </h2>
+            <div class="mt-4 space-y-3 text-[var(--color-text)] leading-relaxed">
+              <p>
+                If you suspect you have sleep apnea, the appropriate first step is a conversation with your family doctor. They can refer you for a sleep study, which may be done at a sleep clinic or with a home testing device depending on your situation. A diagnosis — and the severity classification — guides the treatment options available to you.
+              </p>
+              <p>
+                Once you have a diagnosis, contact us to discuss whether oral appliance therapy may be suitable. We will take impressions and fabricate a custom-fitted device. Follow-up with your physician after starting the appliance is important to confirm it is having the intended effect.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)] leading-relaxed">Call us or book your appointment online.</p>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
+            <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
+          </div>
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">TMJ Services</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white">Have questions about your treatment?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book an appointment.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

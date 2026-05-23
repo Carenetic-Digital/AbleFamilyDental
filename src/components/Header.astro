@@ -1,13 +1,20 @@
 ---
+const aboutLinks = [
+  { label: "Our Clinic", href: "/about/our-clinic" },
+  { label: "Our Team", href: "/about/our-team" },
+  { label: "Careers", href: "/about/careers" },
+];
+
 const col1 = [
   {
     title: "Emergency Services",
     href: "/services/emergency",
     items: [
       { label: "Emergency Appointments", href: "/services/emergency/appointments" },
-      { label: "Same-Day Emergency Care", href: "/services/emergency/same-day" },
+      { label: "Same-Day Urgent Care", href: "/services/emergency/same-day" },
       { label: "Toothache Relief", href: "/services/emergency/toothache" },
       { label: "Broken or Chipped Tooth", href: "/services/emergency/broken-tooth" },
+      { label: "Knocked-Out Tooth", href: "/services/emergency/knocked-out-tooth" },
     ],
   },
   {
@@ -16,7 +23,9 @@ const col1 = [
     items: [
       { label: "Exams & Cleanings", href: "/services/childrens/exams-cleanings" },
       { label: "Infant Oral Care", href: "/services/childrens/infant-oral-care" },
-      { label: "Frenectomies — Tongue-Ties", href: "/services/childrens/frenectomies" },
+      { label: "Fluoride Treatments", href: "/services/childrens/fluoride" },
+      { label: "Dental Sealants", href: "/services/childrens/sealants" },
+      { label: "Frenectomies", href: "/services/childrens/frenectomies" },
       { label: "Space Maintainers", href: "/services/childrens/space-maintainers" },
     ],
   },
@@ -31,6 +40,8 @@ const col2 = [
       { label: "Fluoride Treatments", href: "/services/preventive/fluoride" },
       { label: "Dental Sealants", href: "/services/preventive/sealants" },
       { label: "Mouthguards & Sport Guards", href: "/services/preventive/guards" },
+      { label: "Diet & Oral Health", href: "/services/preventive/nutrition" },
+      { label: "Comfort Techniques", href: "/services/preventive/comfort" },
     ],
   },
   {
@@ -81,6 +92,7 @@ const col4 = [
       { label: "Teeth Whitening", href: "/services/cosmetic/whitening" },
       { label: "Porcelain Veneers", href: "/services/cosmetic/veneers" },
       { label: "Dental Bonding", href: "/services/cosmetic/bonding" },
+      { label: "Smile Makeovers", href: "/services/cosmetic/smile-makeovers" },
     ],
   },
   {
@@ -97,17 +109,20 @@ const col4 = [
     href: "/services/endodontics",
     items: [
       { label: "Root Canal Treatment", href: "/services/endodontics/root-canal" },
-      { label: "Cracked Tooth Treatment", href: "/services/endodontics/cracked-tooth" },
+      { label: "Cracked Tooth", href: "/services/endodontics/cracked-tooth" },
+      { label: "Traumatic Dental Injuries", href: "/services/endodontics/traumatic-injuries" },
+      { label: "Internal Bleaching", href: "/services/endodontics/internal-bleaching" },
     ],
   },
   {
-    title: "TMJ / TMD Therapy",
+    title: "TMJ & Jaw",
     href: "/services/tmj",
     items: [
       { label: "TMJ Diagnosis", href: "/services/tmj/diagnosis" },
-      { label: "Botox® for TMJ & Facial Pain", href: "/services/tmj/botox" },
-      { label: "Custom Night Guards", href: "/services/tmj/night-guards" },
+      { label: "Botox for Jaw Pain", href: "/services/tmj/botox" },
+      { label: "Night Guards", href: "/services/tmj/night-guards" },
       { label: "Bite Correction", href: "/services/tmj/bite-correction" },
+      { label: "Sleep Apnea Devices", href: "/services/tmj/sleep-apnea" },
     ],
   },
 ];
@@ -122,7 +137,7 @@ const allCols = [col1, col2, col3, col4];
       <span class="font-medium tracking-wide text-[var(--color-brand-primary)]">Now accepting new patients</span>
       <span aria-hidden="true" class="w-px h-3 bg-[var(--color-brand-primary)]/25 inline-block align-middle"></span>
       <a
-        href="/patients/book"
+        href="/book"
         class="inline-flex items-center gap-1 font-bold tracking-widest uppercase text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors"
       >
         BOOK NOW
@@ -165,7 +180,30 @@ const allCols = [col1, col2, col3, col4];
     </a>
 
     <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
-      <a href="/about" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">About Us</a>
+      <!-- About dropdown -->
+      <div class="relative" data-dropdown="about">
+        <button
+          type="button"
+          class="px-3 py-2 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]"
+          aria-expanded="false"
+          aria-controls="about-dropdown"
+          data-dropdown-trigger="about"
+        >
+          About Us
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div
+          id="about-dropdown"
+          class="absolute left-0 top-full mt-1 w-44 bg-white rounded-lg border border-[var(--color-border-soft)] shadow-lg py-1"
+          hidden
+          data-dropdown-panel="about"
+        >
+          <a href="/about" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">About Wildwood</a>
+          {aboutLinks.map(link => (
+            <a href={link.href} class="block px-4 py-2 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-brand-primary)]">{link.label}</a>
+          ))}
+        </div>
+      </div>
 
       <!-- Services mega-menu trigger -->
       <div class="relative" data-megamenu>
@@ -187,7 +225,7 @@ const allCols = [col1, col2, col3, col4];
     </nav>
 
     <div class="flex items-center gap-3">
-      <a href="/patients/book" class="hidden md:inline-flex btn btn-primary">
+      <a href="/book" class="hidden md:inline-flex btn btn-primary">
         Book Appointment
       </a>
       <button
@@ -241,7 +279,7 @@ const allCols = [col1, col2, col3, col4];
         </p>
         <div class="flex items-center gap-3">
           <a href="/services" class="text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">View all services →</a>
-          <a href="/patients/book" class="btn btn-primary">Book an appointment</a>
+          <a href="/book" class="btn btn-primary">Book an appointment</a>
         </div>
       </div>
     </div>
@@ -255,7 +293,18 @@ const allCols = [col1, col2, col3, col4];
         <span class="text-xs text-[var(--color-text-muted)] font-normal">Tap to call</span>
       </a>
       <nav class="py-2" aria-label="Mobile primary">
-        <a href="/about" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">About Us</a>
+        <details class="border-b border-[var(--color-border-soft)]">
+          <summary class="py-3 flex items-center justify-between cursor-pointer list-none text-[var(--color-brand-primary)] font-medium">
+            About Us
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="pl-3 pb-3 space-y-1">
+            <a href="/about" class="block py-1 text-sm text-[var(--color-text)]">About Wildwood</a>
+            {aboutLinks.map(link => (
+              <a href={link.href} class="block py-1 text-sm text-[var(--color-text)]">{link.label}</a>
+            ))}
+          </div>
+        </details>
         <details class="border-b border-[var(--color-border-soft)]">
           <summary class="py-3 flex items-center justify-between cursor-pointer list-none text-[var(--color-brand-primary)] font-medium">
             Services
@@ -278,7 +327,7 @@ const allCols = [col1, col2, col3, col4];
         <a href="/existing-patients" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Existing Patients</a>
         <a href="/contact" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact Us</a>
       </nav>
-      <a href="/patients/book" class="btn btn-primary w-full mt-3">Book Appointment</a>
+      <a href="/book" class="btn btn-primary w-full mt-3">Book Appointment</a>
     </div>
   </div>
 </header>
@@ -324,6 +373,28 @@ const allCols = [col1, col2, col3, col4];
       if (panel.hidden) return;
       if (!wrapper.contains(e.target as Node) && !panel.contains(e.target as Node)) close();
     });
+  }
+
+  // About dropdown
+  const aboutWrapper = document.querySelector<HTMLDivElement>('[data-dropdown="about"]');
+  const aboutTrigger = document.querySelector<HTMLButtonElement>('[data-dropdown-trigger="about"]');
+  const aboutPanel = document.querySelector<HTMLDivElement>('[data-dropdown-panel="about"]');
+  if (aboutWrapper && aboutTrigger && aboutPanel) {
+    let aboutTimer: number | undefined;
+    const openAbout = () => {
+      if (aboutTimer) { window.clearTimeout(aboutTimer); aboutTimer = undefined; }
+      aboutPanel.hidden = false;
+      aboutTrigger.setAttribute('aria-expanded', 'true');
+    };
+    const closeAbout = () => { aboutPanel.hidden = true; aboutTrigger.setAttribute('aria-expanded', 'false'); };
+    const scheduleCloseAbout = () => { aboutTimer = window.setTimeout(closeAbout, 180); };
+    aboutTrigger.addEventListener('click', () => { if (aboutPanel.hidden) openAbout(); else closeAbout(); });
+    aboutWrapper.addEventListener('mouseenter', openAbout);
+    aboutWrapper.addEventListener('mouseleave', scheduleCloseAbout);
+    aboutPanel.addEventListener('mouseenter', openAbout);
+    aboutPanel.addEventListener('mouseleave', scheduleCloseAbout);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !aboutPanel.hidden) { closeAbout(); aboutTrigger.focus(); } });
+    document.addEventListener('click', (e) => { if (aboutPanel.hidden) return; if (!aboutWrapper.contains(e.target as Node) && !aboutPanel.contains(e.target as Node)) closeAbout(); });
   }
 
   const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-toggle]');

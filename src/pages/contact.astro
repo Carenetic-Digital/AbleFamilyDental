@@ -295,6 +295,78 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ============================================================
+       VISIT INFORMATION
+       ============================================================ -->
+  <section class="section-y bg-[var(--color-surface-cool)]">
+    <div class="container-wide">
+      <div class="mb-8">
+        <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)]">Visit Information</h2>
+        <p class="mt-2 text-[var(--color-text-muted)]">Everything you need to know before your visit.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        {[
+          {
+            label: "Accepting New Patients",
+            note: "We welcome new patients and families.",
+            positive: true,
+            icon: `<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/>`,
+          },
+          {
+            label: "Direct Billing Available",
+            note: "We bill most major insurance carriers directly.",
+            positive: true,
+            icon: `<rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>`,
+          },
+          {
+            label: "Parking Available",
+            note: "On-site parking is available for patients.",
+            positive: true,
+            icon: `<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>`,
+          },
+          {
+            label: "Wheelchair-Accessible Entrance",
+            note: "Our entrance is fully accessible.",
+            positive: true,
+            icon: `<circle cx="12" cy="5" r="1"/><path d="M9 20l1-5h4l1 5"/><path d="M8 15l1-5h6l1 5"/><path d="M6 20a5 5 0 0 1 5-5"/>`,
+          },
+          {
+            label: "Wheelchair-Accessible Parking",
+            note: "Designated accessible parking spaces on site.",
+            positive: true,
+            icon: `<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="8" r="1"/><path d="M10 14l1-4h2l1 4"/><path d="M9 14h6"/>`,
+          },
+          {
+            label: "Accessible Washroom",
+            note: "Our washroom is wheelchair accessible.",
+            positive: true,
+            icon: `<path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/>`,
+          },
+          {
+            label: "No Same-Day Appointments",
+            note: "Please call ahead to schedule your visit.",
+            positive: false,
+            icon: `<circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/>`,
+          },
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-5 border border-[var(--color-border-soft)] flex items-start gap-4">
+            <div class={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${item.positive ? 'bg-[var(--color-brand-primary)]' : 'bg-[var(--color-surface-alt)]'}`}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={item.positive ? 'white' : 'var(--color-text-muted)'} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <Fragment set:html={item.icon} />
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold text-sm text-[var(--color-brand-primary)]">{item.label}</p>
+              <p class="mt-0.5 text-xs text-[var(--color-text-muted)] leading-relaxed">{item.note}</p>
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        EMERGENCY DENTAL NOTE
        ============================================================ -->
   <section class="section-y bg-[var(--color-surface-alt)]">

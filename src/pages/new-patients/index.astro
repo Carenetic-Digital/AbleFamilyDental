@@ -134,216 +134,77 @@ const steps = [
       <div class="grid lg:grid-cols-2 gap-8">
 
         <!-- New Patient Registration -->
-        <div class="bg-white rounded-2xl shadow-xl border border-[var(--color-border-soft)] p-8">
+        <div class="bg-white rounded-2xl shadow-xl border border-[var(--color-border-soft)] p-8 flex flex-col">
           <div class="flex items-center gap-3 mb-6">
             <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
             </div>
             <div>
-              <h3 class="font-display font-semibold text-xl text-[var(--color-brand-primary)]">New Patient Registration</h3>
+              <h3 class="font-display font-semibold text-xl text-[var(--color-brand-primary)]">New Patient Intake Form</h3>
               <p class="text-sm text-[var(--color-text-muted)]">First time visiting? Start here.</p>
             </div>
           </div>
-
-          <form method="post" action="#" class="space-y-4" novalidate>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="np-name" class="block text-sm font-medium text-[var(--color-text)] mb-1">Full Name <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="text"
-                  id="np-name"
-                  name="full_name"
-                  autocomplete="name"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                  placeholder="Your full name"
-                />
-              </div>
-              <div>
-                <label for="np-dob" class="block text-sm font-medium text-[var(--color-text)] mb-1">Date of Birth <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="date"
-                  id="np-dob"
-                  name="date_of_birth"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                />
-              </div>
+          <div class="space-y-4 text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">
+            <p>
+              Complete your new patient intake form online before your first visit to save time at the clinic. The form collects your health history, current medications, known allergies, and reason for your visit.
+            </p>
+            <p>
+              You can also complete the form at the clinic — we recommend arriving 10 minutes early on your first visit to allow time for this.
+            </p>
+            <div class="bg-[var(--color-surface-cool)] rounded-xl p-4 border border-[var(--color-border-soft)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-primary)] mb-1">Secure &amp; HIPAA-compliant</p>
+              <p class="text-xs text-[var(--color-text-muted)]">This form is hosted by JotForm and transmitted securely. Your health information is handled in accordance with applicable privacy legislation.</p>
             </div>
-
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="np-phone" class="block text-sm font-medium text-[var(--color-text)] mb-1">Phone <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="tel"
-                  id="np-phone"
-                  name="phone"
-                  autocomplete="tel"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                  placeholder="306-000-0000"
-                />
-              </div>
-              <div>
-                <label for="np-email" class="block text-sm font-medium text-[var(--color-text)] mb-1">Email <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="email"
-                  id="np-email"
-                  name="email"
-                  autocomplete="email"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                  placeholder="your@email.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label for="np-health-card" class="block text-sm font-medium text-[var(--color-text)] mb-1">
-                Health Card Number <span class="text-[var(--color-text-muted)] font-normal">(optional)</span>
-              </label>
-              <input
-                type="text"
-                id="np-health-card"
-                name="health_card_number"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                placeholder="Saskatchewan Health Card #"
-              />
-            </div>
-
-            <div>
-              <label for="np-medications" class="block text-sm font-medium text-[var(--color-text)] mb-1">Current Medications</label>
-              <textarea
-                id="np-medications"
-                name="current_medications"
-                rows="3"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="List any medications you are currently taking, or write 'none'"
-              ></textarea>
-            </div>
-
-            <div>
-              <label for="np-allergies" class="block text-sm font-medium text-[var(--color-text)] mb-1">Allergies</label>
-              <textarea
-                id="np-allergies"
-                name="allergies"
-                rows="2"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="Known allergies (medications, latex, etc.) or write 'none'"
-              ></textarea>
-            </div>
-
-            <div>
-              <label for="np-reason" class="block text-sm font-medium text-[var(--color-text)] mb-1">Reason for Visit</label>
-              <textarea
-                id="np-reason"
-                name="reason_for_visit"
-                rows="3"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="Describe what brings you in — routine checkup, specific concern, etc."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-full">
-              Submit Registration
-            </button>
-          </form>
+          </div>
+          <a
+            href="https://hipaa.jotform.com/202455192978263"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 btn btn-primary w-full text-center flex items-center justify-center gap-2"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+            Complete New Patient Form
+          </a>
         </div>
 
         <!-- Health History Update -->
-        <div class="bg-white rounded-2xl shadow-xl border border-[var(--color-border-soft)] p-8">
+        <div class="bg-white rounded-2xl shadow-xl border border-[var(--color-border-soft)] p-8 flex flex-col">
           <div class="flex items-center gap-3 mb-6">
             <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
             <div>
-              <h3 class="font-display font-semibold text-xl text-[var(--color-brand-primary)]">Health History Update</h3>
+              <h3 class="font-display font-semibold text-xl text-[var(--color-brand-primary)]">Dental Medical History Update</h3>
               <p class="text-sm text-[var(--color-text-muted)]">Existing patients — update your records.</p>
             </div>
           </div>
-
-          <form method="post" action="#" class="space-y-4" novalidate>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="hh-name" class="block text-sm font-medium text-[var(--color-text)] mb-1">Full Name <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="text"
-                  id="hh-name"
-                  name="full_name"
-                  autocomplete="name"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                  placeholder="Your full name"
-                />
-              </div>
-              <div>
-                <label for="hh-dob" class="block text-sm font-medium text-[var(--color-text)] mb-1">Date of Birth <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="date"
-                  id="hh-dob"
-                  name="date_of_birth"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                />
-              </div>
+          <div class="space-y-4 text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">
+            <p>
+              If you're an existing patient, use this form to update your dental and medical history before your next visit — particularly if your medications, health conditions, or allergies have changed since your last appointment.
+            </p>
+            <p>
+              Keeping your health information current helps our team provide safe, informed care tailored to your current health status.
+            </p>
+            <div class="bg-[var(--color-surface-cool)] rounded-xl p-4 border border-[var(--color-border-soft)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-primary)] mb-1">Secure &amp; HIPAA-compliant</p>
+              <p class="text-xs text-[var(--color-text-muted)]">This form is hosted by JotForm and transmitted securely. Your health information is handled in accordance with applicable privacy legislation.</p>
             </div>
-
-            <div>
-              <label for="hh-phone" class="block text-sm font-medium text-[var(--color-text)] mb-1">Phone <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-              <input
-                type="tel"
-                id="hh-phone"
-                name="phone"
-                autocomplete="tel"
-                required
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                placeholder="306-000-0000"
-              />
-            </div>
-
-            <div>
-              <label for="hh-medications" class="block text-sm font-medium text-[var(--color-text)] mb-1">Changes to Medications</label>
-              <textarea
-                id="hh-medications"
-                name="medication_changes"
-                rows="3"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="Note any medications added, changed, or stopped since your last visit"
-              ></textarea>
-            </div>
-
-            <div>
-              <label for="hh-conditions" class="block text-sm font-medium text-[var(--color-text)] mb-1">New Health Conditions</label>
-              <textarea
-                id="hh-conditions"
-                name="new_health_conditions"
-                rows="3"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="Any new diagnoses or changes to your health since your last visit"
-              ></textarea>
-            </div>
-
-            <div>
-              <label for="hh-notes" class="block text-sm font-medium text-[var(--color-text)] mb-1">Additional Notes</label>
-              <textarea
-                id="hh-notes"
-                name="notes"
-                rows="3"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="Anything else you'd like your care team to know"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-full">
-              Submit Update
-            </button>
-          </form>
+          </div>
+          <a
+            href="https://hipaa.jotform.com/202455704377255"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 btn btn-primary w-full text-center flex items-center justify-center gap-2"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Update Health History
+          </a>
         </div>
 
       </div>
 
       <p class="mt-6 text-center text-sm text-[var(--color-text-muted)]">
-        Your information is submitted securely and reviewed by our reception team before your appointment. Questions? Call us at <a href="tel:+13063747272" class="font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">306.374.7272</a>.
+        Forms open securely in a new tab. Questions? Call our reception team at <a href="tel:+13063747272" class="font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">306.374.7272</a>.
       </p>
 
     </div>

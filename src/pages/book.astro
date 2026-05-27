@@ -301,9 +301,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <dl class="space-y-2 text-sm">
               {[
                 { day: "Monday", hours: "7:30 am – 4:30 pm" },
-                { day: "Tuesday", hours: "7:30 am – 5:30 pm" },
+                { day: "Tuesday", hours: "7:30 am – 4:30 pm" },
                 { day: "Wednesday", hours: "7:30 am – 8:30 pm", extended: true },
-                { day: "Thursday", hours: "7:30 am – 6:30 pm" },
+                { day: "Thursday", hours: "7:30 am – 4:30 pm" },
                 { day: "Friday", hours: "7:30 am – 4:00 pm" },
               ].map(row => (
                 <div class={`flex justify-between items-center py-1.5 border-b border-[var(--color-border-soft)] last:border-0 ${row.extended ? 'bg-[var(--color-surface-alt)] -mx-2 px-2 rounded-lg' : ''}`}>

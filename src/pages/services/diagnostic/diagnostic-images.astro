@@ -2,8 +2,8 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const siblingServices = [
-  { name: "X-Rays & 3D Imaging", href: "/services/diagnostic/x-rays", current: true },
-  { name: "Diagnostic Images & Digital X-Rays", href: "/services/diagnostic/diagnostic-images" },
+  { name: "X-Rays & 3D Imaging", href: "/services/diagnostic/x-rays" },
+  { name: "Diagnostic Images & Digital X-Rays", href: "/services/diagnostic/diagnostic-images", current: true },
   { name: "Intraoral Cameras", href: "/services/diagnostic/intraoral-cameras" },
   { name: "CBCT Scans", href: "/services/diagnostic/cbct" },
   { name: "Oral Cancer Screening", href: "/services/diagnostic/oral-cancer-screening" },
@@ -11,8 +11,8 @@ const siblingServices = [
 ---
 
 <BaseLayout
-  title="Dental X-Rays & 3D Imaging Saskatoon | Diagnostic Services | Wildwood Dental Clinic"
-  description="Digital dental x-rays and 3D imaging at Wildwood Dental Clinic in Saskatoon. Low-radiation diagnostics to detect decay, monitor bone, and plan treatment."
+  title="Diagnostic Images & Digital X-Rays Saskatoon | Wildwood Dental Clinic"
+  description="Wildwood Dental Clinic uses digital x-ray systems for all diagnostic imaging. Lower radiation, instant on-screen review, and easy record access for patients."
 >
 
   <!-- ============================================================
@@ -22,8 +22,8 @@ const siblingServices = [
     <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
       <img
-        src="/images/sourced/service-diagnostic-xrays.jpg"
-        alt="Dental X-rays"
+        src="/images/services/hero-diagnostic-pexels.jpg"
+        alt=""
         width="800"
         height="600"
         loading="eager"
@@ -40,14 +40,14 @@ const siblingServices = [
         <span aria-hidden="true">›</span>
         <a href="/services/diagnostic" class="hover:text-white transition-colors">Diagnostic Services</a>
         <span aria-hidden="true">›</span>
-        <span class="text-white">X-Rays &amp; 3D Imaging</span>
+        <span class="text-white">Diagnostic Images &amp; Digital X-Rays</span>
       </nav>
       <p class="eyebrow text-[var(--color-brand-accent-soft)]">Diagnostic Services</p>
       <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
-        X-Rays &amp; 3D Imaging
+        Diagnostic Images &amp; Digital X-Rays
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
-        Diagnostic imaging lets us see what a clinical exam cannot, helping us catch issues early and plan treatment with confidence.
+        All diagnostic imaging at Wildwood Dental is captured digitally. Digital x-ray systems produce clear, immediate images that can be reviewed with you at your appointment and stored as part of your permanent dental record.
       </p>
     </div>
   </section>
@@ -62,82 +62,79 @@ const siblingServices = [
         <!-- LEFT: Main content -->
         <div class="space-y-10">
 
-          <!-- Why imaging matters -->
+          <!-- What digital imaging means for patients -->
           <div>
             <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
-              Why dental imaging matters
+              What digital diagnostic imaging means for you
             </h2>
             <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
               <p>
-                A clinical exam is essential, but it only shows the dentist what is visible to the eye. Dental x-rays and 3D imaging reveal what's happening between teeth, below the gumline, and inside the surrounding bone, areas where problems can develop silently before any symptoms appear.
+                Digital x-ray systems have replaced film-based technology at modern dental clinics. Rather than developing x-ray film in a darkroom, digital sensors capture images electronically and display them on screen within seconds. This changes the experience for patients in several practical ways.
               </p>
               <p>
-                Early detection of decay, bone changes, cysts, or other abnormalities means simpler, less involved treatment. Imaging is one of the most important diagnostic tools available to your dental team.
+                Images are available immediately, so your dentist can review findings with you in real time, pointing to specific areas of concern and explaining what they show. There is no waiting, and nothing is left to memory or verbal description alone.
+              </p>
+              <p>
+                Digital images are stored as part of your electronic dental record and can be accessed at any future appointment, making it straightforward to compare current findings against prior images to track changes over time.
               </p>
             </div>
           </div>
 
-          <!-- Image break -->
-          <div class="rounded-2xl overflow-hidden">
-            <img
-              src="/images/services/diagnostic-exam.jpg"
-              alt="Dental diagnostic examination underway"
-              width="800"
-              height="450"
-              loading="lazy"
-              decoding="async"
-              class="w-full h-56 sm:h-72 object-cover"
-            />
-          </div>
-
-
-          <!-- Digital x-rays -->
+          <!-- Radiation -->
           <div>
             <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
-              Digital x-rays
+              Radiation and digital x-rays
             </h2>
             <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
               <p>
-                Wildwood Dental uses digital x-ray systems, which use significantly less radiation than older film-based technology, typically 70–90% less. The images appear instantly on screen, where they can be enlarged, adjusted, and reviewed with you in the chair.
+                Digital x-ray systems use significantly less radiation than older film-based technology, typically 70–90% less. The sensors used in digital systems are more sensitive to radiation than film, so a much smaller dose is required to produce a diagnostic-quality image.
               </p>
               <p>
-                <strong class="text-[var(--color-brand-primary)]">Bitewing x-rays</strong> show the crowns of the upper and lower back teeth and are used primarily to detect cavities between teeth and assess bone levels.
-              </p>
-              <p>
-                <strong class="text-[var(--color-brand-primary)]">Periapical x-rays</strong> capture a full tooth from crown to root tip, including the surrounding bone. They are useful for diagnosing abscesses, root fractures, and bone changes around specific teeth.
-              </p>
-              <p>
-                How often x-rays are taken depends on your individual history, risk level, and how long it has been since the last set. We follow evidence-based guidelines and do not take x-rays on a fixed schedule for everyone, the frequency is personalised.
+                At Wildwood Dental, x-rays are taken based on clinical need, not on a fixed schedule. The frequency and type of imaging recommended depends on your individual history, risk level, and what is being assessed. We follow evidence-based guidelines and will always explain why a particular image is being recommended.
               </p>
             </div>
           </div>
 
-          <!-- Panoramic -->
+          <!-- Types of diagnostic images -->
           <div>
             <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
-              Panoramic x-rays
+              Types of diagnostic images we use
             </h2>
             <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
               <p>
-                A panoramic x-ray (also called a panorex) captures the entire mouth in a single image, all teeth, both jaws, the temporomandibular joints, and surrounding anatomy. It is commonly taken for new patients to establish baseline records, and periodically thereafter to monitor changes over time.
+                Diagnostic records at Wildwood Dental may include several types of images depending on what is being evaluated:
               </p>
-              <p>
-                Panoramic images are also useful for assessing the position of wisdom teeth, evaluating bone levels across the full arch, and identifying abnormalities that may not be visible on smaller films.
-              </p>
+              <ul class="mt-3 space-y-4">
+                {[
+                  ["Digital bitewing x-rays", "The most common type, taken to detect cavities between teeth and assess bone levels in the back of the mouth."],
+                  ["Periapical x-rays", "Show the full length of one or more teeth, including the root and surrounding bone. Used to investigate specific concerns such as infection, root fracture, or bone changes."],
+                  ["Panoramic x-rays", "A single image that captures the entire mouth — all teeth, both jaws, and surrounding anatomy. Useful for new patient records and monitoring changes across the full arch."],
+                  ["Clinical photographs", "Standardized photos of the teeth, gums, and bite used to document baseline appearance and track changes in soft tissue or restorations."],
+                  ["Intraoral camera images", "Close-up images captured inside the mouth during examination, useful for documenting specific findings and showing patients what their dentist is seeing."],
+                ].map(([title, body]) => (
+                  <li class="flex items-start gap-3">
+                    <svg class="mt-1 shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    <div>
+                      <span class="font-semibold text-[var(--color-text)]">{title}</span>
+                      <span class="text-[var(--color-text-muted)]"> — {body}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          <!-- CBCT -->
-          <div>
-            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
-              Cone beam CT (CBCT) for complex planning
+          <!-- Accessing your records -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] mb-4">
+              Accessing and transferring your records
             </h2>
-            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+            <div class="space-y-3 text-[var(--color-text)] leading-relaxed">
               <p>
-                Cone beam computed tomography (CBCT) produces a three-dimensional image of the teeth, jaws, and surrounding structures. Unlike a conventional x-ray, a CBCT scan shows the anatomy in three dimensions, allowing for far more detailed assessment of bone volume and density, nerve pathways, and the precise positioning of teeth.
+                Your diagnostic images belong to you. If you are being referred to a specialist, moving to a new provider, or seeking a second opinion, we can provide copies of your records. Digital records are straightforward to export and share with other dental or medical providers when needed.
               </p>
               <p>
-                CBCT imaging is used when more detailed information is needed, for example, when planning dental implant placement, assessing complex extractions, or investigating suspected pathology. It is not required for routine care but is a valuable tool when clinical decisions require a more complete picture.
+                To request a copy of your records or to have them sent to another provider, contact our clinic directly and we will assist you.
               </p>
             </div>
           </div>
@@ -147,13 +144,15 @@ const siblingServices = [
         <!-- RIGHT: Sidebar -->
         <aside class="space-y-6">
 
+          <!-- Book CTA card -->
           <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
             <h3 class="font-display font-semibold text-lg text-white">Ready to Book?</h3>
             <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or book online, new patients welcome.</p>
-            <a href="/patients/book" class="mt-4 btn btn-primary w-full block text-center">Request Appointment</a>
+            <a href="/book" class="mt-4 btn btn-primary w-full block text-center">Request Appointment</a>
             <a href="tel:+13063747272" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">306.374.7272</a>
           </div>
 
+          <!-- Sibling services card -->
           <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
             <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Diagnostic Services</h3>
             <ul class="space-y-2">
@@ -191,7 +190,7 @@ const siblingServices = [
       <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Ready to get started?</h2>
       <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/patients/book" class="btn btn-primary btn-lg">Request an Appointment</a>
+        <a href="/book" class="btn btn-primary btn-lg">Request an Appointment</a>
         <a href="/contact" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
       </div>
     </div>

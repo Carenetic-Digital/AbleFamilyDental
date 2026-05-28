@@ -33,8 +33,10 @@ const col1 = [
     items: [
       { label: "Exams & Cleanings", href: "/services/childrens/exams-cleanings" },
       { label: "Infant Oral Care", href: "/services/childrens/infant-oral-care" },
+      { label: "Comfort Techniques", href: "/services/childrens/comfort" },
       { label: "Fluoride Treatments", href: "/services/childrens/fluoride" },
       { label: "Dental Sealants", href: "/services/childrens/sealants" },
+      { label: "X-Rays & Imaging", href: "/services/childrens/x-rays" },
       { label: "Frenectomies", href: "/services/childrens/frenectomies" },
       { label: "Space Maintainers", href: "/services/childrens/space-maintainers" },
     ],
@@ -59,6 +61,7 @@ const col2 = [
     href: "/services/diagnostic",
     items: [
       { label: "X-Rays & 3D Imaging", href: "/services/diagnostic/x-rays" },
+      { label: "Diagnostic Images & Digital X-Rays", href: "/services/diagnostic/diagnostic-images" },
       { label: "Intraoral Cameras", href: "/services/diagnostic/intraoral-cameras" },
       { label: "CBCT Scans", href: "/services/diagnostic/cbct" },
       { label: "Oral Cancer Screening", href: "/services/diagnostic/oral-cancer-screening" },
@@ -114,6 +117,8 @@ const col4 = [
       { label: "Porcelain Veneers", href: "/services/cosmetic/veneers" },
       { label: "Dental Bonding", href: "/services/cosmetic/bonding" },
       { label: "Smile Makeovers", href: "/services/cosmetic/smile-makeovers" },
+      { label: "Invisalign & Clear Aligners", href: "/services/orthodontics/invisalign" },
+      { label: "Gum Contouring", href: "/services/periodontal/gum-contouring" },
     ],
   },
   {
@@ -283,7 +288,7 @@ const allCols = [col1, col2, col3, col4];
 
     <div class="flex items-center gap-3">
       <a href="/book" class="hidden md:inline-flex btn btn-primary">
-        Book Appointment
+        Request Appointment
       </a>
       <button
         type="button"
@@ -336,7 +341,7 @@ const allCols = [col1, col2, col3, col4];
         </p>
         <div class="flex items-center gap-3">
           <a href="/services" class="text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">View all services →</a>
-          <a href="/book" class="btn btn-primary">Book an appointment</a>
+          <a href="/book" class="btn btn-primary">Request an appointment</a>
         </div>
       </div>
     </div>
@@ -406,7 +411,7 @@ const allCols = [col1, col2, col3, col4];
         </details>
         <a href="/contact" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact Us</a>
       </nav>
-      <a href="/book" class="btn btn-primary w-full mt-3">Book Appointment</a>
+      <a href="/book" class="btn btn-primary w-full mt-3">Request Appointment</a>
     </div>
   </div>
 </header>

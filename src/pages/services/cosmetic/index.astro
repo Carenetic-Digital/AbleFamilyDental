@@ -21,24 +21,36 @@ const services = [
     icon: `<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>`,
   },
   {
-    title: "Tooth Reshaping",
-    href: "/services/cosmetic",
-    description: "Gentle contouring to smooth irregularities in shape or length.",
-    icon: `<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>`,
+    title: "Smile Makeovers",
+    href: "/services/cosmetic/smile-makeovers",
+    description: "A comprehensive approach combining two or more cosmetic treatments to address multiple aesthetic concerns in a coordinated plan.",
+    icon: `<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>`,
+  },
+  {
+    title: "Invisalign & Clear Aligners",
+    href: "/services/orthodontics/invisalign",
+    description: "Clear aligner therapy to address crowding, spacing, and bite alignment. Treatment is planned and monitored by our team throughout the process.",
+    icon: `<path d="M12 2C9 2 7 4 7 7c0 1.5.5 2.5 1 3.5.5 1 1 2 1 3.5 0 2 .5 4 3 4 1 0 1.5-1 2-1.5.5.5 1 1.5 2 1.5 2.5 0 3-2 3-4 0-1.5.5-2.5 1-3.5.5-1 1-2 1-3.5 0-3-2-5-5-5z"/>`,
+  },
+  {
+    title: "Gum Contouring",
+    href: "/services/periodontal/gum-contouring",
+    description: "Reshaping of the gumline to address uneven gum levels or a gummy smile, performed as part of a broader periodontal or cosmetic treatment plan.",
+    icon: `<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>`,
   },
 ];
 ---
 
 <BaseLayout
   title="Cosmetic Dentistry Saskatoon | Wildwood Dental Clinic"
-  description="Cosmetic dental services in Saskatoon at Wildwood Dental Clinic — teeth whitening, porcelain veneers, dental bonding, tooth reshaping, bite correction, and Invisalign."
+  description="Cosmetic dental services in Saskatoon at Wildwood Dental Clinic, teeth whitening, porcelain veneers, dental bonding, tooth reshaping, bite correction, and Invisalign."
 >
 
   <!-- ============================================================
        HERO
        ============================================================ -->
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
-    <!-- Right-side image panel — desktop only -->
+    <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
       <img
         src="/images/services/hero-cosmetic-pexels.jpg"
@@ -64,7 +76,7 @@ const services = [
         Refine the Appearance of Your Smile
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
-        Cosmetic dentistry at Wildwood Dental focuses on improving the look of your teeth while maintaining — and often improving — their health and function.
+        Cosmetic dentistry at Wildwood Dental focuses on improving the look of your teeth while maintaining, and often improving, their health and function.
       </p>
     </div>
   </section>

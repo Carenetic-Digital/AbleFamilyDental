@@ -3,15 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Contact Us | Wildwood Dental Clinic — Saskatoon, SK"
-  description="Contact Wildwood Dental Clinic in Saskatoon, SK. Call 306.374.7272, email reception@wildwooddentalclinic.com, or visit us at 105 – 1526 8th Street East. Book an appointment or send us a message today."
+  title="Contact Us | Wildwood Dental Clinic, Saskatoon, SK"
+  description="Contact Wildwood Dental Clinic in Saskatoon, SK. Call 306.374.7272, email reception@wildwooddentalclinic.com, or visit us at 105 – 1526 8th Street East. Request an appointment or send us a message today."
 >
 
   <!-- ============================================================
        HERO BANNER
        ============================================================ -->
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
-    <!-- Right-side image panel — desktop only -->
+    <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
       <img
         src="/images/services/hero-new-patients.jpg"
@@ -35,7 +35,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Contact Wildwood Dental Clinic
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
-        Whether you have a question, want to book an appointment, or need to reach us in an emergency — we're here to help.
+        Whether you have a question, want to book an appointment, or need to reach us in an emergency. We're here to help.
       </p>
     </div>
   </section>
@@ -151,7 +151,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <dd class="tabular-nums text-sm text-[var(--color-text-muted)]">7:30 am – 4:30 pm</dd>
               </div>
 
-              <!-- Wednesday — extended hours highlight -->
+              <!-- Wednesday, extended hours highlight -->
               <div class="flex justify-between items-center border-b border-[var(--color-border-soft)] py-3 bg-[var(--color-surface-alt)] -mx-6 px-6 rounded-lg">
                 <dt class="flex items-center gap-2 font-medium text-sm text-[var(--color-brand-primary)]">
                   Wednesday
@@ -178,7 +178,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- Map card -->
           <div class="bg-[#c8d8ea] rounded-2xl overflow-hidden shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.5!2d-106.6235!3d52.1132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f6847f12345%3A0x12345!2sWildwood+Dental+Clinic!5e0!3m2!1sen!2sca!4v1"
+              src="https://www.google.com/maps?q=Wildwood+Dental+Clinic%2C+1526+8th+Street+East%2C+Saskatoon%2C+SK&output=embed"
               width="100%"
               height="250"
               style="border:0; display:block;"
@@ -257,12 +257,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             positive: true,
             icon: `<path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/>`,
           },
-          {
-            label: "No Same-Day Appointments",
-            note: "Please call ahead to schedule your visit.",
-            positive: false,
-            icon: `<circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/>`,
-          },
         ].map(item => (
           <div class="bg-white rounded-2xl p-5 border border-[var(--color-border-soft)] flex items-start gap-4">
             <div class={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${item.positive ? 'bg-[var(--color-brand-primary)]' : 'bg-[var(--color-surface-alt)]'}`}>
@@ -309,7 +303,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
-          Call Now — 306.374.7272
+          Call Now, 306.374.7272
         </a>
 
       </div>
@@ -374,7 +368,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div class="mt-6 flex items-center justify-center gap-4">
           <div class="w-14 h-px bg-[var(--color-brand-accent)]/50"></div>
-          <a href="/patients/book" class="btn btn-primary">Book an Appointment</a>
+          <a href="/patients/book" class="btn btn-primary">Request an Appointment</a>
           <div class="w-14 h-px bg-[var(--color-brand-accent)]/50"></div>
         </div>
 

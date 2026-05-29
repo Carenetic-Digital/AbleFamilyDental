@@ -11,34 +11,34 @@ const steps = [
   {
     number: "02",
     title: "Complete Your Patient Forms",
-    body: "To make the most of your appointment time, please arrive 10 minutes early to complete your paperwork — or download the new patient forms from this page and bring them filled in on the day.",
+    body: "To make the most of your appointment time, please arrive 10 minutes early to complete your paperwork, or download the new patient forms from this page and bring them filled in on the day.",
     icon: `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>`,
   },
   {
     number: "03",
     title: "Your First Visit",
-    body: "Your dentist will complete a comprehensive oral exam, take x-rays as clinically needed, and either perform a cleaning or discuss a treatment plan with you — depending on your current needs.",
+    body: "Your dentist will complete a comprehensive oral exam, take x-rays as clinically needed, and either perform a cleaning or discuss a treatment plan with you, depending on your current needs.",
     icon: `<path d="M9 2C7 2 5 3.5 5 6C5 7.5 5.5 8.5 6 10C6.5 11.5 7 13 7 15C7 17 7.5 20 10 20C11 20 11.5 19 12 18.5C12.5 19 13 20 14 20C16.5 20 17 17 17 15C17 13 17.5 11.5 18 10C18.5 8.5 19 7.5 19 6C19 3.5 17 2 15 2C14 2 13 2.5 12 3C11 2.5 10 2 9 2Z"/>`,
   },
   {
     number: "04",
     title: "Ongoing Care",
-    body: "We'll schedule your recall appointments based on what your dentist recommends — typically every six months. You'll receive reminders by text so it's easy to stay on track with your oral health.",
+    body: "We'll schedule your recall appointments based on what your dentist recommends, typically every six months. You'll receive reminders by text so it's easy to stay on track with your oral health.",
     icon: `<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`,
   },
 ];
 ---
 
 <BaseLayout
-  title="Patients | Wildwood Dental Clinic — New & Existing Patient Information"
-  description="Everything new and existing patients need to know before visiting Wildwood Dental Clinic in Saskatoon — patient forms, insurance and CDCP information, appointment requests, and direct billing details."
+  title="Patients | Wildwood Dental Clinic, New & Existing Patient Information"
+  description="Everything new and existing patients need to know before visiting Wildwood Dental Clinic in Saskatoon, patient forms, insurance and CDCP information, appointment requests, and direct billing details."
 >
 
   <!-- ============================================================
        HERO BANNER
        ============================================================ -->
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
-    <!-- Right-side image panel — desktop only -->
+    <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
       <img
         src="/images/services/hero-new-patients.jpg"
@@ -62,7 +62,7 @@ const steps = [
         Everything You Need for Your Visit
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
-        Whether you're visiting us for the first time or you've been a patient for years, this page has everything you need — from patient forms and appointment requests to insurance and payment information.
+        Whether you're visiting us for the first time or you've been a patient for years, this page has everything you need, from patient forms and appointment requests to insurance and payment information.
       </p>
     </div>
   </section>
@@ -104,7 +104,7 @@ const steps = [
       <div class="mt-10 flex flex-wrap justify-center gap-4">
         <a href="/book" class="btn btn-primary btn-lg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Book Appointment
+          Request Appointment
         </a>
         <a href="tel:+13063747272" class="btn btn-outline btn-lg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -149,7 +149,7 @@ const steps = [
               Complete your new patient intake form online before your first visit to save time at the clinic. The form collects your health history, current medications, known allergies, and reason for your visit.
             </p>
             <p>
-              You can also complete the form at the clinic — we recommend arriving 10 minutes early on your first visit to allow time for this.
+              You can also complete the form at the clinic, we recommend arriving 10 minutes early on your first visit to allow time for this.
             </p>
             <div class="bg-[var(--color-surface-cool)] rounded-xl p-4 border border-[var(--color-border-soft)]">
               <p class="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-primary)] mb-1">Secure &amp; HIPAA-compliant</p>
@@ -175,12 +175,12 @@ const steps = [
             </div>
             <div>
               <h3 class="font-display font-semibold text-xl text-[var(--color-brand-primary)]">Dental Medical History Update</h3>
-              <p class="text-sm text-[var(--color-text-muted)]">Existing patients — update your records.</p>
+              <p class="text-sm text-[var(--color-text-muted)]">Existing patients, update your records.</p>
             </div>
           </div>
           <div class="space-y-4 text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">
             <p>
-              If you're an existing patient, use this form to update your dental and medical history before your next visit — particularly if your medications, health conditions, or allergies have changed since your last appointment.
+              If you're an existing patient, use this form to update your dental and medical history before your next visit, particularly if your medications, health conditions, or allergies have changed since your last appointment.
             </p>
             <p>
               Keeping your health information current helps our team provide safe, informed care tailored to your current health status.
@@ -306,7 +306,7 @@ const steps = [
             <div class="mt-4 border-t border-white/20 pt-4">
               <p class="text-white font-medium">We accept the CDCP at Wildwood Dental Clinic.</p>
               <p class="mt-1 text-[var(--color-text-on-dark-muted)] text-sm">
-                Eligibility is determined by the federal government — we are not able to determine your eligibility on your behalf. However, our team is happy to answer questions about how to use your CDCP benefit for care at our clinic. Please call us or ask at your next visit.
+                Eligibility is determined by the federal government. We are not able to determine your eligibility on your behalf. However, our team is happy to answer questions about how to use your CDCP benefit for care at our clinic. Please call us or ask at your next visit.
               </p>
             </div>
           </div>
@@ -418,7 +418,7 @@ const steps = [
                 name="reason"
                 rows="4"
                 class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="Routine recall, specific concern, or other — give us a brief description and we'll make sure the right time is allocated."
+                placeholder="Routine recall, specific concern, or other, give us a brief description and we'll make sure the right time is allocated."
               ></textarea>
             </div>
 
@@ -447,13 +447,13 @@ const steps = [
         <div class="w-14 h-px bg-[var(--color-brand-accent)]"></div>
       </div>
       <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">
-        We're accepting new patients —<br class="hidden sm:block" /> ready when you are.
+        We're accepting new patients.<br class="hidden sm:block" /> Ready when you are.
       </h2>
       <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto leading-relaxed">
-        Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online — our team will take care of the rest.
+        Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online. Our team will take care of the rest.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/book" class="btn btn-primary btn-lg">Book Appointment</a>
+        <a href="/book" class="btn btn-primary btn-lg">Request Appointment</a>
         <a href="tel:+13063747272" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call Us

@@ -1,0 +1,22 @@
+{
+  "local_task_id": 27,
+  "task_id": 29851483,
+  "project_id": 521191,
+  "description": "Add Google Maps hyperlink to address",
+  "url": "/contact/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-27-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-27-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/contact/",
+  "after_url": "http://localhost:4321/contact/",
+  "fix_summary": "Contact page location card: address now links to Google Maps (https://maps.app.goo.gl/AnBTQPRQ86JRw9T89).",
+  "branch": "bugherd/27",
+  "commit": "9477b516737dee6a73e01de5758cb5ea72a646",
+  "changes": [
+    {
+      "file": "src/pages/contact.astro",
+      "summary": "Wrapped address text in anchor tag linking to Google Maps"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

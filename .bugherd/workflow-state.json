@@ -1,0 +1,11 @@
+{
+  "project_id": 521191,
+  "project_root": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS",
+  "default_branch": "main",
+  "release_branch": "bugherd/release",
+  "live_url": "https://wildwood-dental-clinic.spark0.io",
+  "local_url": "http://localhost:4321",
+  "dev_command": "npm run dev",
+  "ready_column": "developer ready",
+  "doing_column": "developer doing"
+}

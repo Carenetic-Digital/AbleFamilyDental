@@ -1,0 +1,26 @@
+{
+  "local_task_id": 79,
+  "task_id": 29871116,
+  "project_id": 521191,
+  "description": "Rename Invisalign service to Invisalign\u00ae Clear Aligners in nav",
+  "url": "/services/orthodontics/invisalign/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-79-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-79-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/orthodontics/invisalign/",
+  "after_url": "http://localhost:4321/services/orthodontics/invisalign/",
+  "fix_summary": "Navigation mega-menu and homepage service list: 'Invisalign & Clear Aligners' renamed to 'Invisalign\u00ae Clear Aligners'.",
+  "branch": "bugherd/79",
+  "commit": "3cb908e",
+  "changes": [
+    {
+      "file": "src/components/Header.astro",
+      "summary": "Updated Invisalign label in col3 (Orthodontics) and col4 (Cosmetic)"
+    },
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Updated Invisalign items label in serviceCategories"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

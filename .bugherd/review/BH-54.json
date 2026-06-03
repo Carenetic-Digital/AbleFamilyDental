@@ -1,0 +1,22 @@
+{
+  "local_task_id": 54,
+  "task_id": 29857749,
+  "project_id": 521191,
+  "description": "Rename new-patients page to New Patients",
+  "url": "/new-patients/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-54-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-54-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/new-patients/",
+  "after_url": "http://localhost:4321/new-patients/",
+  "fix_summary": "New Patients page: title changed to 'New Patients | Wildwood Dental Clinic, Saskatoon' and eyebrow updated from 'New & Existing Patients' to 'New Patients'.",
+  "branch": "bugherd/54",
+  "commit": "d1065c4",
+  "changes": [
+    {
+      "file": "src/pages/new-patients/index.astro",
+      "summary": "Updated page title and eyebrow text"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

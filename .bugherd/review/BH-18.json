@@ -1,0 +1,22 @@
+{
+  "local_task_id": 18,
+  "task_id": 29850867,
+  "project_id": 521191,
+  "description": "Remove 'Commitment to Clean designation' from the professional standards card on Our Team page",
+  "url": "/about/our-team/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-18-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-18-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/about/our-team/",
+  "after_url": "http://localhost:4321/about/our-team/",
+  "fix_summary": "Our Team page sidebar: 'Commitment to Clean designation' removed from the Professional Standards checklist card.",
+  "branch": "bugherd/18",
+  "commit": "a0dc791c61091d6ff0a13af2c88d4b619f043b44",
+  "changes": [
+    {
+      "file": "src/pages/about/our-team.astro",
+      "summary": "Removed 'Commitment to Clean designation' from Professional Standards list"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

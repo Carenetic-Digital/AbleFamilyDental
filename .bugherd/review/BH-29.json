@@ -1,0 +1,22 @@
+{
+  "local_task_id": 29,
+  "task_id": 29853432,
+  "project_id": 521191,
+  "description": "Update Section 3 body copy on homepage",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-29-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-29-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/",
+  "fix_summary": "Homepage 'Trusted Care' section: body copy updated to 'Wildwood Dental Clinic provides comprehensive dental care...'",
+  "branch": "bugherd/29",
+  "commit": "0073991",
+  "changes": [
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Replaced Section 3 body paragraph with client-provided text"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

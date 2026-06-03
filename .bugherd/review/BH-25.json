@@ -1,0 +1,22 @@
+{
+  "local_task_id": 25,
+  "task_id": 29851432,
+  "project_id": 521191,
+  "description": "Remove postal code from Our Clinic page address",
+  "url": "/about/our-clinic/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-25-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-25-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/about/our-clinic/",
+  "after_url": "http://localhost:4321/about/our-clinic/",
+  "fix_summary": "Our Clinic page address block: postal code 'S7H 0T3' removed from the address line.",
+  "branch": "bugherd/25",
+  "commit": "71a373b",
+  "changes": [
+    {
+      "file": "src/pages/about/our-clinic.astro",
+      "summary": "Removed postal code from address display"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

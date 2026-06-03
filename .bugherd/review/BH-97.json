@@ -1,0 +1,22 @@
+{
+  "local_task_id": 97,
+  "task_id": 29875432,
+  "project_id": 521191,
+  "description": "Replace this photo with the one attached",
+  "url": "/services/cosmetic/bonding/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-97-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-97-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/cosmetic/bonding/",
+  "after_url": "http://localhost:4321/services/cosmetic/bonding/",
+  "fix_summary": "/services/cosmetic/bonding/ hero panel: Replaced old image with Dental_Bonding.png from BugHerd attachment.",
+  "branch": "bugherd/batch-images-1",
+  "commit": "32f1f9dff2938913f66cd6b1802b767e1ad8679c",
+  "changes": [
+    {
+      "file": "src/pages/services/cosmetic/bonding.astro",
+      "summary": "Replaced image src to /images/bugherd/Dental_Bonding.png in hero panel"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

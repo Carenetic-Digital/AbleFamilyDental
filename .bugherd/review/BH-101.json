@@ -1,0 +1,22 @@
+{
+  "local_task_id": 101,
+  "task_id": 29876860,
+  "project_id": 521191,
+  "description": "Replace this photo with the one attached",
+  "url": "/services/cosmetic/whitening/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-101-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-101-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/cosmetic/whitening/",
+  "after_url": "http://localhost:4321/services/cosmetic/whitening/",
+  "fix_summary": "/services/cosmetic/whitening/ hero panel (same change as BH-100 - duplicate attachment): Replaced old image with Whitening_100.png (same image as BH-100) from BugHerd attachment.",
+  "branch": "bugherd/batch-images-1",
+  "commit": "32f1f9dff2938913f66cd6b1802b767e1ad8679c",
+  "changes": [
+    {
+      "file": "src/pages/services/cosmetic/whitening.astro",
+      "summary": "Replaced image src to /images/bugherd/Whitening_100.png (same image as BH-100) in hero panel (same change as BH-100 - duplicate attachment)"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

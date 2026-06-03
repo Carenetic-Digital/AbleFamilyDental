@@ -1,0 +1,22 @@
+{
+  "local_task_id": 91,
+  "task_id": 29874767,
+  "project_id": 521191,
+  "description": "Replace this photo with the one attached",
+  "url": "/services/orthodontics/invisalign/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-91-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-91-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/orthodontics/invisalign/",
+  "after_url": "http://localhost:4321/services/orthodontics/invisalign/",
+  "fix_summary": "/services/orthodontics/invisalign/ main content image break: Replaced old image with ChatGPT_Image_Jun_2_2026_02_01_40_PM.png from BugHerd attachment.",
+  "branch": "bugherd/batch-images-1",
+  "commit": "32f1f9dff2938913f66cd6b1802b767e1ad8679c",
+  "changes": [
+    {
+      "file": "src/pages/services/orthodontics/invisalign.astro",
+      "summary": "Replaced image src to /images/bugherd/ChatGPT_Image_Jun_2_2026_02_01_40_PM.png in main content image break"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

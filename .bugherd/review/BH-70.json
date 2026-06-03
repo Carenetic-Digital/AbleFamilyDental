@@ -1,0 +1,22 @@
+{
+  "local_task_id": 70,
+  "task_id": 29868870,
+  "project_id": 521191,
+  "description": "Replace this photo with the one attached",
+  "url": "/services/emergency/broken-tooth/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-70-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-70-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/emergency/broken-tooth/",
+  "after_url": "http://localhost:4321/services/emergency/broken-tooth/",
+  "fix_summary": "/services/emergency/broken-tooth/ main content image break: Replaced old image with Broken_or_Chipped_Tooth.png from BugHerd attachment.",
+  "branch": "bugherd/batch-images-1",
+  "commit": "32f1f9dff2938913f66cd6b1802b767e1ad8679c",
+  "changes": [
+    {
+      "file": "src/pages/services/emergency/broken-tooth.astro",
+      "summary": "Replaced image src to /images/bugherd/Broken_or_Chipped_Tooth.png in main content image break"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

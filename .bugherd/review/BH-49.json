@@ -1,0 +1,21 @@
+{
+  "local_task_id": 49,
+  "task_id": 29857486,
+  "project_id": 521191,
+  "description": "This should be the pre-footer please consider making it static across all pages/",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-49-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-49-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/",
+  "fix_summary": "Extracted the 'Our Office' section (hours, address, contact) from the homepage into a PreFooter.astro component and added it to BaseLayout.astro, so it now appears on every page before the Footer.",
+  "branch": "bugherd/49",
+  "commit": "746e801b5c35f2c9c8a09a2ce4b0f8e6e7b5e3a4",
+  "changes": [
+    {"file": "src/components/PreFooter.astro", "summary": "New component: Our Office section with office hours, address, email, and phone"},
+    {"file": "src/layouts/BaseLayout.astro", "summary": "Added PreFooter import and <PreFooter /> between main content and Footer"},
+    {"file": "src/pages/index.astro", "summary": "Removed the hardcoded Our Office section (now rendered globally by BaseLayout)"}
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

@@ -1,0 +1,20 @@
+{
+  "local_task_id": 57,
+  "task_id": 29859087,
+  "project_id": 521191,
+  "description": "Replace this photo with the one attached",
+  "url": "/services/emergency/appointments/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-57-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-57-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/emergency/appointments/",
+  "after_url": "http://localhost:4321/services/emergency/appointments/",
+  "fix_summary": "Emergency appointments page: Replaced the emergency-exam.jpg image in the main content area with the new image from attachment.",
+  "branch": "bugherd/57",
+  "commit": "b15cfe16c9e34339b53c8865a8d9ee090d338fa9",
+  "changes": [
+    {"file": "src/pages/services/emergency/appointments.astro", "summary": "Replaced src='/images/services/emergency-exam.jpg' with '/images/bugherd/ChatGPT_Image_Jun_1_2026_02_20_03_PM.png'"},
+    {"file": "public/images/bugherd/ChatGPT_Image_Jun_1_2026_02_20_03_PM.png", "summary": "Added new emergency examination image from BugHerd attachment"}
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

@@ -1,0 +1,19 @@
+{
+  "local_task_id": 13,
+  "task_id": 29838106,
+  "project_id": 521191,
+  "description": "Contrast is weird\n\n\"Contact Us\" text color is too dark, needs to be a lighter color",
+  "url": "/about/careers/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-13-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-13-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/about/careers/",
+  "after_url": "http://localhost:4321/about/careers/",
+  "fix_summary": "Careers page sidebar: Added explicit text-white class to the 'Contact Us' h3 heading inside the navy blue contact CTA card, ensuring proper white-on-dark contrast.",
+  "branch": "bugherd/13",
+  "commit": "332babcccc6c57ba9f3c895e9afb871c6122b5a4",
+  "changes": [
+    {"file": "src/pages/about/careers.astro", "summary": "Added text-white class to h3.Contact Us inside the navy CTA card to ensure readable white text on dark background"}
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

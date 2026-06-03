@@ -1,0 +1,22 @@
+{
+  "local_task_id": 26,
+  "task_id": 29851479,
+  "project_id": 521191,
+  "description": "Remove the Twitter/X icon/link from the footer",
+  "url": "/contact/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/contact/",
+  "after_url": "http://localhost:4321/contact/",
+  "fix_summary": "Footer social icons: X/Twitter icon and link removed (companion fix to BH-12).",
+  "branch": "bugherd/26",
+  "commit": "c2ebd38",
+  "changes": [
+    {
+      "file": "src/components/Footer.astro",
+      "summary": "Removed X/Twitter anchor tag and SVG icon"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

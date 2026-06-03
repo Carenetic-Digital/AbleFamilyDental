@@ -1,0 +1,22 @@
+{
+  "local_task_id": 31,
+  "task_id": 29853571,
+  "project_id": 521191,
+  "description": "Remove 'Since 1989' from hero eyebrow",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/",
+  "fix_summary": "Homepage hero: '\u00b7 Since 1989' removed from the eyebrow text.",
+  "branch": "bugherd/31",
+  "commit": "d5089bf",
+  "changes": [
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Removed '\u00b7 Since 1989' from eyebrow text"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

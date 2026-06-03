@@ -1,0 +1,22 @@
+{
+  "local_task_id": 56,
+  "task_id": 29858292,
+  "project_id": 521191,
+  "description": "Remove background from existing-patients form page",
+  "url": "/existing-patients/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/existing-patients/",
+  "after_url": "http://localhost:4321/existing-patients/",
+  "fix_summary": "Existing Patients page: background decoration removed, form displayed on clean white background.",
+  "branch": "bugherd/56",
+  "commit": "8fcf16c",
+  "changes": [
+    {
+      "file": "src/pages/existing-patients/index.astro",
+      "summary": "Removed background image/decoration from form section"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

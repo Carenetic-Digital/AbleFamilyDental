@@ -1,0 +1,22 @@
+{
+  "local_task_id": 23,
+  "task_id": 29851404,
+  "project_id": 521191,
+  "description": "Fix linking style on new-patients page to 'Learn More' or 'Go To Website'",
+  "url": "/new-patients/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/new-patients/",
+  "after_url": "http://localhost:4321/new-patients/",
+  "fix_summary": "New Patients page: link text updated to use 'Learn More' style.",
+  "branch": "bugherd/23",
+  "commit": "eb93bb7",
+  "changes": [
+    {
+      "file": "src/pages/new-patients/index.astro",
+      "summary": "Updated link text style"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

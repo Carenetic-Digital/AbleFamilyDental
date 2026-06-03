@@ -1,0 +1,22 @@
+{
+  "local_task_id": 92,
+  "task_id": 29874776,
+  "project_id": 521191,
+  "description": "Lighten 'Interested in Invisalign' heading color",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/",
+  "fix_summary": "Homepage Invisalign section: heading color changed from dark navy to brand accent (gold) for lighter appearance.",
+  "branch": "bugherd/92",
+  "commit": "02caba7",
+  "changes": [
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Changed h2 text color from brand-primary to brand-accent"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

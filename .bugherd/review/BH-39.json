@@ -1,0 +1,22 @@
+{
+  "local_task_id": 39,
+  "task_id": 29853896,
+  "project_id": 521191,
+  "description": "Replace heart icon with building icon on About Our Clinic card",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/",
+  "fix_summary": "Homepage info card: 'About Our Clinic' icon changed from heart to building/store icon.",
+  "branch": "bugherd/39",
+  "commit": "d33673f",
+  "changes": [
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Replaced heart SVG with building SVG on About Our Clinic card"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

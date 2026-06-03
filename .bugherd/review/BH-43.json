@@ -2,19 +2,19 @@
   "local_task_id": 43,
   "task_id": 29855059,
   "project_id": 521191,
-  "description": "Wrong link -> https://www.instagram.com/wildwooddentalclinic.sask/",
+  "description": "Fix Instagram link to correct URL",
   "url": "/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-43-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-43-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/",
   "after_url": "http://localhost:4321/",
-  "fix_summary": "Footer social icons: Instagram link updated to correct URL (@wildwooddentalclinic.sask).",
+  "fix_summary": "Footer Instagram icon: link updated to https://www.instagram.com/wildwooddentalclinic.sask/",
   "branch": "bugherd/43",
-  "commit": "2e21f4cd124a4dad7ceda07276430b9df7a2d8f8",
+  "commit": "2e21f4c",
   "changes": [
     {
       "file": "src/components/Footer.astro",
-      "summary": "Updated Instagram href to https://www.instagram.com/wildwooddentalclinic.sask/"
+      "summary": "Updated Instagram href to correct account URL"
     }
   ],
   "status": "pending_review",

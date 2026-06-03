@@ -2,18 +2,20 @@
   "local_task_id": 45,
   "task_id": 29855645,
   "project_id": 521191,
-  "description": "Add Logo",
+  "description": "Add Invisalign\u00ae Provider logo",
   "url": "/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-45-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-45-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/",
   "after_url": "http://localhost:4321/",
-  "fix_summary": "Homepage Invisalign section: Added the official Invisalign logo above the CTA buttons in the Invisalign band section, downloaded from BugHerd attachment.",
+  "fix_summary": "Homepage Invisalign section: Invisalign\u00ae Provider logo added.",
   "branch": "bugherd/45",
-  "commit": "3e21bbe190326d7698f8cad18367fba360410385",
+  "commit": "3e21bbe",
   "changes": [
-    {"file": "src/pages/index.astro", "summary": "Added Invisalign logo img tag above the CTA buttons in the Invisalign band section"},
-    {"file": "public/images/bugherd/Invisalign-Logo_1.png", "summary": "Added Invisalign logo image downloaded from BugHerd attachment"}
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Added Invisalign Provider logo image"
+    }
   ],
   "status": "pending_review",
   "review_comments": ""

@@ -2,19 +2,19 @@
   "local_task_id": 21,
   "task_id": 29851104,
   "project_id": 521191,
-  "description": "Update CDCP banner button to link directly to canada.ca",
+  "description": "Update CDCP banner button to link to canada.ca",
   "url": "/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-21-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-21-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/",
   "after_url": "http://localhost:4321/",
-  "fix_summary": "Homepage CDCP banner: 'Learn More' button now links to https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html (opens in new tab).",
+  "fix_summary": "Homepage CDCP banner: 'Learn More' button now opens canada.ca CDCP page in a new tab.",
   "branch": "bugherd/21",
   "commit": "c6e6ec0",
   "changes": [
     {
       "file": "src/pages/index.astro",
-      "summary": "Updated CDCP button href to canada.ca external URL"
+      "summary": "Updated CDCP button href to external canada.ca URL, added target=_blank"
     }
   ],
   "status": "pending_review",

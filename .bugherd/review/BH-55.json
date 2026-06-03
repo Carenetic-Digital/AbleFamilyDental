@@ -2,19 +2,19 @@
   "local_task_id": 55,
   "task_id": 29857780,
   "project_id": 521191,
-  "description": "Change em-dashes to semicolons in doctor credentials",
+  "description": "Replace em-dash with semicolon in doctor credentials",
   "url": "/about/our-team/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-55-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-55-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/about/our-team/",
   "after_url": "http://localhost:4321/about/our-team/",
-  "fix_summary": "Our Team doctor cards: credential separator changed from em-dash (\u2014) to semicolon (;). e.g. 'DMD; University of Saskatchewan, 2013'.",
+  "fix_summary": "Doctor cards: 'DMD \u2014 University of Saskatchewan, 2013' changed to 'DMD; University of Saskatchewan, 2013'.",
   "branch": "bugherd/55",
-  "commit": "accc1673064cf2ab8223ee81f4c564e647618b9b",
+  "commit": "accc167",
   "changes": [
     {
       "file": "src/pages/about/our-team.astro",
-      "summary": "Replaced &mdash; with ; in doctor credentials line"
+      "summary": "Replaced &mdash; with ; in credentials line"
     }
   ],
   "status": "pending_review",

@@ -2,19 +2,19 @@
   "local_task_id": 47,
   "task_id": 29855995,
   "project_id": 521191,
-  "description": "Change Book a Consultation to Request Appointment on Invisalign page",
+  "description": "Change 'Book a Consultation' button to 'Request Appointment'",
   "url": "/services/orthodontics/invisalign/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-47-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-47-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/services/orthodontics/invisalign/",
   "after_url": "http://localhost:4321/services/orthodontics/invisalign/",
-  "fix_summary": "Invisalign page: both 'Book a Consultation' buttons renamed to 'Request Appointment'.",
+  "fix_summary": "Invisalign page: both CTA buttons renamed from 'Book a Consultation' to 'Request Appointment'.",
   "branch": "bugherd/47",
   "commit": "81ff224",
   "changes": [
     {
       "file": "src/pages/services/orthodontics/invisalign.astro",
-      "summary": "Replaced 2 button labels from 'Book a Consultation' to 'Request Appointment'"
+      "summary": "Replaced 2 button labels"
     }
   ],
   "status": "pending_review",

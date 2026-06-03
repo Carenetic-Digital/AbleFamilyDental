@@ -2,19 +2,19 @@
   "local_task_id": 17,
   "task_id": 29850845,
   "project_id": 521191,
-  "description": "Change icon next to Oral Health Resources to books/documents",
+  "description": "Change 'Oral Health Resources' icon to books/documents",
   "url": "/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-17-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-17-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/",
   "after_url": "http://localhost:4321/",
-  "fix_summary": "Homepage clinic info cards: 'Oral Health Resources' icon changed from tooth to open book icon.",
+  "fix_summary": "Homepage info card: 'Oral Health Resources' icon changed from tooth to open book icon.",
   "branch": "bugherd/17",
-  "commit": "1e89d7ddc7e0f991eb36ef2af826bc57ba29893b",
+  "commit": "1e89d7d",
   "changes": [
     {
       "file": "src/pages/index.astro",
-      "summary": "Replaced tooth SVG path with open-book SVG path"
+      "summary": "Replaced tooth SVG with open-book SVG on Oral Health Resources card"
     }
   ],
   "status": "pending_review",

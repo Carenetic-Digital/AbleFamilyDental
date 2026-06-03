@@ -2,19 +2,19 @@
   "local_task_id": 30,
   "task_id": 29853548,
   "project_id": 521191,
-  "description": "Add Helping Saskatoon families smile tagline",
+  "description": "Add 'Helping Saskatoon families smile with confidence.' tagline",
   "url": "/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-30-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-30-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/",
   "after_url": "http://localhost:4321/",
-  "fix_summary": "Homepage hero: added 'Helping Saskatoon families smile with confidence.' tagline above body copy.",
+  "fix_summary": "Homepage hero: added accent-colored tagline above the body copy.",
   "branch": "bugherd/30",
   "commit": "6fae3a0",
   "changes": [
     {
       "file": "src/pages/index.astro",
-      "summary": "Added accent-colored tagline above body copy in hero"
+      "summary": "Added tagline paragraph between H1 and body copy"
     }
   ],
   "status": "pending_review",

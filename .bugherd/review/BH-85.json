@@ -1,0 +1,22 @@
+{
+  "local_task_id": 85,
+  "task_id": 29873116,
+  "project_id": 521191,
+  "description": "Replace this photo with the one attached",
+  "url": "/services/endodontics/cracked-tooth/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-85-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-85-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/endodontics/cracked-tooth/",
+  "after_url": "http://localhost:4321/services/endodontics/cracked-tooth/",
+  "fix_summary": "/services/endodontics/cracked-tooth/ main content image break: Replaced old image with Update.png from BugHerd attachment.",
+  "branch": "bugherd/batch-images-1",
+  "commit": "32f1f9dff2938913f66cd6b1802b767e1ad8679c",
+  "changes": [
+    {
+      "file": "src/pages/services/endodontics/cracked-tooth.astro",
+      "summary": "Replaced image src to /images/bugherd/Update.png in main content image break"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

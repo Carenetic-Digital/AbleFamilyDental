@@ -47,10 +47,10 @@ const paymentMethods = [
       </nav>
       <p class="eyebrow text-[var(--color-brand-accent-soft)]">New Patients</p>
       <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
-        Insurance &amp; Payment Options
+        Affordable Dental Care Options
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
-        We work with most major Canadian dental insurance plans and aim to make the billing process as straightforward as possible for our patients.
+        At Wildwood Dental Clinic, we believe everyone deserves access to quality dental care. We offer several financial options to help make treatment more affordable, including insurance coordination, flexible payment options, and the Canadian Dental Care Plan (CDCP).
       </p>
     </div>
   </section>
@@ -112,15 +112,36 @@ const paymentMethods = [
             </div>
             <div class="space-y-4 text-[var(--color-text-on-dark-muted)] text-sm leading-relaxed">
               <p>
-                The Canadian Dental Care Plan (CDCP) is a federally funded program providing dental coverage for eligible Canadians who do not have access to private dental insurance. We accept the CDCP at Wildwood Dental Clinic.
+                The Canadian Dental Care Plan (CDCP) is a federal government program designed to make dental care more affordable for eligible Canadian residents who do not have dental insurance. The program helps cover a portion of the cost of many dental services. Wildwood Dental Clinic is pleased to support patients who qualify for the CDCP.
               </p>
               <div>
-                <p class="font-semibold text-white mb-2">Who may qualify:</p>
+                <p class="font-semibold text-white mb-2">Who qualifies for the CDCP?</p>
+                <p class="mb-2">You may qualify if you meet all of the following criteria:</p>
                 <ul class="space-y-1.5">
                   {[
-                    "Canadian residents without private dental insurance coverage",
-                    "Individuals and families who meet the income thresholds set by the federal government",
-                    "Applicants who have applied and been approved through the Government of Canada",
+                    "You do not have access to private dental insurance",
+                    "Your adjusted family net income is under $90,000 per year",
+                    "You are a Canadian resident for tax purposes",
+                    "You filed your tax return in the previous year",
+                  ].map(item => (
+                    <li class="flex items-start gap-2.5">
+                      <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent-soft)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-white mb-2">What services may be covered?</p>
+                <p class="mb-2">The CDCP may help cover a portion of the cost for many dental services such as:</p>
+                <ul class="space-y-1.5">
+                  {[
+                    "Dental exams and X-rays",
+                    "Cleanings and preventive care",
+                    "Fillings and restorative care",
+                    "Root canals",
+                    "Periodontal treatment",
+                    "Some oral surgery services",
                   ].map(item => (
                     <li class="flex items-start gap-2.5">
                       <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent-soft)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
@@ -130,10 +151,19 @@ const paymentMethods = [
                 </ul>
               </div>
               <p>
-                Eligibility for the CDCP is determined by the federal government. For information on how to apply and check your eligibility, visit <strong class="text-white">canada.ca</strong>.
+                Some services may require pre-authorization before they are covered. Depending on your household income, the program may cover between 40% and 100% of eligible treatment costs.
               </p>
-              <p class="text-[var(--color-text-on-dark-muted)]">
-                Our team can answer questions about how to use your CDCP benefit for treatment at our clinic. Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or ask at your next visit.
+              <div class="bg-white/10 rounded-xl p-4 mt-2">
+                <p class="font-semibold text-white mb-1">Important notes about CDCP</p>
+                <ul class="space-y-1 text-xs">
+                  <li>The CDCP may not cover the full cost of treatment</li>
+                  <li>Some procedures require pre-approval</li>
+                  <li>Patients must renew their CDCP coverage each year after filing their annual income tax return</li>
+                  <li>Additional charges may apply depending on the treatment and coverage limits</li>
+                </ul>
+              </div>
+              <p>
+                To apply, visit the Government of Canada at <a href="https://www.canada.ca/en/services/benefits/dental/dental-care-plan/apply.html" target="_blank" rel="noopener noreferrer" class="text-white font-semibold underline hover:text-[var(--color-brand-accent-soft)] transition-colors">canada.ca/dental-care-plan</a>. Our team will help explain your benefits and discuss any costs before your appointment. Call us at <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a>.
               </p>
             </div>
           </div>
@@ -192,10 +222,10 @@ const paymentMethods = [
                   <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)]">How LendCare works</h3>
                   <ul class="mt-3 space-y-2">
                     {[
-                      "Apply quickly online or at the clinic, approval decisions are typically fast",
-                      "Flexible repayment terms to fit your budget",
+                      "High loan limits — pre-approved loans for up to $15,000 may be available",
+                      "Flexible pay-back periods of up to 60 months",
+                      "Benefit from interest rates as low as 9.9% APR",
                       "Available for a wide range of dental treatments, including larger restorative and cosmetic procedures",
-                      "A Canadian company with a focus on healthcare financing",
                     ].map(item => (
                       <li class="flex items-start gap-2.5 text-sm text-[var(--color-text-muted)]">
                         <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>

@@ -1,0 +1,22 @@
+{
+  "local_task_id": 93,
+  "task_id": 29874785,
+  "project_id": 521191,
+  "description": "Rename Invisalign page title to Clear Aligners: Invisalign Provider",
+  "url": "/services/orthodontics/invisalign/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-93-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-93-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/orthodontics/invisalign/",
+  "after_url": "http://localhost:4321/services/orthodontics/invisalign/",
+  "fix_summary": "Invisalign service page: title, breadcrumb, and H1 renamed to 'Clear Aligners: Invisalign Provider'.",
+  "branch": "bugherd/93",
+  "commit": "bd5b823",
+  "changes": [
+    {
+      "file": "src/pages/services/orthodontics/invisalign.astro",
+      "summary": "Replaced all instances of 'Invisalign & Clear Aligners' with 'Clear Aligners: Invisalign Provider'"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

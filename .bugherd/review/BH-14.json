@@ -1,0 +1,22 @@
+{
+  "local_task_id": 14,
+  "task_id": 29850773,
+  "project_id": 521191,
+  "description": "Replace book online with request an appointment online site-wide",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-14-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-14-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/new-patients/",
+  "fix_summary": "Site-wide: all 76 instances of 'book online' replaced with 'request an appointment online' across 49 pages.",
+  "branch": "bugherd/14",
+  "commit": "65041db",
+  "changes": [
+    {
+      "file": "src/ (49 files)",
+      "summary": "Global sed replacement of 'book online' \u2192 'request an appointment online'"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

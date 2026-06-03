@@ -1,0 +1,22 @@
+{
+  "local_task_id": 44,
+  "task_id": 29855640,
+  "project_id": 521191,
+  "description": "Add Invisalign\u00ae trademark symbol to homepage",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-44-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-44-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/",
+  "fix_summary": "Homepage Invisalign section: heading updated from 'Interested in Invisalign?' to 'Interested in Invisalign\u00ae?'.",
+  "branch": "bugherd/44",
+  "commit": "cb5a52e",
+  "changes": [
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Added \u00ae to Invisalign in section heading"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

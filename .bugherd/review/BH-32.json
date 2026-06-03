@@ -1,0 +1,22 @@
+{
+  "local_task_id": 32,
+  "task_id": 29853615,
+  "project_id": 521191,
+  "description": "Update hero eyebrow to Family-Friendly Dentistry in Saskatoon",
+  "url": "/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-32-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-32-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/",
+  "after_url": "http://localhost:4321/",
+  "fix_summary": "Homepage hero: eyebrow updated to 'Family-Friendly Dentistry in Saskatoon'.",
+  "branch": "bugherd/32",
+  "commit": "53f9747",
+  "changes": [
+    {
+      "file": "src/pages/index.astro",
+      "summary": "Updated eyebrow from 'Saskatoon \u00b7 8th Street East' to 'Family-Friendly Dentistry in Saskatoon'"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

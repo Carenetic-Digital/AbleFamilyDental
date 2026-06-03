@@ -1,0 +1,22 @@
+{
+  "local_task_id": 71,
+  "task_id": 29868933,
+  "project_id": 521191,
+  "description": "Lighten card header color on broken-tooth page",
+  "url": "/services/emergency/broken-tooth/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-71-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-71-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/services/emergency/broken-tooth/",
+  "after_url": "http://localhost:4321/services/emergency/broken-tooth/",
+  "fix_summary": "Broken Tooth service page: type-of-fracture card headers lightened from dark navy (brand-primary) to cool surface with dark text.",
+  "branch": "bugherd/71",
+  "commit": "c23b71c",
+  "changes": [
+    {
+      "file": "src/pages/services/emergency/broken-tooth.astro",
+      "summary": "Changed card header bg from brand-primary to surface-cool, text from white to brand-primary"
+    }
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

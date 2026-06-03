@@ -1,0 +1,19 @@
+{
+  "local_task_id": 56,
+  "task_id": 29858292,
+  "project_id": 521191,
+  "description": "I don't think we need the back ground - just the form itself living on this page.",
+  "url": "/existing-patients/",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-56-before.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-56-after.png",
+  "before_url": "https://wildwood-dental-clinic.spark0.io/existing-patients/",
+  "after_url": "http://localhost:4321/existing-patients/",
+  "fix_summary": "Existing patients page: Removed the white card background and shadow from the health history form section. The form now sits directly on a clean white page section without any container box.",
+  "branch": "bugherd/56",
+  "commit": "8fcf16cd8db51e6e2e7d4d58d0a87eb3bce62f44",
+  "changes": [
+    {"file": "src/pages/existing-patients/index.astro", "summary": "Removed bg-white rounded-2xl shadow-xl card wrapper around health history form section, changed section background to bg-white"}
+  ],
+  "status": "pending_review",
+  "review_comments": ""
+}

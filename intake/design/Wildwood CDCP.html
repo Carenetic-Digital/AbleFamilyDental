@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Canadian Dental Care Plan (CDCP) — Wildwood Dental Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --navy:#163a5f;
+  --navy-2:#0e335c;
+  --navy-deep:#0a2c52;
+  --hero-1:#194067;
+  --hero-2:#0c2645;
+  --footer:#0d2c52;
+  --band:#102f54;
+  --gold:#e0a23b;
+  --gold-dark:#c8881f;
+  --gold-soft:#f1c873;
+  --blue-soft:#dde8f6;
+  --blue-tint:#eaf2fb;
+  --panel:#f4f6f9;
+  --ink:#52606f;
+  --ink-2:#6c7886;
+  --line:#e3ebf3;
+  --display:"Playfair Display",Georgia,serif;
+  --sans:"Lato",-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.65;
+  font-size:16px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+.eyebrow{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-size:13px;}
+h1,h2,h3,h4{font-family:var(--display);color:var(--navy);font-weight:700;line-height:1.14;}
+.serif{font-family:var(--display);color:var(--navy);}
+.u-line{display:block;width:64px;height:3px;background:var(--gold);border-radius:2px;}
+.u-line.center{margin:18px auto 0;}
+.u-line.sm{width:46px;height:2.5px;}
+image-slot{display:block;}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:11px;
+  font-family:var(--sans);font-weight:700;font-size:15px;
+  padding:15px 24px;border-radius:7px;cursor:pointer;
+  text-decoration:none;border:1.5px solid transparent;
+  transition:transform .18s ease, background .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.btn svg{width:18px;height:18px;}
+.btn-gold{background:linear-gradient(180deg,#eaad44,#d8901f);color:#fff;box-shadow:0 10px 24px rgba(200,136,31,.28);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(200,136,31,.38);filter:brightness(1.04);}
+
+/* ============ NAV ============ */
+.nav{
+  position:absolute;top:0;left:0;right:0;z-index:5;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:24px 0;}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-decoration:none;}
+.brand .mark{display:flex;gap:5px;margin-bottom:2px;}
+.brand .mark svg{width:16px;height:18px;color:var(--gold);}
+.brand .name{font-family:var(--display);color:#fff;font-weight:700;font-size:25px;letter-spacing:.06em;line-height:1;}
+.brand .sub{font-family:var(--sans);color:#cdd9e8;font-weight:700;font-size:10px;letter-spacing:.34em;}
+.nav-links{display:flex;align-items:center;gap:34px;}
+.nav-links a{color:#eef3f9;text-decoration:none;font-size:15.5px;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:color .16s ease;}
+.nav-links a:hover{color:var(--gold-soft);}
+.nav-links a svg{width:13px;height:13px;opacity:.85;}
+.nav-cta{background:linear-gradient(180deg,#eaad44,#d8901f);color:#fff;padding:13px 22px;border-radius:7px;font-weight:700;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;box-shadow:0 10px 24px rgba(200,136,31,.3);transition:transform .18s ease, filter .18s ease;}
+.nav-cta:hover{transform:translateY(-2px);filter:brightness(1.05);}
+.nav-cta svg{width:16px;height:16px;}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(105deg,var(--hero-1) 0%,var(--hero-2) 60%);
+  isolation:isolate;color:#fff;
+}
+.hero-photo{position:absolute;top:0;right:0;height:100%;width:50%;z-index:-1;}
+.hero-photo image-slot{width:100%;height:100%;}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,var(--hero-1) 0%,rgba(20,52,86,.55) 26%,transparent 60%);}
+.hero-inner{padding:150px 0 96px;max-width:600px;}
+.hero h1{font-size:68px;font-weight:800;letter-spacing:-.01em;color:#fff;line-height:1.08;}
+.hero .u-line{margin-top:26px;}
+.hero p{margin-top:28px;font-size:19px;color:#e7eef6;max-width:430px;line-height:1.6;}
+
+/* ============ WHAT IS CDCP ============ */
+.whatis-sec{padding:64px 0 0;}
+.whatis{
+  position:relative;overflow:hidden;border-radius:14px;
+  background:linear-gradient(180deg,#eef3f8,#f6f8fb);
+  min-height:360px;display:flex;align-items:center;justify-content:center;
+}
+.whatis .flag,.whatis .parl{position:absolute;top:0;bottom:0;width:24%;z-index:0;}
+.whatis .flag{left:0;}
+.whatis .parl{right:0;}
+.whatis .flag image-slot,.whatis .parl image-slot{width:100%;height:100%;}
+.whatis-content{position:relative;z-index:1;max-width:560px;text-align:center;padding:54px 30px 50px;}
+.whatis-icon-row{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:18px;}
+.whatis-icon-row .tick{height:1.5px;width:64px;background:var(--gold);}
+.gov-badge{width:64px;height:64px;border-radius:50%;background:var(--navy-deep);display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto;box-shadow:0 8px 20px rgba(10,44,82,.25);}
+.gov-badge svg{width:30px;height:30px;}
+.whatis-content h2{font-size:42px;}
+.whatis-content p{margin-top:22px;color:#465468;font-size:16.5px;line-height:1.75;}
+.whatis-divider{height:1px;background:rgba(20,54,95,.14);max-width:300px;margin:26px auto 0;}
+.learn-link{margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--navy);text-decoration:none;font-size:16px;}
+.learn-link b{color:var(--navy);font-weight:700;}
+.learn-link .hl{color:var(--gold-dark);}
+.learn-link svg{width:18px;height:18px;color:var(--gold-dark);transition:transform .18s ease;}
+.learn-link:hover svg{transform:translateX(4px);}
+
+/* ============ QUALIFY ============ */
+.qualify{padding:78px 0 64px;}
+.center-head{text-align:center;max-width:760px;margin:0 auto;}
+.center-head h2{font-size:42px;}
+.qual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:54px;}
+.qual-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:38px 26px;text-align:center;min-height:200px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 8px 26px rgba(20,54,95,.05);}
+.qual-card h3{font-size:21px;line-height:1.25;}
+.qual-card p{margin-top:16px;color:#647383;font-size:14.5px;line-height:1.6;}
+.elig-row{display:flex;align-items:center;justify-content:center;gap:13px;margin-top:48px;}
+.q-circle{width:34px;height:34px;border-radius:50%;border:2px solid var(--gold);color:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:17px;}
+.elig-row a{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);text-decoration:none;font-size:18px;}
+.elig-row a svg{width:18px;height:18px;color:var(--gold-dark);transition:transform .18s ease;}
+.elig-row a:hover svg{transform:translateX(4px);}
+.elig-note{text-align:center;margin-top:16px;color:#647383;font-size:15px;}
+.elig-note .hl{color:var(--gold-dark);font-weight:700;}
+
+/* ============ INFO PANELS ============ */
+.info-two{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:8px 0 0;}
+.info-panel{background:var(--panel);border-radius:12px;padding:40px 44px;}
+.info-panel h3{font-size:26px;}
+.info-panel > .u-line{margin:14px 0 22px;}
+.info-panel .lead{color:#566373;font-size:15px;margin-bottom:18px;}
+.cover-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-bottom:20px;}
+.bullet{display:flex;align-items:flex-start;gap:11px;color:#46546a;font-size:15px;line-height:1.5;}
+.bullet::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);margin-top:8px;flex:0 0 auto;}
+.note-list{display:flex;flex-direction:column;gap:14px;margin-bottom:22px;}
+.note-list .bullet{font-size:15px;}
+.info-panel p.foot{color:#566373;font-size:15px;line-height:1.65;}
+
+/* ============ HOW TO APPLY ============ */
+.apply-sec{padding:64px 0;}
+.apply-panel{background:var(--panel);border-radius:14px;padding:56px 40px 50px;text-align:center;}
+.apply-panel h2{font-size:40px;}
+.apply-panel .sub{margin-top:20px;color:#566373;font-size:16.5px;line-height:1.7;}
+.apply-panel .btn-gold{margin-top:30px;}
+.apply-links{display:flex;align-items:stretch;justify-content:center;gap:0;margin-top:40px;}
+.apply-link{display:flex;align-items:center;gap:16px;padding:0 46px;text-decoration:none;}
+.apply-link + .apply-link{border-left:1px solid rgba(20,54,95,.14);}
+.al-ic{width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px rgba(20,54,95,.08);display:flex;align-items:center;justify-content:center;color:var(--navy);flex:0 0 auto;}
+.al-ic svg{width:22px;height:22px;}
+.al-txt{text-align:left;}
+.al-txt b{display:block;color:var(--navy);font-size:16px;font-weight:700;font-family:var(--display);}
+.al-txt span{color:#6c7886;font-size:14px;}
+.apply-link .arr{color:var(--gold-dark);font-size:20px;margin-left:6px;transition:transform .18s ease;}
+.apply-link:hover .arr{transform:translateX(4px);}
+
+/* ============ CDCP CARE ============ */
+.care-sec{padding:24px 0 78px;}
+.care-grid{display:grid;grid-template-columns:1fr 1.06fr;gap:54px;align-items:center;}
+.care-photo{border-radius:12px;overflow:hidden;box-shadow:0 18px 44px rgba(20,54,95,.12);}
+.care-photo image-slot{width:100%;height:440px;}
+.care-copy h2{font-size:40px;line-height:1.1;}
+.care-copy > .u-line{margin:18px 0 24px;}
+.care-copy p{color:#52606f;font-size:16px;margin-bottom:16px;max-width:480px;}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px;margin-top:30px;}
+.feat{display:flex;align-items:flex-start;gap:14px;}
+.feat .fi{color:var(--gold-dark);flex:0 0 auto;margin-top:2px;}
+.feat .fi svg{width:26px;height:26px;}
+.feat b{color:var(--navy);font-family:var(--display);font-weight:700;font-size:16.5px;line-height:1.25;}
+
+/* ============ IMPORTANT THINGS (NAVY BAND) ============ */
+.know-sec{padding:0 0 78px;}
+.know-band{background:linear-gradient(160deg,#163a5f,#0d2c52);border-radius:14px;padding:50px 52px 54px;color:#fff;}
+.know-band h2{color:#fff;font-size:34px;}
+.know-band > .u-line{margin:14px 0 38px;}
+.know-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.know-col{padding:0 30px;position:relative;}
+.know-col:first-child{padding-left:0;}
+.know-col:not(:last-child)::after{content:"";position:absolute;right:0;top:4px;width:1px;height:160px;background:rgba(255,255,255,.16);}
+.know-ic{width:50px;height:50px;border-radius:50%;border:2px solid var(--gold);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
+.know-ic svg{width:24px;height:24px;}
+.know-col p{color:#d4deeb;font-size:15px;line-height:1.6;}
+
+/* ============ FAQ ============ */
+.faq-sec{padding:0 0 78px;}
+.faq-sec h2{font-size:38px;}
+.faq-sec > .wrap > .u-line{margin:14px 0 38px;}
+.faq-list{display:flex;flex-direction:column;gap:14px;}
+.faq{border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden;transition:box-shadow .18s ease,border-color .18s ease;}
+.faq[open]{box-shadow:0 12px 30px rgba(20,54,95,.07);border-color:#d6e2ef;}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 26px;font-weight:700;color:var(--navy);font-size:16.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary .chev{width:20px;height:20px;color:var(--gold-dark);flex:0 0 auto;transition:transform .22s ease;}
+.faq[open] summary .chev{transform:rotate(180deg);}
+.faq .ans{padding:0 26px 22px;color:#586675;font-size:15.5px;line-height:1.7;max-width:900px;}
+
+/* ============ HAVE QUESTIONS CTA ============ */
+.hq-sec{padding:0 0 80px;}
+.hq{background:linear-gradient(165deg,#e9f1fb,#dde9f6);border-radius:14px;padding:38px 46px;display:flex;align-items:center;gap:30px;}
+.hq-ic{width:80px;height:80px;border-radius:50%;background:radial-gradient(120% 120% at 50% 25%,#e7f0fb,#d3e1f2);display:flex;align-items:center;justify-content:center;color:var(--navy);flex:0 0 auto;box-shadow:inset 0 0 0 1px rgba(20,54,95,.06);}
+.hq-ic svg{width:38px;height:38px;}
+.hq-copy{flex:1;}
+.hq-copy h2{font-size:30px;}
+.hq-copy p{margin-top:10px;color:#52606f;font-size:16px;max-width:420px;}
+.hq .btn-gold{flex:0 0 auto;}
+
+/* ============ OUR OFFICE ============ */
+.office-bg{background:linear-gradient(180deg,#fafcfe,#f3f7fb);padding:80px 0 90px;}
+.office-title{display:flex;align-items:center;justify-content:center;gap:22px;margin-bottom:54px;}
+.office-title .rule{height:1px;background:var(--line);flex:1;max-width:380px;}
+.office-title h2{font-size:38px;display:flex;align-items:center;gap:16px;}
+.office-title h2 svg{width:30px;height:30px;color:var(--gold);}
+.office-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.office-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:40px 44px;box-shadow:0 16px 38px rgba(20,54,95,.06);}
+.office-card.tint{background:linear-gradient(165deg,#eef4fc,#e6f0fa);}
+.oc-head{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
+.oc-ic{width:54px;height:54px;border-radius:50%;background:radial-gradient(120% 120% at 50% 25%,#eef4fc,#dde9f6);display:flex;align-items:center;justify-content:center;color:var(--navy);}
+.oc-ic svg{width:26px;height:26px;}
+.oc-head h3{font-size:24px;}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #eef2f7;}
+.hours-row:last-child{border-bottom:none;}
+.hours-row .day{font-weight:700;color:var(--navy);font-size:16px;}
+.hours-row .time{color:#56637a;font-size:16px;white-space:nowrap;}
+.addr-name{font-family:var(--display);font-size:34px;color:var(--navy);font-weight:700;margin-bottom:14px;}
+.addr-line{font-size:18px;color:#3f5168;line-height:1.5;margin-bottom:30px;}
+.addr-row{display:flex;align-items:center;gap:16px;margin-top:18px;}
+.addr-row .mi{width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px rgba(20,54,95,.08);display:flex;align-items:center;justify-content:center;color:var(--navy);flex:0 0 auto;}
+.addr-row .mi svg{width:21px;height:21px;}
+.addr-row a,.addr-row span{color:var(--navy);font-weight:700;font-size:18px;text-decoration:none;}
+.addr-row a:hover{color:var(--gold-dark);}
+
+/* ============ FOOTER ============ */
+footer{background:var(--footer);color:#cdd8e6;}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr;gap:40px;padding:74px 0 50px;}
+.foot-col h4{color:#fff;font-family:var(--display);font-size:22px;margin-bottom:6px;font-weight:700;}
+.foot-col .u-line{margin:0 0 22px;width:48px;}
+.foot-col ul{list-style:none;}
+.foot-col li{margin:14px 0;}
+.foot-col a{color:#c4d2e2;text-decoration:none;font-size:15.5px;display:inline-flex;align-items:center;gap:9px;transition:color .16s ease, transform .16s ease;}
+.foot-col a:hover{color:#fff;}
+.foot-col .chev{color:var(--gold);font-weight:900;}
+.foot-col a.all{color:var(--gold);font-weight:700;}
+.foot-col a.all:hover{transform:translateX(3px);}
+.socials{display:flex;gap:14px;margin-bottom:22px;}
+.soc{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .18s ease, transform .18s ease;}
+.soc:hover{background:rgba(255,255,255,.16);transform:translateY(-2px);}
+.soc svg{width:24px;height:24px;}
+.soc.g{background:#fff;}
+.foot-col.connect p{font-size:15px;color:#aebccd;line-height:1.65;}
+.foot-bar{border-top:1px solid rgba(255,255,255,.12);padding:26px 0;}
+.foot-bar .wrap{display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;font-size:14px;color:#9fb0c4;}
+.foot-bar a{color:#9fb0c4;text-decoration:none;}
+.foot-bar a:hover{color:#fff;}
+.foot-bar .sep{color:rgba(255,255,255,.25);}
+
+@media (max-width:920px){
+  .nav-links{display:none;}
+  .hero-photo{position:relative;width:100%;height:300px;}
+  .hero-photo::after{display:none;}
+  .hero-inner{padding:40px 0 60px;max-width:none;}
+  .hero h1{font-size:46px;}
+  .whatis .flag,.whatis .parl{display:none;}
+  .qual-grid,.know-grid{grid-template-columns:repeat(2,1fr);}
+  .know-col:nth-child(2)::after{display:none;}
+  .info-two,.care-grid,.office-grid,.foot-grid{grid-template-columns:1fr;}
+  .cover-list{grid-template-columns:1fr;}
+  .apply-links{flex-direction:column;align-items:center;gap:20px;}
+  .apply-link + .apply-link{border-left:none;}
+  .hq{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO + NAV ===================== -->
+<header class="hero" data-screen-label="Hero">
+  <div class="hero-photo">
+    <image-slot id="cdcp-hero" fit="cover" placeholder="Drop dental treatment photo"></image-slot>
+  </div>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#">
+        <span class="mark">
+          <svg viewBox="0 0 24 28" fill="currentColor"><path d="M12 0C9 4 7 7 7 11c0 3 2 5 5 5s5-2 5-5c0-4-2-7-5-11Zm0 17v11"/></svg>
+          <svg viewBox="0 0 24 28" fill="currentColor"><path d="M12 0C9 4 7 7 7 11c0 3 2 5 5 5s5-2 5-5c0-4-2-7-5-11Zm0 17v11"/></svg>
+          <svg viewBox="0 0 24 28" fill="currentColor"><path d="M12 0C9 4 7 7 7 11c0 3 2 5 5 5s5-2 5-5c0-4-2-7-5-11Zm0 17v11"/></svg>
+        </span>
+        <span class="name">WILDWOOD</span>
+        <span class="sub">DENTAL CLINIC</span>
+      </a>
+      <div class="nav-links">
+        <a href="#">About Us</a>
+        <a href="#">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+        <a href="#">New Patients</a>
+        <a href="#">Patient Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+        <a href="#">Contact</a>
+      </div>
+      <a class="nav-cta" href="#">Book an Appointment
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <div class="hero-inner">
+      <h1>Canadian<br/>Dental Care Plan<br/>(CDCP)</h1>
+      <span class="u-line"></span>
+      <p>Wildwood Dental Clinic is pleased to support patients who qualify for the CDCP.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== WHAT IS CDCP ===================== -->
+<section class="whatis-sec" data-screen-label="What is the CDCP">
+  <div class="wrap">
+    <div class="whatis">
+      <div class="flag"><image-slot id="cdcp-flag" fit="cover" placeholder="Canadian flag"></image-slot></div>
+      <div class="parl"><image-slot id="cdcp-parliament" fit="cover" placeholder="Parliament building"></image-slot></div>
+      <div class="whatis-content">
+        <div class="whatis-icon-row">
+          <span class="tick"></span>
+          <span class="gov-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/><path d="M12 5V2"/></svg>
+          </span>
+          <span class="tick"></span>
+        </div>
+        <h2 class="serif">What is the CDCP?</h2>
+        <p>The Canadian Dental Care Plan (CDCP) is a federal government program designed to make dental care more affordable for eligible Canadian residents who do not have dental insurance. The program helps cover a portion of the cost of many dental services.</p>
+        <div class="whatis-divider"></div>
+        <a class="learn-link" href="#"><b>They can learn more</b> <span class="hl">here</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DO YOU QUALIFY ===================== -->
+<section class="qualify" data-screen-label="Do You Qualify">
+  <div class="wrap">
+    <div class="center-head">
+      <h2 class="serif">Do You Qualify for the CDCP?</h2>
+      <span class="u-line center"></span>
+    </div>
+    <div class="qual-grid">
+      <div class="qual-card">
+        <h3 class="serif">No Dental Insurance</h3>
+        <p>You do not have access to private dental insurance.</p>
+      </div>
+      <div class="qual-card">
+        <h3 class="serif">Family Income Under $90,000</h3>
+        <p>Your adjusted family net income is under $90,000 per year.</p>
+      </div>
+      <div class="qual-card">
+        <h3 class="serif">Canadian Resident</h3>
+        <p>You are a Canadian resident for tax purposes.</p>
+      </div>
+      <div class="qual-card">
+        <h3 class="serif">Filed Taxes</h3>
+        <p>You filed your tax return in the previous year.</p>
+      </div>
+    </div>
+    <div class="elig-row">
+      <span class="q-circle">?</span>
+      <a href="#">Check Eligibility Details
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <p class="elig-note">Learn more about <span class="hl">eligibility requirements</span> directly from the Government of Canada.</p>
+  </div>
+</section>
+
+<!-- ===================== INFO PANELS ===================== -->
+<section data-screen-label="Coverage &amp; Notes">
+  <div class="wrap">
+    <div class="info-two">
+      <div class="info-panel">
+        <h3 class="serif">What Services May Be Covered?</h3>
+        <span class="u-line"></span>
+        <p class="lead">The CDCP may help cover a portion of the cost for many dental services such as:</p>
+        <div class="cover-list">
+          <span class="bullet">Dental exams and X-rays</span>
+          <span class="bullet">Root canals</span>
+          <span class="bullet">Cleanings and preventive care</span>
+          <span class="bullet">Periodontal treatment</span>
+          <span class="bullet">Fillings and restorative care</span>
+          <span class="bullet">Some oral surgery services</span>
+        </div>
+        <p class="foot">Some services may require pre-authorization before they are covered. Depending on your household income, the program may cover between 40% and 100% of eligible treatment costs.</p>
+      </div>
+      <div class="info-panel">
+        <h3 class="serif">Important Notes About CDCP</h3>
+        <span class="u-line"></span>
+        <div class="note-list">
+          <span class="bullet">The CDCP may not cover the full cost of treatment</span>
+          <span class="bullet">Some procedures require pre-approval</span>
+          <span class="bullet">Patients must renew their CDCP coverage each year after filing their annual income tax return</span>
+          <span class="bullet">Additional charges may apply depending on the treatment and coverage limits</span>
+        </div>
+        <p class="foot">Our team will help explain your benefits and discuss any costs before your appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW TO APPLY ===================== -->
+<section class="apply-sec" data-screen-label="How to Apply">
+  <div class="wrap">
+    <div class="apply-panel">
+      <h2 class="serif">How to Apply for the CDCP</h2>
+      <span class="u-line center"></span>
+      <p class="sub">Patients apply directly through the Government of Canada.<br/>You can apply online through your My Service Canada Account (MSCA).</p>
+      <a class="btn btn-gold" href="#">Apply Through the Government of Canada
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+      </a>
+      <div class="apply-links">
+        <a class="apply-link" href="#">
+          <span class="al-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg></span>
+          <span class="al-txt"><b>CDCP Overview</b><span>Learn more about the plan.</span></span>
+          <span class="arr">→</span>
+        </a>
+        <a class="apply-link" href="#">
+          <span class="al-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="al-txt"><b>Eligibility Details</b><span>See if you qualify.</span></span>
+          <span class="arr">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CDCP CARE AT WILDWOOD ===================== -->
+<section class="care-sec" data-screen-label="CDCP Care at Wildwood">
+  <div class="wrap">
+    <div class="care-grid">
+      <div class="care-photo"><image-slot id="cdcp-care" fit="cover" placeholder="Drop patient photo"></image-slot></div>
+      <div class="care-copy">
+        <h2 class="serif">CDCP Care at<br/>Wildwood Dental Clinic</h2>
+        <span class="u-line"></span>
+        <p>Wildwood Dental Clinic is pleased to support patients who qualify for the CDCP.</p>
+        <p>Our team will help explain your benefits and discuss any costs before your appointment.</p>
+        <div class="feat-grid">
+          <div class="feat">
+            <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5c-1.5-1.3-3.2-2-5-2C4 3.5 2 5.7 2 9c0 2.4.9 4.6 1.7 7 .6 1.8 1 4 2.3 4 1.2 0 1.3-2 1.8-3.6.4-1.3.8-2.4 2.2-2.4s1.8 1.1 2.2 2.4c.5 1.6.6 3.6 1.8 3.6 1.3 0 1.7-2.2 2.3-4 .8-2.4 1.7-4.6 1.7-7 0-3.3-2-5.5-5-5.5-1.8 0-3.5.7-5 2Z"/></svg></span>
+            <b>Modern Dental<br/>Technology</b>
+          </div>
+          <div class="feat">
+            <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+            <b>Comprehensive<br/>Dental Care</b>
+          </div>
+          <div class="feat">
+            <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <b>Experienced<br/>Dental Team</b>
+          </div>
+          <div class="feat">
+            <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>
+            <b>Convenient<br/>Scheduling</b>
+          </div>
+          <div class="feat">
+            <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span>
+            <b>Comfortable<br/>Environment</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== IMPORTANT THINGS TO KNOW ===================== -->
+<section class="know-sec" data-screen-label="Important Things to Know">
+  <div class="wrap">
+    <div class="know-band">
+      <h2 class="serif">Important Things to Know</h2>
+      <span class="u-line"></span>
+      <div class="know-grid">
+        <div class="know-col">
+          <div class="know-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v12"/><path d="M15 9.5a2.5 2.5 0 0 0-2.5-1.5h-1a2 2 0 0 0 0 4h1a2 2 0 0 1 0 4h-1A2.5 2.5 0 0 1 9 14.5"/></svg></div>
+          <p>The CDCP may not cover the full cost of treatment.</p>
+        </div>
+        <div class="know-col">
+          <div class="know-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg></div>
+          <p>Some procedures require pre-approval.</p>
+        </div>
+        <div class="know-col">
+          <div class="know-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></div>
+          <p>Patients must renew their CDCP coverage each year after filing their annual income tax return.</p>
+        </div>
+        <div class="know-col">
+          <div class="know-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+          <p>Additional charges may apply depending on the treatment and coverage limits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-sec" data-screen-label="FAQ">
+  <div class="wrap">
+    <h2 class="serif">Frequently Asked Questions</h2>
+    <span class="u-line"></span>
+    <div class="faq-list">
+      <details class="faq">
+        <summary>Does the CDCP cover all dental treatment?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Not always. The CDCP helps cover a portion of the cost for many common dental services, but it may not cover the full cost of treatment, and some procedures fall outside the plan. Our team will review what is covered for your specific care before treatment begins.</div>
+      </details>
+      <details class="faq">
+        <summary>Will I have any out-of-pocket costs?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Possibly. Depending on your adjusted family net income, the program may cover between 40% and 100% of eligible costs, and some services may exceed CDCP fee limits. We will always explain any expected out-of-pocket amount before your appointment.</div>
+      </details>
+      <details class="faq">
+        <summary>Do I need to renew my coverage?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Yes. CDCP coverage must be renewed each year after you file your annual income tax return. Keeping your taxes up to date ensures your eligibility continues without interruption.</div>
+      </details>
+      <details class="faq">
+        <summary>Can Wildwood Dental Clinic help me understand my coverage?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Absolutely. Our team is happy to walk you through what the CDCP covers, what to expect, and any costs associated with your treatment so there are no surprises.</div>
+      </details>
+      <details class="faq">
+        <summary>Can I use my CDCP benefits at Wildwood Dental Clinic?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Yes. Wildwood Dental Clinic is pleased to support patients who qualify for the CDCP. Let us know you are covered when you book, and we will help coordinate your care.</div>
+      </details>
+      <details class="faq">
+        <summary>Do some services require pre-authorization?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Some procedures do require pre-approval before they are covered under the CDCP. Our team will identify these in advance and handle the necessary steps with you.</div>
+      </details>
+      <details class="faq">
+        <summary>How do I apply for the CDCP?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Patients apply directly through the Government of Canada, online through your My Service Canada Account (MSCA). You can find the application and full eligibility details on the Government of Canada website.</div>
+      </details>
+      <details class="faq">
+        <summary>What if I am unsure whether I qualify?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Review the eligibility requirements on the Government of Canada website, or give us a call. We are glad to point you in the right direction so you can find out whether the CDCP is available to you.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HAVE QUESTIONS CTA ===================== -->
+<section class="hq-sec" data-screen-label="Have Questions CTA">
+  <div class="wrap">
+    <div class="hq">
+      <span class="hq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5c-1.5-1.3-3.2-2-5-2C4 3.5 2 5.7 2 9c0 2.4.9 4.6 1.7 7 .6 1.8 1 4 2.3 4 1.2 0 1.3-2 1.8-3.6.4-1.3.8-2.4 2.2-2.4s1.8 1.1 2.2 2.4c.5 1.6.6 3.6 1.8 3.6 1.3 0 1.7-2.2 2.3-4 .8-2.4 1.7-4.6 1.7-7 0-3.3-2-5.5-5-5.5-1.8 0-3.5.7-5 2Z"/></svg></span>
+      <div class="hq-copy">
+        <h2 class="serif">Have Questions About the CDCP?</h2>
+        <p>Our team is happy to help explain your benefits and schedule your visit.</p>
+      </div>
+      <a class="btn btn-gold" href="#">Book an Appointment
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUR OFFICE ===================== -->
+<section class="office-bg" data-screen-label="Our Office">
+  <div class="wrap">
+    <div class="office-title">
+      <span class="rule"></span>
+      <h2 class="serif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Our Office</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="office-grid">
+      <div class="office-card">
+        <div class="oc-head">
+          <div class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3 class="serif">Office Hours</h3>
+        </div>
+        <div class="hours-row"><span class="day">Monday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Tuesday</span><span class="time">7:30 am – 5:30 pm</span></div>
+        <div class="hours-row"><span class="day">Wednesday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Thursday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Friday</span><span class="time">7:30 am – 4:00 pm</span></div>
+      </div>
+      <div class="office-card tint">
+        <div class="oc-head">
+          <div class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3 class="serif">Our Address</h3>
+        </div>
+        <div class="addr-name">Wildwood Dental Clinic</div>
+        <div class="addr-line">134 – 51st St E, Suite 102,<br/>Saskatoon, SK&nbsp;&nbsp;S7K 0G3</div>
+        <div class="addr-row">
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <a href="/cdn-cgi/l/email-protection#641601070114100d0b0a24130d0800130b0b0000010a10050807080d0a0d074a070b09"><span class="__cf_email__" data-cfemail="245641474154504d4b4a64534d4840534b4b4040414a50454847484d4a4d470a474b49">[email&#160;protected]</span></a>
+        </div>
+        <div class="addr-row">
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+          <span>306.374.7272</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>Services</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#"><span class="chev">›</span> Emergency Services</a></li>
+          <li><a href="#"><span class="chev">›</span> Family Dentistry</a></li>
+          <li><a href="#"><span class="chev">›</span> Cosmetic Dentistry</a></li>
+          <li><a href="#"><span class="chev">›</span> Children's Dentistry</a></li>
+          <li><a class="all" href="#">All Services →</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">New Patients</a></li>
+          <li><a href="#">Patient Forms</a></li>
+          <li><a href="#">Insurance &amp; Payment</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Invisalign®</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="foot-col connect">
+        <h4>Connect With Us</h4>
+        <span class="u-line"></span>
+        <div class="socials">
+          <a class="soc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.2 22v-8H6.5v-3.2h2.7V8.3c0-2.7 1.6-4.2 4.1-4.2 1.2 0 2.4.2 2.4.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6v1.9h2.9L15 14h-2.4v8H9.2z"/></svg></a>
+          <a class="soc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc g" href="#" aria-label="Google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.06-1.4-.18-2.06H12v3.9h5.9a5 5 0 0 1-2.18 3.3v2.7h3.5c2.05-1.9 3.28-4.7 3.28-7.84z"/><path fill="#34A853" d="M12 23c2.96 0 5.45-.98 7.26-2.66l-3.5-2.7c-.97.65-2.22 1.04-3.76 1.04-2.89 0-5.34-1.95-6.21-4.58H2.18v2.78A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.79 14.1a6.6 6.6 0 0 1 0-4.2V7.12H2.18a11 11 0 0 0 0 9.76l3.61-2.78z"/><path fill="#EA4335" d="M12 5.4c1.62 0 3.07.56 4.21 1.65l3.15-3.15C17.45 2.1 14.96 1 12 1A11 11 0 0 0 2.18 7.12l3.61 2.78C6.66 7.35 9.11 5.4 12 5.4z"/></svg></a>
+        </div>
+        <p>Read our Google reviews and see why patients choose Wildwood Dental Clinic for their family's dental care.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bar">
+    <div class="wrap">
+      <span>© 2024 Wildwood Dental Clinic. All Rights Reserved.</span>
+      <span class="sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<template id="__bundler_thumbnail" data-bg-color="#163a5f">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#163a5f"/><text x="50" y="58" font-family="Georgia,serif" font-size="40" fill="#e0a23b" text-anchor="middle" font-weight="700">W</text></svg>
+</template>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

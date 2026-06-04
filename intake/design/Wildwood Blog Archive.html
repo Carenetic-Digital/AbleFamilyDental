@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog — Wildwood Dental Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --navy:#16365c;
+  --navy-deep:#0e2742;
+  --footer:#0d2340;
+  --gold:#e0a23b;
+  --gold-dark:#c8881f;
+  --gold-soft:#f1c873;
+  --orange:#dd8a22;
+  --blue-pill:#d9ecfb;
+  --blue-pill-ink:#1f3a63;
+  --green-pill:#dcebe1;
+  --green-pill-ink:#3c6b51;
+  --tint:#f2f4f8;
+  --tint2:#f7f9fc;
+  --ink:#52606f;
+  --ink-2:#6c7886;
+  --line:#e6ecf3;
+  --display:"Playfair Display",Georgia,serif;
+  --sans:"Lato",-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.65;
+  font-size:16px;
+}
+.wrap{max-width:1220px;margin:0 auto;padding:0 44px;}
+.eyebrow{
+  font-family:var(--sans);font-weight:900;text-transform:uppercase;
+  letter-spacing:.16em;color:var(--gold);font-size:13px;
+}
+h1,h2,h3,h4{font-family:var(--display);color:var(--navy);font-weight:700;line-height:1.14;}
+a{color:inherit;}
+img-fallback,image-slot{display:block;}
+
+/* ===================== HEADER ===================== */
+.site-header{
+  position:sticky;top:0;z-index:50;background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;gap:38px;height:84px;}
+.brand{display:flex;flex-direction:column;line-height:1;margin-right:auto;text-decoration:none;}
+.brand .name{font-family:var(--display);font-weight:800;font-size:30px;color:var(--navy);letter-spacing:.04em;}
+.brand .sub{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--gold);letter-spacing:.22em;margin-top:5px;text-transform:uppercase;}
+.brand .sub::before,.brand .sub::after{content:"—";margin:0 7px;color:var(--gold);}
+.menu{display:flex;align-items:center;gap:34px;}
+.menu a{
+  text-decoration:none;font-weight:700;font-size:15.5px;color:var(--navy);
+  position:relative;padding:6px 0;transition:color .16s ease;
+}
+.menu a:hover{color:var(--gold-dark);}
+.menu a.active{color:var(--navy);}
+.menu a.active::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;
+  background:var(--gold);border-radius:2px;
+}
+.book{
+  display:inline-flex;align-items:center;gap:10px;background:var(--navy-deep);color:#fff;
+  font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:8px;text-decoration:none;
+  box-shadow:0 8px 20px rgba(14,39,66,.18);transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.book:hover{background:#15335a;transform:translateY(-2px);box-shadow:0 12px 26px rgba(14,39,66,.26);}
+.book svg{width:18px;height:18px;}
+
+/* ===================== HERO ===================== */
+.hero{position:relative;background:var(--navy-deep);overflow:hidden;}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:52%;}
+.hero-photo image-slot{width:100%;height:100%;}
+.hero-photo::after{
+  content:"";position:absolute;top:0;left:0;bottom:0;width:170px;
+  background:linear-gradient(90deg,var(--navy-deep) 0%,rgba(14,39,66,.55) 45%,transparent 100%);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:2;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;}
+.hero-copy{padding:62px 0 78px;max-width:540px;}
+.crumbs{font-size:14.5px;color:#aebfd4;margin-bottom:26px;}
+.crumbs .sep{margin:0 8px;color:#5e7193;}
+.crumbs .here{color:#fff;}
+.hero h1{font-size:60px;font-weight:800;letter-spacing:-.01em;color:#fff;margin:14px 0 0;line-height:1.08;}
+.hero-lead{margin-top:24px;max-width:430px;font-size:17px;color:#c7d4e6;line-height:1.6;}
+.searchbar{display:flex;gap:14px;margin-top:34px;max-width:500px;}
+.searchbar .field{
+  flex:1;display:flex;align-items:center;gap:12px;background:#fff;border-radius:10px;
+  padding:0 18px;height:58px;box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+.searchbar .field svg{width:21px;height:21px;color:#8b97a6;flex:0 0 auto;}
+.searchbar input{border:0;outline:0;font-family:var(--sans);font-size:16px;color:var(--navy);width:100%;background:transparent;}
+.searchbar input::placeholder{color:#9aa6b4;}
+.btn-search{
+  border:0;cursor:pointer;background:linear-gradient(180deg,#ecae46,#dd8a22);color:#fff;
+  font-family:var(--sans);font-weight:700;font-size:16px;padding:0 30px;border-radius:10px;
+  box-shadow:0 12px 26px rgba(200,136,31,.34);transition:filter .18s ease, transform .18s ease;
+}
+.btn-search:hover{filter:brightness(1.05);transform:translateY(-1px);}
+.popular{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:9px 14px;font-size:14.5px;color:#b8c6da;max-width:480px;}
+.popular .lbl{font-weight:700;color:#9fb0c8;}
+.popular a{color:#dfe7f2;text-decoration:none;font-weight:700;transition:color .16s ease;}
+.popular a:hover{color:var(--gold-soft);}
+.popular .dot{color:var(--gold);font-weight:900;}
+
+/* ===================== FEATURED ===================== */
+.section{padding:64px 0;}
+.featured{
+  display:grid;grid-template-columns:0.92fr 1.08fr;background:var(--tint);
+  border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  box-shadow:0 18px 44px rgba(20,54,95,.07);
+}
+.featured image-slot{width:100%;height:100%;min-height:340px;}
+.feat-body{padding:48px 52px;display:flex;flex-direction:column;}
+.feat-body h2{font-size:38px;margin:20px 0 0;line-height:1.16;}
+.feat-body .desc{margin-top:20px;font-size:16.5px;color:#54627a;line-height:1.62;max-width:430px;}
+.feat-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:auto;padding-top:42px;}
+
+.tag{display:inline-flex;align-items:center;font-family:var(--sans);font-weight:900;font-size:11.5px;
+  letter-spacing:.08em;text-transform:uppercase;padding:7px 15px;border-radius:999px;}
+.tag.blue{background:var(--blue-pill);color:var(--blue-pill-ink);}
+.tag.green{background:var(--green-pill);color:var(--green-pill-ink);}
+
+.readtime{display:inline-flex;align-items:center;gap:9px;color:#7a8696;font-size:14.5px;font-weight:700;}
+.readtime svg{width:18px;height:18px;color:#9aa6b4;}
+.readlink{display:inline-flex;align-items:center;gap:9px;color:var(--orange);font-weight:900;font-size:15px;text-decoration:none;transition:gap .18s ease;}
+.readlink svg{width:18px;height:18px;}
+.readlink:hover{gap:14px;}
+
+/* ===================== LATEST ARTICLES ===================== */
+.latest-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;}
+.latest-head .kicker{font-family:var(--sans);font-weight:900;font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);}
+.viewall{display:inline-flex;align-items:center;gap:9px;color:var(--orange);font-weight:900;font-size:15px;text-decoration:none;transition:gap .18s ease;}
+.viewall svg{width:18px;height:18px;}
+.viewall:hover{gap:14px;}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(20,54,95,.07);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(20,54,95,.13);}
+.card image-slot{width:100%;height:188px;}
+.card-body{padding:22px 26px 24px;display:flex;flex-direction:column;flex:1;}
+.card-body h3{font-size:22px;margin:16px 0 0;line-height:1.2;}
+.card-body .desc{margin-top:13px;font-size:15px;color:#5d6b7a;line-height:1.55;}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto;padding-top:22px;}
+
+/* ===================== INSTAGRAM ===================== */
+.ig-band{
+  display:grid;grid-template-columns:0.92fr 1.08fr;align-items:center;gap:40px;
+  background:var(--tint2);border:1px solid var(--line);border-radius:16px;padding:34px 40px;
+}
+.ig-left{display:flex;align-items:flex-start;gap:22px;}
+.ig-mark{width:62px;height:62px;border-radius:16px;flex:0 0 auto;
+  background:linear-gradient(45deg,#feda75,#fa7e1e 28%,#d62976 58%,#962fbf 78%,#4f5bd5);
+  display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(214,41,118,.28);}
+.ig-mark svg{width:34px;height:34px;color:#fff;}
+.ig-text h3{font-size:26px;}
+.ig-text p{margin:8px 0 18px;font-size:15.5px;color:#5d6b7a;max-width:330px;line-height:1.55;}
+.ig-btn{display:inline-flex;align-items:center;gap:11px;background:var(--navy-deep);color:#fff;
+  font-weight:700;font-size:15px;padding:14px 24px;border-radius:9px;text-decoration:none;
+  box-shadow:0 10px 24px rgba(14,39,66,.2);transition:transform .18s ease, box-shadow .18s ease;}
+.ig-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(14,39,66,.28);}
+.ig-btn svg{width:17px;height:17px;}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.ig-grid image-slot{width:100%;height:150px;}
+
+/* ===================== OUR OFFICE ===================== */
+.office-bg{background:linear-gradient(180deg,#fafcfe,#f4f8fb);padding:74px 0 84px;}
+.office-title{display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:46px;}
+.office-title .rule{height:1px;background:#d8e2ed;flex:1;max-width:360px;}
+.office-title h2{font-size:38px;display:flex;align-items:center;gap:16px;}
+.office-title h2 svg{width:28px;height:28px;color:var(--gold);}
+.office-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.office-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:38px 42px;box-shadow:0 16px 38px rgba(20,54,95,.06);}
+.office-card.tint{background:linear-gradient(165deg,#eef4fc,#e6f0fa);border-color:#dbe7f4;}
+.oc-head{display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.oc-ic{width:52px;height:52px;border-radius:50%;background:radial-gradient(120% 120% at 50% 25%,#eef4fc,#dde9f6);display:flex;align-items:center;justify-content:center;color:var(--navy);flex:0 0 auto;}
+.oc-ic svg{width:25px;height:25px;}
+.oc-head h3{font-size:24px;}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #eef2f7;}
+.hours-row:last-child{border-bottom:none;}
+.hours-row .day{font-weight:700;color:var(--navy);font-size:16px;}
+.hours-row .time{color:#56637a;font-size:16px;white-space:nowrap;}
+.addr-name{font-family:var(--display);font-size:32px;color:var(--navy);font-weight:700;margin-bottom:14px;}
+.addr-line{font-size:17.5px;color:#3f5168;line-height:1.5;margin-bottom:26px;}
+.addr-row{display:flex;align-items:center;gap:15px;margin-top:16px;}
+.addr-row .mi{width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px rgba(20,54,95,.08);display:flex;align-items:center;justify-content:center;color:var(--navy);flex:0 0 auto;}
+.addr-row .mi svg{width:20px;height:20px;}
+.addr-row a,.addr-row span{color:var(--navy);font-weight:700;font-size:17px;text-decoration:none;}
+.addr-row a:hover{color:var(--gold-dark);}
+
+/* ===================== FOOTER ===================== */
+footer{background:var(--footer);color:#cdd8e6;}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr;gap:40px;padding:70px 0 48px;}
+.foot-col h4{color:#fff;font-family:var(--display);font-size:22px;margin-bottom:6px;font-weight:700;}
+.foot-col .u-line{display:block;width:48px;height:3px;background:var(--gold);border-radius:2px;margin:0 0 22px;}
+.foot-col ul{list-style:none;}
+.foot-col li{margin:14px 0;}
+.foot-col a{color:#c4d2e2;text-decoration:none;font-size:15.5px;display:inline-flex;align-items:center;gap:9px;transition:color .16s ease, transform .16s ease;}
+.foot-col a:hover{color:#fff;}
+.foot-col .chev{color:var(--gold);font-weight:900;}
+.foot-col a.all{color:var(--gold);font-weight:700;}
+.foot-col a.all:hover{transform:translateX(3px);}
+.socials{display:flex;gap:14px;margin-bottom:22px;}
+.soc{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .18s ease, transform .18s ease;}
+.soc:hover{background:rgba(255,255,255,.16);transform:translateY(-2px);}
+.soc svg{width:23px;height:23px;}
+.soc.g{background:#fff;}
+.foot-col.connect p{font-size:15px;color:#aebccd;line-height:1.65;max-width:300px;}
+.foot-bar{border-top:1px solid rgba(255,255,255,.12);padding:24px 0;}
+.foot-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:#9fb0c4;}
+.foot-bar .links{display:flex;align-items:center;gap:22px;}
+.foot-bar a{color:#9fb0c4;text-decoration:none;}
+.foot-bar a:hover{color:#fff;}
+.foot-bar .sep{color:rgba(255,255,255,.22);}
+
+@media (max-width:960px){
+  .menu,.book{display:none;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-photo{position:relative;width:100%;height:300px;}
+  .hero-photo::after{display:none;}
+  .hero-copy{padding:48px 0 56px;max-width:none;}
+  .hero h1{font-size:44px;}
+  .featured,.ig-band{grid-template-columns:1fr;}
+  .cards{grid-template-columns:1fr;}
+  .office-grid,.foot-grid{grid-template-columns:1fr;}
+  .ig-grid{grid-template-columns:repeat(4,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" data-screen-label="Header">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <span class="name">WILDWOOD</span>
+        <span class="sub">Dental Clinic</span>
+      </a>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">For Patients</a>
+        <a class="active" href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <a class="book" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Book an Appointment
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" data-screen-label="Hero">
+  <div class="hero-photo">
+    <image-slot id="blog-hero" fit="cover" src="photos/hero.jpg" placeholder="Drop hero photo"></image-slot>
+  </div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="crumbs">Home <span class="sep">/</span> <span class="here">Blog</span></div>
+        <span class="eyebrow">Patient Education &amp; Resources</span>
+        <h1>Learn About Your<br/>Dental Health</h1>
+        <p class="hero-lead">Helpful advice, treatment information, and oral health tips from the Wildwood Dental Clinic team.</p>
+        <form class="searchbar" onsubmit="return false;">
+          <div class="field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" placeholder="Search articles..." />
+          </div>
+          <button class="btn-search" type="submit">Search</button>
+        </form>
+        <div class="popular">
+          <span class="lbl">Popular searches:</span>
+          <a href="#">Teeth Cleaning</a><span class="dot">•</span>
+          <a href="#">Children's Dentistry</a><span class="dot">•</span>
+          <a href="#">Dental Emergencies</a><span class="dot">•</span>
+          <a href="#">Insurance</a>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED ===================== -->
+<section class="section" data-screen-label="Featured Article">
+  <div class="wrap">
+    <article class="featured">
+      <image-slot id="feat-photo" fit="cover" src="photos/featured.jpg" placeholder="Drop article photo"></image-slot>
+      <div class="feat-body">
+        <div><span class="tag blue">Preventive Care</span></div>
+        <h2>What To Expect During<br/>Your Dental Cleaning</h2>
+        <p class="desc">A professional dental cleaning is one of the best ways to protect your oral health. Here's what happens during your visit.</p>
+        <div class="feat-foot">
+          <span class="readtime">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            4 min read
+          </span>
+          <a class="readlink" href="#">Read Article
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== LATEST ARTICLES ===================== -->
+<section class="section" style="padding-top:0;" data-screen-label="Latest Articles">
+  <div class="wrap">
+    <div class="latest-head">
+      <span class="kicker">Latest Articles</span>
+      <a class="viewall" href="#">View All Articles
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <image-slot id="card1" fit="cover" src="photos/card1.jpg" placeholder="Drop photo"></image-slot>
+        <div class="card-body">
+          <div><span class="tag green">Oral Health Tips</span></div>
+          <h3>5 Easy Habits for a Healthier Smile</h3>
+          <p class="desc">Simple daily habits that can make a big difference in your long-term oral health.</p>
+          <div class="card-foot">
+            <span class="readtime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span>
+            <a class="readlink" href="#">Read Article<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <image-slot id="card2" fit="cover" src="photos/card2.jpg" placeholder="Drop photo"></image-slot>
+        <div class="card-body">
+          <div><span class="tag blue">Restorative Dentistry</span></div>
+          <h3>Do I Need a Dental Crown? Signs to Watch For</h3>
+          <p class="desc">Crowns can restore both the function and appearance of damaged teeth.</p>
+          <div class="card-foot">
+            <span class="readtime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 min read</span>
+            <a class="readlink" href="#">Read Article<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <image-slot id="card3" fit="cover" src="photos/card3.jpg" placeholder="Drop photo"></image-slot>
+        <div class="card-body">
+          <div><span class="tag green">Children's Dentistry</span></div>
+          <h3>How to Help Your Child Feel Comfortable at the Dentist</h3>
+          <p class="desc">Tips to prepare your child for a positive dental experience.</p>
+          <div class="card-foot">
+            <span class="readtime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 min read</span>
+            <a class="readlink" href="#">Read Article<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTAGRAM ===================== -->
+<section class="section" style="padding-top:0;" data-screen-label="Instagram">
+  <div class="wrap">
+    <div class="ig-band">
+      <div class="ig-left">
+        <div class="ig-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="ig-text">
+          <h3 class="serif">Follow Us on Instagram</h3>
+          <p>Daily tips, patient stories, and oral health advice from our team.</p>
+          <a class="ig-btn" href="#">Follow Us on Instagram
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ig-grid">
+        <image-slot id="ig1" fit="cover" radius="10" src="photos/ig1.jpg" placeholder="Photo"></image-slot>
+        <image-slot id="ig2" fit="cover" radius="10" src="photos/ig2.jpg" placeholder="Photo"></image-slot>
+        <image-slot id="ig3" fit="cover" radius="10" src="photos/ig3.jpg" placeholder="Photo"></image-slot>
+        <image-slot id="ig4" fit="cover" radius="10" src="photos/ig4.jpg" placeholder="Photo"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUR OFFICE ===================== -->
+<section class="office-bg" data-screen-label="Our Office">
+  <div class="wrap">
+    <div class="office-title">
+      <span class="rule"></span>
+      <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Our Office</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="office-grid">
+      <div class="office-card">
+        <div class="oc-head">
+          <div class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3>Office Hours</h3>
+        </div>
+        <div class="hours-row"><span class="day">Monday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Tuesday</span><span class="time">7:30 am – 5:30 pm</span></div>
+        <div class="hours-row"><span class="day">Wednesday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Thursday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Friday</span><span class="time">7:30 am – 4:00 pm</span></div>
+      </div>
+      <div class="office-card tint">
+        <div class="oc-head">
+          <div class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Our Address</h3>
+        </div>
+        <div class="addr-name">Wildwood Dental Clinic</div>
+        <div class="addr-line">134 – 51st St E, Suite 102,<br/>Saskatoon, SK&nbsp;&nbsp;S7K 0G3</div>
+        <div class="addr-row">
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <a href="/cdn-cgi/l/email-protection#6a180f090f1a1e0305042a1d03060e1d05050e0e0f041e0b0609060304030944090507"><span class="__cf_email__" data-cfemail="b0c2d5d3d5c0c4d9dfdef0c7d9dcd4c7dfdfd4d4d5dec4d1dcd3dcd9ded9d39ed3dfdd">[email&#160;protected]</span></a>
+        </div>
+        <div class="addr-row">
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+          <span>306.374.7272</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>Services</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#"><span class="chev">›</span> Emergency Services</a></li>
+          <li><a href="#"><span class="chev">›</span> Family Dentistry</a></li>
+          <li><a href="#"><span class="chev">›</span> Cosmetic Dentistry</a></li>
+          <li><a href="#"><span class="chev">›</span> Children's Dentistry</a></li>
+          <li><a class="all" href="#">All Services →</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">New Patients</a></li>
+          <li><a href="#">Patient Forms</a></li>
+          <li><a href="#">Insurance &amp; Payment</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Invisalign®</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="foot-col connect">
+        <h4>Connect With Us</h4>
+        <span class="u-line"></span>
+        <div class="socials">
+          <a class="soc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.2 22v-8H6.5v-3.2h2.7V8.3c0-2.7 1.6-4.2 4.1-4.2 1.2 0 2.4.2 2.4.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6v1.9h2.9L15 14h-2.4v8H9.2z"/></svg></a>
+          <a class="soc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc g" href="#" aria-label="Google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.06-1.4-.18-2.06H12v3.9h5.9a5 5 0 0 1-2.18 3.3v2.7h3.5c2.05-1.9 3.28-4.7 3.28-7.84z"/><path fill="#34A853" d="M12 23c2.96 0 5.45-.98 7.26-2.66l-3.5-2.7c-.97.65-2.22 1.04-3.76 1.04-2.89 0-5.34-1.95-6.21-4.58H2.18v2.78A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.79 14.1a6.6 6.6 0 0 1 0-4.2V7.12H2.18a11 11 0 0 0 0 9.76l3.61-2.78z"/><path fill="#EA4335" d="M12 5.4c1.62 0 3.07.56 4.21 1.65l3.15-3.15C17.45 2.1 14.96 1 12 1A11 11 0 0 0 2.18 7.12l3.61 2.78C6.66 7.35 9.11 5.4 12 5.4z"/></svg></a>
+        </div>
+        <p>Read our Google reviews and see why patients choose Wildwood Dental Clinic for their family's dental care.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bar">
+    <div class="wrap">
+      <span>© 2024 Wildwood Dental Clinic. All Rights Reserved.</span>
+      <span class="links">
+        <a href="#">Privacy Policy</a><span class="sep">|</span>
+        <a href="#">Terms of Use</a><span class="sep">|</span>
+        <a href="#">Accessibility</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<template id="__bundler_thumbnail" data-bg-color="#0e2742">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0e2742"/><text x="50" y="58" font-family="Georgia,serif" font-size="40" fill="#e0a23b" text-anchor="middle" font-weight="700">W</text></svg>
+</template>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

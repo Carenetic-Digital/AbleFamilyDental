@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patient Financing with LendCare — Wildwood Dental Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --navy:#163a5f;
+  --navy-2:#0e335c;
+  --navy-deep:#0a2c52;
+  --footer:#0d2c52;
+  --gold:#e0a23b;
+  --gold-dark:#c8881f;
+  --gold-soft:#f1c873;
+  --red:#e3392b;
+  --panel:#f4f6f9;
+  --ink:#52606f;
+  --ink-2:#6c7886;
+  --line:#e3ebf3;
+  --display:"Playfair Display",Georgia,serif;
+  --sans:"Lato",-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.65;
+  font-size:16px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+.eyebrow{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-size:13px;}
+h1,h2,h3,h4{font-family:var(--display);color:var(--navy);font-weight:700;line-height:1.14;}
+.serif{font-family:var(--display);color:var(--navy);}
+.u-line{display:block;width:64px;height:3px;background:var(--gold);border-radius:2px;}
+.u-line.center{margin:18px auto 0;}
+image-slot{display:block;}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:11px;
+  font-family:var(--sans);font-weight:700;font-size:15px;
+  padding:15px 24px;border-radius:7px;cursor:pointer;
+  text-decoration:none;border:1.5px solid transparent;
+  transition:transform .18s ease, background .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.btn svg{width:18px;height:18px;}
+.btn-gold{background:linear-gradient(180deg,#eaad44,#d8901f);color:#fff;box-shadow:0 10px 24px rgba(200,136,31,.28);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(200,136,31,.38);filter:brightness(1.04);}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(13,44,82,.22);}
+.btn-navy:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 14px 30px rgba(13,44,82,.3);}
+
+/* ============ UTILITY BAR ============ */
+.util{background:var(--navy-deep);color:#cdd9e8;font-size:13.5px;}
+.util .wrap{display:flex;align-items:center;justify-content:space-between;height:46px;}
+.util-left{display:flex;align-items:center;gap:18px;}
+.util-item{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#dde7f3;}
+.util-item.muted{color:#9fb2c9;font-weight:400;}
+.util-item svg{width:15px;height:15px;color:var(--gold-soft);}
+.util .divider{width:1px;height:16px;background:rgba(255,255,255,.18);}
+.util-phone{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:700;text-decoration:none;letter-spacing:.02em;}
+.util-phone svg{width:15px;height:15px;color:var(--gold-soft);}
+
+/* ============ HEADER ============ */
+.site-head{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:90px;}
+.logo{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;line-height:1;}
+.logo .mono{font-family:var(--display);font-weight:800;font-size:38px;letter-spacing:.04em;color:var(--navy);}
+.logo .full{font-family:var(--sans);font-weight:700;font-size:10px;letter-spacing:.3em;color:var(--navy);margin-top:5px;opacity:.78;}
+.mainnav{display:flex;align-items:center;gap:30px;}
+.mainnav a{color:var(--navy);text-decoration:none;font-size:15.5px;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:color .16s ease;}
+.mainnav a:hover{color:var(--gold-dark);}
+.mainnav a svg{width:13px;height:13px;opacity:.7;}
+.head-cta{background:linear-gradient(180deg,#eaad44,#d8901f);color:#fff;padding:13px 24px;border-radius:7px;font-weight:700;font-size:14.5px;text-decoration:none;box-shadow:0 8px 20px rgba(200,136,31,.26);transition:transform .18s ease, filter .18s ease;white-space:nowrap;}
+.head-cta:hover{transform:translateY(-2px);filter:brightness(1.05);}
+
+/* ============ HERO ============ */
+.hero{background:linear-gradient(165deg,#f6f8fb 0%,#eef2f7 100%);padding:70px 0 76px;}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.02fr;gap:64px;align-items:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:13px;margin-bottom:24px;}
+.hero-eyebrow .ic{width:40px;height:40px;border-radius:50%;background:var(--navy-deep);display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto;}
+.hero-eyebrow .ic svg{width:19px;height:19px;}
+.hero h1{font-size:56px;font-weight:800;letter-spacing:-.01em;line-height:1.1;position:relative;display:inline-block;}
+.hero h1 .dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--red);vertical-align:top;margin:6px 0 0 16px;}
+.hero p{margin-top:26px;font-size:17px;color:#566373;max-width:480px;line-height:1.75;}
+
+/* hero photo card */
+.hero-card{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 24px 56px rgba(20,54,95,.16);}
+.hero-card image-slot{width:100%;height:440px;}
+.hero-overlay{position:absolute;left:18px;right:18px;bottom:18px;background:#fff;border-radius:12px;box-shadow:0 12px 30px rgba(20,54,95,.18);display:flex;align-items:center;gap:16px;padding:14px 16px;}
+.hero-overlay .oic{width:46px;height:46px;border-radius:50%;background:linear-gradient(180deg,#eeb24f,#d8901f);display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto;}
+.hero-overlay .oic svg{width:22px;height:22px;}
+.hero-overlay .otxt{font-size:14.5px;color:var(--navy);font-weight:700;line-height:1.35;flex:1;}
+.hero-overlay .btn-navy{padding:12px 18px;font-size:14px;white-space:nowrap;}
+.hero-overlay .btn-navy svg{width:15px;height:15px;}
+
+/* ============ FAQ ACCORDION ============ */
+.faq-sec{padding:64px 0 18px;}
+.faq-list{display:flex;flex-direction:column;gap:16px;}
+.faq{border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden;transition:box-shadow .2s ease,border-color .2s ease;}
+.faq[open]{box-shadow:0 16px 38px rgba(20,54,95,.08);border-color:#d6e2ef;}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:22px 26px;font-family:var(--display);font-weight:700;color:var(--navy);font-size:18px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq .pm{width:30px;height:30px;border-radius:50%;background:var(--navy-deep);display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto;position:relative;}
+.faq .pm::before,.faq .pm::after{content:"";position:absolute;background:#fff;border-radius:2px;}
+.faq .pm::before{width:12px;height:2px;}
+.faq .pm::after{width:2px;height:12px;transition:transform .22s ease,opacity .22s ease;}
+.faq[open] .pm::after{transform:scaleY(0);opacity:0;}
+.faq summary .q{flex:1;}
+.faq summary .chev{width:20px;height:20px;color:var(--ink-2);flex:0 0 auto;transition:transform .22s ease;}
+.faq[open] summary .chev{transform:rotate(180deg);}
+.faq .ans{padding:0 26px 24px 74px;color:#586675;font-size:15.5px;line-height:1.75;max-width:920px;font-family:var(--sans);}
+.faq.is-first[open]{background:linear-gradient(180deg,#f6f9fd,#fbfcfe);}
+.faq .ans.bordered{border-left:3px solid var(--gold);padding-left:22px;margin-left:52px;}
+.faq.is-first .ans{padding-left:0;}
+
+/* ============ HELP BAND ============ */
+.help-sec{padding:42px 0 0;}
+.help{background:linear-gradient(165deg,#fbf2e0,#f7ecd6);border:1px solid #f0e2c6;border-radius:14px;padding:36px 44px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;}
+.help-main{display:flex;align-items:flex-start;gap:22px;}
+.help-ic{width:64px;height:64px;border-radius:50%;border:2px solid var(--gold);color:var(--gold-dark);display:flex;align-items:center;justify-content:center;flex:0 0 auto;background:rgba(255,255,255,.4);}
+.help-ic svg{width:32px;height:32px;}
+.help-copy h2{font-size:26px;}
+.help-copy p{margin-top:10px;color:#6a614c;font-size:15px;line-height:1.65;max-width:460px;}
+.help-actions{display:flex;flex-direction:column;gap:20px;border-left:1px solid rgba(200,136,31,.3);padding-left:40px;}
+.help-action{display:flex;align-items:center;gap:14px;}
+.help-action .ha-ic{width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--gold-dark);flex:0 0 auto;box-shadow:0 4px 12px rgba(200,136,31,.16);}
+.help-action .ha-ic svg{width:20px;height:20px;}
+.help-action b{display:block;color:var(--navy);font-family:var(--display);font-size:16px;font-weight:700;}
+.help-action a{color:var(--navy);font-family:var(--display);font-size:18px;font-weight:700;text-decoration:none;}
+.help-action a:hover{color:var(--gold-dark);}
+.help-action span{color:#6a614c;font-size:14px;}
+
+/* ============ DISCLAIMER ============ */
+.disc-sec{padding:24px 0 70px;}
+.disc{background:linear-gradient(165deg,#eef4fc,#e7f0fa);border:1px solid #dbe7f5;border-radius:12px;padding:24px 30px;display:flex;align-items:center;gap:20px;}
+.disc-ic{width:46px;height:46px;border-radius:50%;background:var(--navy-deep);display:flex;align-items:center;justify-content:center;color:var(--gold-soft);flex:0 0 auto;}
+.disc-ic svg{width:22px;height:22px;}
+.disc p{font-size:14px;color:#4f6076;line-height:1.6;}
+
+/* ============ OUR OFFICE ============ */
+.office-bg{background:linear-gradient(180deg,#fafcfe,#f3f7fb);padding:80px 0 90px;}
+.office-title{display:flex;align-items:center;justify-content:center;gap:22px;margin-bottom:54px;}
+.office-title .rule{height:1px;background:var(--line);flex:1;max-width:380px;}
+.office-title h2{font-size:38px;display:flex;align-items:center;gap:16px;}
+.office-title h2 svg{width:30px;height:30px;color:var(--gold);}
+.office-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.office-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:40px 44px;box-shadow:0 16px 38px rgba(20,54,95,.06);}
+.office-card.tint{background:linear-gradient(165deg,#eef4fc,#e6f0fa);}
+.oc-head{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
+.oc-ic{width:54px;height:54px;border-radius:50%;background:radial-gradient(120% 120% at 50% 25%,#eef4fc,#dde9f6);display:flex;align-items:center;justify-content:center;color:var(--navy);}
+.oc-ic svg{width:26px;height:26px;}
+.oc-head h3{font-size:24px;}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #eef2f7;}
+.hours-row:last-child{border-bottom:none;}
+.hours-row .day{font-weight:700;color:var(--navy);font-size:16px;}
+.hours-row .time{color:#56637a;font-size:16px;white-space:nowrap;}
+.addr-name{font-family:var(--display);font-size:34px;color:var(--navy);font-weight:700;margin-bottom:14px;}
+.addr-line{font-size:18px;color:#3f5168;line-height:1.5;margin-bottom:30px;}
+.addr-row{display:flex;align-items:center;gap:16px;margin-top:18px;}
+.addr-row .mi{width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px rgba(20,54,95,.08);display:flex;align-items:center;justify-content:center;color:var(--navy);flex:0 0 auto;}
+.addr-row .mi svg{width:21px;height:21px;}
+.addr-row a,.addr-row span{color:var(--navy);font-weight:700;font-size:18px;text-decoration:none;}
+.addr-row a:hover{color:var(--gold-dark);}
+
+/* ============ FOOTER ============ */
+footer{background:var(--footer);color:#cdd8e6;}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr;gap:40px;padding:74px 0 50px;}
+.foot-col h4{color:#fff;font-family:var(--display);font-size:22px;margin-bottom:6px;font-weight:700;}
+.foot-col .u-line{margin:0 0 22px;width:48px;}
+.foot-col ul{list-style:none;}
+.foot-col li{margin:14px 0;}
+.foot-col a{color:#c4d2e2;text-decoration:none;font-size:15.5px;display:inline-flex;align-items:center;gap:9px;transition:color .16s ease, transform .16s ease;}
+.foot-col a:hover{color:#fff;}
+.foot-col .chev{color:var(--gold);font-weight:900;}
+.foot-col a.all{color:var(--gold);font-weight:700;}
+.foot-col a.all:hover{transform:translateX(3px);}
+.socials{display:flex;gap:14px;margin-bottom:22px;}
+.soc{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .18s ease, transform .18s ease;}
+.soc:hover{background:rgba(255,255,255,.16);transform:translateY(-2px);}
+.soc svg{width:24px;height:24px;}
+.soc.g{background:#fff;}
+.foot-col.connect p{font-size:15px;color:#aebccd;line-height:1.65;}
+.foot-bar{border-top:1px solid rgba(255,255,255,.12);padding:26px 0;}
+.foot-bar .wrap{display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;font-size:14px;color:#9fb0c4;}
+.foot-bar a{color:#9fb0c4;text-decoration:none;}
+.foot-bar a:hover{color:#fff;}
+.foot-bar .sep{color:rgba(255,255,255,.25);}
+
+@media (max-width:960px){
+  .util-left .util-item.muted,.util .divider{display:none;}
+  .mainnav{display:none;}
+  .site-head .wrap{height:74px;}
+  .hero .wrap{grid-template-columns:1fr;gap:40px;}
+  .hero h1{font-size:42px;}
+  .help{grid-template-columns:1fr;gap:28px;}
+  .help-actions{border-left:none;padding-left:0;border-top:1px solid rgba(200,136,31,.3);padding-top:24px;flex-direction:row;flex-wrap:wrap;gap:28px;}
+  .office-grid,.foot-grid{grid-template-columns:1fr;}
+  .hero-overlay{flex-direction:column;align-items:flex-start;}
+}
+@media (max-width:560px){
+  .wrap{padding:0 22px;}
+  .hero h1{font-size:34px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== UTILITY BAR ===================== -->
+<div class="util">
+  <div class="wrap">
+    <div class="util-left">
+      <span class="util-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Mon–Fri&nbsp;&nbsp;Opens 7:30 am
+      </span>
+      <span class="divider"></span>
+      <span class="util-item muted">Wed open until 8:30 pm</span>
+    </div>
+    <a class="util-phone" href="tel:3063747272">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      306.374.7272
+    </a>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-head" data-screen-label="Header">
+  <div class="wrap">
+    <a class="logo" href="#">
+      <span class="mono">WDC</span>
+      <span class="full">WILDWOOD DENTAL CLINIC</span>
+    </a>
+    <nav class="mainnav">
+      <a href="#">About Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+      <a href="#">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+      <a href="#">New Patients <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+      <a href="#">Existing Patients <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <a class="head-cta" href="#">Request Appointment</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+        <span class="eyebrow">Patient Financing</span>
+      </div>
+      <h1 class="serif">Flexible payment<span class="dot"></span> options with LendCare</h1>
+      <p>We offer patient financing through LendCare, a Canadian healthcare financing provider. LendCare allows you to spread the cost of dental treatment over time with flexible payment plans, making it easier to move forward with recommended care without having to pay everything upfront.</p>
+    </div>
+    <div class="hero-card">
+      <image-slot id="lc-hero" fit="cover" placeholder="Drop reception / consultation photo"></image-slot>
+      <div class="hero-overlay">
+        <span class="oic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M2 20h20"/></svg></span>
+        <span class="otxt">Apply online in minutes<br/>or ask our team in clinic.</span>
+        <a class="btn btn-navy" href="#">Apply with LendCare
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ACCORDION ===================== -->
+<section class="faq-sec" data-screen-label="LendCare FAQ">
+  <div class="wrap">
+    <div class="faq-list">
+      <details class="faq is-first" open>
+        <summary><span class="pm"></span><span class="q">How does LendCare work?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans bordered">Applying for financing is simple. You can complete an application online or ask our team for assistance during your visit. If approved, you'll be able to select a payment plan that fits your budget and pay for treatment over time rather than all at once.</div>
+      </details>
+      <details class="faq">
+        <summary><span class="pm"></span><span class="q">What treatments can be financed?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Financing can be applied to a wide range of dental treatments, from restorative and cosmetic care to major procedures such as crowns, implants, orthodontics, and oral surgery. If you're unsure whether your treatment qualifies, our team is happy to confirm during your visit.</div>
+      </details>
+      <details class="faq">
+        <summary><span class="pm"></span><span class="q">Is approval guaranteed?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Approval is not guaranteed. LendCare reviews each application individually, and financing is subject to credit approval. Many patients do qualify, and our team can help you start an application to find out which options are available to you.</div>
+      </details>
+      <details class="faq">
+        <summary><span class="pm"></span><span class="q">Can I make monthly payments?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Yes. LendCare offers flexible monthly payment plans so you can spread the cost of treatment over time instead of paying everything upfront. Once you're approved, you'll be able to choose a plan that fits your budget.</div>
+      </details>
+      <details class="faq">
+        <summary><span class="pm"></span><span class="q">What are the payment terms?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Payment terms vary depending on the amount financed and your individual qualifications. Term lengths, rates, and monthly amounts are presented to you before you accept any offer, so you can decide what works best for you.</div>
+      </details>
+      <details class="faq">
+        <summary><span class="pm"></span><span class="q">Who can I contact if I have questions?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans">Our team is always happy to help. Call us at 306.374.7272 or ask at your next appointment, and we'll walk you through the financing options and answer any questions about applying through LendCare.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HELP BAND ===================== -->
+<section class="help-sec" data-screen-label="We're Here to Help">
+  <div class="wrap">
+    <div class="help">
+      <div class="help-main">
+        <span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5c-1.5-1.3-3.2-2-5-2C4 3.5 2 5.7 2 9c0 2.4.9 4.6 1.7 7 .6 1.8 1 4 2.3 4 1.2 0 1.3-2 1.8-3.6.4-1.3.8-2.4 2.2-2.4s1.8 1.1 2.2 2.4c.5 1.6.6 3.6 1.8 3.6 1.3 0 1.7-2.2 2.3-4 .8-2.4 1.7-4.6 1.7-7 0-3.3-2-5.5-5-5.5-1.8 0-3.5.7-5 2Z"/></svg></span>
+        <div class="help-copy">
+          <h2 class="serif">We're here to help.</h2>
+          <p>Have questions about financing options or whether your treatment may qualify? Our team is happy to walk you through the process and help you find the best solution for your needs.</p>
+        </div>
+      </div>
+      <div class="help-actions">
+        <div class="help-action">
+          <span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <div><b>Call us</b><a href="tel:3063747272">306.374.7272</a></div>
+        </div>
+        <div class="help-action">
+          <span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>
+          <div><b>Book an appointment</b><span>We're here when you're ready.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DISCLAIMER ===================== -->
+<section class="disc-sec" data-screen-label="Disclaimer">
+  <div class="wrap">
+    <div class="disc">
+      <span class="disc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      <p>Financing is provided by LendCare and is subject to credit approval. Terms, conditions, and rates vary based on individual qualifications. Please review all financing documents carefully before accepting any financing offer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUR OFFICE ===================== -->
+<section class="office-bg" data-screen-label="Our Office">
+  <div class="wrap">
+    <div class="office-title">
+      <span class="rule"></span>
+      <h2 class="serif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Our Office</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="office-grid">
+      <div class="office-card">
+        <div class="oc-head">
+          <div class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3 class="serif">Office Hours</h3>
+        </div>
+        <div class="hours-row"><span class="day">Monday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Tuesday</span><span class="time">7:30 am – 5:30 pm</span></div>
+        <div class="hours-row"><span class="day">Wednesday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Thursday</span><span class="time">7:30 am – 4:30 pm</span></div>
+        <div class="hours-row"><span class="day">Friday</span><span class="time">7:30 am – 4:00 pm</span></div>
+      </div>
+      <div class="office-card tint">
+        <div class="oc-head">
+          <div class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3 class="serif">Our Address</h3>
+        </div>
+        <div class="addr-name">Wildwood Dental Clinic</div>
+        <div class="addr-line">134 – 51st St E, Suite 102,<br/>Saskatoon, SK&nbsp;&nbsp;S7K 0G3</div>
+        <div class="addr-row">
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <a href="/cdn-cgi/l/email-protection#a1d3c4c2c4d1d5c8cecfe1d6c8cdc5d6cecec5c5c4cfd5c0cdc2cdc8cfc8c28fc2cecc"><span class="__cf_email__" data-cfemail="b1c3d4d2d4c1c5d8dedff1c6d8ddd5c6deded5d5d4dfc5d0ddd2ddd8dfd8d29fd2dedc">[email&#160;protected]</span></a>
+        </div>
+        <div class="addr-row">
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+          <span>306.374.7272</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>Services</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#"><span class="chev">›</span> Emergency Services</a></li>
+          <li><a href="#"><span class="chev">›</span> Family Dentistry</a></li>
+          <li><a href="#"><span class="chev">›</span> Cosmetic Dentistry</a></li>
+          <li><a href="#"><span class="chev">›</span> Children's Dentistry</a></li>
+          <li><a class="all" href="#">All Services →</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">New Patients</a></li>
+          <li><a href="#">Patient Forms</a></li>
+          <li><a href="#">Insurance &amp; Payment</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <span class="u-line"></span>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Invisalign®</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="foot-col connect">
+        <h4>Connect With Us</h4>
+        <span class="u-line"></span>
+        <div class="socials">
+          <a class="soc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.2 22v-8H6.5v-3.2h2.7V8.3c0-2.7 1.6-4.2 4.1-4.2 1.2 0 2.4.2 2.4.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6v1.9h2.9L15 14h-2.4v8H9.2z"/></svg></a>
+          <a class="soc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc g" href="#" aria-label="Google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.06-1.4-.18-2.06H12v3.9h5.9a5 5 0 0 1-2.18 3.3v2.7h3.5c2.05-1.9 3.28-4.7 3.28-7.84z"/><path fill="#34A853" d="M12 23c2.96 0 5.45-.98 7.26-2.66l-3.5-2.7c-.97.65-2.22 1.04-3.76 1.04-2.89 0-5.34-1.95-6.21-4.58H2.18v2.78A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.79 14.1a6.6 6.6 0 0 1 0-4.2V7.12H2.18a11 11 0 0 0 0 9.76l3.61-2.78z"/><path fill="#EA4335" d="M12 5.4c1.62 0 3.07.56 4.21 1.65l3.15-3.15C17.45 2.1 14.96 1 12 1A11 11 0 0 0 2.18 7.12l3.61 2.78C6.66 7.35 9.11 5.4 12 5.4z"/></svg></a>
+        </div>
+        <p>Read our Google reviews and see why patients choose Wildwood Dental Clinic for their family's dental care.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bar">
+    <div class="wrap">
+      <span>© 2024 Wildwood Dental Clinic. All Rights Reserved.</span>
+      <span class="sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<template id="__bundler_thumbnail" data-bg-color="#163a5f">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#163a5f"/><text x="50" y="58" font-family="Georgia,serif" font-size="40" fill="#e0a23b" text-anchor="middle" font-weight="700">W</text></svg>
+</template>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

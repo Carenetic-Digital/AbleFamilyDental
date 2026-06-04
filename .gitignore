@@ -27,3 +27,6 @@ playwright-report/
 # Wrangler
 .wrangler/
 .playwright-mcp/
+
+# BugHerd review data (local only, not committed)
+.bugherd/

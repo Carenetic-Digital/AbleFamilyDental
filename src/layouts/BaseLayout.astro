@@ -12,6 +12,7 @@ interface Props {
   image?: string;
   noindex?: boolean;
   showMobileBar?: boolean;
+  showPreFooter?: boolean;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   image,
   noindex = false,
   showMobileBar = true,
+  showPreFooter = true,
 } = Astro.props;
 
 const businessData = {
@@ -92,7 +94,7 @@ const businessData = {
       <slot />
     </main>
 
-    <PreFooter />
+    {showPreFooter && <PreFooter />}
 
     <Footer />
 

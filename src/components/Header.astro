@@ -1,6 +1,5 @@
 ---
 const aboutLinks = [
-  { label: "Our Clinic", href: "/about/our-clinic" },
   { label: "Our Doctors", href: "/about/our-team" },
   { label: "Careers", href: "/about/careers" },
   { label: "Blog", href: "/blog" },
@@ -10,6 +9,7 @@ const newPatientLinks = [
   { label: "What to Expect", href: "/new-patients/what-to-expect" },
   { label: "Patient Forms", href: "/new-patients/forms" },
   { label: "Insurance & Payment", href: "/new-patients/insurance-payment" },
+  { label: "FAQs", href: "/faq" },
 ];
 
 const existingPatientLinks = [
@@ -214,7 +214,7 @@ const allCols = [col1, col2, col3, col4];
           hidden
           data-dropdown-panel="about"
         >
-          <a href="/about" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">About Wildwood</a>
+          <a href="/about/our-clinic" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">About Wildwood</a>
           {aboutLinks.map(link => (
             <a href={link.href} class="block px-4 py-2 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-brand-primary)]">{link.label}</a>
           ))}
@@ -362,7 +362,7 @@ const allCols = [col1, col2, col3, col4];
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="pl-3 pb-3 space-y-1">
-            <a href="/about" class="block py-1 text-sm text-[var(--color-text)]">About Wildwood</a>
+            <a href="/about/our-clinic" class="block py-1 text-sm text-[var(--color-text)]">About Wildwood</a>
             {aboutLinks.map(link => (
               <a href={link.href} class="block py-1 text-sm text-[var(--color-text)]">{link.label}</a>
             ))}

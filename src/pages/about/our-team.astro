@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const aboutNav = [
-  { name: "About Wildwood", href: "/about" },
   { name: "Our Clinic", href: "/about/our-clinic" },
   { name: "Our Team", href: "/about/our-team", current: true },
   { name: "Careers", href: "/about/careers" },
@@ -106,7 +105,7 @@ const doctors = [
       <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span aria-hidden="true">›</span>
-        <a href="/about" class="hover:text-white transition-colors">About</a>
+        <a href="/about/our-clinic" class="hover:text-white transition-colors">About</a>
         <span aria-hidden="true">›</span>
         <span class="text-white">Our Team</span>
       </nav>

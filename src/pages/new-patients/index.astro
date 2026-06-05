@@ -211,116 +211,9 @@ const steps = [
   </section>
 
   <!-- ============================================================
-       INSURANCE & PAYMENT
-       ============================================================ -->
-  <section id="insurance" class="section-y bg-white">
-    <div class="container-wide">
-
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="eyebrow">Coverage &amp; payment</p>
-        <h2 class="mt-3 font-display font-semibold text-[length:var(--text-4xl)] leading-tight text-[var(--color-brand-primary)]">
-          Insurance &amp; Payment Options
-        </h2>
-        <p class="mt-3 text-lg text-[var(--color-text-muted)] leading-relaxed">
-          We work with most major Canadian dental insurance plans and offer flexible payment options to make your dental care straightforward.
-        </p>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-8 items-start">
-
-        <!-- Left: general insurance & payment -->
-        <div class="space-y-6">
-
-          <div class="bg-[var(--color-surface-cool)] rounded-xl p-6 border border-[var(--color-border-soft)]">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-              </div>
-              <h3 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">Direct Insurance Billing</h3>
-            </div>
-            <p class="text-sm text-[var(--color-text)] leading-relaxed">
-              We bill most major Canadian dental insurance plans directly, so you don't have to pay the full amount upfront and wait for reimbursement. Simply bring your insurance card and member ID to your appointment and our team will handle the claim on your behalf.
-            </p>
-            <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Accepted plans include most employer group benefit plans and many individual dental plans offered through Canadian carriers. If you're unsure whether your plan is accepted, give us a call before your visit and we'll confirm.
-            </p>
-          </div>
-
-          <div class="bg-[var(--color-surface-cool)] rounded-xl p-6 border border-[var(--color-border-soft)]">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <h3 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">Payment Options</h3>
-            </div>
-            <p class="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-              For any balance remaining after insurance, or for patients without coverage, we accept the following forms of payment:
-            </p>
-            <ul class="space-y-2">
-              {["Credit card (Visa, Mastercard, American Express)", "Debit (Interac)", "Cash"].map(option => (
-                <li class="flex items-center gap-2.5 text-sm text-[var(--color-text-muted)]">
-                  <svg class="shrink-0 text-[var(--color-brand-accent)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
-                  {option}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- Right: CDCP highlight card -->
-        <div class="bg-[var(--color-brand-primary)] rounded-2xl p-8 text-white shadow-xl">
-          <div class="flex items-center gap-3 mb-5">
-            <svg class="shrink-0" width="40" height="40" viewBox="0 0 56 56" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M28 6 L10 13 L10 27 C10 38 18 47 28 50 C38 47 46 38 46 27 L46 13 Z" stroke-width="2.5" fill="none"/>
-              <polyline points="20,28 25,33 36,22" stroke-width="3"/>
-            </svg>
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-accent-soft)]">Government Program</p>
-              <h3 class="font-display font-semibold text-xl text-white leading-snug">Canadian Dental Care Plan (CDCP)</h3>
-            </div>
-          </div>
-
-          <div class="space-y-4 text-[var(--color-text-on-dark-muted)] text-sm leading-relaxed">
-            <p>
-              The Canadian Dental Care Plan (CDCP) is a federal government program designed to help Canadians who do not have access to private dental insurance. It provides coverage for a range of dental services for eligible individuals and families.
-            </p>
-            <div>
-              <p class="font-semibold text-white mb-2">Who may qualify:</p>
-              <ul class="space-y-1.5">
-                {[
-                  "Canadian residents without existing dental insurance coverage",
-                  "Individuals and families who meet income-testing thresholds set by the federal government",
-                  "Eligible applicants must apply through the Government of Canada"
-                ].map(item => (
-                  <li class="flex items-start gap-2.5">
-                    <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent-soft)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <p>
-              You can check your eligibility and apply through the Government of Canada. <a href="https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand-accent-soft)] underline underline-offset-2 hover:text-white transition-colors">Learn More</a>.
-            </p>
-            <div class="mt-4 border-t border-white/20 pt-4">
-              <p class="text-white font-medium">We accept the CDCP at Wildwood Dental Clinic.</p>
-              <p class="mt-1 text-[var(--color-text-on-dark-muted)] text-sm">
-                Eligibility is determined by the federal government. We are not able to determine your eligibility on your behalf. However, our team is happy to answer questions about how to use your CDCP benefit for care at our clinic. Please call us or ask at your next visit.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
        APPOINTMENT REQUEST (EXISTING PATIENTS)
        ============================================================ -->
-  <section id="request-appointment" class="section-y bg-[var(--color-surface-cool)]">
+  <section id="request-appointment" class="section-y bg-white">
     <div class="container-wide">
 
       <div class="max-w-2xl mx-auto">
@@ -429,6 +322,135 @@ const steps = [
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INSURANCE & PAYMENT
+       ============================================================ -->
+  <section id="insurance" class="section-y bg-[var(--color-surface-cool)]">
+    <div class="container-wide">
+
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="eyebrow">Coverage &amp; payment</p>
+        <h2 class="mt-3 font-display font-semibold text-[length:var(--text-4xl)] leading-tight text-[var(--color-brand-primary)]">
+          Insurance &amp; Payment Options
+        </h2>
+        <p class="mt-3 text-lg text-[var(--color-text-muted)] leading-relaxed">
+          We work with most major Canadian dental insurance plans and offer flexible payment options to make your dental care straightforward.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+
+        <!-- Left: general insurance & payment -->
+        <div class="space-y-6">
+
+          <div class="bg-white rounded-xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">Direct Insurance Billing</h3>
+            </div>
+            <p class="text-sm text-[var(--color-text)] leading-relaxed">
+              We bill most major Canadian dental insurance plans directly, so you don't have to pay the full amount upfront and wait for reimbursement. Simply bring your insurance card and member ID to your appointment and our team will handle the claim on your behalf.
+            </p>
+            <p class="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
+              Accepted plans include most employer group benefit plans and many individual dental plans offered through Canadian carriers. If you're unsure whether your plan is accepted, give us a call before your visit and we'll confirm.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">Payment Options</h3>
+            </div>
+            <p class="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+              For any balance remaining after insurance, or for patients without coverage, we accept the following forms of payment:
+            </p>
+            <ul class="space-y-2">
+              {["Credit card (Visa, Mastercard, American Express)", "Debit (Interac)", "Cash"].map(option => (
+                <li class="flex items-center gap-2.5 text-sm text-[var(--color-text-muted)]">
+                  <svg class="shrink-0 text-[var(--color-brand-accent)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                  {option}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Right: CDCP highlight card -->
+        <div class="bg-[var(--color-brand-primary)] rounded-2xl p-8 text-white shadow-xl">
+          <div class="flex items-center gap-3 mb-5">
+            <svg class="shrink-0" width="40" height="40" viewBox="0 0 56 56" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M28 6 L10 13 L10 27 C10 38 18 47 28 50 C38 47 46 38 46 27 L46 13 Z" stroke-width="2.5" fill="none"/>
+              <polyline points="20,28 25,33 36,22" stroke-width="3"/>
+            </svg>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-accent-soft)]">Government Program</p>
+              <h3 class="font-display font-semibold text-xl text-white leading-snug">Canadian Dental Care Plan (CDCP)</h3>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-[var(--color-text-on-dark-muted)] text-sm leading-relaxed">
+            <p>
+              The Canadian Dental Care Plan (CDCP) is a federal government program designed to help Canadians who do not have access to private dental insurance. It provides coverage for a range of dental services for eligible individuals and families.
+            </p>
+            <div>
+              <p class="font-semibold text-white mb-2">Who may qualify:</p>
+              <ul class="space-y-1.5">
+                {[
+                  "Canadian residents without existing dental insurance coverage",
+                  "Individuals and families who meet income-testing thresholds set by the federal government",
+                  "Eligible applicants must apply through the Government of Canada"
+                ].map(item => (
+                  <li class="flex items-start gap-2.5">
+                    <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent-soft)]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p>
+              You can check your eligibility and apply through the Government of Canada. <a href="https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand-accent-soft)] underline underline-offset-2 hover:text-white transition-colors">Learn More</a>.
+            </p>
+            <div class="mt-4 border-t border-white/20 pt-4">
+              <p class="text-white font-medium">We accept the CDCP at Wildwood Dental Clinic.</p>
+              <p class="mt-1 text-[var(--color-text-on-dark-muted)] text-sm">
+                Eligibility is determined by the federal government. We are not able to determine your eligibility on your behalf. However, our team is happy to answer questions about how to use your CDCP benefit for care at our clinic. Please call us or ask at your next visit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LendCare financing callout -->
+      <div class="mt-10 rounded-2xl border border-[var(--color-border-soft)] bg-white overflow-hidden">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-5 px-7 py-6">
+          <div class="w-11 h-11 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          </div>
+          <div class="flex-1 space-y-2">
+            <h3 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">Patient Financing with LendCare</h3>
+            <p class="text-sm text-[var(--color-text)] leading-relaxed">
+              We offer patient financing through LendCare, a Canadian healthcare financing provider. LendCare lets you spread the cost of dental treatment — including crowns, implants, orthodontics, and other major procedures — over flexible monthly payments rather than paying everything upfront.
+            </p>
+            <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+              Applications can be completed online in minutes or in clinic with help from our team. Financing is subject to credit approval; terms and monthly amounts are presented before you accept any offer.
+            </p>
+          </div>
+          <a href="/new-patients/lendcare" class="btn btn-outline shrink-0 self-start sm:self-center">
+            Learn About Financing
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 

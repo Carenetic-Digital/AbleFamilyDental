@@ -1,19 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const hours = [
-  { day: "Monday",    time: "7:30 am – 4:30 pm" },
-  { day: "Tuesday",   time: "7:30 am – 4:30 pm" },
-  { day: "Wednesday", time: "7:30 am – 8:30 pm" },
-  { day: "Thursday",  time: "7:30 am – 4:30 pm" },
-  { day: "Friday",    time: "7:30 am – 4:00 pm" },
-];
 ---
 
 <BaseLayout
   title="Patient Financing with LendCare | Wildwood Dental Clinic Saskatoon"
   description="Wildwood Dental Clinic offers patient financing through LendCare. Spread the cost of dental treatment over time with flexible monthly payment plans."
-  showPreFooter={false}
 >
 
   <!-- ============================================================
@@ -189,67 +181,6 @@ const hours = [
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
         </span>
         <p style="font-size:14px;color:#4f6076;line-height:1.6;">Financing is provided by LendCare and is subject to credit approval. Terms, conditions, and rates vary based on individual qualifications. Please review all financing documents carefully before accepting any financing offer.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       OUR OFFICE
-       ============================================================ -->
-  <section style="background:linear-gradient(180deg,#fafcfe,#f3f7fb);padding:80px 0 90px;">
-    <div class="container-wide">
-
-      <div style="display:flex;align-items:center;justify-content:center;gap:22px;margin-bottom:54px;">
-        <span style="height:1px;background:#e3ebf3;flex:1;max-width:380px;display:block;"></span>
-        <h2 class="font-display" style="font-size:38px;color:var(--color-brand-primary);font-weight:700;display:flex;align-items:center;gap:16px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--color-brand-accent);"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          Our Office
-        </h2>
-        <span style="height:1px;background:#e3ebf3;flex:1;max-width:380px;display:block;"></span>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
-
-        <!-- Office Hours -->
-        <div style="background:#fff;border:1px solid #e3ebf3;border-radius:14px;padding:40px 44px;box-shadow:0 16px 38px rgba(20,54,95,.06);">
-          <div style="display:flex;align-items:center;gap:16px;margin-bottom:26px;">
-            <span style="width:54px;height:54px;border-radius:50%;background:radial-gradient(120% 120% at 50% 25%,#eef4fc,#dde9f6);display:flex;align-items:center;justify-content:center;color:var(--color-brand-primary);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </span>
-            <h3 class="font-display" style="font-size:24px;color:var(--color-brand-primary);font-weight:700;">Office Hours</h3>
-          </div>
-          {hours.map((row, i) => (
-            <div style={`display:flex;justify-content:space-between;align-items:center;padding:15px 0;${i < hours.length - 1 ? 'border-bottom:1px solid #eef2f7;' : ''}`}>
-              <span style="font-weight:700;color:var(--color-brand-primary);font-size:16px;">{row.day}</span>
-              <span style="color:#56637a;font-size:16px;white-space:nowrap;">{row.time}</span>
-            </div>
-          ))}
-        </div>
-
-        <!-- Address -->
-        <div style="background:linear-gradient(165deg,#eef4fc,#e6f0fa);border:1px solid #e3ebf3;border-radius:14px;padding:40px 44px;box-shadow:0 16px 38px rgba(20,54,95,.06);">
-          <div style="display:flex;align-items:center;gap:16px;margin-bottom:26px;">
-            <span style="width:54px;height:54px;border-radius:50%;background:radial-gradient(120% 120% at 50% 25%,#eef4fc,#dde9f6);display:flex;align-items:center;justify-content:center;color:var(--color-brand-primary);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            </span>
-            <h3 class="font-display" style="font-size:24px;color:var(--color-brand-primary);font-weight:700;">Our Address</h3>
-          </div>
-          <div class="font-display" style="font-size:34px;color:var(--color-brand-primary);font-weight:700;margin-bottom:14px;">Wildwood Dental Clinic</div>
-          <div style="font-size:18px;color:#3f5168;line-height:1.5;margin-bottom:30px;">105 – 1526 8th Street East,<br/>Saskatoon, SK&nbsp; S7H 0T3</div>
-          <div style="display:flex;align-items:center;gap:16px;margin-top:18px;">
-            <span style="width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px rgba(20,54,95,.08);display:flex;align-items:center;justify-content:center;color:var(--color-brand-primary);flex:0 0 auto;">
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-            </span>
-            <a href="mailto:reception@wildwooddentalclinic.com" style="color:var(--color-brand-primary);font-weight:700;font-size:18px;text-decoration:none;">reception@wildwooddentalclinic.com</a>
-          </div>
-          <div style="display:flex;align-items:center;gap:16px;margin-top:18px;">
-            <span style="width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px rgba(20,54,95,.08);display:flex;align-items:center;justify-content:center;color:var(--color-brand-primary);flex:0 0 auto;">
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-            </span>
-            <span style="color:var(--color-brand-primary);font-weight:700;font-size:18px;">306.374.7272</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>

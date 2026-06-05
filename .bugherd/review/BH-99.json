@@ -4,8 +4,8 @@
   "project_id": 521191,
   "description": "Replace this photo with the one attached",
   "url": "/services/cosmetic/veneers/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-99-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-99-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-services_cosmetic_veneers_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-services_cosmetic_veneers_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/services/cosmetic/veneers/",
   "after_url": "http://localhost:4321/services/cosmetic/veneers/",
   "fix_summary": "/services/cosmetic/veneers/ main content image break: Replaced old image with Vaneers.png from BugHerd attachment.",
@@ -17,6 +17,7 @@
       "summary": "Replaced image src to /images/bugherd/Vaneers.png in main content image break"
     }
   ],
-  "status": "pending_review",
-  "review_comments": ""
+  "status": "approved",
+  "review_comments": "",
+  "reviewed_at": "2026-06-04T19:27:57.507Z"
 }

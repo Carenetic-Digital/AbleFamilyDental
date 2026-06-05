@@ -4,8 +4,8 @@
   "project_id": 521191,
   "description": "Lighten card header color on broken-tooth page",
   "url": "/services/emergency/broken-tooth/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-services_emergency_broken-tooth_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-services_emergency_broken-tooth_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/services/emergency/broken-tooth/",
   "after_url": "http://localhost:4321/services/emergency/broken-tooth/",
   "fix_summary": "Broken Tooth page: fracture type card headers changed from dark navy to light surface background with dark text.",
@@ -14,9 +14,10 @@
   "changes": [
     {
       "file": "src/pages/services/emergency/broken-tooth.astro",
-      "summary": "Card header bg changed brand-primary\u2192surface-cool, text white\u2192brand-primary"
+      "summary": "Card header bg changed brand-primary→surface-cool, text white→brand-primary"
     }
   ],
-  "status": "pending_review",
-  "review_comments": ""
+  "status": "needs_revision",
+  "review_comments": "[2026-06-04T19:22:15.156Z]\nThe text \"Need to Be Seen\" in the blue box on the right column needs to be white",
+  "reviewed_at": "2026-06-04T19:22:15.156Z"
 }

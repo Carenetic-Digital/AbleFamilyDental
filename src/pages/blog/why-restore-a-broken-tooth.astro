@@ -1,217 +1,104 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
 ---
 
-<BaseLayout
+<BlogArticleLayout
   title="Why Restore a Broken Tooth? | Wildwood Dental Clinic Blog"
   description="A broken tooth can happen to anyone. Understanding the types of tooth fractures and why prompt treatment matters can help you make the right decision for your oral health."
+  category="Restorative Dentistry"
+  categoryStyle="amber"
+  headline="Why Restore a Broken Tooth?"
+  readTime="5 min read"
+  date="August 28, 2018"
+  dateIso="2018-08-28"
+  heroImage="/images/services/hero-restorative.jpg"
+  heroImageAlt="Restorative dental care"
+  currentSlug="why-restore-a-broken-tooth"
 >
 
-  <!-- HERO -->
-  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
-    <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
-      <img
-        src="/images/services/hero-restorative.jpg"
-        alt=""
-        width="800"
-        height="600"
-        loading="eager"
-        decoding="async"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
-    </div>
-    <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
-      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-white transition-colors">Home</a>
-        <span aria-hidden="true">›</span>
-        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
-        <span aria-hidden="true">›</span>
-        <span class="text-white">Why Restore a Broken Tooth?</span>
-      </nav>
-      <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#fef3c7] text-[#92400e] mb-4">Restorative Dentistry</span>
-      <h1 class="mt-2 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
-        Why Restore a Broken Tooth?
-      </h1>
-      <p class="mt-4 text-sm text-[var(--color-text-on-dark-muted)]">
-        <time datetime="2018-08-28">August 28, 2018</time>
+  <div class="space-y-8 leading-relaxed text-[var(--color-text)]">
+
+    <p class="text-lg text-[var(--color-text-muted)]">
+      Maybe you've been there before. You're crunching down on a piece of hard candy or ice and you suddenly feel something — a broken tooth. This can happen even in people with otherwise healthy teeth, and knowing what to do next can make a significant difference in the outcome.
+    </p>
+
+    <div>
+      <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">What causes broken teeth?</h2>
+      <p>
+        Tooth fractures can occur for a number of reasons. Contact sports without a mouthguard, falls, automobile accidents, or simply biting down on something unexpectedly hard can all cause a tooth to crack or break. In some cases, teeth that have been weakened by decay or large fillings are more vulnerable to fracture.
       </p>
     </div>
-  </section>
 
-  <!-- ARTICLE CONTENT -->
-  <section class="section-y bg-white">
-    <div class="container-wide">
-      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+    <div>
+      <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">Types of tooth fractures</h2>
+      <p class="mb-4">Not all broken teeth are the same. Understanding the type of fracture helps your dentist determine the appropriate treatment:</p>
 
-        <!-- Article body -->
-        <article class="prose-content space-y-8 text-[var(--color-text)] leading-relaxed">
-
-          <p class="text-lg text-[var(--color-text-muted)]">
-            Maybe you've been there before. You're crunching down on a piece of hard candy or ice and you suddenly feel something — a broken tooth. This can happen even in people with otherwise healthy teeth, and knowing what to do next can make a significant difference in the outcome.
-          </p>
-
-          <div>
-            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">What causes broken teeth?</h2>
-            <p>
-              Tooth fractures can occur for a number of reasons. Contact sports without a mouthguard, falls, automobile accidents, or simply biting down on something unexpectedly hard can all cause a tooth to crack or break. In some cases, teeth that have been weakened by decay or large fillings are more vulnerable to fracture.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">Types of tooth fractures</h2>
-            <p class="mb-4">Not all broken teeth are the same. Understanding the type of fracture helps your dentist determine the appropriate treatment:</p>
-
-            <div class="space-y-4">
-              <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
-                <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Craze lines</h3>
-                <p class="mt-1 text-sm">Tiny surface cracks in the outer enamel. These are generally cosmetic and do not affect the function or structural integrity of the tooth.</p>
-              </div>
-              <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
-                <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Broken cusp</h3>
-                <p class="mt-1 text-sm">A fracture on one of the chewing surfaces of the tooth. This weakens the tooth and usually requires a crown or other restoration to protect it.</p>
-              </div>
-              <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
-                <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Cracked tooth</h3>
-                <p class="mt-1 text-sm">A deeper fracture that extends from the chewing surface toward the root. Early treatment is important — if left unaddressed, the crack can propagate and eventually affect the nerve.</p>
-              </div>
-              <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
-                <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Split tooth</h3>
-                <p class="mt-1 text-sm">A severe fracture where the tooth has separated into distinct segments. In most cases, extraction is required, followed by a replacement option such as an implant or bridge.</p>
-              </div>
-              <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
-                <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Vertical root fracture</h3>
-                <p class="mt-1 text-sm">A fracture that starts in the root and extends upward. These can be difficult to detect because they may cause few or no symptoms until the surrounding bone and gum tissue become affected.</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">Why restoration matters</h2>
-            <p>
-              Whenever the structure of a tooth is compromised, it becomes weaker and more susceptible to further damage. A small crack that might be treatable with a crown today can become a split tooth requiring extraction tomorrow if it is left untreated. Decay can also enter through a crack and progress quickly once it reaches the inner layers of the tooth.
-            </p>
-            <p class="mt-3">
-              Addressing a broken tooth promptly also helps protect the surrounding teeth and tissues. An untreated fracture can affect your bite, irritate the gum tissue, and in some cases lead to infection.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">Treatment options</h2>
-            <p class="mb-4">The right treatment depends on the location and severity of the fracture. Common options include:</p>
-            <ul class="space-y-2">
-              <li class="flex items-start gap-3">
-                <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
-                <span><strong class="text-[var(--color-brand-primary)]">Dental fillings</strong> for minor fractures with minimal structural damage</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
-                <span><strong class="text-[var(--color-brand-primary)]">Dental crowns</strong> to cover and protect a tooth that has lost significant structure</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
-                <span><strong class="text-[var(--color-brand-primary)]">Porcelain veneers</strong> for front teeth with cosmetically significant fractures</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
-                <span><strong class="text-[var(--color-brand-primary)]">Root canal therapy</strong> when a fracture has reached the pulp chamber and the tooth can be saved</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="border-t border-[var(--color-border-soft)] pt-8">
-            <p>
-              If you have a broken or cracked tooth, we encourage you to book an appointment soon. The sooner we can assess the damage, the more options we typically have available to restore the tooth.
-            </p>
-            <p class="mt-3">
-              Call Wildwood Dental Clinic at <a href="tel:+13063747272" class="font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">306.374.7272</a> or use our online booking form.
-            </p>
-          </div>
-
-          <div class="mt-4">
-            <a href="/blog" class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent)] transition-colors">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-              Back to Blog
-            </a>
-          </div>
-
-        </article>
-
-        <!-- Sidebar -->
-        <aside class="space-y-6">
-          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6">
-            <h3 class="font-display font-semibold text-lg mb-3 text-[var(--color-brand-primary)]">Have a broken tooth?</h3>
-            <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-5">
-              Don't wait. Book an appointment and we'll assess the damage and discuss your options.
-            </p>
-            <a href="/book" class="btn btn-primary w-full text-center block">
-              Request Appointment
-            </a>
-            <a href="tel:+13063747272" class="mt-3 block text-center text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
-              306.374.7272
-            </a>
-          </div>
-
-          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6">
-            <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)] mb-4">Related Services</h3>
-            <ul class="space-y-3">
-              <li>
-                <a href="/services/restorative/crowns-bridges" class="text-sm font-semibold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent)] transition-colors">Crowns &amp; Bridges →</a>
-              </li>
-              <li>
-                <a href="/services/restorative/fillings" class="text-sm font-semibold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent)] transition-colors">Dental Fillings →</a>
-              </li>
-              <li>
-                <a href="/services/endodontics/root-canal" class="text-sm font-semibold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent)] transition-colors">Root Canal Therapy →</a>
-              </li>
-              <li>
-                <a href="/services/emergency" class="text-sm font-semibold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent)] transition-colors">Emergency Dentistry →</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6">
-            <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)] mb-4">More Articles</h3>
-            <ul class="space-y-4">
-              <li>
-                <a href="/blog/tips-for-choosing-the-right-family-dental-clinic" class="group">
-                  <span class="text-xs text-[var(--color-text-muted)] block mb-1">Family Dentistry</span>
-                  <span class="text-sm font-semibold text-[var(--color-brand-primary)] group-hover:text-[var(--color-brand-accent)] transition-colors leading-snug block">Tips for Choosing the Right Family Dental Clinic</span>
-                </a>
-              </li>
-              <li>
-                <a href="/blog/what-to-expect-at-your-teeth-cleaning" class="group">
-                  <span class="text-xs text-[var(--color-text-muted)] block mb-1">Preventive Care</span>
-                  <span class="text-sm font-semibold text-[var(--color-brand-primary)] group-hover:text-[var(--color-brand-accent)] transition-colors leading-snug block">What to Expect at Your Teeth Cleaning</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </aside>
-
+      <div class="space-y-4">
+        <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
+          <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Craze lines</h3>
+          <p class="mt-1 text-sm">Tiny surface cracks in the outer enamel. These are generally cosmetic and do not affect the function or structural integrity of the tooth.</p>
+        </div>
+        <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
+          <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Broken cusp</h3>
+          <p class="mt-1 text-sm">A fracture on one of the chewing surfaces of the tooth. This weakens the tooth and usually requires a crown or other restoration to protect it.</p>
+        </div>
+        <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
+          <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Cracked tooth</h3>
+          <p class="mt-1 text-sm">A deeper fracture that extends from the chewing surface toward the root. Early treatment is important — if left unaddressed, the crack can propagate and eventually affect the nerve.</p>
+        </div>
+        <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
+          <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Split tooth</h3>
+          <p class="mt-1 text-sm">A severe fracture where the tooth has separated into distinct segments. In most cases, extraction is required, followed by a replacement option such as an implant or bridge.</p>
+        </div>
+        <div class="border-l-2 border-[var(--color-brand-accent)] pl-4">
+          <h3 class="font-semibold text-[var(--color-brand-primary)] text-base">Vertical root fracture</h3>
+          <p class="mt-1 text-sm">A fracture that starts in the root and extends upward. These can be difficult to detect because they may cause few or no symptoms until the surrounding bone and gum tissue become affected.</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="section-y bg-[var(--color-surface-alt)]">
-    <div class="container-wide text-center max-w-2xl mx-auto">
-      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] leading-tight text-[var(--color-brand-primary)]">
-        Restorative dentistry in Saskatoon
-      </h2>
-      <p class="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
-        From fillings to crowns, Wildwood Dental Clinic offers a full range of restorative options to get your smile back to full function.
+    <div>
+      <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">Why restoration matters</h2>
+      <p>
+        Whenever the structure of a tooth is compromised, it becomes weaker and more susceptible to further damage. A small crack that might be treatable with a crown today can become a split tooth requiring extraction tomorrow if it is left untreated. Decay can also enter through a crack and progress quickly once it reaches the inner layers of the tooth.
       </p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/book" class="btn btn-primary btn-lg">
-          Book an Appointment
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="/services/restorative" class="btn btn-outline btn-lg">
-          Restorative Services
-        </a>
-      </div>
+      <p class="mt-3">
+        Addressing a broken tooth promptly also helps protect the surrounding teeth and tissues. An untreated fracture can affect your bite, irritate the gum tissue, and in some cases lead to infection.
+      </p>
     </div>
-  </section>
 
-</BaseLayout>
+    <div>
+      <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">Treatment options</h2>
+      <p class="mb-4">The right treatment depends on the location and severity of the fracture. Common options include:</p>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-3">
+          <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+          <span><strong class="text-[var(--color-brand-primary)]">Dental fillings</strong> for minor fractures with minimal structural damage</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+          <span><strong class="text-[var(--color-brand-primary)]">Dental crowns</strong> to cover and protect a tooth that has lost significant structure</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+          <span><strong class="text-[var(--color-brand-primary)]">Porcelain veneers</strong> for front teeth with cosmetically significant fractures</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="shrink-0 mt-1 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+          <span><strong class="text-[var(--color-brand-primary)]">Root canal therapy</strong> when a fracture has reached the pulp chamber and the tooth can be saved</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="border-t border-[var(--color-border-soft)] pt-8">
+      <p>
+        If you have a broken or cracked tooth, we encourage you to book an appointment soon. The sooner we can assess the damage, the more options we typically have available to restore the tooth.
+      </p>
+      <p class="mt-3">
+        Call Wildwood Dental Clinic at <a href="tel:+13063747272" class="font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">306.374.7272</a> or use our online booking form.
+      </p>
+    </div>
+
+  </div>
+
+</BlogArticleLayout>

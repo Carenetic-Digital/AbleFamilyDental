@@ -4,16 +4,22 @@
   "project_id": 521191,
   "description": "Replace this photo with the one attached",
   "url": "/new-patients/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-63-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-63-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-new-patients_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-new-patients_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/new-patients/",
   "after_url": "http://localhost:4321/new-patients/",
   "fix_summary": "New patients page: Replaced hero panel image with new patient/doctor photo from attachment.",
   "branch": "bugherd/63",
   "commit": "eed099f77e8bb784046ccfbf245f38aba26811e0",
   "changes": [
-    {"file": "src/pages/new-patients/index.astro", "summary": "Replaced hero panel image src to /images/bugherd/ChatGPT_Image_Jun_1_2026_07_14_38_PM.png"},
-    {"file": "public/images/bugherd/ChatGPT_Image_Jun_1_2026_07_14_38_PM.png", "summary": "Added new hero image from BugHerd attachment"}
+    {
+      "file": "src/pages/new-patients/index.astro",
+      "summary": "Replaced hero panel image src to /images/bugherd/ChatGPT_Image_Jun_1_2026_07_14_38_PM.png"
+    },
+    {
+      "file": "public/images/bugherd/ChatGPT_Image_Jun_1_2026_07_14_38_PM.png",
+      "summary": "Added new hero image from BugHerd attachment"
+    }
   ],
   "status": "pending_review",
   "review_comments": ""

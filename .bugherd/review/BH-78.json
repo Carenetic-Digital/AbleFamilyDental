@@ -4,8 +4,8 @@
   "project_id": 521191,
   "description": "Replace this photo with the one attached",
   "url": "/contact/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-78-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-78-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-contact_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-contact_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/contact/",
   "after_url": "http://localhost:4321/contact/",
   "fix_summary": "/contact/ hero panel: Replaced old image with Wildwood_Dental_Clinic_Patient_Doc_78.png from BugHerd attachment.",
@@ -17,6 +17,7 @@
       "summary": "Replaced image src to /images/bugherd/Wildwood_Dental_Clinic_Patient_Doc_78.png in hero panel"
     }
   ],
-  "status": "pending_review",
-  "review_comments": ""
+  "status": "approved",
+  "review_comments": "",
+  "reviewed_at": "2026-06-04T19:23:24.670Z"
 }

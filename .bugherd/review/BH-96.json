@@ -4,14 +4,15 @@
   "project_id": 521191,
   "description": "Confirm gum contouring and Invisalign nav entries point to canonical pages",
   "url": "/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/",
   "after_url": "http://localhost:4321/",
   "fix_summary": "Nav audit confirmed: both Gum Contouring and Invisalign appear in multiple sections but all link to the same canonical URLs.",
   "branch": "bugherd/96",
   "commit": "8b42b52",
   "changes": [],
-  "status": "pending_review",
-  "review_comments": ""
+  "status": "approved",
+  "review_comments": "",
+  "reviewed_at": "2026-06-04T19:26:52.819Z"
 }

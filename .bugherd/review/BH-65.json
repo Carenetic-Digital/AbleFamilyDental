@@ -4,15 +4,18 @@
   "project_id": 521191,
   "description": "Copy should follow the attached document",
   "url": "/new-patients/insurance-payment/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-65-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-65-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-new-patients_insurance-payment_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-new-patients_insurance-payment_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/new-patients/insurance-payment/",
   "after_url": "http://localhost:4321/new-patients/insurance-payment/",
   "fix_summary": "Insurance & Payment page: Updated hero headline to 'Affordable Dental Care Options', expanded CDCP section with eligibility criteria, service coverage list, and important notes. Updated LendCare section with specific rates ($15K limit, 60 months, 9.9% APR).",
   "branch": "bugherd/65",
   "commit": "c4ac7d506af09a37e69609d7917eb30392500454",
   "changes": [
-    {"file": "src/pages/new-patients/insurance-payment.astro", "summary": "Updated hero headline and intro paragraph; expanded CDCP section with detailed eligibility criteria and covered services; updated LendCare bullet points with specific financial terms from DOCX"}
+    {
+      "file": "src/pages/new-patients/insurance-payment.astro",
+      "summary": "Updated hero headline and intro paragraph; expanded CDCP section with detailed eligibility criteria and covered services; updated LendCare bullet points with specific financial terms from DOCX"
+    }
   ],
   "status": "pending_review",
   "review_comments": ""

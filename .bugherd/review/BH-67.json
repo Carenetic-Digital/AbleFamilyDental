@@ -4,16 +4,20 @@
   "project_id": 521191,
   "description": "Replace this photo with the one attached",
   "url": "/services/emergency/same-day/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-67-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-67-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-services_emergency_same-day_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-services_emergency_same-day_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/services/emergency/same-day/",
   "after_url": "http://localhost:4321/services/emergency/same-day/",
   "fix_summary": "Same-day emergency page: Replaced hero panel image (emergency-treatment.jpg) with the patient/doctor photo from attachment.",
   "branch": "bugherd/67",
   "commit": "f98ea1f8e0cf0c6e0df1e9ffd7f80de3eb7e9e38",
   "changes": [
-    {"file": "src/pages/services/emergency/same-day.astro", "summary": "Replaced hero panel image src from '/images/services/emergency-treatment.jpg' to '/images/bugherd/Wildwood_Dental_Clinic_Patient_Doc.png'"}
+    {
+      "file": "src/pages/services/emergency/same-day.astro",
+      "summary": "Replaced hero panel image src from '/images/services/emergency-treatment.jpg' to '/images/bugherd/Wildwood_Dental_Clinic_Patient_Doc.png'"
+    }
   ],
-  "status": "pending_review",
-  "review_comments": ""
+  "status": "needs_revision",
+  "review_comments": "[2026-06-04T19:08:36.494Z]\nThe uploaded photo was not applied to the hero. Please add the uploaded photo to the hero",
+  "reviewed_at": "2026-06-04T19:08:36.494Z"
 }

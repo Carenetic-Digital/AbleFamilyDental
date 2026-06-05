@@ -4,8 +4,8 @@
   "project_id": 521191,
   "description": "Rename Invisalign page title to 'Clear Aligners: Invisalign Provider'",
   "url": "/services/orthodontics/invisalign/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-9-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-services_orthodontics_invisalign_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-services_orthodontics_invisalign_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/services/orthodontics/invisalign/",
   "after_url": "http://localhost:4321/services/orthodontics/invisalign/",
   "fix_summary": "Invisalign page: title, breadcrumb, and H1 renamed from 'Invisalign & Clear Aligners' to 'Clear Aligners: Invisalign Provider'.",
@@ -17,6 +17,7 @@
       "summary": "Replaced all 'Invisalign & Clear Aligners' text with new name"
     }
   ],
-  "status": "pending_review",
-  "review_comments": ""
+  "status": "approved",
+  "review_comments": "",
+  "reviewed_at": "2026-06-04T19:26:12.701Z"
 }

@@ -4,8 +4,8 @@
   "project_id": 521191,
   "description": "Replace this photo with the one attached",
   "url": "/services/tmj/diagnosis/",
-  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-108-before.png",
-  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/BH-108-after.png",
+  "before_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-before-services_tmj_diagnosis_.png",
+  "after_screenshot": "/Users/nathannorberg/Documents/WildwoodDental/Wildwood-Dental-CDS/.bugherd/screenshots/page-after-services_tmj_diagnosis_.png",
   "before_url": "https://wildwood-dental-clinic.spark0.io/services/tmj/diagnosis/",
   "after_url": "http://localhost:4321/services/tmj/diagnosis/",
   "fix_summary": "/services/tmj/diagnosis/ main content image break: Replaced old image with TMJ.png from BugHerd attachment.",
@@ -17,6 +17,7 @@
       "summary": "Replaced image src to /images/bugherd/TMJ.png in main content image break"
     }
   ],
-  "status": "pending_review",
-  "review_comments": ""
+  "status": "approved",
+  "review_comments": "",
+  "reviewed_at": "2026-06-04T19:28:38.775Z"
 }

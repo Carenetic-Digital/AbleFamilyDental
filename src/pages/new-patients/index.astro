@@ -238,23 +238,16 @@ const steps = [
             </p>
           </div>
 
-          <iframe
-            id="JotFormIFrame-202455192978263"
-            title="Appointment Request Form"
-            src="https://hipaa.jotform.com/202455192978263"
-            allow="geolocation; microphone; camera; fullscreen"
-            frameborder="0"
-            scrolling="no"
-            style="min-width:100%;width:100%;height:600px;border:none;"
-          ></iframe>
-          <script is:inline>
-            window.addEventListener('message', function(e) {
-              if (typeof e.data === 'object' && e.data.action === 'setHeight' && e.data.formID === '202455192978263') {
-                var iframe = document.getElementById('JotFormIFrame-202455192978263');
-                if (iframe) iframe.style.height = e.data.height + 'px';
-              }
-            });
-          </script>
+          <div class="overflow-hidden">
+            <iframe
+              src="https://hipaa.jotform.com/202455192978263"
+              width="100%"
+              height="600"
+              scrolling="yes"
+              style="border: 0; display: block;"
+              title="Appointment Request Form"
+            ></iframe>
+          </div>
         </div>
 
       </div>

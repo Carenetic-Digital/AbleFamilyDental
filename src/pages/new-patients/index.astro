@@ -238,87 +238,23 @@ const steps = [
             </p>
           </div>
 
-          <form method="post" action="#" class="space-y-4" novalidate>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="ar-name" class="block text-sm font-medium text-[var(--color-text)] mb-1">Full Name <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="text"
-                  id="ar-name"
-                  name="full_name"
-                  autocomplete="name"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                  placeholder="Your full name"
-                />
-              </div>
-              <div>
-                <label for="ar-phone" class="block text-sm font-medium text-[var(--color-text)] mb-1">Phone <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-                <input
-                  type="tel"
-                  id="ar-phone"
-                  name="phone"
-                  autocomplete="tel"
-                  required
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                  placeholder="306-000-0000"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label for="ar-email" class="block text-sm font-medium text-[var(--color-text)] mb-1">Email <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
-              <input
-                type="email"
-                id="ar-email"
-                name="email"
-                autocomplete="email"
-                required
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="ar-date" class="block text-sm font-medium text-[var(--color-text)] mb-1">Preferred Date</label>
-                <input
-                  type="date"
-                  id="ar-date"
-                  name="preferred_date"
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30"
-                />
-              </div>
-              <div>
-                <label for="ar-time" class="block text-sm font-medium text-[var(--color-text)] mb-1">Preferred Time</label>
-                <select
-                  id="ar-time"
-                  name="preferred_time"
-                  class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 bg-white"
-                >
-                  <option value="">Select a time</option>
-                  <option value="morning">Morning (before noon)</option>
-                  <option value="afternoon">Afternoon (noon – 4 pm)</option>
-                  <option value="evening">Evening (after 4 pm)</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label for="ar-reason" class="block text-sm font-medium text-[var(--color-text)] mb-1">Reason for Visit</label>
-              <textarea
-                id="ar-reason"
-                name="reason"
-                rows="4"
-                class="border border-[var(--color-border)] rounded-lg px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-accent)]/30 resize-y"
-                placeholder="Routine recall, specific concern, or other, give us a brief description and we'll make sure the right time is allocated."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-full">
-              Submit Appointment Request
-            </button>
-          </form>
+          <iframe
+            id="JotFormIFrame-202455192978263"
+            title="Appointment Request Form"
+            src="https://hipaa.jotform.com/202455192978263"
+            allow="geolocation; microphone; camera; fullscreen"
+            frameborder="0"
+            scrolling="no"
+            style="min-width:100%;width:100%;height:600px;border:none;"
+          ></iframe>
+          <script is:inline>
+            window.addEventListener('message', function(e) {
+              if (typeof e.data === 'object' && e.data.action === 'setHeight' && e.data.formID === '202455192978263') {
+                var iframe = document.getElementById('JotFormIFrame-202455192978263');
+                if (iframe) iframe.style.height = e.data.height + 'px';
+              }
+            });
+          </script>
         </div>
 
       </div>

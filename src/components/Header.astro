@@ -307,11 +307,11 @@ const allCols = [col1, col2, col3, col4];
   <!-- Mega-menu panel -->
   <div
     id="services-megamenu"
-    class="hidden lg:block absolute inset-x-0 top-full bg-white border-t border-b border-[var(--color-border)] shadow-lg"
+    class="hidden lg:block absolute inset-x-0 top-full bg-white border-t border-b border-[var(--color-border)] shadow-lg max-h-[calc(100dvh-4rem)] overflow-y-auto"
     data-megamenu-panel
     hidden
   >
-    <div class="container-wide py-8">
+    <div class="container-wide py-5">
       <div class="grid grid-cols-4 gap-8">
         {allCols.map(col => (
           <div class="space-y-6">

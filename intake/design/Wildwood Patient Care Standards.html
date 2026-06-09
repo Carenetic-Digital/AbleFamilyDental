@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patient Care Standards — Carenetic</title>
+<link rel="stylesheet" href="carenetic-tokens.css" />
+<script src="image-slot.js"></script>
+<style>
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--white);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:64px 32px;
+}
+.container-wide{max-width:1320px;width:100%;margin:0 auto;padding:0 1.5rem;}
+
+/* faint blue radial alt wash behind the whole section */
+.standards{
+  position:relative;
+  padding:var(--space-8) 0;
+}
+.standards::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse at 30% 30%, rgba(74,118,210,0.10) 0%, transparent 58%);
+}
+.standards > *{position:relative;z-index:1;}
+
+/* ---- two-column split: 40% copy / 60% credentials ---- */
+.std-grid{
+  display:grid;grid-template-columns:40fr 60fr;gap:var(--space-7);align-items:start;
+}
+
+/* ---- header (left column) ---- */
+.std-head{max-width:none;}
+.std-head .eyebrow{color:#e0a23b;margin-bottom:var(--space-3);}
+.std-head .eyebrow .accent-line{display:block;width:48px;height:3px;background:#e0a23b;border-radius:2px;margin-top:var(--space-3);}
+.std-head h2{margin:0 0 var(--space-4);max-width:none;}
+.std-head .accent-rule{width:48px;height:48px;margin:0 0 var(--space-4);transform:rotate(45deg);border:1.5px solid var(--border-blue);background:rgba(74,118,210,0.04);display:flex;align-items:center;justify-content:center;}
+.std-head .accent-rule svg{transform:rotate(-45deg);}
+.std-head p{color:var(--fg-2);font-size:var(--fs-body);line-height:1.7;margin:0;}
+
+/* ---- right column ---- */
+.std-creds{display:flex;flex-direction:column;gap:var(--space-5);}
+
+/* ---- logo row: 3 squares ---- */
+.cred-row{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);
+}
+.bp-card{
+  position:relative;
+  border:1px solid var(--border);
+  border-radius:var(--radius-sharp);
+  background:var(--white);
+  padding:var(--space-5);
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  transition:border-color var(--dur-base) var(--ease-std);
+}
+.bp-card:hover{border-color:var(--border-strong);}
+
+/* the square logo slot */
+.cred-square{
+  width:100%;
+  aspect-ratio:1/1;
+  background:var(--gray-50);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sharp);
+  overflow:hidden;
+}
+.cred-square image-slot{width:100%;height:100%;display:block;}
+
+/* ---- background graphic placeholder box ---- */
+.std-graphic{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/7;
+  background:var(--gray-50);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sharp);
+  display:flex;align-items:center;justify-content:center;
+}
+.std-graphic .ph-label{
+  font-family:var(--font-ui);font-size:var(--fs-xs);font-weight:600;
+  text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-400);
+}
+
+@media (max-width:980px){
+  .std-grid{grid-template-columns:1fr;gap:var(--space-6);}
+}
+@media (max-width:560px){
+  .cred-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="container-wide">
+  <section class="standards" data-screen-label="Patient Care Standards" data-comment-anchor="patient-care-standards">
+
+    <div class="std-grid">
+
+    <div class="std-head">
+      <span class="eyebrow">Patient Care Standards<span class="accent-line" aria-hidden="true"></span></span>
+      <h2>Committed to Safe, Professional Dental Care</h2>
+      <p>We follow the standards and guidelines set by the College of Dental Surgeons of Saskatchewan, reference trusted national dental resources, and uphold cleanliness and infection-prevention standards through the Commitment to Clean program.</p>
+    </div>
+
+    <div class="std-creds">
+    <div class="cred-row">
+
+      <div class="bp-card cred-card">
+        <div class="cred-square">
+          <image-slot id="std-cdss" fit="contain" placeholder="CDSS logo (square)"></image-slot>
+        </div>
+      </div>
+
+      <div class="bp-card cred-card">
+        <div class="cred-square">
+          <image-slot id="std-cda" fit="contain" placeholder="CDA logo (square)"></image-slot>
+        </div>
+      </div>
+
+      <div class="bp-card cred-card">
+        <div class="cred-square">
+          <image-slot id="std-clean" fit="contain" placeholder="Commitment to Clean (square)"></image-slot>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="std-graphic" aria-label="Background graphic placeholder">
+      <span class="ph-label">Background graphic — to be added</span>
+    </div>
+
+    </div>
+
+    </div>
+
+  </section>
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ const instructions = [
   {
     id: "cleaning",
     title: "After a Cleaning & Exam",
-    icon: `<path d="M9 2C7 2 5 3.5 5 6C5 7.5 5.5 8.5 6 10C6.5 11.5 7 13 7 15C7 17 7.5 20 10 20C11 20 11.5 19 12 18.5C12.5 19 13 20 14 20C16.5 20 17 17 17 15C17 13 17.5 11.5 18 10C18.5 8.5 19 7.5 19 6C19 3.5 17 2 15 2C14 2 13 2.5 12 3C11 2.5 10 2 9 2Z"/>`,
+    iconImg: "/images/icons/cleaning.svg",
     items: [
       "Some mild gum tenderness or sensitivity is normal for 1–2 days after a cleaning, particularly if it has been a while since your last appointment.",
       "Continue brushing and flossing as usual, gentle technique is fine. Avoiding flossing to spare sore gums can lead to continued irritation.",
@@ -21,7 +21,7 @@ const instructions = [
   {
     id: "freezing",
     title: "After Freezing (Local Anesthetic)",
-    icon: `<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`,
+    iconImg: "/images/icons/anesthesia.svg",
     items: [
       "Numbness from local anesthetic typically wears off within 1–4 hours, depending on the type of anesthetic used and the area treated.",
       "While you're numb, avoid hot foods and drinks, you may not be able to judge temperature accurately and could burn yourself.",
@@ -32,7 +32,7 @@ const instructions = [
   {
     id: "filling",
     title: "After a Filling",
-    icon: `<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>`,
+    iconImg: "/images/icons/filling.svg",
     items: [
       "If you received local anesthetic, follow the instructions above regarding freezing while your numbness wears off.",
       "Some sensitivity to temperature, particularly cold, is normal for a few days to a few weeks after a filling. This is a common response as the tooth settles.",
@@ -43,7 +43,7 @@ const instructions = [
   {
     id: "crown-temp",
     title: "After a Temporary Crown",
-    icon: `<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>`,
+    iconImg: "/images/icons/crowns.svg",
     items: [
       "Temporary crowns are not as secure as permanent ones. Avoid sticky or hard foods, toffee, gum, raw carrots, and similar items can dislodge the temporary.",
       "Be gentle when flossing around the temporary crown. Rather than pulling floss up and out, slide it out sideways to avoid lifting the crown.",
@@ -54,7 +54,7 @@ const instructions = [
   {
     id: "extraction",
     title: "After an Extraction",
-    icon: `<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>`,
+    iconImg: "/images/icons/extraction.svg",
     items: [
       "Bite down gently on the gauze provided for 30–45 minutes after the extraction to help control bleeding and allow a clot to form.",
       "Some blood-tinged saliva is normal for the first 24 hours. This can look like more bleeding than it is. Excessive bright red bleeding that doesn't slow is not normal, call us.",
@@ -68,7 +68,7 @@ const instructions = [
   {
     id: "root-canal",
     title: "After Root Canal Treatment",
-    icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
+    iconImg: "/images/icons/rootcanal.svg",
     items: [
       "The tooth and surrounding area may feel tender or sore for a few days after root canal treatment. This is a normal response to the procedure.",
       "Over-the-counter pain relief (such as ibuprofen or acetaminophen) is usually adequate for managing discomfort. Take as directed on the packaging.",
@@ -79,7 +79,7 @@ const instructions = [
   {
     id: "whitening",
     title: "After Teeth Whitening",
-    icon: `<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>`,
+    iconImg: "/images/icons/whitening.svg",
     items: [
       "Some tooth sensitivity is common after whitening treatment. This usually resolves within 1–2 days.",
       "For the first 48 hours after whitening, avoid foods and drinks that can stain, coffee, tea, red wine, berries, tomato sauce, and dark sauces.",
@@ -171,8 +171,11 @@ const instructions = [
           {instructions.map(section => (
             <div id={section.id} class="scroll-mt-8">
               <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={section.icon} />
+                <div class="w-14 h-14 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0 overflow-hidden">
+                  {section.iconImg
+                    ? <img src={section.iconImg} alt="" aria-hidden="true" class="w-10 h-10 object-contain brightness-0 invert" />
+                    : <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={section.icon} />
+                  }
                 </div>
                 <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)]">{section.title}</h2>
               </div>

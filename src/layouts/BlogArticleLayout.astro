@@ -128,7 +128,9 @@ const keepReading = allPosts.filter(p => p.slug !== currentSlug);
   <section class="section-y" aria-label="Article content">
     <div class="container-wide">
       <article class="article-prose">
-        <slot />
+        <div class="article-body">
+          <slot />
+        </div>
         <div class="article-prose__back">
           <a href="/blog">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -367,6 +369,105 @@ const keepReading = allPosts.filter(p => p.slug !== currentSlug);
   /* ==================== ARTICLE PROSE ==================== */
   .article-prose {
     width: 80%;
+  }
+
+  /* ---- Prose typography (editor-friendly) ----
+     The blog body is plain semantic HTML (TinyMCE-style, no classes).
+     All presentation lives here so an editor only needs to type
+     paragraphs, H2/H3, links, lists, blockquotes and horizontal rules. */
+  .article-body {
+    line-height: 1.7;
+    color: var(--color-text);
+  }
+  .article-body :global(> :first-child) { margin-top: 0; }
+
+  .article-body :global(p) {
+    margin: 1.25rem 0 0;
+  }
+  /* Lead paragraph (first block of the article) */
+  .article-body :global(p:first-child) {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+  }
+
+  .article-body :global(h2) {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--text-3xl);
+    color: var(--color-brand-primary);
+    line-height: 1.25;
+    margin: 2.75rem 0 1rem;
+  }
+
+  .article-body :global(h3) {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-brand-primary);
+    margin: 1.75rem 0 0;
+  }
+
+  .article-body :global(a) {
+    color: var(--color-brand-accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+  .article-body :global(a:hover) {
+    color: var(--color-brand-accent-hover);
+  }
+
+  .article-body :global(strong) {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+  }
+
+  /* Bulleted lists render as branded checklists */
+  .article-body :global(ul) {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+  }
+  .article-body :global(ul li) {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-top: 0.5rem;
+  }
+  .article-body :global(ul li::before) {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-brand-accent);
+    font-weight: 700;
+  }
+
+  /* Ordered lists keep standard numbering */
+  .article-body :global(ol) {
+    margin: 1.25rem 0 0;
+    padding-left: 1.4rem;
+  }
+  .article-body :global(ol li) {
+    margin-top: 0.5rem;
+  }
+
+  /* Blockquotes used for accented callout "cards" */
+  .article-body :global(blockquote) {
+    border-left: 2px solid var(--color-brand-accent);
+    padding-left: 1rem;
+    margin: 1.25rem 0 0;
+  }
+  .article-body :global(blockquote :first-child) {
+    margin-top: 0;
+  }
+  .article-body :global(blockquote p) {
+    font-size: 0.9375rem;
+    margin-top: 0.25rem;
+  }
+
+  .article-body :global(hr) {
+    border: 0;
+    border-top: 1px solid var(--color-border-soft);
+    margin: 2.75rem 0 0;
   }
 
   .article-prose__back {

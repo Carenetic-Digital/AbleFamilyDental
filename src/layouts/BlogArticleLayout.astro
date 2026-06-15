@@ -296,7 +296,7 @@ const keepReading = allPosts.filter(p => p.slug !== currentSlug);
 
   .article-hero__copy {
     padding: 5.5rem 0 8rem;
-    max-width: 640px;
+    max-width: min(600px, calc(50vw - 2.5rem));
   }
 
   .article-hero__crumbs {

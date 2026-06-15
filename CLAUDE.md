@@ -117,6 +117,10 @@ See `docs/third-party-scripts.md` for the full guide, common scripts and their C
 - `npm run test` — Run Playwright tests
 - `npm run deploy` — Build and deploy to Cloudflare Workers
 
+## Deployment
+
+Pushing to `origin/main` triggers an automatic deploy via GitHub Actions (`.github/workflows/deploy.yml`). The site goes live at **https://wildwood-dental-clinic.spark0.io/** within ~1 minute of a push. No manual deploy step is needed.
+
 ## Process Documentation
 
 Full process documentation (for PMs, strategists, and developers) lives at the sibling project `../spark-docs/` and is deployed at https://spark-process.carenetic-digital.workers.dev

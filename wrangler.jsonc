@@ -3,6 +3,7 @@
   "account_id": "6ba8d559dd652da1003752c4674dfa6c",
   "compatibility_date": "2026-02-01",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "not_found_handling": "404-page"
   }
 }

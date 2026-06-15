@@ -1,11 +1,11 @@
 {
-  "name": "[Business Name]",
-  "short_name": "[Short Name]",
-  "description": "[Business description]",
+  "name": "Wildwood Dental Clinic",
+  "short_name": "Wildwood Dental",
+  "description": "Family and cosmetic dentistry in Saskatoon, SK. Accepting new patients.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#1e3352",
   "icons": [
     {
       "src": "/icon-192.png",

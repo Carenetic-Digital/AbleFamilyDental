@@ -8,17 +8,15 @@ test('homepage loads', async ({ page }) => {
 test('all navigation links work', async ({ page }) => {
   await page.goto('/');
 
-  const navLinks = page.locator('nav a');
-  const count = await navLinks.count();
+  const hrefs = await page.locator('nav a[href^="/"]').evaluateAll(links =>
+    links.map(link => link.getAttribute('href'))
+  );
 
-  for (let i = 0; i < count; i++) {
-    const link = navLinks.nth(i);
-    const href = await link.getAttribute('href');
+  const uniqueHrefs = [...new Set(hrefs)].filter(Boolean);
 
-    if (href && href.startsWith('/')) {
-      await link.click();
-      await expect(page).not.toHaveURL(/404/);
-      await page.goto('/');
-    }
+  for (const href of uniqueHrefs) {
+    const response = await page.goto(href!);
+    expect(response?.status()).toBeLessThan(400);
+    await expect(page).not.toHaveURL(/404/);
   }
 });

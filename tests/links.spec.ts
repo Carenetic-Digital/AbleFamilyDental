@@ -12,7 +12,8 @@ test('all internal links resolve', async ({ page }) => {
 
   for (const href of uniqueHrefs) {
     const response = await page.goto(href!);
-    expect(response?.status()).toBeLessThan(400);
+    if (!response) continue; // same-page fragment navigation returns null
+    expect(response.status(), `${href} returned ${response.status()}`).toBeLessThan(400);
   }
 });
 

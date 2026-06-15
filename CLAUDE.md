@@ -108,6 +108,7 @@ See `docs/third-party-scripts.md` for the full guide, common scripts and their C
 - All images go in `public/images/` — never hotlink to external URLs
 - Redirects go in `public/_redirects` (Cloudflare format)
 - Use `compound-engineering:frontend-design` skill for page generation
+- **All internal page links must have a trailing slash** — Cloudflare routes to trailing slash by default, so `/about` must be `/about/`, `/services/cosmetic-dentistry` must be `/services/cosmetic-dentistry/`, etc. The root `/` is already correct. This applies to `href` attributes in `<a>` tags in `.astro` files. **Exception:** static asset paths (`.ico`, `.svg`, `.png`, `.webp`, `.webmanifest`, `.pdf`, etc.) must NOT have a trailing slash — only page route paths get the trailing slash.
 
 ## Commands Reference
 

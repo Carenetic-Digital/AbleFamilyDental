@@ -11,8 +11,9 @@
   --color-brand-primary: #1e3352;        /* Deep navy — header, dark bands, primary text accents */
   --color-brand-primary-deep: #142540;   /* Slightly deeper navy for hover/pressed on dark fills */
   --color-brand-heading: #274567;        /* Softer navy for body headings */
-  --color-brand-accent: #d59639;         /* Wildwood gold — primary CTAs, links */
-  --color-brand-accent-hover: #b97c25;   /* Darkened gold for hover (better AA on white) */
+  --color-brand-accent: #7a5720;         /* Dark gold — text links, eyebrows, focus, AA on light surfaces */
+  --color-brand-accent-btn: #7a5720;     /* Dark gold for buttons — passes WCAG AA 4.5:1 on white */
+  --color-brand-accent-hover: #5f4218;   /* Deeper gold for hover/pressed states */
   --color-brand-accent-soft: #eeb663;    /* Light gold for soft fills, decorative */
   --color-brand-secondary: #cbd9de;      /* Pale blue-gray — borders, soft surface tints */
 
@@ -25,7 +26,7 @@
 
   /* Text */
   --color-text: #1f2937;                 /* Body copy */
-  --color-text-muted: #5b6573;           /* Secondary text (darker than legacy #808080 for AA) */
+  --color-text-muted: #4a5568;           /* Secondary text, AA on white and blue-tinted sections */
   --color-text-on-dark: #f4f1ea;         /* Warm off-white on navy */
   --color-text-on-dark-muted: #b8c5d0;   /* Footer/captions on navy */
 
@@ -201,6 +202,11 @@ html {
   color: var(--color-brand-accent);
 }
 
+/* WCAG 2.5.8: standalone text CTA links need min 24px touch target */
+a.inline-flex:not(.btn) {
+  padding-block: 0.25rem;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -221,7 +227,7 @@ html {
 }
 
 .btn-primary {
-  background-color: var(--color-brand-accent);
+  background-color: var(--color-brand-accent-btn);
   color: #fff;
   box-shadow: var(--shadow-sm);
 }

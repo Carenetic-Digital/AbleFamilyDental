@@ -17,8 +17,8 @@ const serviceCategories = [
 ---
 
 <BaseLayout
-  title="Wildwood Dental Clinic | Family Dentistry on 8th Street East, Saskatoon"
-  description="A family-friendly general dentistry clinic on 8th Street East in Saskatoon. Saskatchewan-trained dentists offering preventive, restorative, cosmetic, and surgical care for over 35 years."
+  title="Wildwood Dental Clinic | Family Dentistry, Saskatoon"
+  description="Family-friendly dentistry on 8th Street East in Saskatoon, with preventive, restorative, cosmetic, and surgical care from a Saskatchewan-trained team."
 >
 
   <!-- ============================================================
@@ -28,16 +28,19 @@ const serviceCategories = [
 
     <!-- Hero image: right half, absolute, fades left into white -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[52%] pointer-events-none" aria-hidden="true">
-      <img
-        src="/images/hero/dentist_greeting.jpg"
-        alt=""
-        width="832"
-        height="1040"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-        class="w-full h-full object-cover object-center"
-      />
+      <picture>
+        <source srcset="/images/hero/dentist-greeting.webp" type="image/webp" />
+        <img
+          src="/images/hero/dentist_greeting.jpg"
+          alt=""
+          width="1491"
+          height="1491"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="w-full h-full object-cover object-center"
+        />
+      </picture>
       <!-- Gradient fade from white into image -->
       <div
         class="absolute inset-y-0 left-0 w-48 pointer-events-none"
@@ -58,7 +61,7 @@ const serviceCategories = [
         </p>
 
         <div class="mt-8 flex flex-wrap items-center gap-3">
-          <a href="/book" class="btn btn-primary btn-lg">
+          <a href="/book/" class="btn btn-primary btn-lg">
             Request Appointment
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -105,7 +108,7 @@ const serviceCategories = [
         </div>
       </div>
       <a
-        href="/cdcp"
+        href="/cdcp/"
         class="shrink-0 btn bg-white text-[var(--color-brand-primary)] hover:bg-[var(--color-surface-alt)] font-semibold"
       >
         Learn More →
@@ -163,16 +166,19 @@ const serviceCategories = [
         </div>
 
         <!-- RIGHT column: single city image with badge -->
-        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-full min-h-[280px]">
-          <img
-            src="/images/hero/saskatoon-city.png"
-            alt="Aerial view of Saskatoon"
-            width="800"
-            height="600"
-            loading="lazy"
-            decoding="async"
-            class="w-full h-full object-cover"
-          />
+        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[280px]">
+          <picture>
+            <source srcset="/images/hero/saskatoon-city.webp" type="image/webp" />
+            <img
+              src="/images/hero/saskatoon-city.png"
+              alt="Aerial view of Saskatoon"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          </picture>
           <!-- Navy badge overlay -->
           <div class="absolute bottom-4 left-4 inline-flex items-center gap-2.5 bg-[var(--color-brand-primary)]/85 text-white rounded-xl px-5 py-3.5 shadow-lg backdrop-blur-sm">
             <svg class="shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -189,37 +195,46 @@ const serviceCategories = [
         <!-- Image mosaic -->
         <div class="grid grid-cols-2 gap-3" style="grid-template-rows: auto auto;">
           <div>
-            <img
-              src="/images/hero/wildwood-dental-team.png"
-              alt="Wildwood Dental team member reviewing X-ray with patient"
-              width="1086"
-              height="1448"
-              loading="lazy"
-              decoding="async"
-              class="w-full object-cover rounded-xl aspect-[4/3] shadow-xl"
-            />
+            <picture>
+              <source srcset="/images/hero/wildwood-dental-team.webp" type="image/webp" />
+              <img
+                src="/images/hero/wildwood-dental-team.png"
+                alt="Wildwood Dental team member reviewing X-ray with patient"
+                width="1086"
+                height="1448"
+                loading="lazy"
+                decoding="async"
+                class="w-full object-cover rounded-xl aspect-[4/3] shadow-xl"
+              />
+            </picture>
           </div>
           <div class="row-span-2">
-            <img
-              src="/images/hero/wildwood-seating.png"
-              alt="Comfortable seating area at Wildwood Dental Clinic"
-              width="600"
-              height="900"
-              loading="lazy"
-              decoding="async"
-              class="w-full h-full object-cover rounded-xl shadow-xl"
-            />
+            <picture>
+              <source srcset="/images/hero/wildwood-seating.webp" type="image/webp" />
+              <img
+                src="/images/hero/wildwood-seating.png"
+                alt="Comfortable seating area at Wildwood Dental Clinic"
+                width="1086"
+                height="1449"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover rounded-xl shadow-xl"
+              />
+            </picture>
           </div>
           <div>
-            <img
-              src="/images/bugherd/BH37_ChatGPT_Image_Jun_1_2026_12_43_50_PM.png"
-              alt="Wildwood Dental Clinic front desk"
-              width="600"
-              height="450"
-              loading="lazy"
-              decoding="async"
-              class="w-full object-cover rounded-xl aspect-[4/3] shadow-xl"
-            />
+            <picture>
+              <source srcset="/images/hero/wildwood-front-desk.webp" type="image/webp" />
+              <img
+                src="/images/hero/wildwood-front-desk.png"
+                alt="Wildwood Dental Clinic front desk"
+                width="1082"
+                height="1454"
+                loading="lazy"
+                decoding="async"
+                class="w-full object-cover rounded-xl aspect-[4/3] shadow-xl"
+              />
+            </picture>
           </div>
         </div>
 
@@ -235,7 +250,7 @@ const serviceCategories = [
               <p class="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">
                 Personalized dental care focused on your comfort and long-term health.
               </p>
-              <a href="/about/our-clinic" class="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+              <a href="/about/our-clinic/" class="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
                 Learn More →
               </a>
             </div>
@@ -250,7 +265,7 @@ const serviceCategories = [
               <p class="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">
                 A team dedicated to patient-centred care.
               </p>
-              <a href="/about/our-team" class="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+              <a href="/about/our-team/" class="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
                 Meet the Team →
               </a>
             </div>
@@ -265,7 +280,7 @@ const serviceCategories = [
               <p class="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">
                 Learn more about your dental health, treatments, and how to maintain a healthy smile.
               </p>
-              <a href="/blog" class="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+              <a href="/blog/" class="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
                 Read Our Blog →
               </a>
             </div>
@@ -280,7 +295,7 @@ const serviceCategories = [
   <!-- ============================================================
        SECTION 4: Services Carousel
        ============================================================ -->
-  <section class="section-y bg-[var(--color-surface-cool)]" style="padding-bottom: 2.5rem;">
+  <section class="section-y bg-[var(--color-surface-cool)] overflow-x-hidden" style="padding-bottom: 2.5rem;">
     <div class="container-wide">
       <div class="text-center">
         <div class="flex items-center justify-center gap-3 mb-3">
@@ -319,7 +334,6 @@ const serviceCategories = [
                 href={svc.href}
                 data-svc-card
                 class="svc-card card group flex flex-col bg-white hover:border-[var(--color-brand-accent)]/30"
-                aria-label={svc.title}
               >
                 <div class="flex items-center gap-3">
                   <div class="w-16 h-16 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
@@ -370,7 +384,7 @@ const serviceCategories = [
        SECTION 5: Invisalign Band
        ============================================================ -->
   <section class="section-y bg-[var(--color-surface)]">
-    <div class="px-20">
+    <div class="px-4 lg:px-20">
       <div class="rounded-2xl shadow-sm ring-1 ring-[var(--color-brand-secondary)]/40 px-8 py-10 lg:px-12 grid lg:grid-cols-2 gap-12 items-center" style="background: linear-gradient(135deg, #eef4f8 0%, #d8e8f2 100%)">
 
         <!-- LEFT -->
@@ -396,7 +410,7 @@ const serviceCategories = [
             Our team can help you understand if Invisalign treatment may be right for you.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="/services/orthodontics/invisalign" class="btn btn-primary btn-lg">
+            <a href="/services/orthodontics/invisalign/" class="btn btn-primary btn-lg">
               Learn About Invisalign →
             </a>
             <a href="/services/orthodontics/invisalign#consultation-form" class="btn btn-outline btn-lg">
@@ -410,20 +424,23 @@ const serviceCategories = [
 
         <!-- RIGHT: Invisalign product image + provider logo -->
         <div class="hidden lg:flex justify-start items-center gap-8">
+          <picture class="w-full max-w-xs">
+            <source srcset="/images/invisalign/invisalign-product.webp" type="image/webp" />
+            <img
+              src="/images/invisalign/invisalign-product.png"
+              alt="Invisalign clear aligner tray with carrying case"
+              width="992"
+              height="853"
+              loading="lazy"
+              decoding="async"
+              class="w-full object-contain [transform:scaleX(-1)]"
+            />
+          </picture>
           <img
-            src="/images/invisalign/invisalign-product.png"
-            alt="Invisalign clear aligner tray with carrying case"
-            width="900"
-            height="900"
-            loading="lazy"
-            decoding="async"
-            class="w-full max-w-xs object-contain [transform:scaleX(-1)]"
-          />
-          <img
-            src="/images/logos/Invisalign+Provider+Logo-RGB.webp"
+            src="/images/logos/Invisalign-Provider-Logo-RGB.webp"
             alt="Invisalign Provider"
-            width="300"
-            height="100"
+            width="1410"
+            height="368"
             loading="lazy"
             decoding="async"
             class="w-64 object-contain"
@@ -467,7 +484,7 @@ const serviceCategories = [
           </div>
           <div class="mx-6 h-px bg-[#c5d9e6]"></div>
           <div class="px-6 py-4">
-            <a href="/new-patients" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+            <a href="/new-patients/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
               Get Started →
             </a>
           </div>
@@ -488,7 +505,7 @@ const serviceCategories = [
           </div>
           <div class="mx-6 h-px bg-[#c5d9e6]"></div>
           <div class="px-6 py-4">
-            <a href="/existing-patients" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+            <a href="/existing-patients/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
               Update Your Form →
             </a>
           </div>
@@ -509,7 +526,7 @@ const serviceCategories = [
           </div>
           <div class="mx-6 h-px bg-[#c5d9e6]"></div>
           <div class="px-6 py-4">
-            <a href="/new-patients/insurance-payment" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
+            <a href="/new-patients/insurance-payment/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">
               Learn More →
             </a>
           </div>

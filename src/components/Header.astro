@@ -154,7 +154,7 @@ const allCols = [col1, col2, col3, col4];
       <span class="font-medium tracking-wide text-[var(--color-brand-primary)]">Now accepting new patients</span>
       <span aria-hidden="true" class="w-px h-3 bg-[var(--color-brand-primary)]/25 inline-block align-middle"></span>
       <a
-        href="/book"
+        href="/book/"
         class="inline-flex items-center gap-1 font-bold tracking-widest uppercase text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors"
       >
         BOOK NOW
@@ -189,6 +189,7 @@ const allCols = [col1, col2, col3, col4];
           alt="Wildwood Dental Clinic"
           width="250"
           height="92"
+          loading="eager"
           fetchpriority="high"
           decoding="async"
           class="h-11 sm:h-12 w-auto"
@@ -215,7 +216,7 @@ const allCols = [col1, col2, col3, col4];
           hidden
           data-dropdown-panel="about"
         >
-          <a href="/about/our-clinic" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">Our Clinic</a>
+          <a href="/about/our-clinic/" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">Our Clinic</a>
           {aboutLinks.map(link => (
             <a href={link.href} class="block px-4 py-2 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-brand-primary)]">{link.label}</a>
           ))}
@@ -254,7 +255,7 @@ const allCols = [col1, col2, col3, col4];
           hidden
           data-dropdown-panel="new-patients"
         >
-          <a href="/new-patients" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">New Patients</a>
+          <a href="/new-patients/" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">New Patients</a>
           {newPatientLinks.map(link => (
             <a href={link.href} class="block px-4 py-2 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-brand-primary)]">{link.label}</a>
           ))}
@@ -279,17 +280,17 @@ const allCols = [col1, col2, col3, col4];
           hidden
           data-dropdown-panel="existing-patients"
         >
-          <a href="/existing-patients" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">Existing Patients</a>
+          <a href="/existing-patients/" class="block px-4 py-2 text-sm text-[var(--color-brand-primary)] font-medium hover:bg-[var(--color-surface-alt)]">Existing Patients</a>
           {existingPatientLinks.map(link => (
             <a href={link.href} class="block px-4 py-2 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-brand-primary)]">{link.label}</a>
           ))}
         </div>
       </div>
-      <a href="/contact" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Contact Us</a>
+      <a href="/contact/" class="px-3 py-2 text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">Contact Us</a>
     </nav>
 
     <div class="flex items-center gap-3">
-      <a href="/book" class="hidden md:inline-flex btn btn-primary">
+      <a href="/book/" class="hidden md:inline-flex btn btn-primary">
         Request Appointment
       </a>
       <button
@@ -342,8 +343,8 @@ const allCols = [col1, col2, col3, col4];
           Not sure which service you need? We'll help you figure it out at your first visit.
         </p>
         <div class="flex items-center gap-3">
-          <a href="/services" class="text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">View all services →</a>
-          <a href="/book" class="btn btn-primary">Request an appointment</a>
+          <a href="/services/" class="text-sm font-medium text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">View all services →</a>
+          <a href="/book/" class="btn btn-primary">Request an appointment</a>
         </div>
       </div>
     </div>
@@ -363,7 +364,7 @@ const allCols = [col1, col2, col3, col4];
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="pl-3 pb-3 space-y-1">
-            <a href="/about/our-clinic" class="block py-1 text-sm text-[var(--color-text)]">Our Clinic</a>
+            <a href="/about/our-clinic/" class="block py-1 text-sm text-[var(--color-text)]">Our Clinic</a>
             {aboutLinks.map(link => (
               <a href={link.href} class="block py-1 text-sm text-[var(--color-text)]">{link.label}</a>
             ))}
@@ -393,7 +394,7 @@ const allCols = [col1, col2, col3, col4];
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="pl-3 pb-3 space-y-1">
-            <a href="/new-patients" class="block py-1 text-sm text-[var(--color-text)]">New Patients</a>
+            <a href="/new-patients/" class="block py-1 text-sm text-[var(--color-text)]">New Patients</a>
             {newPatientLinks.map(link => (
               <a href={link.href} class="block py-1 text-sm text-[var(--color-text)]">{link.label}</a>
             ))}
@@ -405,15 +406,15 @@ const allCols = [col1, col2, col3, col4];
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="pl-3 pb-3 space-y-1">
-            <a href="/existing-patients" class="block py-1 text-sm text-[var(--color-text)]">Existing Patients</a>
+            <a href="/existing-patients/" class="block py-1 text-sm text-[var(--color-text)]">Existing Patients</a>
             {existingPatientLinks.map(link => (
               <a href={link.href} class="block py-1 text-sm text-[var(--color-text)]">{link.label}</a>
             ))}
           </div>
         </details>
-        <a href="/contact" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact Us</a>
+        <a href="/contact/" class="block py-3 text-[var(--color-brand-primary)] border-b border-[var(--color-border-soft)]">Contact Us</a>
       </nav>
-      <a href="/book" class="btn btn-primary w-full mt-3">Request Appointment</a>
+      <a href="/book/" class="btn btn-primary w-full mt-3">Request Appointment</a>
     </div>
   </div>
 </header>

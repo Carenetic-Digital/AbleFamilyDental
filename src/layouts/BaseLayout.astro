@@ -24,13 +24,22 @@ const {
   showPreFooter = true,
 } = Astro.props;
 
+const siteURL = Astro.site ?? new URL('https://wildwooddentalclinic.com/');
+const siteRoot = new URL('/', siteURL).href;
+const organizationId = 'https://wildwooddentalclinic.com/#organization';
+const websiteId = 'https://wildwooddentalclinic.com/#website';
+const logoURL = new URL('/images/logos/WDC-logo-remastered.svg', siteURL).href;
+const ogImageURL = new URL('/images/og-default.jpg', siteURL).href;
+
 const businessData = {
   "@id": "https://wildwooddentalclinic.com/#dentist",
   name: "Wildwood Dental Clinic",
-  url: Astro.site?.href ?? "https://wildwooddentalclinic.com/",
+  url: siteRoot,
   telephone: "+1-306-374-7272",
   email: "reception@wildwooddentalclinic.com",
-  image: new URL('/images/og-default.jpg', Astro.site ?? 'https://wildwooddentalclinic.com/').href,
+  image: ogImageURL,
+  logo: logoURL,
+  parentOrganization: { "@id": organizationId },
   address: {
     "@type": "PostalAddress",
     streetAddress: "105 - 1526 8th Street East",
@@ -51,11 +60,42 @@ const businessData = {
   ],
   areaServed: { "@type": "City", name: "Saskatoon" },
 };
+
+const organizationData = {
+  "@id": organizationId,
+  name: "Wildwood Dental Clinic",
+  url: siteRoot,
+  logo: logoURL,
+  image: ogImageURL,
+  telephone: "+1-306-374-7272",
+  email: "reception@wildwooddentalclinic.com",
+  sameAs: [
+    "https://www.facebook.com/WildwoodDentalClinic",
+    "https://www.instagram.com/wildwooddentalclinic.sask/",
+    "https://share.google/tBUCH3KsjPqnNPytZ",
+  ],
+};
+
+const websiteData = {
+  "@id": websiteId,
+  name: "Wildwood Dental Clinic",
+  url: siteRoot,
+  publisher: { "@id": organizationId },
+  inLanguage: "en-CA",
+};
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WQKBTTT');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -81,11 +121,17 @@ const businessData = {
       noindex={noindex}
     />
 
+    <StructuredData type="Organization" data={organizationData} />
+    <StructuredData type="WebSite" data={websiteData} />
     <StructuredData type="LocalBusiness" data={businessData} />
 
-    <script is:inline type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=xpgpvbwyxogw2yahdxjxlw" async="true"></script>
   </head>
   <body class="font-body text-[var(--color-text)] bg-[var(--color-surface)] antialiased overflow-x-hidden">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQKBTTT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <Header />
@@ -104,7 +150,7 @@ const businessData = {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call
         </a>
-        <a href="/book" class="flex items-center justify-center gap-2 py-3.5 bg-[var(--color-brand-accent)] text-white font-semibold">
+        <a href="/book/" class="flex items-center justify-center gap-2 py-3.5 bg-[var(--color-brand-accent-btn)] text-white font-semibold">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Book
         </a>

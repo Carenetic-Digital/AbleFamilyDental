@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StructuredData from '../components/StructuredData.astro';
 
 const categories = [
   {
@@ -292,12 +293,26 @@ const features = [
     icon: `<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/>`,
   },
 ];
+
+const faqSchema = {
+  mainEntity: faqGroups.flatMap(group =>
+    group.questions.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: a,
+      },
+    }))
+  ),
+};
 ---
 
 <BaseLayout
-  title="Frequently Asked Questions | Wildwood Dental Clinic, Saskatoon"
+  title="FAQ | Wildwood Dental Clinic, Saskatoon"
   description="Find answers to common questions about appointments, insurance, children's dentistry, emergency care, and more at Wildwood Dental Clinic in Saskatoon, SK."
 >
+  <StructuredData type="FAQPage" data={faqSchema} />
 
   <!-- ============================================================
        HERO
@@ -469,7 +484,7 @@ const features = [
 
         <span class="hidden sm:block w-px h-12 bg-white/20 flex-shrink-0" aria-hidden="true"></span>
 
-        <a href="/book" class="btn btn-primary flex-shrink-0">
+        <a href="/book/" class="btn btn-primary flex-shrink-0">
           Request Appointment
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>

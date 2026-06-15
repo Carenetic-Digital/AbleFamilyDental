@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Contact Us | Wildwood Dental Clinic, Saskatoon, SK"
-  description="Contact Wildwood Dental Clinic in Saskatoon, SK. Call 306.374.7272, email reception@wildwooddentalclinic.com, or visit us at 105 – 1526 8th Street East. Request an appointment or send us a message today."
+  description="Call 306.374.7272, email, or visit Wildwood Dental Clinic at 105 - 1526 8th Street East in Saskatoon. Request an appointment or send us a message."
 >
 
   <!-- ============================================================
@@ -13,15 +13,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
     <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
-      <img
-        src="/images/bugherd/Wildwood_Dental_Clinic_Patient_Doc_78.png"
-        alt=""
-        width="800"
-        height="600"
-        loading="eager"
-        decoding="async"
-        class="w-full h-full object-cover"
-      />
+      <picture>
+        <source srcset="/images/contact/wildwood-patient-consult.webp" type="image/webp" />
+        <img
+          src="/images/contact/wildwood-patient-consult.png"
+          alt=""
+          width="1086"
+          height="1448"
+          loading="eager"
+          decoding="async"
+          class="w-full h-full object-cover"
+        />
+      </picture>
       <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
@@ -177,15 +180,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </dl>
           </div>
 
-          <!-- Map card -->
+          <!-- Map card — facade prevents Google Maps JS from loading until user interaction -->
           <div class="bg-[#c8d8ea] rounded-2xl overflow-hidden shadow-xl">
+            <div id="map-facade" class="relative w-full" style="height:250px;">
+              <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#c8d8ea]">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <button
+                  onclick="document.getElementById('map-facade').style.display='none';document.getElementById('map-iframe').style.display='block';"
+                  class="px-4 py-2 rounded-lg bg-white text-sm font-semibold text-[var(--color-brand-primary)] shadow hover:shadow-md transition-shadow"
+                >
+                  Load Map
+                </button>
+              </div>
+            </div>
             <iframe
+              id="map-iframe"
               src="https://www.google.com/maps?q=Wildwood+Dental+Clinic%2C+1526+8th+Street+East%2C+Saskatoon%2C+SK&output=embed"
               width="100%"
               height="250"
-              style="border:0; display:block;"
+              style="border:0; display:none;"
               allowfullscreen=""
-              loading="lazy"
               title="Wildwood Dental Clinic location on Google Maps"
             ></iframe>
             <div class="p-4 flex items-start justify-between gap-4">
@@ -358,7 +372,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div class="mt-6 flex items-center justify-center gap-4">
           <div class="w-14 h-px bg-[var(--color-brand-accent)]/50"></div>
-          <a href="/book" class="btn btn-primary">Request an Appointment</a>
+          <a href="/book/" class="btn btn-primary">Request an Appointment</a>
           <div class="w-14 h-px bg-[var(--color-brand-accent)]/50"></div>
         </div>
 

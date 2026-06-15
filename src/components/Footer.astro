@@ -17,6 +17,7 @@ const footerResources = [
   { label: "Careers", href: "/about/careers" },
   { label: "FAQs", href: "/faq" },
   { label: "Blog", href: "/blog" },
+  { label: "Accessibility", href: "/accessibility-statement" },
 ];
 ---
 
@@ -33,14 +34,14 @@ const footerResources = [
         <ul class="space-y-2">
           {footerServices.map(link => (
             <li>
-              <a href={link.href} class="inline-flex items-center gap-1.5 text-[var(--color-text-on-dark-muted)] hover:text-white text-sm leading-loose transition-colors">
+              <a href={link.href} class="inline-flex items-center gap-1.5 text-[var(--color-text-on-dark-muted)] hover:text-white text-sm py-1 transition-colors">
                 <span aria-hidden="true" class="text-[var(--color-brand-accent)]">›</span>
                 {link.label}
               </a>
             </li>
           ))}
           <li>
-            <a href="/services" class="inline-flex items-center gap-1.5 text-[var(--color-brand-accent)] hover:text-white text-sm font-semibold leading-loose transition-colors mt-1">
+            <a href="/services/" class="inline-flex items-center gap-1.5 text-[var(--color-brand-accent)] hover:text-white text-sm font-semibold py-1 transition-colors mt-1">
               All Services →
             </a>
           </li>
@@ -54,7 +55,7 @@ const footerResources = [
         <ul class="space-y-2">
           {footerQuickLinks.map(link => (
             <li>
-              <a href={link.href} class="text-[var(--color-text-on-dark-muted)] hover:text-white text-sm leading-loose transition-colors">
+              <a href={link.href} class="inline-flex text-[var(--color-text-on-dark-muted)] hover:text-white text-sm py-1 transition-colors">
                 {link.label}
               </a>
             </li>
@@ -69,7 +70,7 @@ const footerResources = [
         <ul class="space-y-2">
           {footerResources.map(link => (
             <li>
-              <a href={link.href} class="text-[var(--color-text-on-dark-muted)] hover:text-white text-sm leading-loose transition-colors">
+              <a href={link.href} class="inline-flex text-[var(--color-text-on-dark-muted)] hover:text-white text-sm py-1 transition-colors">
                 {link.label}
               </a>
             </li>
@@ -150,9 +151,11 @@ const footerResources = [
     <div class="pt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-[var(--color-text-on-dark-muted)]">
       <span>© {year} Wildwood Dental Clinic. All Rights Reserved.</span>
       <span aria-hidden="true" class="text-white/20">|</span>
-      <a href="/privacy" class="text-white hover:text-[var(--color-brand-accent)] transition-colors">Privacy Policy</a>
+      <a href="/privacy/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent)] transition-colors">Privacy Policy</a>
       <span aria-hidden="true" class="text-white/20">|</span>
-      <a href="/terms" class="text-white hover:text-[var(--color-brand-accent)] transition-colors">Terms of Use</a>
+      <a href="/terms/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent)] transition-colors">Terms of Use</a>
+      <span aria-hidden="true" class="text-white/20">|</span>
+      <a href="/accessibility-statement/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent)] transition-colors">Accessibility</a>
     </div>
 
   </div>

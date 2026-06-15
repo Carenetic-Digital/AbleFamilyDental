@@ -181,25 +181,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </dl>
           </div>
 
-          <!-- Map card — facade prevents Google Maps JS from loading until user interaction -->
+          <!-- Map card -->
           <div class="bg-[#c8d8ea] rounded-2xl overflow-hidden shadow-xl">
-            <div id="map-facade" class="relative w-full" style="height:250px;">
-              <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#c8d8ea]">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <button
-                  onclick="document.getElementById('map-facade').style.display='none';document.getElementById('map-iframe').style.display='block';"
-                  class="px-4 py-2 rounded-lg bg-white text-sm font-semibold text-[var(--color-brand-primary)] shadow hover:shadow-md transition-shadow"
-                >
-                  Load Map
-                </button>
-              </div>
-            </div>
             <iframe
               id="map-iframe"
               src="https://www.google.com/maps?q=Wildwood+Dental+Clinic%2C+1526+8th+Street+East%2C+Saskatoon%2C+SK&output=embed"
               width="100%"
               height="250"
-              style="border:0; display:none;"
+              style="border:0;"
+              loading="lazy"
               allowfullscreen=""
               title="Wildwood Dental Clinic location on Google Maps"
             ></iframe>

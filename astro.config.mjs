@@ -6,7 +6,13 @@ export default defineConfig({
   // Set this to your production URL (updated during deployment)
   site: 'https://wildwooddentalclinic.com',
   output: 'static',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Keep noindex/draft routes out of the sitemap so we don't advertise
+      // pages to search engines that we've explicitly told them not to index.
+      filter: (page) => !page.includes('/about/careers-first-draft'),
+    }),
+  ],
   devToolbar: {
     enabled: false,
   },

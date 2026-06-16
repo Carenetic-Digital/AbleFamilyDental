@@ -18,9 +18,30 @@ jobs:
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> ~/.npmrc
           echo "@sparkable-cms:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          # Fail loudly if the token is missing or can't read the package, instead
+          # of letting `npm ci` silently skip the optional @sparkable-cms/cms dep
+          # (which then trips the CI build guard in astro.config.mjs).
+          if [ -z "${{ secrets.GH_PACKAGES_TOKEN }}" ]; then
+            echo "::error::GH_PACKAGES_TOKEN secret is empty"; exit 1
+          fi
+          CODE=$(curl -s -o /dev/null -w '%{http_code}' \
+            -H "Authorization: Bearer ${{ secrets.GH_PACKAGES_TOKEN }}" \
+            https://npm.pkg.github.com/@sparkable-cms/cms)
+          echo "GitHub Packages auth check: HTTP $CODE"
+          if [ "$CODE" != "200" ]; then
+            echo "::error::Cannot read @sparkable-cms/cms (HTTP $CODE) — token lacks read:packages or org access"; exit 1
+          fi
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --include=optional
+
+      - name: Assert CMS package installed
+        run: |
+          if [ ! -d node_modules/@sparkable-cms/cms ]; then
+            echo "::error::@sparkable-cms/cms did not install — npm silently skipped the optional dep. Check registry auth."
+            exit 1
+          fi
+          echo "✅ @sparkable-cms/cms present: $(node -p "require('@sparkable-cms/cms/package.json').version")"
 
       - name: Build
         run: npm run build

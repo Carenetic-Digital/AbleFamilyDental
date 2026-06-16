@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
+// "Featured News" is the clinic news item (not a blog post), so it stays a
+// literal pointer at /news/.
 const featuredNews = {
   tag: { label: "Clinic News", color: "blue" },
   title: "We've Launched a New Website to Better Serve Our Patients",
@@ -11,36 +14,19 @@ const featuredNews = {
   imageAlt: "Wildwood Dental Clinic reception and waiting area",
 };
 
-const articles = [
-  {
-    tag: { label: "Family Dentistry", color: "blue" },
-    title: "Tips for Choosing the Right Family Dental Clinic",
-    desc: "Selecting a dentist for the entire family can be challenging. After all, you want a provider who can meet the needs of adults and children alike.",
-    readTime: "4 min read",
-    href: "/blog/tips-for-choosing-the-right-family-dental-clinic",
-    image: "/images/services/clinic-patient.jpg",
-    imageAlt: "Family dental clinic",
-  },
-  {
-    tag: { label: "Preventive Care", color: "green" },
-    title: "What to Expect at Your Teeth Cleaning",
-    desc: "You've had professional teeth cleanings twice a year for as long as you can remember, but you still may not know everything your hygienist does.",
-    readTime: "4 min read",
-    href: "/blog/what-to-expect-at-your-teeth-cleaning",
-    image: "/images/services/preventive-hygiene.jpg",
-    imageAlt: "Dental hygienist performing a professional cleaning",
-  },
-  {
-    tag: { label: "Restorative Dentistry", color: "amber" },
-    title: "Why Restore a Broken Tooth?",
-    desc: "Ignoring a broken tooth may seem tempting, but there are good reasons to address it promptly and restore full function.",
-    readTime: "3 min read",
-    href: "/blog/why-restore-a-broken-tooth",
-    image: "/images/services/hero-restorative.jpg",
-    imageAlt: "Restorative dental procedure",
-  },
-];
-
+// Article cards are sourced from the CMS blog collection. Newest first;
+// drafts excluded.
+const articles = (await getCollection('blog', (post) => !post.data.draft))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((post) => ({
+    tag: { label: post.data.category ?? '', color: post.data.categoryStyle ?? 'blue' },
+    title: post.data.headline || post.data.title,
+    desc: post.data.description ?? '',
+    readTime: post.data.readTime ?? '',
+    href: `/blog/${post.id}`,
+    image: post.data.featuredImage?.src ?? '',
+    imageAlt: post.data.featuredImage?.alt ?? '',
+  }));
 ---
 
 <BaseLayout

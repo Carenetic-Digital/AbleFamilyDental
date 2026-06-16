@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 interface Props {
   title: string;
@@ -29,40 +30,22 @@ const {
   currentSlug,
 } = Astro.props;
 
-const allPosts = [
-  {
-    slug: 'what-to-expect-at-your-teeth-cleaning',
-    category: 'Preventive Care',
-    categoryStyle: 'green',
-    title: 'What to Expect at Your Teeth Cleaning',
-    readTime: '5 min read',
-    href: '/blog/what-to-expect-at-your-teeth-cleaning',
-    image: '/images/sourced/dental-cleaning-blog.png',
-    imageAlt: 'Dental hygienist performing a professional cleaning',
-  },
-  {
-    slug: 'tips-for-choosing-the-right-family-dental-clinic',
-    category: 'Family Dentistry',
-    categoryStyle: 'blue',
-    title: 'Tips for Choosing the Right Family Dental Clinic',
-    readTime: '4 min read',
-    href: '/blog/tips-for-choosing-the-right-family-dental-clinic',
-    image: '/images/sourced/happy-family-dental-blog.png',
-    imageAlt: 'Happy family at a dental clinic',
-  },
-  {
-    slug: 'why-restore-a-broken-tooth',
-    category: 'Restorative Dentistry',
-    categoryStyle: 'amber',
-    title: 'Why Restore a Broken Tooth?',
-    readTime: '5 min read',
-    href: '/blog/why-restore-a-broken-tooth',
-    image: '/images/sourced/restore-broken-tooth-blog.png',
-    imageAlt: 'Restorative dental care',
-  },
-];
-
-const keepReading = allPosts.filter(p => p.slug !== currentSlug);
+// "Keep Reading" is derived from the CMS blog collection so new posts appear
+// automatically. Excludes drafts and the current post; newest first (matching
+// the blog index order).
+const keepReading = (await getCollection('blog'))
+  .filter((post) => post.id !== currentSlug && !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((post) => ({
+    slug: post.id,
+    category: post.data.category ?? '',
+    categoryStyle: (post.data.categoryStyle ?? 'blue') as 'green' | 'blue' | 'amber',
+    title: post.data.headline || post.data.title,
+    readTime: post.data.readTime ?? '',
+    href: `/blog/${post.id}`,
+    image: post.data.featuredImage?.src ?? '',
+    imageAlt: post.data.featuredImage?.alt ?? '',
+  }));
 ---
 
 <BaseLayout title={title} description={description}>

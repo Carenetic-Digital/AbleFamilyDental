@@ -325,6 +325,45 @@ a.inline-flex:not(.btn) {
   to   { transform: translateX(-50%); }
 }
 
+/* ============================================================
+   Blog in-body image alignment (Sparkable CMS contract §8d)
+   The blog editor inserts <img> with these semantic classes (kept by the
+   sanitizer). They must be defined or floated images render full-width.
+   ============================================================ */
+.blog-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0;
+}
+.blog-img--left {
+  float: left;
+  max-width: 50%;
+  margin: 0.5rem 1.5rem 1rem 0;
+}
+.blog-img--right {
+  float: right;
+  max-width: 50%;
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+.blog-img--center {
+  display: block;
+  margin-inline: auto;
+}
+.blog-img--full {
+  width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 640px) {
+  .blog-img--left,
+  .blog-img--right {
+    float: none;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+}
+
 /* Decorative thin gold underline used under headings */
 .heading-rule::after {
   content: "";

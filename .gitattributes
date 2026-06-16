@@ -1,4 +1,10 @@
 * text=auto
+
+# Shell scripts and entrypoints must use LF line endings — Docker/Linux
+# cannot resolve `/bin/bash\r` when the shebang has CRLF.
 *.sh text eol=lf
 entrypoint.sh text eol=lf
+gen-lockfile.sh text eol=lf
+
+# Dockerfile also needs LF for consistent parsing across hosts.
 Dockerfile text eol=lf

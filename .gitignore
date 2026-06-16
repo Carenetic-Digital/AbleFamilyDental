@@ -30,3 +30,9 @@ playwright-report/
 
 # BugHerd review data (local only, not committed)
 .bugherd/
+
+# Sparkable CMS — runtime state (users.db, pending changes). Lives on the
+# fly.io staging volume; must NOT be committed or sync wipes CMS users.
+# (See CLAUDE.md gotcha #9.) Note: site-settings.json is intentionally NOT
+# ignored — production builds need it committed.
+.sparkable/

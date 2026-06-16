@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { readSiteSettings } from '@sparkable-cms/cms/runtime';
+
+const settings = readSiteSettings();
+const perPage = settings.blog?.postsPerPage ?? 9;
+
+// Page 1 is the bespoke /blog/ index (featured news + Instagram band). This
+// route only produces the overflow pages (2..N) once the post count exceeds
+// postsPerPage. With few posts it generates nothing, so the live look is
+// unchanged. See SITE_SETUP.md §8c.
+export async function getStaticPaths({ paginate }) {
+  const cmsSettings = readSiteSettings();
+  const size = cmsSettings.blog?.postsPerPage ?? 9;
+  const posts = (await getCollection('blog', (post) => !post.data.draft))
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+  return paginate(posts, { pageSize: size }).filter((p) => p.params.page !== '1');
+}
+
+const { page } = Astro.props;
+
+const articles = page.data.map((post) => ({
+  tag: { label: post.data.category ?? '', color: post.data.categoryStyle ?? 'blue' },
+  title: post.data.headline || post.data.title,
+  desc: post.data.description ?? '',
+  readTime: post.data.readTime ?? '',
+  href: `/blog/${post.id}`,
+  image: post.data.featuredImage?.src ?? '',
+  imageAlt: post.data.featuredImage?.alt ?? '',
+}));
+---
+
+<BaseLayout
+  title={`Blog — Page ${page.currentPage} | Wildwood Dental Clinic | Saskatoon`}
+  description="Helpful advice, treatment information, and oral health tips from the Wildwood Dental Clinic team in Saskatoon."
+>
+  <section class="py-16">
+    <div class="container-wide">
+      <div class="latest-head">
+        <span class="kicker">More Articles</span>
+        <a href="/blog/" class="readlink">
+          Back to Blog
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="cards-grid">
+        {articles.map(article => (
+          <article class="blog-card">
+            <div class="card-img-wrap">
+              <img src={article.image} alt={article.imageAlt} width="400" height="188" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-body">
+              <span class={`pill pill-${article.tag.color}`}>{article.tag.label}</span>
+              <h3 class="font-display font-bold" style="font-size:22px;margin-top:16px;line-height:1.2;color: var(--color-brand-primary);">{article.title}</h3>
+              <p class="card-desc">{article.desc}</p>
+              <div class="card-foot">
+                <span class="readtime">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  {article.readTime}
+                </span>
+                <a href={article.href} class="readlink">
+                  Read Article
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <nav class="blog-pagination" aria-label="Blog pagination">
+        {page.url.prev && <a href={page.url.prev} class="readlink">← Previous</a>}
+        {page.url.next && <a href={page.url.next} class="readlink">Next →</a>}
+      </nav>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">
+        Ready to book your next visit?
+      </h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto leading-relaxed">
+        Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online — new patients are always welcome.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book/" class="btn btn-primary btn-lg">Request an Appointment</a>
+        <a href="/contact/" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  .pill {
+    display: inline-flex; align-items: center;
+    font-family: var(--font-body); font-weight: 900;
+    font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase;
+    padding: 7px 15px; border-radius: 999px; align-self: flex-start;
+  }
+  .pill-blue  { background: #d9ecfb; color: #1f3a63; }
+  .pill-green { background: #dcebe1; color: #3c6b51; }
+  .pill-amber { background: #fef3c7; color: #92400e; }
+  .readtime { display: inline-flex; align-items: center; gap: 9px; color: #7a8696; font-size: 14.5px; font-weight: 700; }
+  .readtime svg { color: #9aa6b4; }
+  .readlink { display: inline-flex; align-items: center; gap: 9px; color: var(--color-brand-accent); font-weight: 900; font-size: 15px; text-decoration: none; transition: gap .18s ease; }
+  .readlink:hover { gap: 14px; color: var(--color-brand-accent); }
+  .latest-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+  .kicker { font-family: var(--font-body); font-weight: 900; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-brand-primary); }
+  .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .blog-card { background: #fff; border: 1px solid #e6ecf3; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 12px 32px rgba(20,54,95,.07); transition: transform .2s ease, box-shadow .2s ease; }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 22px 46px rgba(20,54,95,.13); }
+  .card-img-wrap { height: 188px; overflow: hidden; flex-shrink: 0; }
+  .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card-body { padding: 22px 26px 24px; display: flex; flex-direction: column; flex: 1; }
+  .card-desc { margin-top: 13px; font-size: 15px; color: #5d6b7a; line-height: 1.55; }
+  .card-foot { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: auto; padding-top: 22px; }
+  .blog-pagination { display: flex; gap: 28px; justify-content: center; margin-top: 48px; }
+  @media (max-width: 960px) {
+    .cards-grid { grid-template-columns: 1fr; }
+  }
+</style>

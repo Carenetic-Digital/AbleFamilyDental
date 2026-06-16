@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', (post) => !post.data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { data } = post;
+
+// The CMS stores the date as ISO and coerces it to a Date. Reproduce the
+// original display ("August 28, 2018") + machine-readable datetime.
+const dateObj = data.date instanceof Date ? data.date : new Date(data.date);
+const displayDate = dateObj.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+const dateIso = dateObj.toISOString().slice(0, 10);
+---
+
+<BlogArticleLayout
+  title={data.title}
+  description={data.description}
+  category={data.category}
+  categoryStyle={data.categoryStyle}
+  headline={data.headline || data.title}
+  readTime={data.readTime}
+  date={displayDate}
+  dateIso={dateIso}
+  heroImage={data.featuredImage?.src}
+  heroImageAlt={data.featuredImage?.alt}
+  currentSlug={post.id}
+>
+  <Fragment set:html={data.body} />
+</BlogArticleLayout>

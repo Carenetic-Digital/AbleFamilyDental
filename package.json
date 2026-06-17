@@ -12,10 +12,8 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.0",
+    "@sparkable-cms/cms": "^0.17.0",
     "astro": "^5.2.0"
-  },
-  "optionalDependencies": {
-    "@sparkable-cms/cms": "^0.17.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.0",

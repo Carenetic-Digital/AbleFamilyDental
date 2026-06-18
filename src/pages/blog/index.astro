@@ -177,10 +177,10 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
         </div>
         <div class="ig-grid">
           {[
-            { src: "/images/services/clinic-patient.jpg" },
-            { src: "/images/services/childrens-smile.jpg" },
-            { src: "/images/services/content-consultation.jpg" },
-            { src: "/images/services/diagnostic-exam.jpg" },
+            { src: "/images/blog/IG 1.png" },
+            { src: "/images/blog/IG 2.png" },
+            { src: "/images/blog/IG 3.png" },
+            { src: "/images/blog/Ig 4.png" },
           ].map(photo => (
             <div class="ig-photo">
               <img src={photo.src} alt="" width="200" height="150" loading="lazy" decoding="async" aria-hidden="true" />

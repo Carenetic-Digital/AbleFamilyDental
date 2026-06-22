@@ -5,46 +5,85 @@ on:
     types: [created]
   pull_request_review_comment:
     types: [created]
-  issues:
-    types: [opened, assigned]
-  pull_request_review:
-    types: [submitted]
 
 jobs:
   claude:
-    if: |
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
-      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+    if: contains(github.event.comment.body, '@claude')
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pull-requests: read
-      issues: read
+      contents: write
+      pull-requests: write
+      issues: write
       id-token: write
-      actions: read # Required for Claude to read CI results on PRs
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
-
-      - name: Run Claude Code
+          fetch-depth: 0
+      - uses: anthropics/claude-code-action@v1
         id: claude
-        uses: anthropics/claude-code-action@v1
         with:
+          # Supports either auth method. Only one secret needs to be set —
+          # whichever is populated is used; the other resolves to an empty
+          # string and is ignored by the action.
+          #   CLAUDE_CODE_OAUTH_TOKEN — set by running /install-github-app
+          #     from a Claude Code session (subscription path)
+          #   ANTHROPIC_API_KEY — paste from console.anthropic.com (API path)
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          allowed_bots: "helpscout-bridge[bot],helpscout-review-middleware[bot]"
+          claude_args: '--allowed-tools "Bash(gh pr create:*),Bash(gh pr view:*)"'
 
-          # This is an optional setting that allows Claude to read CI results on PRs
-          additional_permissions: |
-            actions: read
+      # Fallback: if Claude pushed a branch with new commits but never opened a
+      # PR, open one here. Skips silently when nothing was pushed — so manual
+      # issues with no code don't get a stub PR.
+      - name: Open PR if Claude pushed code without one
+        if: ${{ !cancelled() && github.event.issue && !github.event.issue.pull_request }}
+        env:
+          # Prefer a PAT (PR_AUTOMATION_TOKEN) so the cf-review workflow fires
+          # on the auto-opened PR. PRs opened with GITHUB_TOKEN do not trigger
+          # other workflows by GitHub's design.
+          GH_TOKEN: ${{ secrets.PR_AUTOMATION_TOKEN || secrets.GITHUB_TOKEN }}
+          ISSUE_NUM: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          set -e
+          git fetch origin --prune
+          DEFAULT_BRANCH=$(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')
+          # Only consider branches with commits in the last hour to avoid
+          # picking up stale unrelated branches.
+          CUTOFF=$(( $(date -u +%s) - 3600 ))
 
-          # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
-          # prompt: 'Update the pull request description to include a summary of changes.'
+          BRANCH=""
+          while read -r ref ts; do
+            [ -z "$ref" ] && continue
+            [ "${ts:-0}" -lt "$CUTOFF" ] && continue
+            name="${ref#origin/}"
+            case "$name" in
+              HEAD|"$DEFAULT_BRANCH") continue ;;
+            esac
+            ahead=$(git rev-list --count "origin/${DEFAULT_BRANCH}..origin/${name}" 2>/dev/null || echo 0)
+            [ "$ahead" -gt 0 ] || continue
+            existing=$(gh pr list --head "$name" --state open --json number --jq 'length' 2>/dev/null || echo 0)
+            [ "$existing" = "0" ] || continue
+            BRANCH="$name"
+            break
+          done < <(git for-each-ref --sort=-committerdate \
+                     --format='%(refname:short) %(committerdate:unix)' \
+                     refs/remotes/origin)
 
-          # Optional: Add claude_args to customize behavior and configuration
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://code.claude.com/docs/en/cli-reference for available options
-          # claude_args: '--allowed-tools Bash(gh pr *)'
+          if [ -z "$BRANCH" ]; then
+            echo "No recent branch ahead of ${DEFAULT_BRANCH} without an open PR — nothing to do."
+            exit 0
+          fi
 
+          echo "Opening PR for branch ${BRANCH} against ${DEFAULT_BRANCH}"
+          gh pr create \
+            --base "${DEFAULT_BRANCH}" \
+            --head "${BRANCH}" \
+            --title "${ISSUE_TITLE}" \
+            --body "$(cat <<EOF
+          Auto-opened from issue #${ISSUE_NUM} because the @claude run pushed code without creating a PR.
+
+          Closes #${ISSUE_NUM}
+          EOF
+          )"

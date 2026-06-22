@@ -36,3 +36,6 @@ playwright-report/
 # (See CLAUDE.md gotcha #9.) Note: site-settings.json is intentionally NOT
 # ignored — production builds need it committed.
 .sparkable/
+
+# cf-review local screenshots
+.cf-review/

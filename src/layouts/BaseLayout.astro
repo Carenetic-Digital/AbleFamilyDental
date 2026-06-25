@@ -5,9 +5,9 @@ import StructuredData from '../components/StructuredData.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PreFooter from '../components/PreFooter.astro';
-import SparkableHead from '@sparkable-cms/cms/runtime/SparkableHead.astro';
-import SparkableFooter from '@sparkable-cms/cms/runtime/SparkableFooter.astro';
-import { readSiteSettings } from '@sparkable-cms/cms/runtime';
+import SparkableHead from '../stubs/SparkableHead.astro';
+import SparkableFooter from '../stubs/SparkableFooter.astro';
+import { readSiteSettings } from '../stubs/sparkable-runtime';
 
 interface Props {
   title: string;

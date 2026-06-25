@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { blogSchema } from '@sparkable-cms/cms/content';
-import { resolveBlogFields } from '@sparkable-cms/cms/runtime';
+import { blogSchema } from './stubs/sparkable-content';
+import { resolveBlogFields } from './stubs/sparkable-runtime';
 
 // Blog posts are CMS-managed JSON entries. The post shape is owned by the CMS:
 // resolveBlogFields() reads this site's blog.fields from site-settings.json

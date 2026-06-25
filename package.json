@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "SPARKABLE_CMS=true astro dev",
+    "dev": "astro dev",
     "dev:nocms": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.0",
-    "@sparkable-cms/cms": "^0.20.0",
     "astro": "^5.2.0"
   },
   "devDependencies": {

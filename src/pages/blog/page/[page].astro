@@ -1,18 +1,10 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { readSiteSettings } from '../../../stubs/sparkable-runtime';
+const perPage = 9;
 
-const settings = readSiteSettings();
-const perPage = settings.blog?.postsPerPage ?? 9;
-
-// Page 1 is the bespoke /blog/ index (featured news + Instagram band). This
-// route only produces the overflow pages (2..N) once the post count exceeds
-// postsPerPage. With few posts it generates nothing, so the live look is
-// unchanged. See SITE_SETUP.md §8c.
 export async function getStaticPaths({ paginate }) {
-  const cmsSettings = readSiteSettings();
-  const size = cmsSettings.blog?.postsPerPage ?? 9;
+  const size = 9;
   const posts = (await getCollection('blog', (post) => !post.data.draft))
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
   return paginate(posts, { pageSize: size }).filter((p) => p.params.page !== '1');

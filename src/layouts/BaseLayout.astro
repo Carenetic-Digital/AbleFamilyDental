@@ -5,10 +5,6 @@ import StructuredData from '../components/StructuredData.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PreFooter from '../components/PreFooter.astro';
-import SparkableHead from '../stubs/SparkableHead.astro';
-import SparkableFooter from '../stubs/SparkableFooter.astro';
-import { readSiteSettings } from '../stubs/sparkable-runtime';
-
 interface Props {
   title: string;
   description?: string;
@@ -18,16 +14,10 @@ interface Props {
   showPreFooter?: boolean;
 }
 
-// CMS-managed site settings (analytics scripts, noindex, default SEO). The
-// file is absent on a fresh install, so readSiteSettings() returns empty
-// defaults and the hard-coded fallbacks below remain in force.
-const siteSettings = readSiteSettings();
-
 const {
   title,
-  description = siteSettings.defaultDescription
-    ?? 'Wildwood Dental Clinic is a family-friendly general dentistry practice on 8th Street East in Saskatoon, serving Saskatoon families for over 35 years.',
-  image = siteSettings.defaultOgImage,
+  description = 'Wildwood Dental Clinic is a family-friendly general dentistry practice on 8th Street East in Saskatoon, serving Saskatoon families for over 35 years.',
+  image = '/images/og-default.jpg',
   noindex = false,
   showMobileBar = true,
   showPreFooter = true,
@@ -133,9 +123,6 @@ const websiteData = {
     <StructuredData type="WebSite" data={websiteData} />
     <StructuredData type="LocalBusiness" data={businessData} />
 
-    <!-- CMS-managed head: noindex toggle + editor-added header scripts.
-         Renders nothing until an editor configures them. -->
-    <SparkableHead />
 
   </head>
   <body class="font-body text-[var(--color-text)] bg-[var(--color-surface)] antialiased overflow-x-hidden">
@@ -170,7 +157,5 @@ const websiteData = {
       <div class="md:hidden h-16" aria-hidden="true"></div>
     )}
 
-    <!-- CMS-managed footer scripts. Renders nothing until an editor adds them. -->
-    <SparkableFooter />
   </body>
 </html>

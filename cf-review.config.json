@@ -1,8 +1,0 @@
-{
-  "cfProjectName": "wildwood-dental-clinic",
-  "productionUrl": "https://wildwooddentalclinic.com",
-  "previewUrlPattern": "https://wildwood-dental-clinic-preview.carenetic-digital.workers.dev",
-  "routes": ["/", "/about", "/book", "/cdcp", "/contact", "/faq", "/privacy", "/terms"],
-  "screenshotWidths": [1280, 375],
-  "waitAfterDeploy": 10000
-}

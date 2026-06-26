@@ -1,44 +1,78 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Aileron";
+  src: url("/fonts/Aileron-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aileron";
+  src: url("/fonts/Aileron-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aileron";
+  src: url("/fonts/Aileron-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aileron";
+  src: url("/fonts/Aileron-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aileron";
+  src: url("/fonts/Aileron-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   /* ============================================================
-     Brand tokens — Wildwood Dental Clinic
-     Built as semantic vars so sister CDS clinics can re-theme by
-     overriding only the --color-brand-* / --color-surface-* vars.
+     Brand tokens — Able Family Dental
      ============================================================ */
 
-  /* Brand: navy + gold */
-  --color-brand-primary: #1e3352;        /* Deep navy — header, dark bands, primary text accents */
-  --color-brand-primary-deep: #142540;   /* Slightly deeper navy for hover/pressed on dark fills */
-  --color-brand-heading: #274567;        /* Softer navy for body headings */
-  --color-brand-accent: #7a5720;         /* Dark gold — text links, eyebrows, focus, AA on light surfaces */
-  --color-brand-accent-btn: #7a5720;     /* Dark gold for buttons — passes WCAG AA 4.5:1 on white */
-  --color-brand-accent-hover: #5f4218;   /* Deeper gold for hover/pressed states */
-  --color-brand-accent-soft: #eeb663;    /* Light gold for soft fills, decorative */
-  --color-brand-secondary: #cbd9de;      /* Pale blue-gray — borders, soft surface tints */
+  /* Brand: teal */
+  --color-brand-primary: #008080;        /* Deep teal — header, dark bands, primary text accents */
+  --color-brand-primary-deep: #006b6b;   /* Deeper teal for hover/pressed on dark fills */
+  --color-brand-heading: #006b6b;        /* Teal for body headings */
+  --color-brand-accent: #007575;         /* Dark teal — links, eyebrows, focus (5.5:1 on white) */
+  --color-brand-accent-btn: #008080;     /* Dark teal for buttons */
+  --color-brand-accent-hover: #006b6b;   /* Deeper teal for hover/pressed states */
+  --color-brand-accent-soft: #64C7C3;    /* Light teal — soft fills, decorative */
+  --color-brand-secondary: #ABADB0;      /* Light gray — borders, soft surface tints */
 
   /* Surfaces */
   --color-surface: #ffffff;
-  --color-surface-alt: #faf6ef;          /* Warm cream — the "family dentistry" warmth */
-  --color-surface-cool: #f6f9fa;         /* Cool blue-tinted alt surface */
-  --color-surface-muted: #f2f2f2;        /* Legacy alternating section bg */
-  --color-surface-dark: #1e3352;         /* Dark navy band sections */
+  --color-surface-alt: #f0fafa;          /* Very light teal tint */
+  --color-surface-cool: #f5fafa;         /* Cool teal-tinted alt surface */
+  --color-surface-muted: #f2f2f2;        /* Alternating section bg */
+  --color-surface-dark: #008080;         /* Dark teal band sections */
 
   /* Text */
-  --color-text: #1f2937;                 /* Body copy */
-  --color-text-muted: #4a5568;           /* Secondary text, AA on white and blue-tinted sections */
-  --color-text-on-dark: #f4f1ea;         /* Warm off-white on navy */
-  --color-text-on-dark-muted: #b8c5d0;   /* Footer/captions on navy */
+  --color-text: #333132;                 /* Near-black body copy */
+  --color-text-muted: #616264;           /* Secondary text */
+  --color-text-on-dark: #ffffff;         /* White on teal */
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.96);  /* Secondary text on teal (4.5:1) */
 
   /* Borders */
   --color-border: #e5e7eb;
-  --color-border-soft: #eef0f2;
+  --color-border-soft: #edf5f5;
 
   /* Semantic */
   --color-success: #0f8a5f;
   --color-warning: #d59639;
   --color-error: #b91c1c;
-  --color-info: #1e3352;
+  --color-info: #008080;
 
   /* Backwards-compat aliases for default Tailwind color utility names */
   --color-primary: var(--color-brand-primary);
@@ -60,8 +94,8 @@
   /* ============================================================
      Typography
      ============================================================ */
-  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Aileron", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Aileron", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Fluid type scale (clamp(min, preferred, max)) */
   --text-xs: 0.75rem;        /* 12 */
@@ -94,9 +128,9 @@
   --radius-2xl: 1.5rem;
 
   /* Shadows — soft and warm */
-  --shadow-sm: 0 1px 2px rgba(30, 51, 82, 0.06);
-  --shadow-md: 0 4px 14px rgba(30, 51, 82, 0.08);
-  --shadow-lg: 0 12px 32px rgba(30, 51, 82, 0.10);
+  --shadow-sm: 0 1px 2px rgba(0, 128, 128, 0.06);
+  --shadow-md: 0 4px 14px rgba(0, 128, 128, 0.08);
+  --shadow-lg: 0 12px 32px rgba(0, 128, 128, 0.10);
 }
 
 /* ============================================================
@@ -192,14 +226,16 @@ html {
 /* Section spacing */
 .section-y { padding-block: var(--spacing-section); }
 
-/* Eyebrow label */
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-brand-accent);
+/* Eyebrow label — in @layer components so Tailwind utilities can override color */
+@layer components {
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-brand-accent);
+  }
 }
 
 /* WCAG 2.5.8: standalone text CTA links need min 24px touch target */

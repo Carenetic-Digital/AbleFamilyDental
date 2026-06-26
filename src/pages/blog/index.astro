@@ -7,11 +7,11 @@ import { getCollection } from 'astro:content';
 const featuredNews = {
   tag: { label: "Clinic News", color: "blue" },
   title: "We've Launched a New Website to Better Serve Our Patients",
-  desc: "Wildwood Dental Clinic has launched a new website to make it easier for patients to find service information, request appointments, and connect with our team from any device.",
+  desc: "Able Family Dental has launched a new website to make it easier for patients to find service information, request appointments, and connect with our team from any device.",
   readTime: "3 min read",
   href: "/news/new-website-launch",
   image: "/images/blog/new-website-launch.png",
-  imageAlt: "Person browsing the new Wildwood Dental Clinic website on a laptop",
+  imageAlt: "Person browsing the new Able Family Dental website on a laptop",
 };
 
 // Article cards are sourced from the CMS blog collection. Newest first;
@@ -30,8 +30,8 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
 ---
 
 <BaseLayout
-  title="Blog | Wildwood Dental Clinic | Saskatoon"
-  description="Helpful advice, treatment information, and oral health tips from the Wildwood Dental Clinic team in Saskatoon."
+  title="Blog | Able Family Dental | Lethbridge"
+  description="Helpful advice, treatment information, and oral health tips from the Able Family Dental team in Lethbridge."
 >
 
   <!-- ============================================================
@@ -63,7 +63,7 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
         <h1 class="mt-3 font-display font-bold text-white" style="font-size:60px;letter-spacing:-.01em;line-height:1.08;">
           Learn About Your<br/>Dental Health
         </h1>
-        <p class="hero-lead">Helpful advice, treatment information, and oral health tips from the Wildwood Dental Clinic team.</p>
+        <p class="hero-lead">Helpful advice, treatment information, and oral health tips from the Able Family Dental team.</p>
       </div>
     </div>
   </section>
@@ -169,7 +169,7 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
           <div class="ig-text">
             <h3 class="font-display font-bold" style="font-size:26px;color: var(--color-brand-primary);">Follow Us on Instagram</h3>
             <p>Daily tips, patient stories, and oral health advice from our team.</p>
-            <a href="https://www.instagram.com/wildwooddentalclinic.sask/" target="_blank" rel="noopener noreferrer" class="ig-btn">
+            <a href="https://www.instagram.com/ablefamilydental/" target="_blank" rel="noopener noreferrer" class="ig-btn">
               Follow Us on Instagram
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -203,7 +203,7 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
         Ready to book your next visit?
       </h2>
       <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto leading-relaxed">
-        Call <a href="tel:+13063747272" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">306.374.7272</a> or book online — new patients are always welcome.
+        Call <a href="tel:+14033277202" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">403.327.7202</a> or book online — new patients are always welcome.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
         <a href="/book/" class="btn btn-primary btn-lg">Request an Appointment</a>

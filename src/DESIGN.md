@@ -1,4 +1,4 @@
-# Wildwood Dental Clinic — Design System
+# Able Family Dental — Design System
 
 A warm, modern family-dentistry visual system anchored in the clinic's existing navy + gold palette. Tokens are defined as CSS variables in `src/styles/global.css` so sister CDS clinics can re-theme without touching components.
 

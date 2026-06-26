@@ -52,8 +52,16 @@ const col2 = [
       { label: "Fluoride Treatments", href: "/services/preventive/fluoride" },
       { label: "Dental Sealants", href: "/services/preventive/sealants" },
       { label: "Mouthguards & Sport Guards", href: "/services/preventive/guards" },
-      { label: "Diet & Oral Health", href: "/services/preventive/nutrition" },
       { label: "Comfort Techniques", href: "/services/preventive/comfort" },
+    ],
+  },
+  {
+    title: "Sedation Dentistry",
+    href: "/services/sedation",
+    items: [
+      { label: "Nitrous Oxide (Laughing Gas)", href: "/services/sedation/nitrous-oxide" },
+      { label: "Oral Sedation", href: "/services/sedation/oral-sedation" },
+      { label: "IV Sedation", href: "/services/sedation/iv-sedation" },
     ],
   },
   {
@@ -61,9 +69,7 @@ const col2 = [
     href: "/services/diagnostic",
     items: [
       { label: "X-Rays & 3D Imaging", href: "/services/diagnostic/x-rays" },
-      { label: "Diagnostic Images & Digital X-Rays", href: "/services/diagnostic/diagnostic-images" },
       { label: "Intraoral Cameras", href: "/services/diagnostic/intraoral-cameras" },
-      { label: "CBCT Scans", href: "/services/diagnostic/cbct" },
       { label: "Oral Cancer Screening", href: "/services/diagnostic/oral-cancer-screening" },
     ],
   },
@@ -77,7 +83,17 @@ const col3 = [
       { label: "Tooth-Colored Fillings", href: "/services/restorative/fillings" },
       { label: "Crowns & Bridges", href: "/services/restorative/crowns-bridges" },
       { label: "Inlays & Onlays", href: "/services/restorative/inlays-onlays" },
-      { label: "Dentures", href: "/services/restorative/dentures" },
+    ],
+  },
+  {
+    title: "Prosthodontics",
+    href: "/services/prosthodontics",
+    items: [
+      { label: "Crowns & Bridges", href: "/services/prosthodontics/crowns-bridges" },
+      { label: "Full & Partial Dentures", href: "/services/prosthodontics/dentures" },
+      { label: "Implant-Supported Restorations", href: "/services/prosthodontics/implant-restorations" },
+      { label: "Inlays & Onlays", href: "/services/prosthodontics/inlays-onlays" },
+      { label: "Replacing Worn Dental Work", href: "/services/prosthodontics/replacement" },
     ],
   },
   {
@@ -94,17 +110,7 @@ const col3 = [
     href: "/services/orthodontics",
     items: [
       { label: "Invisalign® Clear Aligners", href: "/services/orthodontics/invisalign" },
-    ],
-  },
-  {
-    title: "TMJ & Jaw",
-    href: "/services/tmj",
-    items: [
-      { label: "TMJ Diagnosis", href: "/services/tmj/diagnosis" },
-      { label: "Botulinum Toxin for Jaw Pain", href: "/services/tmj/botox" },
-      { label: "Night Guards", href: "/services/tmj/night-guards" },
-      { label: "Bite Correction", href: "/services/tmj/bite-correction" },
-      { label: "Sleep Apnea Devices", href: "/services/tmj/sleep-apnea" },
+      { label: "Retainers & Braces", href: "/services/orthodontics/retainers-braces" },
     ],
   },
 ];
@@ -119,7 +125,6 @@ const col4 = [
       { label: "Dental Bonding", href: "/services/cosmetic/bonding" },
       { label: "Smile Makeovers", href: "/services/cosmetic/smile-makeovers" },
       { label: "Invisalign® Clear Aligners", href: "/services/orthodontics/invisalign" },
-      { label: "Gum Contouring", href: "/services/periodontal/gum-contouring" },
     ],
   },
   {
@@ -128,7 +133,6 @@ const col4 = [
     items: [
       { label: "Gum Disease Treatment", href: "/services/periodontal/gum-disease" },
       { label: "Scaling & Root Planing", href: "/services/periodontal/scaling-root-planing" },
-      { label: "Gum Contouring", href: "/services/periodontal/gum-contouring" },
     ],
   },
   {
@@ -139,7 +143,16 @@ const col4 = [
       { label: "Cracked Tooth", href: "/services/endodontics/cracked-tooth" },
       { label: "Traumatic Dental Injuries", href: "/services/endodontics/traumatic-injuries" },
       { label: "Internal Bleaching", href: "/services/endodontics/internal-bleaching" },
-      { label: "Gum Grafting", href: "/services/endodontics/gum-grafting" },
+    ],
+  },
+  {
+    title: "TMJ & Jaw",
+    href: "/services/tmj",
+    items: [
+      { label: "TMJ Diagnosis", href: "/services/tmj/diagnosis" },
+      { label: "Botulinum Toxin for Jaw Pain", href: "/services/tmj/botox" },
+      { label: "Night Guards", href: "/services/tmj/night-guards" },
+      { label: "Bite Correction", href: "/services/tmj/bite-correction" },
     ],
   },
 ];
@@ -149,9 +162,9 @@ const allCols = [col1, col2, col3, col4];
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[var(--color-border)]" data-header>
   <!-- Notification bar -->
-  <div class="hidden md:block text-xs" style="background-color: #f5f0e8;">
+  <div class="hidden md:block text-xs" style="background-color: #e8f7f7;">
     <div class="container-wide flex items-center justify-center py-1.5 gap-3">
-      <span class="font-medium tracking-wide text-[var(--color-brand-primary)]">Now accepting new patients</span>
+      <span class="font-medium tracking-wide text-[var(--color-brand-heading)]">Now accepting new patients</span>
       <span aria-hidden="true" class="w-px h-3 bg-[var(--color-brand-primary)]/25 inline-block align-middle"></span>
       <a
         href="/book/"
@@ -168,31 +181,28 @@ const allCols = [col1, col2, col3, col4];
     <div class="container-wide flex items-center justify-between py-2">
       <div class="flex items-center gap-1.5 text-xs text-[var(--color-text-on-dark-muted)]">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span class="text-white">Mon–Fri &nbsp;Opens 7:30 am</span>
+        <span class="text-white">Mon–Fri &nbsp;Opens 7:00 am &nbsp;·&nbsp; Sat by appointment</span>
       </div>
-      <a href="tel:+13063747272" class="inline-flex items-center gap-2 font-semibold text-white tabular-nums hover:text-[var(--color-brand-accent-soft)] text-base">
+      <a href="tel:+14033277202" class="inline-flex items-center gap-2 font-semibold text-white tabular-nums hover:text-[var(--color-brand-accent-soft)] text-base">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        306.374.7272
+        403.327.7202
       </a>
     </div>
   </div>
 
   <!-- Main nav -->
   <div class="container-wide flex items-center justify-between gap-6 py-4">
-    <a href="/" class="inline-flex items-center" aria-label="Wildwood Dental Clinic home">
-      <picture>
-        <source type="image/webp" srcset="/images/brand/wildwood-dental-clinic-logo.webp" />
-        <img
-          src="/images/brand/wildwood-dental-clinic-logo.png"
-          alt="Wildwood Dental Clinic"
-          width="250"
-          height="92"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          class="h-11 sm:h-12 w-auto"
-        />
-      </picture>
+    <a href="/" class="inline-flex items-center" aria-label="Able Family Dental home">
+      <img
+        src="/images/logos/able-family-dental-logo.png"
+        alt="Able Family Dental"
+        width="220"
+        height="80"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="h-11 sm:h-12 w-auto"
+      />
     </a>
 
     <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
@@ -351,8 +361,8 @@ const allCols = [col1, col2, col3, col4];
   <!-- Mobile menu -->
   <div id="mobile-menu" class="lg:hidden hidden border-t border-[var(--color-border)] bg-white overflow-y-auto max-h-[calc(100dvh-4rem)]" data-mobile-menu>
     <div class="container-wide py-4">
-      <a href="tel:+13063747272" class="flex items-center justify-between py-3 border-b border-[var(--color-border-soft)] text-[var(--color-brand-primary)] font-semibold">
-        <span>306.374.7272</span>
+      <a href="tel:+14033277202" class="flex items-center justify-between py-3 border-b border-[var(--color-border-soft)] text-[var(--color-brand-primary)] font-semibold">
+        <span>403.327.7202</span>
         <span class="text-xs text-[var(--color-text-muted)] font-normal">Tap to call</span>
       </a>
       <nav class="py-2" aria-label="Mobile primary">
@@ -460,7 +470,6 @@ const allCols = [col1, col2, col3, col4];
     });
   }
 
-  // Generic simple dropdown factory
   function initDropdown(key: string) {
     const wrapper = document.querySelector<HTMLDivElement>(`[data-dropdown="${key}"]`);
     const trigger = document.querySelector<HTMLButtonElement>(`[data-dropdown-trigger="${key}"]`);

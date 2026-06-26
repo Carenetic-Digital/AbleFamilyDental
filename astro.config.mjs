@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://wildwooddentalclinic.com',
+  site: 'https://ablefamilydental.com',
   output: 'static',
   devToolbar: {
     enabled: false,

@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const siblingServices = [
+  { name: "Relaxation Dentistry for Nervous Patients", href: "/services/ivs/relaxation" },
+  { name: "Sedation for Sensitive Teeth or Gag Reflex", href: "/services/ivs/sensitive-teeth" },
+  { name: "Stress-Free Visits with IV Sedation", href: "/services/ivs/stress-free", current: true },
+  { name: "Monitoring & Safe Sedation Care", href: "/services/ivs/monitoring" },
+];
+---
+
+<BaseLayout
+  title="Stress-Free Dental Visits Lethbridge | Able Family Dental"
+  description="Stress-free dental visits with IV sedation at Able Family Dental in Lethbridge. Many patients remember little of their procedure. Call Dr. Tyler Snow's office at 403.327.7202."
+>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
+      <img
+        src="/images/services/hero-iv-sedation.jpg"
+        alt=""
+        width="800"
+        height="600"
+        loading="eager"
+        decoding="async"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+    </div>
+    <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="text-white hover:text-white/80 transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/" class="hover:text-white transition-colors">Services</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services/ivs/" class="hover:text-white transition-colors">IV Sedation</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Stress-Free Visits</span>
+      </nav>
+      <p class="eyebrow text-white">IV Sedation Dentistry</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Stress-Free Visits with IV Sedation
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        IV sedation produces a deeply relaxed state that allows dental care to happen comfortably. Most patients have little or no memory of their procedure, making the entire experience far less daunting than expected.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT + SIDEBAR
+       ============================================================ -->
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+
+        <!-- LEFT: Main content -->
+        <div class="space-y-10">
+
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Little to no memory of your procedure
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                One of the most significant benefits of IV sedation is its amnesic effect. Most patients treated under IV sedation have very limited or no memory of the procedure once the sedation wears off. For patients who dread dental visits, this means the anticipated discomfort often never registers as a lasting experience.
+              </p>
+              <p>
+                You arrive, you settle in, you feel relaxed — and before you know it, your treatment is complete. The procedure itself passes without the sense of time, anxiety, or tension that many patients associate with dental work.
+              </p>
+              <p>
+                This is not general anaesthesia. You remain conscious and can respond to simple requests. But the combination of deep relaxation and amnesia means that even lengthy or complex procedures feel, in retrospect, brief and unremarkable.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Get more done in fewer visits
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                Because IV sedation allows patients to tolerate longer appointments comfortably, it is often possible to complete multiple treatments in a single visit that would otherwise require several separate appointments. This is particularly beneficial for patients who:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-[var(--color-text-muted)]">
+                <li>Have been deferring care and have several outstanding treatment needs</li>
+                <li>Have difficulty taking multiple days off work for dental appointments</li>
+                <li>Live further from the city and prefer fewer trips to Lethbridge</li>
+                <li>Simply want to minimise the overall number of dental visits</li>
+              </ul>
+              <p>
+                Our team will plan your appointment carefully to make the most of the time available while keeping your treatment manageable and safe.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              What the day looks like
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>
+                On the day of your appointment, you will fast beforehand as instructed, and someone will drive you to the office. The sedation takes effect quickly once the IV is placed. During treatment you may be aware of some activity but will feel calm and relaxed. Afterward, there is a short recovery period before you are discharged into the care of your companion.
+              </p>
+              <p>
+                We recommend keeping the rest of that day light. Most patients feel clear-headed by evening, though individual recovery times vary slightly depending on the amount of sedation used.
+              </p>
+            </div>
+          </div>
+
+          <!-- Callout -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-base text-[var(--color-brand-primary)]">You will need a driver</h3>
+                <p class="mt-1.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  A responsible adult must accompany you to your appointment and drive you home afterward. This is a requirement for all IV sedation procedures. Please arrange this in advance and let us know at booking if you have questions about the logistics.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="space-y-6">
+
+          <!-- Book CTA card -->
+          <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
+            <h3 class="font-display font-semibold text-lg text-white">Ready to Book?</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or request an appointment online, new patients welcome.</p>
+            <a href="/book/" class="mt-4 btn btn-primary w-full block text-center">Request Appointment</a>
+            <a href="tel:+14033277202" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">403.327.7202</a>
+          </div>
+
+          <!-- Sibling services card -->
+          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
+            <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">IV Sedation Services</h3>
+            <ul class="space-y-2">
+              {siblingServices.map(svc => (
+                <li>
+                  {svc.current ? (
+                    <span class="flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)]">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </span>
+                  ) : (
+                    <a href={svc.href} class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
+                      {svc.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+       ============================================================ -->
+  <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+    <div class="relative container-wide">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Ready to book?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+14033277202" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">403.327.7202</a> or request an appointment online.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/book/" class="btn btn-primary btn-lg">Request an Appointment</a>
+        <a href="/contact/" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

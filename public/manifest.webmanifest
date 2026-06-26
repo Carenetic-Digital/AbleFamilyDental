@@ -1,27 +1,14 @@
 {
-  "name": "Wildwood Dental Clinic",
-  "short_name": "Wildwood Dental",
-  "description": "Family and cosmetic dentistry in Saskatoon, SK. Accepting new patients.",
+  "name": "Able Family Dental",
+  "short_name": "Able Dental",
+  "description": "Family dentistry and implants in Lethbridge, AB. Accepting new patients.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1e3352",
+  "theme_color": "#008080",
   "icons": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "/icon-512-maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }

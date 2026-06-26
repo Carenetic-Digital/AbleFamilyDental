@@ -2,9 +2,11 @@
 const year = new Date().getFullYear();
 const footerServices = [
   { label: "Emergency Services", href: "/services/emergency" },
-  { label: "Family Dentistry", href: "/services/preventive" },
+  { label: "Family & Preventive Dentistry", href: "/services/preventive" },
   { label: "Cosmetic Dentistry", href: "/services/cosmetic" },
   { label: "Children's Dentistry", href: "/services/childrens" },
+  { label: "Sedation Dentistry", href: "/services/sedation" },
+  { label: "Dental Implants", href: "/services/oral-surgery/implants" },
 ];
 const footerQuickLinks = [
   { label: "About Us", href: "/about" },
@@ -30,18 +32,18 @@ const footerResources = [
       <!-- Col 1: Services -->
       <div class="pr-4 md:pr-8">
         <h3 class="font-body text-sm font-semibold tracking-[0.16em] uppercase text-white mb-2">Services</h3>
-        <div class="w-8 h-0.5 bg-[var(--color-brand-accent)] mb-5"></div>
+        <div class="w-8 h-0.5 bg-[var(--color-brand-accent-soft)] mb-5"></div>
         <ul class="space-y-2">
           {footerServices.map(link => (
             <li>
               <a href={link.href} class="inline-flex items-center gap-1.5 text-[var(--color-text-on-dark-muted)] hover:text-white text-sm py-1 transition-colors">
-                <span aria-hidden="true" class="text-[var(--color-brand-accent)]">›</span>
+                <span aria-hidden="true" class="text-[var(--color-brand-accent-soft)]">›</span>
                 {link.label}
               </a>
             </li>
           ))}
           <li>
-            <a href="/services/" class="inline-flex items-center gap-1.5 text-[var(--color-brand-accent-soft)] hover:text-white text-sm font-semibold py-1 transition-colors mt-1">
+            <a href="/services/" class="inline-flex items-center gap-1.5 text-white hover:text-[var(--color-brand-accent-soft)] text-sm font-semibold py-1 transition-colors mt-1">
               All Services →
             </a>
           </li>
@@ -51,7 +53,7 @@ const footerResources = [
       <!-- Col 2: Quick Links -->
       <div class="pl-4 md:px-8">
         <h3 class="font-body text-sm font-semibold tracking-[0.16em] uppercase text-white mb-2">Quick Links</h3>
-        <div class="w-8 h-0.5 bg-[var(--color-brand-accent)] mb-5"></div>
+        <div class="w-8 h-0.5 bg-[var(--color-brand-accent-soft)] mb-5"></div>
         <ul class="space-y-2">
           {footerQuickLinks.map(link => (
             <li>
@@ -66,7 +68,7 @@ const footerResources = [
       <!-- Col 3: Resources -->
       <div class="pr-4 md:px-8">
         <h3 class="font-body text-sm font-semibold tracking-[0.16em] uppercase text-white mb-2">Resources</h3>
-        <div class="w-8 h-0.5 bg-[var(--color-brand-accent)] mb-5"></div>
+        <div class="w-8 h-0.5 bg-[var(--color-brand-accent-soft)] mb-5"></div>
         <ul class="space-y-2">
           {footerResources.map(link => (
             <li>
@@ -78,21 +80,21 @@ const footerResources = [
         </ul>
       </div>
 
-      <!-- Col 4: Connect With Us + WDC logo (same row) -->
+      <!-- Col 4: Connect -->
       <div class="pl-4 md:pl-10 overflow-visible">
         <div class="mb-2">
           <h3 class="font-body text-sm font-semibold tracking-[0.16em] uppercase text-white">Connect With Us</h3>
         </div>
-        <div class="w-8 h-0.5 bg-[var(--color-brand-accent)] mb-5"></div>
+        <div class="w-8 h-0.5 bg-[var(--color-brand-accent-soft)] mb-5"></div>
 
         <!-- Social icons -->
         <div class="flex items-center gap-3 mb-5">
           <!-- Facebook -->
           <a
-            href="https://www.facebook.com/WildwoodDentalClinic"
+            href="https://www.facebook.com/ablefamilydental"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Wildwood Dental Clinic on Facebook"
+            aria-label="Able Family Dental on Facebook"
             class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
@@ -102,10 +104,10 @@ const footerResources = [
 
           <!-- Instagram -->
           <a
-            href="https://www.instagram.com/wildwooddentalclinic.sask/"
+            href="https://www.instagram.com/ablefamilydental/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Wildwood Dental Clinic on Instagram"
+            aria-label="Able Family Dental on Instagram"
             class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -117,10 +119,10 @@ const footerResources = [
 
           <!-- Google -->
           <a
-            href="https://share.google/tBUCH3KsjPqnNPytZ"
+            href="https://maps.app.goo.gl/pAJAeiNddySjEkKc8"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Wildwood Dental Clinic Google Business Profile"
+            aria-label="Able Family Dental Google Business Profile"
             class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none">
@@ -132,30 +134,30 @@ const footerResources = [
           </a>
         </div>
 
-        <a href="/" aria-label="Wildwood Dental Clinic home" class="inline-block">
+        <a href="/" aria-label="Able Family Dental home" class="inline-block">
           <img
-            src="/images/logos/WDC-logo-remastered-white.svg"
-            alt="Wildwood Dental Clinic"
-            width="250"
-            height="92"
+            src="/images/logos/able-family-dental-logo-white.png"
+            alt="Able Family Dental"
+            width="200"
+            height="72"
             loading="lazy"
             decoding="async"
-            class="h-14 w-auto block"
+            class="h-12 w-auto block"
           />
         </a>
       </div>
 
     </div>
 
-    <!-- Bottom bar: centered with dividers -->
+    <!-- Bottom bar -->
     <div class="pt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-[var(--color-text-on-dark-muted)]">
-      <span>© {year} Wildwood Dental Clinic. All Rights Reserved.</span>
+      <span>© {year} Able Family Dental. All Rights Reserved.</span>
       <span aria-hidden="true" class="text-white/20">|</span>
-      <a href="/privacy/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent)] transition-colors">Privacy Policy</a>
+      <a href="/privacy/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent-soft)] transition-colors">Privacy Policy</a>
       <span aria-hidden="true" class="text-white/20">|</span>
-      <a href="/terms/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent)] transition-colors">Terms of Use</a>
+      <a href="/terms/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent-soft)] transition-colors">Terms of Use</a>
       <span aria-hidden="true" class="text-white/20">|</span>
-      <a href="/accessibility-statement/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent)] transition-colors">Accessibility</a>
+      <a href="/accessibility-statement/" class="inline-flex py-1 text-white hover:text-[var(--color-brand-accent-soft)] transition-colors">Accessibility</a>
     </div>
 
   </div>

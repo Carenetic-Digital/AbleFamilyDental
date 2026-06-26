@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wildwooddentalclinic.com/sitemap-index.xml
+Sitemap: https://ablefamilydental.com/sitemap-index.xml

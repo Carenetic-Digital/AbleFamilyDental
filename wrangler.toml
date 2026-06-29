@@ -1,0 +1,10 @@
+name = "able-family-dental"
+compatibility_date = "2025-01-01"
+account_id = "6ba8d559dd652da1003752c4674dfa6c"
+
+routes = [
+  { pattern = "able-family-dental.spark0.io/*", zone_id = "a304abff61171719fefd9ec2f1f37d68" }
+]
+
+[assets]
+directory = "./dist"

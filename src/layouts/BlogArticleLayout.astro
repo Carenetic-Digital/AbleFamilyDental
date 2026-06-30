@@ -100,8 +100,8 @@ const keepReading = (await getCollection('blog'))
     </div>
 
     <svg class="article-hero__wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,60 C280,44 520,86 760,92 C1000,98 1180,74 1440,52 L1440,140 L0,140 Z" fill="#c2d4ea"/>
-      <path d="M0,36 C240,80 470,118 760,114 C1000,110 1200,56 1440,16 L1440,140 L0,140 Z" fill="rgba(208,225,243,0.82)"/>
+      <path d="M0,60 C280,44 520,86 760,92 C1000,98 1180,74 1440,52 L1440,140 L0,140 Z" fill="#a8d4d4"/>
+      <path d="M0,36 C240,80 470,118 760,114 C1000,110 1200,56 1440,16 L1440,140 L0,140 Z" fill="rgba(192,220,220,0.82)"/>
       <path d="M0,98 C260,88 500,122 760,124 C1020,126 1220,98 1440,72 L1440,140 L0,140 Z" fill="#ffffff"/>
     </svg>
 
@@ -287,11 +287,11 @@ const keepReading = (await getCollection('blog'))
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: #aebfd4;
+    color: rgba(255,255,255,0.6);
     margin-bottom: 1.75rem;
   }
   .article-hero__crumbs a {
-    color: #aebfd4;
+    color: rgba(255,255,255,0.6);
     text-decoration: none;
     transition: color 150ms ease;
   }
@@ -301,13 +301,14 @@ const keepReading = (await getCollection('blog'))
     font-weight: 600;
   }
   .article-hero__crumbs span[aria-hidden="true"] {
-    color: #5e7193;
+    color: rgba(255,255,255,0.35);
     font-size: 0.8rem;
   }
 
   .article-hero__copy :global(.eyebrow) {
     display: block;
     margin-bottom: 1rem;
+    color: #fff;
   }
 
   .article-hero__title {
@@ -326,7 +327,7 @@ const keepReading = (await getCollection('blog'))
     align-items: center;
     gap: 1.25rem;
     margin-top: 2rem;
-    color: #dbe5f1;
+    color: rgba(255,255,255,0.8);
     font-size: 0.9375rem;
     font-weight: 600;
   }
@@ -335,7 +336,7 @@ const keepReading = (await getCollection('blog'))
     align-items: center;
     gap: 0.5rem;
   }
-  .article-hero__mitem svg { color: #9fb3cd; }
+  .article-hero__mitem svg { color: rgba(255,255,255,0.55); }
   .article-hero__divider {
     width: 1px; height: 20px;
     background: rgba(255,255,255,0.28);
@@ -541,12 +542,12 @@ const keepReading = (await getCollection('blog'))
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 12px 30px rgba(20,54,95,0.07);
+    box-shadow: 0 12px 30px rgba(0,107,107,0.07);
     transition: transform 200ms ease, box-shadow 200ms ease;
   }
   .kr-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 44px rgba(20,54,95,0.13);
+    box-shadow: 0 20px 44px rgba(0,107,107,0.13);
   }
 
   .kr-card__image {
@@ -603,7 +604,7 @@ const keepReading = (await getCollection('blog'))
     align-self: flex-start;
   }
   .kr-tag--green { background: #dcebe1; color: #3c6b51; }
-  .kr-tag--blue  { background: #d9ecfb; color: #1f3a63; }
+  .kr-tag--blue  { background: #cde7e7; color: #004d4d; }
   .kr-tag--amber { background: #fef3c7; color: #92400e; }
 
   .kr-readtime {
@@ -640,8 +641,8 @@ const keepReading = (await getCollection('blog'))
   .article-cta-band {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(150deg, #eef3f9 0%, #e7eef7 100%);
-    border: 1px solid #dde6f1;
+    background: linear-gradient(150deg, #f0fafa 0%, #e2f5f5 100%);
+    border: 1px solid #d0e8e8;
     border-radius: var(--radius-2xl);
     display: flex;
     align-items: center;

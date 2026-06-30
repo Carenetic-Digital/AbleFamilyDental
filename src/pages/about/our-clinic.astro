@@ -192,10 +192,10 @@ const aboutSections = [
               <!-- 4-slot sliding track: s0(off-left) | s1(visible) | s2(visible) | s3(off-right) -->
               <div class="overflow-hidden flex-1" id="space-viewport" style="opacity:0">
                 <div class="flex gap-4" id="space-track">
-                  <img id="space-s0" src="/images/about/able-family-dental-seating.png"   alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
-                  <img id="space-s1" src="/images/about/able-family-dental-exterior.png"  alt="Able Family Dental exterior"              width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
-                  <img id="space-s2" src="/images/about/able-family-dental-reception.png" alt="Able Family Dental reception area"         width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
-                  <img id="space-s3" src="/images/about/able-family-dental-seating.png"   alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
+                  <img id="space-s0" src="/images/about/able-family-dental-exterior.png"       alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
+                  <img id="space-s1" src="/images/about/able-family-dental-front-desk.png"     alt="Able Family Dental front desk"           width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
+                  <img id="space-s2" src="/images/about/able-family-dental-sterilization.png"  alt="Able Family Dental sterilization area"   width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
+                  <img id="space-s3" src="/images/about/able-family-dental-treatment-room.png" alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" class="shrink-0 w-[calc(50%-8px)] rounded-xl shadow-xl object-cover aspect-[4/3]" />
                 </div>
               </div>
               <button id="space-next" aria-label="Next" class="shrink-0 w-9 h-9 rounded-full border border-[var(--color-border-soft)] bg-white shadow-sm flex items-center justify-center text-[var(--color-brand-primary)] hover:bg-[var(--color-surface-cool)] transition-colors">
@@ -207,9 +207,10 @@ const aboutSections = [
           <script is:inline>
             (function () {
               var slides = [
-                { src: '/images/about/able-family-dental-exterior.png',  alt: 'Able Family Dental exterior' },
-                { src: '/images/about/able-family-dental-reception.png', alt: 'Able Family Dental reception area' },
-                { src: '/images/about/able-family-dental-seating.png',   alt: 'Able Family Dental patient seating area' },
+                { src: '/images/about/able-family-dental-front-desk.png',     alt: 'Able Family Dental front desk' },
+                { src: '/images/about/able-family-dental-sterilization.png',  alt: 'Able Family Dental sterilization area' },
+                { src: '/images/about/able-family-dental-treatment-room.png', alt: 'Able Family Dental treatment room' },
+                { src: '/images/about/able-family-dental-exterior.png',       alt: 'Able Family Dental exterior' },
               ];
               var N = slides.length;
               var current = 0;
@@ -306,8 +307,8 @@ const aboutSections = [
             <div class="grid sm:grid-cols-2 gap-4">
               <div class="rounded-2xl overflow-hidden">
                 <img
-                  src="/images/bugherd/CEREC_Primemill.png"
-                  alt="CEREC Primemill in-office milling unit"
+                  src="/images/about/able-family-dental-treatment.png"
+                  alt="Dental hygienist treating a patient at Able Family Dental"
                   width="800"
                   height="600"
                   loading="lazy"

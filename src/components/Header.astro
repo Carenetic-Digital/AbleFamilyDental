@@ -97,15 +97,6 @@ const col3 = [
     ],
   },
   {
-    title: "Oral Surgery",
-    href: "/services/oral-surgery",
-    items: [
-      { label: "Dental Implants", href: "/services/oral-surgery/implants" },
-      { label: "Wisdom Tooth Extraction", href: "/services/oral-surgery/wisdom-teeth" },
-      { label: "Tooth Extractions", href: "/services/oral-surgery/extractions" },
-    ],
-  },
-  {
     title: "Orthodontics",
     href: "/services/orthodontics",
     items: [
@@ -116,6 +107,15 @@ const col3 = [
 ];
 
 const col4 = [
+  {
+    title: "Oral Surgery",
+    href: "/services/oral-surgery",
+    items: [
+      { label: "Dental Implants", href: "/services/oral-surgery/implants" },
+      { label: "Wisdom Tooth Extraction", href: "/services/oral-surgery/wisdom-teeth" },
+      { label: "Tooth Extractions", href: "/services/oral-surgery/extractions" },
+    ],
+  },
   {
     title: "Cosmetic Dentistry",
     href: "/services/cosmetic",
@@ -135,6 +135,9 @@ const col4 = [
       { label: "Scaling & Root Planing", href: "/services/periodontal/scaling-root-planing" },
     ],
   },
+];
+
+const col5 = [
   {
     title: "Endodontic Services",
     href: "/services/endodontics",
@@ -157,7 +160,7 @@ const col4 = [
   },
 ];
 
-const allCols = [col1, col2, col3, col4];
+const allCols = [col1, col2, col3, col4, col5];
 ---
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[var(--color-border)]" data-header>
@@ -321,21 +324,21 @@ const allCols = [col1, col2, col3, col4];
     data-megamenu-panel
     hidden
   >
-    <div class="container-wide py-5">
-      <div class="grid grid-cols-4 gap-8">
+    <div class="container-wide py-4">
+      <div class="grid grid-cols-5 gap-6">
         {allCols.map(col => (
-          <div class="space-y-6">
+          <div class="space-y-4">
             {col.map((cat, catIdx) => (
-              <div class={catIdx > 0 ? "pt-5 border-t border-[var(--color-border-soft)]" : ""}>
-                <a href={cat.href} class="block group mb-3">
-                  <h3 class="font-display text-base font-semibold text-[var(--color-brand-primary)] group-hover:text-[var(--color-brand-accent-hover)] leading-tight">
+              <div class={catIdx > 0 ? "pt-4 border-t border-[var(--color-border-soft)]" : ""}>
+                <a href={cat.href} class="block group mb-2">
+                  <h3 class="font-display text-sm font-semibold text-[var(--color-brand-primary)] group-hover:text-[var(--color-brand-accent-hover)] leading-tight">
                     {cat.title}
                   </h3>
                 </a>
-                <ul class="space-y-1.5">
+                <ul class="space-y-1">
                   {cat.items.map(item => (
                     <li>
-                      <a href={item.href} class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent-hover)] leading-snug">
+                      <a href={item.href} class="block text-xs text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent-hover)] leading-snug">
                         {item.label}
                       </a>
                     </li>
@@ -346,7 +349,7 @@ const allCols = [col1, col2, col3, col4];
           </div>
         ))}
       </div>
-      <div class="mt-6 pt-5 border-t border-[var(--color-border-soft)] flex flex-wrap items-center justify-between gap-4">
+      <div class="mt-4 pt-4 border-t border-[var(--color-border-soft)] flex flex-wrap items-center justify-between gap-4">
         <p class="text-sm text-[var(--color-text-muted)]">
           Not sure which service you need? We'll help you figure it out at your first visit.
         </p>

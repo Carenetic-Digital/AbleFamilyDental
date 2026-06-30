@@ -39,3 +39,7 @@ playwright-report/
 
 # cf-review local screenshots
 .cf-review/
+
+# Large video files
+*.mp4
+*.mov

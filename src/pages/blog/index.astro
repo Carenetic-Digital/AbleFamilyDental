@@ -55,8 +55,8 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
     <div class="container-wide relative z-10">
       <div class="hero-copy">
         <nav class="flex items-center gap-2 mb-6" aria-label="Breadcrumb">
-          <a href="/" class="text-[#aebfd4] hover:text-white transition-colors text-sm">Home</a>
-          <span class="text-[#5e7193] text-sm" aria-hidden="true">/</span>
+          <a href="/" class="text-white/60 hover:text-white transition-colors text-sm">Home</a>
+          <span class="text-white/35 text-sm" aria-hidden="true">/</span>
           <span class="text-white text-sm">Blog</span>
         </nav>
         <p class="eyebrow">Patient Education &amp; Resources</p>
@@ -216,13 +216,14 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
 
 <style is:global>
   /* ===== HERO ===== */
+  .blog-hero .eyebrow { color: #fff; }
   .blog-hero {
     position: relative;
-    background: #0e2742;
+    background: #004d4d;
     overflow: hidden;
   }
   .hero-fade {
-    background: linear-gradient(90deg, #0e2742 0%, rgba(14,39,66,.55) 45%, transparent 100%);
+    background: linear-gradient(90deg, #004d4d 0%, rgba(0,77,77,.55) 45%, transparent 100%);
     pointer-events: none;
   }
   .hero-copy {
@@ -235,7 +236,7 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
     margin-top: 24px;
     max-width: 430px;
     font-size: 17px;
-    color: #c7d4e6;
+    color: #b8dcdc;
     line-height: 1.6;
   }
   .searchbar {
@@ -249,18 +250,18 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
   .btn-search {
     border: 0;
     cursor: pointer;
-    background: linear-gradient(180deg, #ecae46, #dd8a22);
+    background: linear-gradient(180deg, #008080, #006b6b);
     color: #fff;
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 16px;
     padding: 0 30px;
     border-radius: 10px;
-    box-shadow: 0 12px 26px rgba(200,136,31,.34);
+    box-shadow: 0 12px 26px rgba(0,107,107,.34);
     transition: filter .18s ease, transform .18s ease;
     white-space: nowrap;
   }
-  .btn-search:hover { filter: brightness(1.05); transform: translateY(-1px); }
+  .btn-search:hover { filter: brightness(1.08); transform: translateY(-1px); }
 
   /* ===== SHARED ===== */
   .pill {
@@ -275,7 +276,7 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
     border-radius: 999px;
     align-self: flex-start;
   }
-  .pill-blue  { background: #d9ecfb; color: #1f3a63; }
+  .pill-blue  { background: #cde7e7; color: #004d4d; }
   .pill-green { background: #dcebe1; color: #3c6b51; }
   .pill-amber { background: #fef3c7; color: #92400e; }
 
@@ -309,11 +310,11 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
   .featured-card {
     display: grid;
     grid-template-columns: 0.92fr 1.08fr;
-    background: #f2f4f8;
-    border: 1px solid #e6ecf3;
+    background: #f0fafa;
+    border: 1px solid #d0e8e8;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 18px 44px rgba(20,54,95,.07);
+    box-shadow: 0 18px 44px rgba(0,107,107,.07);
   }
   .feat-img-wrap {
     position: relative;
@@ -371,15 +372,15 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
   }
   .blog-card {
     background: #fff;
-    border: 1px solid #e6ecf3;
+    border: 1px solid #d0e8e8;
     border-radius: 14px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 12px 32px rgba(20,54,95,.07);
+    box-shadow: 0 12px 32px rgba(0,107,107,.07);
     transition: transform .2s ease, box-shadow .2s ease;
   }
-  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 22px 46px rgba(20,54,95,.13); }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 22px 46px rgba(0,107,107,.13); }
   .card-img-wrap {
     height: 188px;
     overflow: hidden;
@@ -418,8 +419,8 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
     grid-template-columns: 0.92fr 1.08fr;
     align-items: center;
     gap: 40px;
-    background: #f7f9fc;
-    border: 1px solid #e6ecf3;
+    background: #f0fafa;
+    border: 1px solid #d0e8e8;
     border-radius: 16px;
     padding: 34px 40px;
   }
@@ -450,17 +451,17 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
     display: inline-flex;
     align-items: center;
     gap: 11px;
-    background: #0e2742;
+    background: #004d4d;
     color: #fff;
     font-weight: 700;
     font-size: 15px;
     padding: 14px 24px;
     border-radius: 9px;
     text-decoration: none;
-    box-shadow: 0 10px 24px rgba(14,39,66,.2);
+    box-shadow: 0 10px 24px rgba(0,77,77,.2);
     transition: transform .18s ease, box-shadow .18s ease;
   }
-  .ig-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(14,39,66,.28); color: #fff; }
+  .ig-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,77,77,.28); color: #fff; }
   .ig-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

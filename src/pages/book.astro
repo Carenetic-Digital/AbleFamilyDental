@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Request an Appointment | Able Family Dental, Lethbridge"
-  description="Schedule your dental appointment at Able Family Dental on 8th Street East in Lethbridge. New and existing patients welcome. Call 403.327.7202 or request online."
+  description="Schedule your dental appointment at Able Family Dental on 5th Street South in Lethbridge. New and existing patients welcome. Call 403.327.7202 or request online."
 >
 
   <!-- ============================================================
@@ -90,7 +90,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <p>511 – 5th Street South<br/>Lethbridge, Alberta</p>
             </div>
             <a
-              href="https://maps.google.com/?q=105-1526+8th+Street+East+Lethbridge+SK"
+              href="https://maps.app.goo.gl/pAJAeiNddySjEkKc8"
               target="_blank"
               rel="noopener noreferrer"
               class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-soft)] transition-colors"
@@ -139,7 +139,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 { icon: `<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`, text: "Arrive 10 minutes early for your first appointment to complete any remaining paperwork." },
                 { icon: `<rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>`, text: "Bring your insurance card and a piece of photo ID." },
                 { icon: `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>`, text: "New patients can complete forms online in advance via the Patients page." },
-                { icon: `<circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/>`, text: "Free parking available on-site, no hunting for a spot before your visit." },
+                { icon: `<circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/>`, text: "Street parking is available on 5th Street South and nearby streets." },
               ].map(tip => (
                 <li class="flex items-start gap-3">
                   <div class="w-7 h-7 rounded-full bg-[var(--color-surface-cool)] flex items-center justify-center shrink-0 mt-0.5">
@@ -161,11 +161,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </li>
               <li class="flex items-center gap-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Accessible parking spaces near the entrance
+                Accessible washroom on site
               </li>
               <li class="flex items-center gap-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Bus routes within one block on 8th Street East
+                Lethbridge Transit routes nearby
               </li>
             </ul>
           </div>
@@ -200,22 +200,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             icon: `<rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>`,
           },
           {
-            label: "Parking Available",
-            note: "On-site parking is available for patients.",
-            positive: true,
-            icon: `<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>`,
-          },
-          {
             label: "Wheelchair-Accessible Entrance",
             note: "Our entrance is fully accessible.",
             positive: true,
             icon: `<circle cx="12" cy="5" r="1"/><path d="M9 20l1-5h4l1 5"/><path d="M8 15l1-5h6l1 5"/><path d="M6 20a5 5 0 0 1 5-5"/>`,
-          },
-          {
-            label: "Wheelchair-Accessible Parking",
-            note: "Designated accessible parking spaces on site.",
-            positive: true,
-            icon: `<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="8" r="1"/><path d="M10 14l1-4h2l1 4"/><path d="M9 14h6"/>`,
           },
           {
             label: "Accessible Washroom",

@@ -317,12 +317,12 @@ const faqSchema = {
   <!-- ============================================================
        HERO
        ============================================================ -->
-  <section class="relative overflow-hidden" style="background: linear-gradient(180deg, #f2f7fc 0%, #e4edf7 100%);">
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
 
     <!-- Right-side photo, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[45%] pointer-events-none" aria-hidden="true">
       <img
-        src="/images/sourced/faq-hero.png"
+        src="/images/sourced/faq-hero-reception.png"
         alt=""
         width="900"
         height="700"
@@ -330,33 +330,24 @@ const faqSchema = {
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <!-- Soft left fade -->
-      <div class="absolute inset-y-0 left-0 w-[55%]" style="background: linear-gradient(to right, #eaf2fb 0%, rgba(234,242,251,0.7) 50%, transparent 100%);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
 
     <!-- Text content -->
     <div class="container-wide relative py-16 lg:py-28 lg:max-w-[58%]">
-      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-muted)] mb-5" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-[var(--color-brand-primary)] transition-colors">Home</a>
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="text-white hover:text-white/80 transition-colors">Home</a>
         <span aria-hidden="true">›</span>
-        <span class="text-[var(--color-brand-primary)]">FAQ</span>
+        <span class="text-white">FAQ</span>
       </nav>
-      <p class="eyebrow text-[var(--color-brand-accent)]">Patient Information</p>
-      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-[var(--color-brand-primary)] max-w-xl">
+      <p class="eyebrow" style="color: white;">Patient Information</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-xl">
         Frequently Asked<br>Questions
       </h1>
-      <div class="mt-4 w-16 h-0.5 bg-[var(--color-brand-accent)] rounded-full"></div>
-      <p class="mt-6 text-lg text-[var(--color-text)] leading-relaxed max-w-lg">
+      <p class="mt-6 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-lg">
         Helpful answers about appointments, insurance, dental visits, and care at Able Family Dental.
       </p>
     </div>
-
-    <!-- Bottom wave -->
-    <svg class="block w-full" style="margin-top: -2px;" viewBox="0 0 1440 80" preserveAspectRatio="none" fill="none" aria-hidden="true">
-      <path d="M0,50 C280,22 520,68 760,72 C1000,76 1220,50 1440,28 L1440,80 L0,80 Z" fill="rgba(194,212,234,0.55)"></path>
-      <path d="M0,30 C240,62 480,76 760,74 C1040,72 1220,42 1440,14 L1440,80 L0,80 Z" fill="rgba(215,228,243,0.65)"></path>
-      <path d="M0,58 C320,40 600,78 760,78 C920,78 1140,52 1440,36 L1440,80 L0,80 Z" fill="#ffffff"></path>
-    </svg>
 
   </section>
 

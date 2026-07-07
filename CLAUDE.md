@@ -119,7 +119,9 @@ See `docs/third-party-scripts.md` for the full guide, common scripts and their C
 
 ## Deployment
 
-Pushing to `origin/main` triggers an automatic deploy via GitHub Actions (`.github/workflows/deploy.yml`). The site goes live at **https://wildwood-dental-clinic.spark0.io/** within ~1 minute of a push. No manual deploy step is needed.
+There is no auto-deploy GitHub Action for this project — pushing to `origin/main` does **not** publish the site by itself. Deploys are manual: run `npm run deploy` (`astro build && wrangler deploy`). The site goes live at **https://able-family-dental.spark0.io/** within about a minute of running that command.
+
+When the user says "deploy" (or "commit, push, and deploy"), always run `npm run deploy` as part of the request — don't assume the push alone covers it.
 
 ## Process Documentation
 

@@ -16,14 +16,14 @@
 /dental-sealants/ /services/preventive/sealants/  301
 /fluoride-treatment/ /services/preventive/fluoride/  301
 /diagnostic-imaging-digital-x-rays/ /services/diagnostic/diagnostic-images/  301
-/periodontal-gum-disease-treatment/ /services/periodontal/gum-disease/  301
-/oral-cancer-screening/ /services/diagnostic/oral-cancer-screening/  301
+/periodontal-gum-disease-treatment/ /services/periodontal/  301
+/oral-cancer-screening/ /services/diagnostic/  301
 /restorative-dental-care/ /services/restorative/  301
 /dental-fillings/ /services/restorative/fillings/  301
 /dental-bridges/ /services/restorative/crowns-bridges/  301
 /dental-crowns/ /services/restorative/crowns-bridges/  301
 /ceramic-crowns/ /services/restorative/crowns-bridges/  301
-/full-and-partial-dentures/ /services/restorative/dentures/  301
+/full-and-partial-dentures/ /services/prosthodontics/dentures/  301
 /dental-implants/ /services/oral-surgery/implants/  301
 /root-canal-treatment/ /services/endodontics/root-canal/  301
 /cosmetic-dentistry/ /services/cosmetic/  301
@@ -39,7 +39,7 @@
 /wisdom-tooth-extraction/ /services/oral-surgery/wisdom-teeth/  301
 /tmj-tmjd-treatment-and-night-guards/ /services/tmj/  301
 /mouth-and-sports-guards/ /services/preventive/guards/  301
-/snoring-and-sleep-apnea-treatment/ /services/tmj/sleep-apnea/  301
+/snoring-and-sleep-apnea-treatment/ /services/tmj/  301
 /sedation-dentistry/ /services/preventive/comfort/  301
 /schedule-a-dental-appointment/ /book/  301
 /patient-forms/ /new-patients/forms/  301
@@ -66,18 +66,31 @@
 /services/oral-surgery/sedation /services/preventive/comfort/  301
 /services/oral-surgery/sports-guards /services/preventive/guards/  301
 /services/oral-surgery/tmj-night-guards /services/tmj/night-guards/  301
-/services/oral-surgery/sleep-apnea /services/tmj/sleep-apnea/  301
+/services/oral-surgery/sleep-apnea /services/tmj/  301
 /services/cosmetic/bite-correction /services/tmj/bite-correction/  301
 /services/cosmetic/invisalign /services/orthodontics/invisalign/  301
 /services/cosmetic/reshaping /services/cosmetic/  301
 /services/preventive/cleanings-checkups /services/preventive/cleanings-exams/  301
-/services/preventive/oral-cancer-screening /services/diagnostic/oral-cancer-screening/  301
-/services/preventive/periodontal-treatment /services/periodontal/gum-disease/  301
+/services/preventive/oral-cancer-screening /services/diagnostic/  301
+/services/preventive/periodontal-treatment /services/periodontal/  301
 /services/preventive/x-rays /services/diagnostic/x-rays/  301
 /services/restorative/implants /services/oral-surgery/implants/  301
 /services/restorative/root-canal /services/endodontics/root-canal/  301
 /services/restorative/bridges /services/restorative/crowns-bridges/  301
 /services/restorative/crowns /services/restorative/crowns-bridges/  301
+
+# ============================================================
+# Redirects from removed service pages (superseded by 2026 service list)
+# ============================================================
+
+/services/preventive/nutrition/ /services/preventive/  301
+/services/diagnostic/cbct/ /services/diagnostic/  301
+/services/diagnostic/oral-cancer-screening/ /services/diagnostic/  301
+/services/periodontal/gum-contouring/ /services/periodontal/  301
+/services/periodontal/gum-disease/ /services/periodontal/  301
+/services/endodontics/gum-grafting/ /services/endodontics/  301
+/services/tmj/sleep-apnea/ /services/tmj/  301
+/services/restorative/dentures/ /services/prosthodontics/dentures/  301
 
 # ============================================================
 # Blog post redirects (old site slugs → new blog paths)

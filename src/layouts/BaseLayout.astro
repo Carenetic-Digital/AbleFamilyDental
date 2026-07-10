@@ -5,6 +5,7 @@ import StructuredData from '../components/StructuredData.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PreFooter from '../components/PreFooter.astro';
+import { clinic, openingHoursSpecification } from '../data/clinic';
 interface Props {
   title: string;
   description?: string;
@@ -16,7 +17,7 @@ interface Props {
 
 const {
   title,
-  description = 'Able Family Dental offers family dentistry and implants in Lethbridge, AB. We welcome new patients of all ages, call 403.327.7202 to book.',
+  description = `Able Family Dental offers family dentistry and implants in Lethbridge, AB. We welcome new patients of all ages, call ${clinic.phoneDisplay} to book.`,
   image = '/images/og-default.jpg',
   noindex = true,
   showMobileBar = true,
@@ -32,42 +33,37 @@ const ogImageURL = new URL('/images/og-default.jpg', siteURL).href;
 
 const businessData = {
   "@id": "https://ablefamilydental.com/#dentist",
-  name: "Able Family Dental",
+  name: clinic.name,
   url: siteRoot,
-  telephone: "+1-403-327-7202",
-  email: "reception@ablefamilydental.com",
+  telephone: clinic.phoneSchema,
+  email: clinic.email,
   image: ogImageURL,
   logo: logoURL,
   parentOrganization: { "@id": organizationId },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "511 5th Street South",
-    addressLocality: "Lethbridge",
-    addressRegion: "AB",
-    addressCountry: "CA",
+    streetAddress: clinic.streetAddress,
+    addressLocality: clinic.city,
+    addressRegion: clinic.regionAbbr,
+    addressCountry: clinic.country,
   },
   geo: {
     "@type": "GeoCoordinates",
     latitude: 49.6922,
     longitude: -112.8422,
   },
-  openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Friday"], opens: "08:00", closes: "17:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Tuesday", "Thursday"], opens: "08:00", closes: "18:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "07:00", closes: "17:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "14:00" },
-  ],
-  areaServed: { "@type": "City", name: "Lethbridge" },
+  openingHoursSpecification,
+  areaServed: { "@type": "City", name: clinic.city },
 };
 
 const organizationData = {
   "@id": organizationId,
-  name: "Able Family Dental",
+  name: clinic.name,
   url: siteRoot,
   logo: logoURL,
   image: ogImageURL,
-  telephone: "+1-403-327-7202",
-  email: "reception@ablefamilydental.com",
+  telephone: clinic.phoneSchema,
+  email: clinic.email,
   sameAs: [
     "https://www.facebook.com/ablefamilydental",
     "https://www.instagram.com/ablefamilydental/",

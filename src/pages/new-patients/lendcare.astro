@@ -33,16 +33,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <!-- Right: image card with overlay -->
       <div style="position:relative;border-radius:14px;overflow:hidden;box-shadow:0 24px 56px rgba(20,54,95,.16);">
         <img
-          src="/images/services/content-consultation.jpg"
-          alt="Patient consultation at Able Family Dental"
-          width="700"
-          height="440"
+          src="/images/services/lendcare-hero.jpg"
+          alt="Dentist examining a patient at Able Family Dental"
+          width="1024"
+          height="768"
           loading="eager"
           decoding="async"
           style="width:100%;height:440px;object-fit:cover;display:block;"
         />
         <div style="position:absolute;left:18px;right:18px;bottom:18px;background:#fff;border-radius:12px;box-shadow:0 12px 30px rgba(20,54,95,.18);display:flex;align-items:center;gap:16px;padding:14px 16px;">
-          <span style="width:46px;height:46px;border-radius:50%;background:linear-gradient(180deg,#eeb24f,#d8901f);display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto;">
+          <span style="width:46px;height:46px;border-radius:50%;background:linear-gradient(180deg,var(--color-brand-primary),var(--color-brand-primary-deep));display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M2 20h20"/></svg>
           </span>
           <span style="font-size:14.5px;color:var(--color-brand-primary);font-weight:700;line-height:1.35;flex:1;">Apply online in minutes<br/>or ask our team in clinic.</span>
@@ -146,9 +146,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div style="display:flex;flex-direction:column;gap:20px;border-left:1px solid rgba(200,136,31,.3);padding-left:40px;">
+        <div style="display:flex;flex-direction:column;gap:20px;border-left:1px solid rgba(0,107,107,.2);padding-left:40px;">
           <div style="display:flex;align-items:center;gap:14px;">
-            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--color-brand-accent-hover);flex:0 0 auto;box-shadow:0 4px 12px rgba(200,136,31,.16);">
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--color-brand-accent-hover);flex:0 0 auto;box-shadow:0 4px 12px rgba(0,107,107,.16);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
             </span>
             <div>
@@ -157,7 +157,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:14px;">
-            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--color-brand-accent-hover);flex:0 0 auto;box-shadow:0 4px 12px rgba(200,136,31,.16);">
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--color-brand-accent-hover);flex:0 0 auto;box-shadow:0 4px 12px rgba(0,107,107,.16);">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
             </span>
             <div>
@@ -264,7 +264,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     .lc-hero-grid  { grid-template-columns: 1fr !important; }
     .lc-help-grid  { grid-template-columns: 1fr !important; }
     .lc-office-grid{ grid-template-columns: 1fr !important; }
-    .lc-help-actions { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(200,136,31,.3); padding-top: 24px; }
+    .lc-help-actions { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(0,107,107,.2); padding-top: 24px; }
   }
   @media (max-width: 560px) {
     .lc-hero h1 { font-size: 34px !important; }

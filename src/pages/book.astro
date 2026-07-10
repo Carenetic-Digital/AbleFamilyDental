@@ -87,7 +87,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="space-y-2 text-sm text-[var(--color-text-on-dark-muted)]">
               <p class="font-semibold text-white">Able Family Dental</p>
-              <p>511 – 5th Street South<br/>Lethbridge, Alberta</p>
+              <p>511 5th Street South<br/>Lethbridge, Alberta</p>
             </div>
             <a
               href="https://maps.app.goo.gl/pAJAeiNddySjEkKc8"
@@ -114,11 +114,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <dl class="space-y-2 text-sm">
               {[
-                { day: "Monday", hours: "7:30 am – 4:30 pm" },
-                { day: "Tuesday", hours: "7:30 am – 4:30 pm" },
-                { day: "Wednesday", hours: "7:30 am – 8:30 pm", extended: true },
-                { day: "Thursday", hours: "7:30 am – 4:30 pm" },
-                { day: "Friday", hours: "7:30 am – 4:00 pm" },
+                { day: "Monday", hours: "7:30 am to 4:30 pm" },
+                { day: "Tuesday", hours: "7:30 am to 4:30 pm" },
+                { day: "Wednesday", hours: "7:30 am to 8:30 pm", extended: true },
+                { day: "Thursday", hours: "7:30 am to 4:30 pm" },
+                { day: "Friday", hours: "7:30 am to 4:00 pm" },
               ].map(row => (
                 <div class={`flex justify-between items-center py-1.5 border-b border-[var(--color-border-soft)] last:border-0 ${row.extended ? 'bg-[var(--color-surface-alt)] -mx-2 px-2 rounded-lg' : ''}`}>
                   <dt class={`font-medium ${row.extended ? 'text-[var(--color-brand-primary)]' : 'text-[var(--color-text)]'}`}>{row.day}</dt>

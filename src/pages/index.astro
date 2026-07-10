@@ -26,9 +26,9 @@ const serviceCategories = [
        ============================================================ -->
   <section class="relative overflow-hidden bg-white min-h-[520px] lg:min-h-[600px]">
 
-    <!-- Hero image: right half, absolute, fades left into white -->
-    <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[52%] pointer-events-none" aria-hidden="true">
-      <picture>
+    <!-- Hero image: right side, bleeds softly into the text column -->
+    <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[60%] pointer-events-none" aria-hidden="true">
+      <picture class="block h-full">
         <source srcset="/images/hero/able-family-dental-hero.webp" type="image/webp" />
         <img
           src="/images/hero/able-family-dental-hero.jpg"
@@ -38,17 +38,17 @@ const serviceCategories = [
           loading="eager"
           decoding="async"
           fetchpriority="high"
-          class="w-full h-full object-cover object-center"
+          class="w-full h-full object-cover object-[24%_center]"
         />
       </picture>
-      <!-- Gradient fade from white into image -->
+      <!-- Soft multi-stop fade: image bleeds into text without clipping the dentist -->
       <div
-        class="absolute inset-y-0 left-0 w-48 pointer-events-none"
-        style="background: linear-gradient(to right, #ffffff, transparent);"
+        class="absolute inset-y-0 left-0 w-[72%] pointer-events-none"
+        style="background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.96) 8%, rgba(255,255,255,0.84) 18%, rgba(255,255,255,0.66) 30%, rgba(255,255,255,0.44) 42%, rgba(255,255,255,0.24) 54%, rgba(255,255,255,0.1) 66%, rgba(255,255,255,0.03) 78%, transparent 92%);"
       ></div>
     </div>
 
-    <div class="container-wide relative pt-14 pb-20 md:pt-20 md:pb-28 lg:grid lg:grid-cols-12">
+    <div class="container-wide relative z-10 pt-14 pb-20 md:pt-20 md:pb-28 lg:grid lg:grid-cols-12">
 
       <!-- LEFT: col-span-6 -->
       <div class="lg:col-span-6">
@@ -62,9 +62,10 @@ const serviceCategories = [
 
         <div class="mt-8 flex flex-wrap items-center gap-3">
           <a href="/book/" class="btn btn-primary btn-lg">
-            Request Appointment
+            Book Appointment
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
+          <a href="/refer/" class="btn btn-outline btn-lg">Refer Patient</a>>
           <a href="tel:+14033277202" class="btn btn-outline btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             403.327.7202
@@ -160,6 +161,7 @@ const serviceCategories = [
         </div>
 
         <!-- RIGHT column: single city image with badge -->
+        <div class="rounded-2xl shadow-xl">
         <div class="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[280px]">
           <picture>
             <source srcset="/images/hero/lethbridge-downtown.webp" type="image/webp" />
@@ -179,6 +181,7 @@ const serviceCategories = [
             <span class="text-base font-semibold leading-tight">Downtown Lethbridge on 5th Street South</span>
           </div>
         </div>
+        </div>
 
         </div><!-- /grid -->
       </div><!-- /skyline wrapper -->
@@ -193,9 +196,9 @@ const serviceCategories = [
               <source srcset="/images/hero/mosaic-building.webp" type="image/webp" />
               <img
                 src="/images/hero/mosaic-building.png"
-                alt="Exterior of Able Family Dental in Lethbridge"
-                width="1224"
-                height="915"
+                alt="Patient waiting room at Able Family Dental in Lethbridge"
+                width="1448"
+                height="1086"
                 loading="lazy"
                 decoding="async"
                 class="w-full object-cover rounded-xl aspect-[4/3] shadow-xl"
@@ -207,9 +210,9 @@ const serviceCategories = [
               <source srcset="/images/hero/mosaic-hallway.webp" type="image/webp" />
               <img
                 src="/images/hero/mosaic-hallway.png"
-                alt="Modern hallway inside Able Family Dental clinic"
-                width="1920"
-                height="1080"
+                alt="Exterior of Able Family Dental clinic in Lethbridge"
+                width="1449"
+                height="1086"
                 loading="lazy"
                 decoding="async"
                 class="w-full h-full object-cover rounded-xl shadow-xl"
@@ -448,7 +451,7 @@ const serviceCategories = [
   <!-- ============================================================
        SECTION 6: Patient Information
        ============================================================ -->
-  <section class="section-y" style="background-color: #c8d8ea; padding-top: 2.5rem;">
+  <section class="section-y" style="background-color: #ABADB0; padding-top: 2.5rem;">
     <div class="container-wide">
 
       <div class="text-center mx-auto">
@@ -575,7 +578,7 @@ const serviceCategories = [
        SECTION 8: Patient Care Standards
        ============================================================ -->
   <section class="pt-[var(--spacing-section)] pb-0 bg-[var(--color-surface)] relative overflow-hidden">
-    <!-- Faint blue radial gradient — matches design intent -->
+    <!-- Faint blue radial gradient, matches design intent -->
     <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 30% 30%, rgba(74,118,210,0.08) 0%, transparent 58%);" aria-hidden="true"></div>
 
     <div class="container-wide relative grid lg:grid-cols-[40fr_60fr] gap-10 lg:gap-14 items-start pb-2">
@@ -646,7 +649,7 @@ const serviceCategories = [
 
         </div>
 
-        <!-- Skyline graphic — constrained to right column -->
+        <!-- Skyline graphic, constrained to right column -->
         <div class="w-full" style="aspect-ratio: 16/5;">
           <img
             src="/images/brand/lethbridge-landmarks-line-art.svg"

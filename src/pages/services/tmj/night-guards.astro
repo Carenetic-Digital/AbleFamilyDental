@@ -2,15 +2,16 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const siblingServices = [
-  { name: "Bite Correction", href: "/services/tmj/bite-correction" },
-  { name: "TMJ Diagnosis", href: "/services/tmj/diagnosis" },
+  { name: "TMJ Overview", href: "/services/tmj" },
+  { name: "Diagnosis", href: "/services/tmj/diagnosis" },
   { name: "Botulinum Toxin for Jaw Pain", href: "/services/tmj/botox" },
-  { name: "Custom Night Guards", href: "/services/tmj/night-guards", current: true },
+  { name: "Night Guards", href: "/services/tmj/night-guards", current: true },
+  { name: "Bite Correction", href: "/services/tmj/bite-correction" },
 ];
 ---
 
 <BaseLayout
-  title="TMJ Treatment & Night Guards | TMJ/TMD Therapy | Able Family Dental Lethbridge"
+  title="Night Guards | TMJ/TMD Therapy | Able Family Dental Lethbridge"
   description="TMJ treatment and custom night guards at Able Family Dental in Lethbridge. Learn about temporomandibular disorders, symptoms, causes, and treatment options including occlusal splints."
 >
 
@@ -29,7 +30,7 @@ const siblingServices = [
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-white mb-5" aria-label="Breadcrumb">

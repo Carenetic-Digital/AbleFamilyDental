@@ -13,20 +13,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
     <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
-      <picture>
-        <!-- TODO(Projects Team): no patient-consult photo was supplied; using exterior as interim (decorative panel). Swap in a real image. -->
-        <source srcset="/images/hero/able-family-dental-exterior.webp" type="image/webp" />
-        <img
-          src="/images/hero/able-family-dental-exterior.png"
-          alt=""
-          width="1086"
-          height="1448"
-          loading="eager"
-          decoding="async"
-          class="w-full h-full object-cover"
-        />
-      </picture>
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <img
+        src="/images/services/contact-hero.png"
+        alt=""
+        width="1200"
+        height="800"
+        loading="eager"
+        decoding="async"
+        class="w-full h-full object-cover object-[70%_20%]"
+      />
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
@@ -213,6 +209,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
 
+          <!-- Parking -->
+          <div class="bg-white rounded-2xl border border-[var(--color-border-soft)] shadow-sm p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="text-[var(--color-brand-primary)] shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+              <h2 class="font-display font-semibold text-lg text-[var(--color-brand-primary)]">Parking</h2>
+            </div>
+            <ul class="space-y-2 text-sm text-[var(--color-text-muted)] leading-relaxed list-disc pl-5">
+              <li>Street parking is available on 5th Street South and surrounding streets</li>
+              <li>On-site parking is not available at our location</li>
+              <li>If you have specific parking or access needs, please contact our office</li>
+            </ul>
+            <p class="mt-3 text-xs text-[var(--color-text-muted)]">* Please allow a few extra minutes for parking during busy times.</p>
+          </div>
+
         </div>
         <!-- /RIGHT -->
 
@@ -245,8 +255,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             icon: `<rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>`,
           },
           {
-            label: "Wheelchair-Accessible Entrance",
-            note: "Our entrance is fully accessible.",
+            label: "Accessible Rear Entrance",
+            note: "Step-free, wheelchair-accessible entry is available at the rear of the clinic.",
             positive: true,
             icon: `<circle cx="12" cy="5" r="1"/><path d="M9 20l1-5h4l1 5"/><path d="M8 15l1-5h6l1 5"/><path d="M6 20a5 5 0 0 1 5-5"/>`,
           },
@@ -277,7 +287,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- ============================================================
        EMERGENCY DENTAL NOTE
        ============================================================ -->
-  <section class="section-y bg-[var(--color-surface-alt)]">
+  <section class="section-y bg-white">
     <div class="container-wide">
       <div class="max-w-2xl mx-auto text-center">
 

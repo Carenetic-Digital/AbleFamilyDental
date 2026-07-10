@@ -2,16 +2,16 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const siblingServices = [
-  { name: "Cleanings & Exams", href: "/services/preventive/cleanings-exams" },
   { name: "Fluoride Treatments", href: "/services/preventive/fluoride" },
+  { name: "Routine Cleanings & Exams", href: "/services/preventive/cleanings-exams" },
   { name: "Dental Sealants", href: "/services/preventive/sealants" },
-  { name: "Mouthguards & Sport Guards", href: "/services/preventive/guards", current: true },
+  { name: "Night Guards & Mouthguards", href: "/services/preventive/guards", current: true },
   { name: "Patient Comfort Techniques", href: "/services/preventive/comfort" },
 ];
 ---
 
 <BaseLayout
-  title="Sports Guards (Mouthguards) | Preventive Dentistry | Able Family Dental Lethbridge"
+  title="Night Guards & Mouthguards | Preventive Dentistry | Able Family Dental Lethbridge"
   description="Custom-fitted sports mouthguards at Able Family Dental in Lethbridge. Learn why custom guards offer better protection than over-the-counter options for contact and collision sports."
 >
 
@@ -30,7 +30,7 @@ const siblingServices = [
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-white mb-5" aria-label="Breadcrumb">
@@ -43,8 +43,7 @@ const siblingServices = [
         <span class="text-white">Sports Guards</span>
       </nav>
       <p class="eyebrow text-white">Preventive Dentistry</p>
-      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
-        Sports Guards
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">Night Guards &amp; Mouthguards
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
         A custom-fitted mouthguard is one of the simplest protective measures available for athletes. It fits precisely over your teeth and is far more comfortable and effective than generic over-the-counter options.

@@ -2,22 +2,22 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const subServices = [
-  { name: "Scaling & Root Planing", href: "/services/periodontal/scaling-root-planing" },
+  { name: "Gum Disease Treatment", href: "/services/periodontal/gum-disease" },
 ];
 
 const services = [
   {
-    title: "Scaling & Root Planing",
-    href: "/services/periodontal/scaling-root-planing",
-    description: "A thorough cleaning of the root surfaces below the gumline, performed under local anesthetic. This is the standard non-surgical treatment for more advanced gum disease and is often done in sections over one or more appointments.",
-    icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
+    title: "Gum Disease Treatment",
+    href: "/services/periodontal/gum-disease",
+    description: "Gum disease treatment varies depending on the stage of disease, from improved home care and professional cleaning for early gingivitis, to more involved periodontal therapy and ongoing maintenance for more advanced conditions.",
+    icon: `<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>`,
   },
 ];
 ---
 
 <BaseLayout
   title="Periodontal Care | Gum Health | Able Family Dental Lethbridge"
-  description="Periodontal care for gum health at Able Family Dental in Lethbridge, scaling and root planing, gum disease treatment, and gum contouring."
+  description="Periodontal care for gum health at Able Family Dental in Lethbridge, gum disease treatment and ongoing periodontal care."
 >
 
   <!-- ============================================================
@@ -35,7 +35,7 @@ const services = [
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-white mb-5" aria-label="Breadcrumb">

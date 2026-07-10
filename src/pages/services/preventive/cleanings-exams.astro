@@ -2,16 +2,16 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const siblingServices = [
-  { name: "Cleanings & Exams", href: "/services/preventive/cleanings-exams", current: true },
   { name: "Fluoride Treatments", href: "/services/preventive/fluoride" },
+  { name: "Routine Cleanings & Exams", href: "/services/preventive/cleanings-exams", current: true },
   { name: "Dental Sealants", href: "/services/preventive/sealants" },
-  { name: "Mouthguards & Sport Guards", href: "/services/preventive/guards" },
+  { name: "Night Guards & Mouthguards", href: "/services/preventive/guards" },
   { name: "Patient Comfort Techniques", href: "/services/preventive/comfort" },
 ];
 ---
 
 <BaseLayout
-  title="Cleanings & Exams | Preventive Dentistry | Able Family Dental"
+  title="Routine Cleanings & Exams | Preventive Dentistry | Able Family Dental"
   description="Routine dental cleanings and check-ups at Able Family Dental in Lethbridge. Professional scaling, polishing, exams, and personalised home-care guidance."
 >
 
@@ -30,7 +30,7 @@ const siblingServices = [
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-white mb-5" aria-label="Breadcrumb">
@@ -43,8 +43,7 @@ const siblingServices = [
         <span class="text-white">Cleanings &amp; Check-ups</span>
       </nav>
       <p class="eyebrow text-white">Preventive Dentistry</p>
-      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
-        Cleanings &amp; Check-ups
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">Routine Cleanings &amp; Exams
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
         A routine cleaning and exam is one of the most important things you can do for your long-term oral health. We make every visit thorough, comfortable, and informative.

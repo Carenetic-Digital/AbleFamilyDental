@@ -2,10 +2,10 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const siblingServices = [
-  { name: "Cleanings & Exams", href: "/services/preventive/cleanings-exams" },
   { name: "Fluoride Treatments", href: "/services/preventive/fluoride" },
+  { name: "Routine Cleanings & Exams", href: "/services/preventive/cleanings-exams" },
   { name: "Dental Sealants", href: "/services/preventive/sealants", current: true },
-  { name: "Mouthguards & Sport Guards", href: "/services/preventive/guards" },
+  { name: "Night Guards & Mouthguards", href: "/services/preventive/guards" },
   { name: "Patient Comfort Techniques", href: "/services/preventive/comfort" },
 ];
 ---
@@ -30,7 +30,7 @@ const siblingServices = [
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-white mb-5" aria-label="Breadcrumb">

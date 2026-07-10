@@ -5,6 +5,7 @@ const siblingServices = [
   { name: "X-Rays & 3D Imaging", href: "/services/diagnostic/x-rays", current: true },
   { name: "Diagnostic Images & Digital X-Rays", href: "/services/diagnostic/diagnostic-images" },
   { name: "Intraoral Cameras", href: "/services/diagnostic/intraoral-cameras" },
+  { name: "Oral Cancer Screening", href: "/services/diagnostic/oral-cancer-screening" },
 ];
 ---
 
@@ -28,7 +29,7 @@ const siblingServices = [
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-white mb-5" aria-label="Breadcrumb">
@@ -132,12 +133,27 @@ const siblingServices = [
             </h2>
             <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
               <p>
-                Cone beam computed tomography (CBCT) produces a three-dimensional image of the teeth, jaws, and surrounding structures. Unlike a conventional x-ray, a CBCT scan shows the anatomy in three dimensions, allowing for far more detailed assessment of bone volume and density, nerve pathways, and the precise positioning of teeth.
+                Cone beam computed tomography (CBCT) uses a cone-shaped beam to capture a three-dimensional image of the teeth, jaws, bone, and surrounding anatomy. Unlike a conventional x-ray, a CBCT scan can be viewed in cross-section from any angle, allowing detailed assessment of bone volume and density, nerve pathways, and the precise positioning of teeth.
               </p>
               <p>
-                CBCT imaging is used when more detailed information is needed, for example, when planning dental implant placement, assessing complex extractions, or investigating suspected pathology. It is not required for routine care but is a valuable tool when clinical decisions require a more complete picture.
+                CBCT is not part of routine dental care. It is ordered when three-dimensional information is necessary for treatment planning. Common situations include dental implant planning, assessment of impacted teeth, complex root canal anatomy, and evaluation of jaw or bone pathology.
+              </p>
+              <p>
+                A CBCT scan delivers more radiation than a standard dental x-ray, so it is used only when the clinical benefit justifies it. The scan itself is non-invasive, typically takes under a minute, and involves no discomfort.
               </p>
             </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden max-h-[700px]">
+            <img
+              src="/images/bugherd/Scan.png"
+              alt="CBCT cone beam CT scan at Able Family Dental"
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-auto"
+            />
           </div>
 
         </div>

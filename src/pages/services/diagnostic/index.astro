@@ -5,7 +5,7 @@ const services = [
   {
     title: "X-Rays & 3D Imaging",
     href: "/services/diagnostic/x-rays",
-    description: "Digital x-rays reveal decay between teeth, monitor bone levels, and show anatomy below the gumline, areas that cannot be assessed by visual exam alone.",
+    description: "Digital x-rays and CBCT 3D imaging reveal decay between teeth, monitor bone levels, and show anatomy below the gumline for accurate diagnosis and complex treatment planning.",
     icon: `<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>`,
   },
   {
@@ -19,6 +19,12 @@ const services = [
     href: "/services/diagnostic/intraoral-cameras",
     description: "Small cameras allow us to show you exactly what we see inside your mouth, making it easier to understand findings and participate in decisions about your care.",
     icon: `<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>`,
+  },
+  {
+    title: "Oral Cancer Screening",
+    href: "/services/diagnostic/oral-cancer-screening",
+    description: "A visual and tactile examination of the oral tissues at each routine visit helps detect changes that may warrant further investigation.",
+    icon: `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>`,
   },
 ];
 ---
@@ -43,7 +49,7 @@ const services = [
         decoding="async"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-y-0 left-0 w-2/3" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
     <div class="container-wide relative py-16 lg:py-24 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-white mb-5" aria-label="Breadcrumb">

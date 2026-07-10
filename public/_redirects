@@ -16,8 +16,8 @@
 /dental-sealants/ /services/preventive/sealants/  301
 /fluoride-treatment/ /services/preventive/fluoride/  301
 /diagnostic-imaging-digital-x-rays/ /services/diagnostic/diagnostic-images/  301
-/periodontal-gum-disease-treatment/ /services/periodontal/  301
-/oral-cancer-screening/ /services/diagnostic/  301
+/periodontal-gum-disease-treatment/ /services/periodontal/gum-disease/  301
+/oral-cancer-screening/ /services/diagnostic/oral-cancer-screening/  301
 /restorative-dental-care/ /services/restorative/  301
 /dental-fillings/ /services/restorative/fillings/  301
 /dental-bridges/ /services/restorative/crowns-bridges/  301
@@ -71,8 +71,8 @@
 /services/cosmetic/invisalign /services/orthodontics/invisalign/  301
 /services/cosmetic/reshaping /services/cosmetic/  301
 /services/preventive/cleanings-checkups /services/preventive/cleanings-exams/  301
-/services/preventive/oral-cancer-screening /services/diagnostic/  301
-/services/preventive/periodontal-treatment /services/periodontal/  301
+/services/preventive/oral-cancer-screening /services/diagnostic/oral-cancer-screening/  301
+/services/preventive/periodontal-treatment /services/periodontal/gum-disease/  301
 /services/preventive/x-rays /services/diagnostic/x-rays/  301
 /services/restorative/implants /services/oral-surgery/implants/  301
 /services/restorative/root-canal /services/endodontics/root-canal/  301
@@ -80,17 +80,13 @@
 /services/restorative/crowns /services/restorative/crowns-bridges/  301
 
 # ============================================================
-# Redirects from removed service pages (superseded by 2026 service list)
+/services/preventive/nutrition/ /services/preventive/  301
+/services/tmj/sleep-apnea/ /services/tmj/  301
+/services/diagnostic/cbct/ /services/diagnostic/x-rays/  301
+
+# Redirects from dropped Able categories (align with Wildwood map)
 # ============================================================
 
-/services/preventive/nutrition/ /services/preventive/  301
-/services/diagnostic/cbct/ /services/diagnostic/  301
-/services/diagnostic/oral-cancer-screening/ /services/diagnostic/  301
-/services/periodontal/gum-contouring/ /services/periodontal/  301
-/services/periodontal/gum-disease/ /services/periodontal/  301
-/services/endodontics/gum-grafting/ /services/endodontics/  301
-/services/tmj/sleep-apnea/ /services/tmj/  301
-/services/restorative/dentures/ /services/prosthodontics/dentures/  301
 
 # ============================================================
 # Blog post redirects (old site slugs → new blog paths)
@@ -108,3 +104,12 @@
 /category/family-dentistry/ /blog/  301
 /category/preventive-dentistry/ /blog/  301
 /author/marketing/ /blog/  301
+
+/services/periodontal/scaling-root-planing/ /services/periodontal/gum-disease/  301
+/services/periodontal/gum-contouring/ /services/periodontal/  301
+/services/endodontics/gum-grafting/ /services/endodontics/  301
+/services/restorative/dentures/ /services/prosthodontics/dentures/  301
+/services/sedation/ /services/ivs/  301
+/services/sedation/nitrous-oxide/ /services/preventive/comfort/  301
+/services/sedation/oral-sedation/ /services/preventive/comfort/  301
+/services/sedation/iv-sedation/ /services/ivs/  301

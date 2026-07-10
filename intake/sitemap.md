@@ -21,16 +21,14 @@ Services expanded from 4 to 11 top-level categories. Patient section split into 
     - Broken/Chipped Tooth Emergency Repair (`/services/emergency/broken-tooth`)
     - Knocked-Out Tooth Treatment (`/services/emergency/knocked-out-tooth`)
   - Preventive Dentistry (`/services/preventive`)
-    - Routine Cleanings & Exams (`/services/preventive/cleanings-exams`)
     - Fluoride Treatments (`/services/preventive/fluoride`)
+    - Routine Cleanings & Exams (`/services/preventive/cleanings-exams`)
     - Dental Sealants (`/services/preventive/sealants`)
-    - Night Guards, Mouthguards & Sport Guards (`/services/preventive/guards`)
-    - Nutrition Counseling (`/services/preventive/nutrition`)
+    - Night Guards & Mouthguards (`/services/preventive/guards`)
     - Patient Comfort Techniques (`/services/preventive/comfort`)
   - Diagnostic Services (`/services/diagnostic`)
-    - X-Rays & 3D Imaging (`/services/diagnostic/x-rays`)
+    - X-Rays & 3D Imaging (`/services/diagnostic/x-rays`) — includes CBCT / 3D imaging content
     - Intraoral Cameras (`/services/diagnostic/intraoral-cameras`)
-    - CBCT Scans (Cone Beam CT) (`/services/diagnostic/cbct`)
     - Oral Cancer Screenings (`/services/diagnostic/oral-cancer-screening`)
   - Children's Dentistry (`/services/childrens`)
     - Children's Dental Exams & Cleanings (`/services/childrens/exams-cleanings`)
@@ -39,23 +37,27 @@ Services expanded from 4 to 11 top-level categories. Patient section split into 
     - Fluoride Treatments (`/services/childrens/fluoride`)
     - Dental Sealants (`/services/childrens/sealants`)
     - X-Rays & Imaging (`/services/childrens/x-rays`)
-    - Frenectomies — Tongue-Ties (`/services/childrens/frenectomies`)
     - Space Maintainers (`/services/childrens/space-maintainers`)
   - Orthodontics (`/services/orthodontics`)
-    - Invisalign & Clear Aligners (`/services/orthodontics/invisalign`) ← canonical Invisalign page; cross-linked from Cosmetic
+    - Invisalign® Clear Aligners (`/services/orthodontics/invisalign`) ← canonical Invisalign page; cross-linked from Cosmetic
+    - Invisalign, Retainers & Braces (`/services/orthodontics/retainers-braces`)
   - Restorative (`/services/restorative`)
     - Tooth-Colored Fillings (`/services/restorative/fillings`)
     - Crowns & Bridges (`/services/restorative/crowns-bridges`)
     - Inlays & Onlays (`/services/restorative/inlays-onlays`)
+  - Prosthodontic Care — Tooth Replacement & Smile Restoration (`/services/prosthodontics`)
+    - Crowns & Bridges (`/services/prosthodontics/crowns-bridges`)
+    - Full & Partial Dentures (`/services/prosthodontics/dentures`)
+    - Implant-Supported Restorations (`/services/prosthodontics/implant-restorations`)
+    - Inlays & Onlays (`/services/prosthodontics/inlays-onlays`)
+    - Replacing Worn Dental Work (`/services/prosthodontics/replacement`)
   - Oral Surgery (`/services/oral-surgery`)
     - Extractions (`/services/oral-surgery/extractions`)
     - Wisdom Tooth Extraction (`/services/oral-surgery/wisdom-teeth`)
     - Dental Implants — Single & Multiple (`/services/oral-surgery/implants`)
   - Periodontal (Gum) Care (`/services/periodontal`)
-    - Scaling & Root Planing — Deep Cleaning (`/services/periodontal/scaling-root-planing`)
     - Gum Disease Treatment (`/services/periodontal/gum-disease`)
-    - Gum Contouring (`/services/periodontal/gum-contouring`) ← canonical; cross-linked from Cosmetic
-  - Endodontic Services — By Specialist (`/services/endodontics`)
+  - Endodontic Services (`/services/endodontics`)
     - Root Canal Treatment (`/services/endodontics/root-canal`)
     - Treatment of Traumatic Dental Injuries (`/services/endodontics/traumatic-injuries`)
     - Cracked Tooth Treatment (`/services/endodontics/cracked-tooth`)
@@ -66,11 +68,15 @@ Services expanded from 4 to 11 top-level categories. Patient section split into 
     - Smile Makeovers (`/services/cosmetic/smile-makeovers`)
     - Dental Bonding (`/services/cosmetic/bonding`)
     - Invisalign & Clear Aligners → cross-link to `/services/orthodontics/invisalign`
-    - Gum Contouring → cross-link to `/services/periodontal/gum-contouring`
-  - TMJ/TMD Therapy (`/services/tmj`)
+  - IVS (Sedation) (`/services/ivs`)
+    - Relaxation Dentistry for Nervous Patients (`/services/ivs/relaxation`)
+    - Sedation Options for Sensitive Teeth or Gag Reflex (`/services/ivs/sensitive-teeth`)
+    - Stress-Free Dental Visits with IV Sedation (`/services/ivs/stress-free`)
+    - Monitoring and Safe Sedation Care (`/services/ivs/monitoring`)
+  - TMJ & Jaw (`/services/tmj`)
     - TMJ Diagnosis (`/services/tmj/diagnosis`)
-    - Botox® Therapy for TMJ & Facial Pain (`/services/tmj/botox`)
-    - Custom Night Guards (`/services/tmj/night-guards`)
+    - Botulinum Toxin for Jaw Pain (`/services/tmj/botox`)
+    - Night Guards (`/services/tmj/night-guards`)
     - Bite Correction (`/services/tmj/bite-correction`)
 - New Patients (`/new-patients`)
   - What to Expect (`/new-patients/what-to-expect`)
@@ -98,7 +104,6 @@ Services mega-menu lists all 11 categories. Each category links to its hub page;
 ## Cross-Link Notes
 
 - **Invisalign** — canonical page at `/services/orthodontics/invisalign`. Cosmetic Dentistry hub cross-links to it rather than hosting a duplicate.
-- **Gum Contouring** — canonical at `/services/periodontal/gum-contouring`. Cosmetic hub cross-links.
 - **Fluoride / Sealants** — appear in both Preventive and Children's. Separate pages per category (context differs); no redirect needed.
 
 ## Redirects from WordPress (legacy flat URLs)
@@ -124,7 +129,7 @@ Services mega-menu lists all 11 categories. Each category links to its hub page;
 | `/dental-bridges/` | `/services/restorative/crowns-bridges` |
 | `/dental-crowns/` | `/services/restorative/crowns-bridges` |
 | `/ceramic-crowns/` | `/services/restorative/crowns-bridges` |
-| `/full-and-partial-dentures/` | `/services/restorative` |
+| `/full-and-partial-dentures/` | `/services/prosthodontics/dentures` |
 | `/dental-implants/` | `/services/oral-surgery/implants` |
 | `/root-canal-treatment/` | `/services/endodontics/root-canal` |
 | `/cosmetic-dentistry/` | `/services/cosmetic` |

@@ -139,7 +139,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
           <p>Front-desk and administrative team members who manage patient scheduling, insurance billing, communications, and the day-to-day operations of the clinic.</p>
         </div>
-        <img src="/images/sourced/careers-reception.png" alt="Reception team" width="400" height="148" loading="lazy" decoding="async" style="width:100%;height:148px;object-fit:cover;display:block;" />
+        <img src="/images/sourced/careers-admin-reception.jpg" alt="Receptionist at Able Family Dental front desk" width="400" height="148" loading="lazy" decoding="async" style="width:100%;height:148px;object-fit:cover;object-position:center;display:block;" />
       </article>
     </div>
   </div>
@@ -275,8 +275,8 @@ h1, h2, h3, h4 { font-family: var(--cv2-display); color: var(--cv2-navy); font-w
   align-items: center;
   min-height: 560px;
 }
-.hero .wrap { position: relative; z-index: 1; }
-.hero-copy { padding: 76px 0 120px 0; max-width: 560px; }
+.hero .wrap { position: relative; z-index: 3; }
+.hero-copy { padding: 76px 0 calc(clamp(72px, 12vw, 140px) + 56px) 0; max-width: 560px; }
 .hero h1 {
   font-size: 72px;
   font-weight: 800;
@@ -311,7 +311,17 @@ h1, h2, h3, h4 { font-family: var(--cv2-display); color: var(--cv2-navy); font-w
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.06) 8%, rgba(0,0,0,0.22) 18%, rgba(0,0,0,0.42) 30%, rgba(0,0,0,0.58) 42%, rgba(0,0,0,0.74) 54%, rgba(0,0,0,0.88) 66%, black 78%, black 100%);
   mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.06) 8%, rgba(0,0,0,0.22) 18%, rgba(0,0,0,0.42) 30%, rgba(0,0,0,0.58) 42%, rgba(0,0,0,0.74) 54%, rgba(0,0,0,0.88) 66%, black 78%, black 100%);
 }
-.hero-wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; z-index: 2; display: block; }
+.hero-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: clamp(72px, 12vw, 140px);
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+}
 
 /* ============ VALUES ============ */
 .section { padding: 84px 0; }
@@ -444,7 +454,7 @@ h1, h2, h3, h4 { font-family: var(--cv2-display); color: var(--cv2-navy); font-w
 /* ============ RESPONSIVE ============ */
 @media (max-width: 920px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-copy { padding: 60px 0 90px; max-width: none; }
+  .hero-copy { padding: 60px 0 calc(clamp(72px, 12vw, 140px) + 64px); max-width: none; }
   .hero-photo { position: relative; width: 100%; height: 340px; z-index: 0; }
   .hero-photo img { -webkit-mask-image: none; mask-image: none; }
   .values, .roles { grid-template-columns: repeat(2, 1fr); }

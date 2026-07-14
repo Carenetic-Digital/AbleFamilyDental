@@ -1,41 +1,106 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
-const services = [
+const invisalignBenefits = [
+  "Nearly invisible appearance",
+  "Removable for eating and brushing",
+  "Comfortable smooth aligners",
+  "Fewer emergency appointments",
+  "Great for many mild to moderate orthodontic concerns",
+];
+
+const bracesBenefits = [
+  "Excellent for simple and complex cases",
+  "Precise tooth movement",
+  "No need to remember to wear aligners",
+  "Proven long-term results",
+  "Suitable for children, teens, and adults",
+];
+
+const orthodonticsHelps = [
+  "Crooked teeth",
+  "Crowded teeth",
+  "Gaps between teeth",
+  "Overbite",
+  "Underbite",
+  "Crossbite",
+  "Open bite",
+  "Bite alignment",
+];
+
+const invisalignCompare = [
+  "Nearly invisible",
+  "Removable",
+  "Easy brushing & flossing",
+  "Popular with adults",
+  "Requires patient compliance",
+];
+
+const bracesCompare = [
+  "Fixed in place",
+  "Excellent for complex cases",
+  "Always working 24/7",
+  "Proven long-term results",
+  "Great for children, teens, and adults",
+];
+
+const expectSteps = [
   {
-    title: "Invisalign® Clear Aligners",
-    href: "/services/orthodontics/invisalign",
-    description: "A series of removable, transparent aligners that gradually guide teeth into better alignment, a discreet alternative to traditional braces.",
-    icon: `<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>`,
+    title: "Consultation",
+    body: "We'll examine your smile, discuss your goals, and determine whether Invisalign® or braces is the best option.",
   },
   {
-    title: "Invisalign, Retainers & Braces",
-    href: "/services/orthodontics/retainers-braces",
-    description: "Traditional braces for more involved alignment needs, and retainers to hold teeth in place after orthodontic treatment is complete.",
-    icon: `<path d="M12 2C9 2 7 4 7 7c0 1.5.5 2.5 1 3.5.5 1 1 2 1 3.5 0 2 .5 4 3 4 1 0 1.5-1 2-1.5.5.5 1 1.5 2 1.5 2.5 0 3-2 3-4 0-1.5.5-2.5 1-3.5.5-1 1-2 1-3.5 0-3-2-5-5-5z"/>`,
+    title: "Personalized Treatment Plan",
+    body: "We'll explain your treatment options, expected timeline, and answer any questions.",
+  },
+  {
+    title: "Active Treatment",
+    body: "Your smile gradually transforms through scheduled progress visits.",
+  },
+  {
+    title: "Retention",
+    body: "Once treatment is complete, retainers help protect your new smile.",
+  },
+];
+
+const faqs = [
+  {
+    q: "Am I a candidate for Invisalign®?",
+    a: "Many teens and adults qualify. We'll determine if it's right during your consultation.",
+  },
+  {
+    q: "Are braces only for children?",
+    a: "No. Many adults choose orthodontic treatment every year.",
+  },
+  {
+    q: "How long does treatment take?",
+    a: "Many patients complete treatment within 12–24 months, depending on their needs.",
+  },
+  {
+    q: "Does orthodontic treatment hurt?",
+    a: "You may experience mild soreness after adjustments or switching aligners, but it typically resolves within a few days.",
   },
 ];
 ---
 
 <BaseLayout
-  title="Orthodontics | Clear Aligner Therapy | Able Family Dental Lethbridge"
-  description="Orthodontic treatment at Able Family Dental in Lethbridge. We offer clear aligner therapy for patients looking to improve alignment."
+  title="Orthodontics | Invisalign® & Traditional Braces | Able Family Dental Lethbridge"
+  description="Orthodontic treatment at Able Family Dental in Lethbridge, including Invisalign® clear aligners and traditional metal braces for children, teens, and adults."
 >
 
   <!-- ============================================================
        HERO
        ============================================================ -->
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
-    <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
       <img
-        src="/images/services/hero-orthodontics.jpg"
+        src="/images/services/orthodontics-hero.jpg"
         alt=""
-        width="800"
-        height="600"
+        width="1024"
+        height="682"
         loading="eager"
         decoding="async"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover object-[68%_center]"
       />
       <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
@@ -47,62 +112,98 @@ const services = [
         <span aria-hidden="true">›</span>
         <span class="text-white">Orthodontics</span>
       </nav>
-      <p class="eyebrow text-white">Able Family Dental</p>
+      <p class="eyebrow text-white">Orthodontics at Able Family Dental</p>
       <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
-        Orthodontics
+        Straighter Smiles with Invisalign® &amp; Traditional Braces
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
-        Orthodontic treatment focuses on correcting tooth alignment and bite. At Able Family Dental, we offer clear aligner therapy for patients who are considering orthodontic options.
+        Whether you're looking for the nearly invisible convenience of Invisalign® or the proven effectiveness of traditional metal braces, our team can help you achieve a healthier, more confident smile.
       </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/book/" class="btn btn-primary">Book a Consultation</a>
+        <a href="tel:+14033277202" class="btn border border-white/30 text-white hover:bg-white/10 transition-colors">403.327.7202</a>
+      </div>
     </div>
   </section>
 
   <!-- ============================================================
-       SERVICE CARDS
+       TREATMENT OPTIONS
        ============================================================ -->
   <section class="section-y bg-[var(--color-surface-cool)]">
     <div class="container-wide">
-
-      <div class="max-w-3xl mx-auto text-center mb-14">
-        <p class="eyebrow">Orthodontic services</p>
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <p class="eyebrow">Treatment Options</p>
         <h2 class="mt-3 font-display font-semibold text-[length:var(--text-4xl)] leading-tight text-[var(--color-brand-primary)]">
-          Clear aligner therapy at Able Family Dental
+          Orthodontic Treatment Options at Able Family Dental
         </h2>
         <p class="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
-          We offer a modern orthodontic option for patients looking to address alignment without traditional braces. A consultation will determine whether clear aligners are appropriate for your situation.
+          Every smile is unique. During your consultation, we'll evaluate your bite, discuss your goals, and recommend the orthodontic solution that best fits your lifestyle and needs.
         </p>
       </div>
 
-      <div class="max-w-4xl mx-auto">
-        {services.map(svc => (
-          <div class="bg-white rounded-2xl p-8 md:p-10 border border-[var(--color-border-soft)] shadow-md flex flex-col sm:flex-row gap-8 items-start">
-            <div class="w-16 h-16 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={svc.icon} />
-            </div>
-            <div class="flex-1">
-              <h3 class="font-display font-semibold text-2xl text-[var(--color-brand-primary)] mb-3">{svc.title}</h3>
-              <p class="text-base text-[var(--color-text-muted)] leading-relaxed">{svc.description}</p>
-              <a href={svc.href} class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">
-                Learn More
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
+      <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <!-- Invisalign -->
+        <article class="bg-white rounded-2xl p-8 border border-[var(--color-border-soft)] shadow-md flex flex-col">
+          <h3 class="font-display font-semibold text-2xl text-[var(--color-brand-primary)]">
+            Invisalign® Clear Aligners
+          </h3>
+          <p class="mt-4 text-[var(--color-text)] leading-relaxed">
+            Nearly invisible removable aligners designed to gradually move your teeth into their ideal position.
+          </p>
+          <p class="mt-3 text-[var(--color-text-muted)] leading-relaxed">
+            Perfect for many teens and adults who want a discreet orthodontic option while maintaining their normal lifestyle.
+          </p>
+          <p class="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-primary)]">Benefits</p>
+          <ul class="mt-3 space-y-2.5 flex-1">
+            {invisalignBenefits.map((item) => (
+              <li class="flex items-start gap-2.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href="/services/orthodontics/invisalign/" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">
+            Learn More About Invisalign®
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
 
+        <!-- Traditional Braces -->
+        <article class="bg-white rounded-2xl p-8 border border-[var(--color-border-soft)] shadow-md flex flex-col">
+          <h3 class="font-display font-semibold text-2xl text-[var(--color-brand-primary)]">
+            Traditional Metal Braces
+          </h3>
+          <p class="mt-4 text-[var(--color-text)] leading-relaxed">
+            Traditional braces remain one of the most reliable and effective ways to correct a wide range of orthodontic concerns.
+          </p>
+          <p class="mt-3 text-[var(--color-text-muted)] leading-relaxed">
+            Today's braces are smaller, more comfortable, and more efficient than ever before.
+          </p>
+          <p class="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-primary)]">Benefits</p>
+          <ul class="mt-3 space-y-2.5 flex-1">
+            {bracesBenefits.map((item) => (
+              <li class="flex items-start gap-2.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                <svg class="shrink-0 mt-0.5 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href="/services/orthodontics/retainers-braces/" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] transition-colors">
+            Learn More About Braces
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ============================================================
-       MAIN CONTENT + SIDEBAR
+       WHY CONSIDER + COMPARISON
        ============================================================ -->
   <section class="section-y bg-white">
     <div class="container-wide">
       <div class="grid lg:grid-cols-[1fr_300px] gap-12">
-
-        <!-- LEFT: Main content -->
-        <div class="space-y-10">
+        <div class="space-y-14">
 
           <!-- Specialty disclaimer -->
           <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
@@ -116,81 +217,126 @@ const services = [
             </div>
           </div>
 
-          <!-- What orthodontics addresses -->
           <div>
             <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
-              What orthodontics addresses
+              Why Consider Orthodontic Treatment?
             </h2>
             <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>Straightening your teeth isn't just about appearance.</p>
               <p>
-                Orthodontic treatment focuses on the position of teeth and how the upper and lower teeth come together when biting. Misaligned teeth can make thorough cleaning more difficult, affect chewing function, and cause some patients aesthetic concerns. Bite problems, where the upper and lower teeth do not meet as they should, can also contribute to uneven wear over time.
+                Orthodontic treatment can improve the way your teeth fit together, make brushing and flossing easier, reduce excessive wear on teeth, and create a healthier bite.
               </p>
+            </div>
+            <p class="mt-6 font-semibold text-[var(--color-brand-primary)]">Orthodontics can help with:</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2.5">
+              {orthodonticsHelps.map((item) => (
+                <li class="flex items-center gap-2.5 text-[var(--color-text-muted)]">
+                  <svg class="shrink-0 text-[var(--color-brand-accent)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Invisalign® or Traditional Braces?
+            </h2>
+            <p class="text-[var(--color-text)] leading-relaxed mb-8">
+              Both treatments can produce outstanding results—the right choice depends on your smile, lifestyle, and treatment goals.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="rounded-2xl border border-[var(--color-border-soft)] bg-[var(--color-surface-cool)] p-6">
+                <h3 class="font-display font-semibold text-xl text-[var(--color-brand-primary)]">Invisalign®</h3>
+                <ul class="mt-4 space-y-2.5">
+                  {invisalignCompare.map((item) => (
+                    <li class="flex items-start gap-2.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                      <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="rounded-2xl border border-[var(--color-border-soft)] bg-[var(--color-surface-cool)] p-6">
+                <h3 class="font-display font-semibold text-xl text-[var(--color-brand-primary)]">Traditional Braces</h3>
+                <ul class="mt-4 space-y-2.5">
+                  {bracesCompare.map((item) => (
+                    <li class="flex items-start gap-2.5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                      <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)] shrink-0" aria-hidden="true"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p class="mt-6 text-[var(--color-text)] leading-relaxed">
+              During your consultation, we'll explain both options and help you decide which treatment is best for you.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
+              Orthodontic Treatment for Every Age
+            </h2>
+            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+              <p>Orthodontic treatment isn't just for teenagers.</p>
               <p>
-                Not all alignment concerns require treatment, and not all alignment concerns are appropriate for every type of orthodontic option. A consultation is the best way to determine what, if anything, makes sense for your situation.
+                We provide orthodontic solutions for children, teens, and adults. Whether you're starting treatment for the first time or returning to improve your smile later in life, we're here to help.
               </p>
             </div>
           </div>
 
-          <!-- What we offer -->
           <div>
-            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
-              What we offer at Able Family Dental
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-6">
+              What to Expect
             </h2>
-            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
-              <p>
-                At Able Family Dental, we offer <strong class="text-[var(--color-brand-primary)]">clear aligner therapy</strong>, a series of removable, transparent aligners worn over the teeth that gradually guide them into a more aligned position. Each set of aligners is worn for a period of time before progressing to the next in the series.
-              </p>
-              <p>
-                Clear aligners are a discreet option for patients who want to address alignment concerns without the appearance of traditional braces. They are removable, which makes eating and oral hygiene easier to manage during treatment.
-              </p>
-            </div>
+            <ol class="space-y-5">
+              {expectSteps.map((step, i) => (
+                <li class="flex gap-4 items-start">
+                  <span class="w-9 h-9 rounded-full bg-[var(--color-brand-primary)] text-white font-semibold text-sm flex items-center justify-center shrink-0">{i + 1}</span>
+                  <div>
+                    <h3 class="font-semibold text-[var(--color-brand-primary)]">{step.title}</h3>
+                    <p class="mt-1 text-[var(--color-text-muted)] leading-relaxed">{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
 
-          <!-- Who orthodontic treatment is for -->
           <div>
-            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-4">
-              Who orthodontic treatment is for
+            <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-6">
+              Frequently Asked Questions
             </h2>
-            <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
-              <p>
-                Orthodontic treatment is not only for teenagers. Adults make up a significant portion of orthodontic patients, and many people pursue alignment treatment at various stages of life.
-              </p>
-              <p>
-                Clear aligner therapy may be appropriate for mild to moderate alignment concerns. More significant bite or crowding issues may require a referral to an orthodontist, a dental specialist, for an assessment and discussion of options. We will let you know honestly at your consultation what we can address and when a referral may serve you better.
-              </p>
-            </div>
-          </div>
-
-          <!-- Consultation -->
-          <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
-            <h2 class="font-display font-semibold text-[length:var(--text-2xl)] text-[var(--color-brand-primary)] mb-4">
-              Starting with a consultation
-            </h2>
-            <div class="space-y-3 text-[var(--color-text)] leading-relaxed">
-              <p>
-                If you are curious about whether clear aligner therapy is appropriate for you, the first step is an examination and consultation. We review your current alignment, take any needed records, and discuss your goals so you have a clear picture of your options and what treatment would involve.
-              </p>
-              <p>
-                Not every alignment concern requires treatment, and we will give you a straightforward assessment of what we find.
-              </p>
+            <div class="space-y-3">
+              {faqs.map((item) => (
+                <details class="group border border-[var(--color-border-soft)] rounded-xl bg-[var(--color-surface-cool)] overflow-hidden">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-5 py-4 font-semibold text-[var(--color-brand-primary)]">
+                    <span>{item.q}</span>
+                    <span class="w-6 h-6 rounded-full border border-[var(--color-border-soft)] bg-white flex items-center justify-center shrink-0 group-open:bg-[var(--color-brand-primary)] group-open:border-[var(--color-brand-primary)]" aria-hidden="true">
+                      <svg class="w-3 h-3 text-[var(--color-brand-accent)] group-open:text-white" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <line x1="2" y1="6" x2="10" y2="6" />
+                        <line x1="6" y1="2" x2="6" y2="10" class="group-open:hidden" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div class="px-5 pb-4 text-[var(--color-text-muted)] leading-relaxed">
+                    {item.a}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
 
         </div>
 
-        <!-- RIGHT: Sidebar -->
-        <aside class="space-y-6">
-
-          <!-- Book CTA card -->
+        <!-- Sidebar -->
+        <aside class="space-y-6 lg:sticky lg:top-28 self-start">
           <div class="bg-[var(--color-brand-primary)] rounded-2xl p-6 text-white">
-            <h3 class="font-display font-semibold text-lg text-white">Ready to Book?</h3>
-            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Call us or request an appointment online, new patients welcome.</p>
+            <h3 class="font-display font-semibold text-lg text-white">Book a Consultation</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-on-dark-muted)]">Discover which treatment is right for you.</p>
             <a href="/book/" class="mt-4 btn btn-primary w-full block text-center">Book Appointment</a>
-            <a href="/refer/" class="mt-2 btn btn-outline w-full block text-center">Refer Patient</a>
             <a href="tel:+14033277202" class="mt-2 block text-center text-sm text-[var(--color-text-on-dark-muted)] hover:text-white transition-colors">403.327.7202</a>
           </div>
-
-          <!-- Sub-services card -->
           <div class="bg-[var(--color-surface-cool)] rounded-2xl p-6 border border-[var(--color-border-soft)]">
             <h3 class="font-body text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand-primary)] mb-4">Orthodontic Services</h3>
             <ul class="space-y-2">
@@ -203,31 +349,31 @@ const services = [
               <li>
                 <a href="/services/orthodontics/retainers-braces/" class="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-brand-accent)] transition-colors">
                   <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-border-soft)] shrink-0" aria-hidden="true"></span>
-                  Invisalign, Retainers &amp; Braces
+                  Traditional Metal Braces
                 </a>
               </li>
             </ul>
           </div>
-
         </aside>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       CTA BAND
+       CLOSING CTA
        ============================================================ -->
   <section class="bg-[var(--color-brand-primary)] py-16 text-center overflow-hidden relative">
     <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0 60 C 240 20, 480 100, 720 60 C 960 20, 1200 100, 1440 60 L1440 160 L0 160 Z" fill="rgba(255,255,255,0.03)"/>
     </svg>
-    <div class="relative container-wide">
-      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Interested in orthodontic options?</h2>
-      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg max-w-xl mx-auto">Call <a href="tel:+14033277202" class="text-white font-semibold hover:text-[var(--color-brand-accent-soft)] transition-colors">403.327.7202</a> or book a consultation online.</p>
+    <div class="relative container-wide max-w-3xl mx-auto">
+      <h2 class="font-display font-semibold text-[length:var(--text-4xl)] text-white leading-tight">Ready to Transform Your Smile?</h2>
+      <p class="mt-4 text-[var(--color-text-on-dark-muted)] text-lg leading-relaxed">
+        Whether you're considering Invisalign® or traditional braces, our team is here to help you choose the treatment that's right for you.
+      </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/book/" class="btn btn-primary btn-lg">Book Appointment</a>
-        <a href="/refer/" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Refer Patient</a>
-        <a href="/contact/" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">Contact Us</a>
+        <a href="/book/" class="btn btn-primary btn-lg">Book a Consultation</a>
+        <a href="tel:+14033277202" class="btn btn-lg border border-white/30 text-white hover:bg-white/10 transition-colors">403.327.7202</a>
       </div>
     </div>
   </section>

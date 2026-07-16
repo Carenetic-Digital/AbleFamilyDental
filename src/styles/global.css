@@ -377,21 +377,6 @@ a.inline-flex:not(.btn) {
   border-color: var(--color-brand-secondary);
 }
 
-/* Hero skyline — masked silhouette filled with soft teal, pinned to bottom */
-.hero-skyline {
-  aspect-ratio: 1200 / 493;
-  background-color: var(--color-brand-accent-soft);
-  opacity: 0.11;
-  -webkit-mask-image: url("/images/brand/saskatoon-skyline.webp");
-          mask-image: url("/images/brand/saskatoon-skyline.webp");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center bottom;
-          mask-position: center bottom;
-  -webkit-mask-size: 100% auto;
-          mask-size: 100% auto;
-}
-
 /* Insurance marquee — infinite horizontal scroll of provider names */
 .insurance-marquee {
   -webkit-mask-image: linear-gradient(to right, transparent, black 4rem, black calc(100% - 4rem), transparent);

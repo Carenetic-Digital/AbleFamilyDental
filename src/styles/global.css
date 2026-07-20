@@ -183,6 +183,21 @@ html {
   }
 }
 
+/* Teal hero breadcrumbs — keep crumbs white/light grey.
+   Global `a` uses brand teal, which disappears on the teal hero band. */
+section[class*="color-brand-primary"] nav[aria-label="Breadcrumb"] {
+  color: var(--color-text-on-dark-muted);
+}
+section[class*="color-brand-primary"] nav[aria-label="Breadcrumb"] a {
+  color: rgba(255, 255, 255, 0.85);
+}
+section[class*="color-brand-primary"] nav[aria-label="Breadcrumb"] a:hover {
+  color: #ffffff;
+}
+section[class*="color-brand-primary"] nav[aria-label="Breadcrumb"] > .text-white {
+  color: #ffffff;
+}
+
 /* Visible keyboard focus — WCAG 2.4.7 */
 :focus-visible {
   outline: 2px solid var(--color-brand-accent);

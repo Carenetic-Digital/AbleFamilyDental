@@ -48,6 +48,19 @@ const doctors = [
     photoWebp: null,
     initials: "TS",
   },
+  {
+    name: "Dr. Rajan Varada",
+    credentials: "General Dentist",
+    education: "Orthodontics & Dentofacial Orthopedics",
+    bio: [
+      "Dr. Rajan Varada is an experienced clinician whose career spans more than two decades across India, the United Arab Emirates, and Canada. Originally from Bangalore, India, he earned his dental degree in 2003 before pursuing advanced specialty training in Orthodontics and Dentofacial Orthopedics, completing his specialization in 2008. Following his training, he spent several years in academia and advanced clinical practice, managing complex orthodontic and surgical cases while mentoring future dental professionals.",
+      "In 2013, Dr. Varada relocated to the UAE, where he served as Head of the Dentistry Department while continuing to provide high-level patient care. Since moving to Canada in 2020, he has remained actively involved in both clinical dentistry and education, including teaching within the Department of Orthodontics at the University of Toronto.",
+      "Now practicing as a General Dentist with a specialized focus in orthodontics, Dr. Varada provides Invisalign clear aligner therapy and comprehensive orthodontic-focused care for teens and adults seeking healthier, more confident smiles.",
+    ],
+    photo: "/images/team/dr-rajan-varada.jpg",
+    photoWebp: null,
+    initials: "RV",
+  },
 ];
 ---
 
@@ -60,16 +73,23 @@ const doctors = [
        HERO BANNER
        ============================================================ -->
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
-    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
-      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
-        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
-      </svg>
+    <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[48%] pointer-events-none" aria-hidden="true">
+      <img
+        src="/images/team/hero-our-doctors.jpg"
+        alt=""
+        width="1536"
+        height="1024"
+        loading="eager"
+        decoding="async"
+        class="w-full h-full object-cover object-[center_20%]"
+      />
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
-    <div class="container-wide relative py-16 lg:py-20">
+    <div class="container-wide relative py-16 lg:py-20 lg:max-w-[58%]">
       <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
         <a href="/" class="text-white hover:text-white/80 transition-colors">Home</a>
         <span aria-hidden="true">›</span>
-        <a href="/about/our-clinic/" class="text-white hover:text-white/80 transition-colors">About</a>
+        <a href="/about/our-clinic/" class="text-white/80 hover:text-white transition-colors">About</a>
         <span aria-hidden="true">›</span>
         <span class="text-white">Our Doctors</span>
       </nav>
@@ -78,7 +98,7 @@ const doctors = [
         Our Doctors
       </h1>
       <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
-        Our dentists trained at the University of Alberta and are licensed by the Alberta Dental Association and College. They are committed to compassionate, patient-centred care for families throughout Lethbridge and the surrounding communities.
+        Our dentists are licensed by the Alberta Dental Association and College and are committed to compassionate, patient-centred care for families throughout Lethbridge and the surrounding communities.
       </p>
     </div>
   </section>
@@ -99,7 +119,7 @@ const doctors = [
               Our dentists
             </h2>
             <p class="text-[var(--color-text)] leading-relaxed">
-              Able Family Dental is home to three general dentists, all trained at the University of Alberta. Together, they bring decades of experience and a broad range of clinical interests across preventive, restorative, cosmetic, and family dentistry.
+              Able Family Dental is home to four general dentists who bring decades of experience and a broad range of clinical interests across preventive, restorative, cosmetic, orthodontic, and family dentistry.
             </p>
           </div>
 

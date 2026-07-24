@@ -168,12 +168,19 @@ const categories = [
        HERO
        ============================================================ -->
   <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
-    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
-      <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice">
-        <path d="M0 280 C 200 265, 400 285, 600 275 C 700 270, 750 278, 800 273 L800 300 L0 300 Z" fill="white"/>
-      </svg>
+    <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
+      <img
+        src="/images/services/hero-services-dr-varada.jpg"
+        alt=""
+        width="1536"
+        height="1024"
+        loading="eager"
+        decoding="async"
+        class="w-full h-full object-cover object-[center_25%]"
+      />
+      <div class="absolute inset-y-0 left-0 w-2/5" style="background: linear-gradient(to right, var(--color-brand-primary), transparent);"></div>
     </div>
-    <div class="container-wide relative py-16 lg:py-20">
+    <div class="container-wide relative py-16 lg:py-20 lg:max-w-[64%]">
       <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
         <a href="/" class="text-white hover:text-white/80 transition-colors">Home</a>
         <span aria-hidden="true">›</span>

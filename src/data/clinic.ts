@@ -11,6 +11,8 @@ export const clinic = {
   city: 'Lethbridge',
   region: 'Alberta',
   regionAbbr: 'AB',
+  /** Canadian format A1A 1A1 — still required on schema.org PostalAddress */
+  postalCode: 'T1J 2B9',
   country: 'CA',
   hoursNote:
     '*Saturdays available by appointment only. Call to inquire about which Saturdays we are open.',

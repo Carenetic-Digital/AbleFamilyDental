@@ -70,6 +70,7 @@ const businessData = {
     streetAddress: clinic.streetAddress,
     addressLocality: clinic.city,
     addressRegion: clinic.regionAbbr,
+    postalCode: clinic.postalCode,
     addressCountry: clinic.country,
   },
   geo: {
@@ -149,10 +150,26 @@ const breadcrumbData = {
 <!doctype html>
 <html lang="en-CA">
   <head>
-    <!-- TODO: Add Able Family Dental GTM container ID before launch -->
+    <!-- Google Tag Manager (includes GA4 G-GDKQJSMBLW + Meta Pixel 989509751248688) -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NHTJF68');
+    </script>
 
-    <!-- BugHerd -->
-    <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=nwthuguvqv8bmp9co2dtya" async="true" is:inline></script>
+    <!-- Patient Prism -->
+    <script
+      is:inline
+      async
+      src="https://next-api.patientprism.com/v1/snippet/a1f15e1f-9604-45e9-a349-4f8c9f96c08d"
+    ></script>
 
     <!-- MaxAssist Online Booking, TODO: uncomment before launch -->
     <!-- <script src="https://cdn.maxassist.com/scripts/maxassist-booking.js" data-server-url="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X" is:inline></script> -->
@@ -184,7 +201,16 @@ const breadcrumbData = {
 
   </head>
   <body class="font-body text-[var(--color-text)] bg-[var(--color-surface)] antialiased overflow-x-hidden">
-    <!-- TODO: Add GTM noscript fallback before launch -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NHTJF68"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"
+      ></iframe>
+    </noscript>
 
     <a href="#main" class="skip-link">Skip to main content</a>
 

@@ -40,7 +40,7 @@ import { clinic } from '../data/clinic';
           <svg class="shrink-0 text-[var(--color-brand-primary)]" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <p class="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">Our Address</p>
         </div>
-        <h3 class="mt-2 font-display font-semibold text-xl text-[var(--color-brand-primary)]">{clinic.name}</h3>
+        <h3 class="mt-2 font-display font-semibold text-xl text-[var(--color-brand-heading)]">{clinic.name}</h3>
         <address class="not-italic mt-2 flex flex-col gap-4 text-sm text-[var(--color-text)]">
           <div>
             <p class="leading-relaxed text-[var(--color-text)] font-medium">
@@ -49,20 +49,20 @@ import { clinic } from '../data/clinic';
             </p>
           </div>
           <div class="flex items-center gap-3">
-            <svg class="shrink-0 text-[var(--color-brand-primary)]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg class="shrink-0 text-[var(--color-brand-heading)]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <a
               href={`mailto:${clinic.email}`}
-              class="text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)] font-medium break-all"
+              class="text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] font-medium break-all"
             >
               {clinic.email}
             </a>
           </div>
           <div class="flex flex-col gap-1.5">
             <div class="flex items-center gap-3">
-              <svg class="shrink-0 text-[var(--color-brand-primary)]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg class="shrink-0 text-[var(--color-brand-heading)]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <a
                 href={`tel:${clinic.phoneTel}`}
-                class="text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)] font-semibold tabular-nums text-xl"
+                class="text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] font-semibold tabular-nums text-xl"
               >
                 {clinic.phoneDisplay}
               </a>
@@ -71,7 +71,7 @@ import { clinic } from '../data/clinic';
               Toll-free{' '}
               <a
                 href={`tel:${clinic.tollFreeTel}`}
-                class="text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)] font-semibold tabular-nums"
+                class="text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)] font-semibold tabular-nums"
               >
                 {clinic.tollFreeDisplay}
               </a>

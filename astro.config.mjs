@@ -8,11 +8,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  integrations: [
-    sitemap({
-      filter: (page) => !page.includes('/about/careers-first-draft'),
-    }),
-  ],
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

@@ -32,8 +32,13 @@ const {
   noindex = false,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const imageURL = new URL(image, Astro.site);
+const siteURL = Astro.site ?? new URL('https://ablefamilydental.com/');
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
+// Staging hosts still serve the new assets; production domain may still be the
+// old WordPress site — use request origin for og/twitter images on spark0.io (QA 2.8).
+const isStagingHost = /\.spark0\.io$/i.test(Astro.url.hostname);
+const assetBase = isStagingHost ? new URL(Astro.url.origin) : siteURL;
+const imageURL = new URL(image, assetBase);
 
 const siteName = 'Able Family Dental';
 ---

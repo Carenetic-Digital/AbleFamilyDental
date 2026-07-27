@@ -8,6 +8,21 @@ const bookingUrl =
   'https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X';
 const jotformUrl = 'https://form.jotform.com/213275643171251';
 const year = new Date().getFullYear();
+const smileSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dentist',
+  name: 'Able Family Dental',
+  url: 'https://ablefamilydental.com/smile/',
+  telephone: '+1-403-327-7202',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '511 5th Street South',
+    addressLocality: 'Lethbridge',
+    addressRegion: 'AB',
+    addressCountry: 'CA',
+  },
+  image: 'https://ablefamilydental.com/images/marketing/smile-hero-exterior.jpg',
+};
 ---
 
 <!doctype html>
@@ -20,13 +35,31 @@ const year = new Date().getFullYear();
       name="description"
       content="Serving Lethbridge Families Since 2006. Comprehensive dental care for every stage of life — family dentistry, Invisalign®, dental implants, and IV sedation."
     />
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="canonical" href="https://ablefamilydental.com/smile/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Able Family Dental" />
+    <meta property="og:locale" content="en_CA" />
     <meta property="og:title" content="Your Smile, Our Priority. | Able Family Dental" />
+    <meta
+      property="og:description"
+      content="Serving Lethbridge Families Since 2006. Comprehensive dental care for every stage of life — family dentistry, Invisalign®, dental implants, and IV sedation."
+    />
     <meta property="og:url" content="https://ablefamilydental.com/smile/" />
     <meta property="og:image" content="https://ablefamilydental.com/images/marketing/smile-hero-exterior.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Smile, Our Priority. | Able Family Dental" />
+    <meta
+      name="twitter:description"
+      content="Serving Lethbridge Families Since 2006. Comprehensive dental care for every stage of life — family dentistry, Invisalign®, dental implants, and IV sedation."
+    />
+    <meta name="twitter:image" content="https://ablefamilydental.com/images/marketing/smile-hero-exterior.jpg" />
     <meta name="theme-color" content="#008080" />
+    <script type="application/ld+json" set:html={JSON.stringify(smileSchema)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Condensed:700&display=swap" rel="stylesheet" />

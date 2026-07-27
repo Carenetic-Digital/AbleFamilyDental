@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import StructuredData from '../../components/StructuredData.astro';
 
 const aboutNav = [
-  { name: "Our Clinic", href: "/about/our-clinic" },
-  { name: "Our Doctors", href: "/about/our-team", current: true },
-  { name: "Careers", href: "/about/careers" },
+  { name: "Our Clinic", href: "/about/our-clinic/" },
+  { name: "Our Doctors", href: "/about/our-team/", current: true },
+  { name: "Careers", href: "/about/careers/" },
 ];
 
 const doctors = [
@@ -62,12 +63,26 @@ const doctors = [
     initials: "RV",
   },
 ];
+
+const doctorPersonSchemas = doctors.map((doc) => ({
+  name: doc.name,
+  jobTitle: 'Dentist',
+  worksFor: { '@id': 'https://ablefamilydental.com/#dentist' },
+  image: `https://ablefamilydental.com${doc.photo}`,
+  url: 'https://ablefamilydental.com/about/our-team/',
+  description: doc.bio[0],
+  hasCredential: doc.credentials,
+  alumniOf: doc.education,
+}));
 ---
 
 <BaseLayout
   title="Meet Our Doctors | Able Family Dental Lethbridge"
   description="Meet our doctors at Able Family Dental in Lethbridge, experienced dentists dedicated to comprehensive, patient-centred care."
 >
+  {doctorPersonSchemas.map((person) => (
+    <StructuredData type="Person" data={person} />
+  ))}
 
   <!-- ============================================================
        HERO BANNER

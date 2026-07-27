@@ -12,7 +12,7 @@ export default defineConfig({
         command: `npm run preview -- --host 127.0.0.1 --port ${port}`,
         url: baseURL,
         timeout: 120000,
-        reuseExistingServer: false,
+        reuseExistingServer: !process.env.CI,
       },
   use: {
     baseURL,

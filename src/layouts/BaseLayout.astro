@@ -34,36 +34,66 @@ const siteURL = Astro.site ?? new URL('https://ablefamilydental.com/');
 const siteRoot = new URL('/', siteURL).href;
 const organizationId = 'https://ablefamilydental.com/#organization';
 const websiteId = 'https://ablefamilydental.com/#website';
+const dentistId = 'https://ablefamilydental.com/#dentist';
 const logoURL = new URL('/images/logos/able-family-dental-logo.png', siteURL).href;
-const ogImageURL = new URL('/images/og-default.jpg', siteURL).href;
+const ogImageURL = new URL(image.startsWith('http') ? image : image, siteURL).href;
+const pageURL = new URL(Astro.url.pathname, siteURL).href;
+
+const labelFromSegment = (seg: string) =>
+  seg
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: siteRoot },
+  ...pathSegments.map((seg, i) => ({
+    '@type': 'ListItem',
+    position: i + 2,
+    name: labelFromSegment(seg),
+    item: new URL('/' + pathSegments.slice(0, i + 1).join('/') + '/', siteURL).href,
+  })),
+];
 
 const businessData = {
-  "@id": "https://ablefamilydental.com/#dentist",
+  '@id': dentistId,
   name: clinic.name,
   url: siteRoot,
   telephone: clinic.phoneSchema,
   email: clinic.email,
   image: ogImageURL,
   logo: logoURL,
-  parentOrganization: { "@id": organizationId },
+  parentOrganization: { '@id': organizationId },
   address: {
-    "@type": "PostalAddress",
+    '@type': 'PostalAddress',
     streetAddress: clinic.streetAddress,
     addressLocality: clinic.city,
     addressRegion: clinic.regionAbbr,
     addressCountry: clinic.country,
   },
   geo: {
-    "@type": "GeoCoordinates",
+    '@type': 'GeoCoordinates',
     latitude: 49.6922,
     longitude: -112.8422,
   },
   openingHoursSpecification,
-  areaServed: { "@type": "City", name: clinic.city },
+  areaServed: [
+    { '@type': 'City', name: clinic.city },
+    { '@type': 'AdministrativeArea', name: 'Alberta' },
+  ],
+  medicalSpecialty: 'https://schema.org/Dentistry',
+  priceRange: '$$',
+  hasMap: 'https://maps.app.goo.gl/pAJAeiNddySjEkKc8',
+  sameAs: [
+    'https://www.facebook.com/ablefamilydental',
+    'https://www.instagram.com/ablefamilydental/',
+    'https://maps.app.goo.gl/pAJAeiNddySjEkKc8',
+  ],
 };
 
 const organizationData = {
-  "@id": organizationId,
+  '@id': organizationId,
   name: clinic.name,
   url: siteRoot,
   logo: logoURL,
@@ -71,23 +101,53 @@ const organizationData = {
   telephone: clinic.phoneSchema,
   email: clinic.email,
   sameAs: [
-    "https://www.facebook.com/ablefamilydental",
-    "https://www.instagram.com/ablefamilydental/",
-    "https://maps.app.goo.gl/pAJAeiNddySjEkKc8",
+    'https://www.facebook.com/ablefamilydental',
+    'https://www.instagram.com/ablefamilydental/',
+    'https://maps.app.goo.gl/pAJAeiNddySjEkKc8',
   ],
 };
 
 const websiteData = {
-  "@id": websiteId,
-  name: "Able Family Dental",
+  '@id': websiteId,
+  name: 'Able Family Dental',
   url: siteRoot,
-  publisher: { "@id": organizationId },
-  inLanguage: "en-CA",
+  publisher: { '@id': organizationId },
+  inLanguage: 'en-CA',
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://ablefamilydental.com/book/',
+      actionPlatform: [
+        'http://schema.org/DesktopWebPlatform',
+        'http://schema.org/MobileWebPlatform',
+      ],
+    },
+    result: {
+      '@type': 'Reservation',
+      name: 'Dental appointment request',
+    },
+  },
+};
+
+const webPageData = {
+  '@id': `${pageURL}#webpage`,
+  name: title,
+  description,
+  url: pageURL,
+  isPartOf: { '@id': websiteId },
+  about: { '@id': dentistId },
+  inLanguage: 'en-CA',
+  primaryImageOfPage: { '@type': 'ImageObject', url: ogImageURL },
+};
+
+const breadcrumbData = {
+  itemListElement: breadcrumbItems,
 };
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
   <head>
     <!-- TODO: Add Able Family Dental GTM container ID before launch -->
 
@@ -116,8 +176,11 @@ const websiteData = {
 
     <StructuredData type="Organization" data={organizationData} />
     <StructuredData type="WebSite" data={websiteData} />
-    <StructuredData type="LocalBusiness" data={businessData} />
-
+    <StructuredData type="Dentist" data={businessData} />
+    <StructuredData type="WebPage" data={webPageData} />
+    {pathSegments.length > 0 && (
+      <StructuredData type="BreadcrumbList" data={breadcrumbData} />
+    )}
 
   </head>
   <body class="font-body text-[var(--color-text)] bg-[var(--color-surface)] antialiased overflow-x-hidden">

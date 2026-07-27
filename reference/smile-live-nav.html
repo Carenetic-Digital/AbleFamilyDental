@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+        <style type="text/css">
+            iframe,
+            object,
+            embed {
+                /* position: absolute; */
+                width: 100%;
+                height: 100%;
+            }
+
+
+
+
+
+
+            /**
+             * NavBar Default Control
+             */
+            .navbar {
+                font-size: 14px !important;
+                font: 'Roboto', sans-serif;
+                padding: 0;
+                border: 1px solid;
+                line-height: 48px;
+            }
+            .navbar a{
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .navbar-nav{
+                
+            }
+            .dropdown-menu {
+                font-size: 14px !important;
+            }
+
+            #mainNav .navbar-nav .nav-item .nav-link {
+                /* font-size: 90%; */
+                font-weight: 400;
+                /* padding: 0.75em 0; */
+                letter-spacing: normal !important;
+                color: #fff;
+                white-space: nowrap;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .d-md-inline,
+            .ninja-forms-field option {
+                
+                
+                font-family: 'Roboto', sans-serif;
+                
+            }
+
+            .navbar .navbar-nav>.nav-item>.dropdown-toggle {
+                position: relative;
+                width: 100%;
+                
+            }
+
+            #mainNav .dropdown-menu .dropdown-item.heading a {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                
+
+            }
+
+            #mainNav .dropdown:not(.mega) .dropdown-menu .nav-link {
+
+                
+
+            }
+
+            /** END Navbar Default Control */
+
+
+
+
+
+
+
+
+
+            
+            .masthead-cover-invisalign {
+
+                height: 510px;
+
+            }
+
+            .masthead-cover-invisalign {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                padding-top: 50px;
+            }
+
+            .banner-ad {
+                height: 436px;
+                margin-top: 40px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                /* background-image: url(../img/photos/bg-hero-booking.jpg); */
+            }
+
+            .steps-list {
+                counter-reset: section;
+                list-style: none;
+                position: relative;
+                margin-left: 32px;
+                /* margin-right: 94px; */
+
+            }
+
+            .book-consultation {
+
+                height: 600px;
+
+            }
+
+            .steps-list h2 {
+
+                font-weight: 500 !important;
+
+
+            }
+
+            .schedule-consultation {
+
+                float: left;
+                margin-left: 71px;
+                width: 360px;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                padding: 9px;
+                font-weight: 500 !important;
+                background-color: #008080 !important;
+
+            }
+
+            .schedule-consultation-button {
+
+                width: 250px;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                padding: 13px;
+                border-radius: 10px;
+                line-height: initial;
+                font-weight: 500 !important;
+                background-color: #008080 !important;
+
+            }
+
+            .steps-list .step-title,
+            .step-title {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 7px;
+                padding-bottom: 0px;
+
+            }
+
+            .videos h2.step-title {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 7px;
+                padding-bottom: 10px;
+
+            }
+
+            .steps-list p {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24.8px;
+
+            }
+
+            .steps-list li {
+
+                position: relative;
+
+            }
+
+            .steps-list li:before {
+                counter-increment: section;
+                content: counter(section);
+                color: #fff;
+                font-size: 34px;
+                font-weight: 400;
+                position: absolute;
+                width: 64px;
+                left: -80px;
+                text-align: center;
+                height: 64px;
+                padding-top: 7px;
+                background-image: url("data:image/svg+xml;utf8,<svg width='64' height='64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='32' width='64' height='64' style='fill: %23008080 !important' /></svg>");
+            }
+
+
+            .notification {
+
+                font-weight: normal !important;
+                line-height: normal !important;
+                height: 32px !important;
+
+            }
+
+            .notification .container p.notification-hours,
+            .notification .container p.desktop-notification {
+
+                font-size: 13px;
+                font-weight: 500;
+                color: #fff;
+                margin-bottom: 0;
+
+            }
+
+
+
+            .notification,
+            .notifocation p,
+            .notification .container p.notification-hours,
+            .notification .container p.desktop-notification {
+
+                font-size: 19px !important;
+
+            }
+
+            @media(max-width: 420px) {
+
+                .notification,
+                .notifocation p,
+                .notification .container p.notification-hours,
+                .notification .container p.desktop-notification {
+
+                    font-size: 19px !important;
+
+                }
+
+            }
+
+            @media(max-width:992px) {
+
+                .anchor {
+                    display: block;
+                    height: 115px;
+                    /*same height as header*/
+                    margin-top: -115px;
+                    /*same height as header*/
+                    visibility: hidden;
+
+                }
+
+
+                .book-consultation {
+
+                    height: 660px;
+
+                }
+
+                .js-map-home.consult {
+
+                    padding: 13px;
+                    padding-left: 0;
+                    height: 550px !important;
+
+                }
+
+                .notification .container p.desktop-notification {
+                    display: none;
+                }
+
+                .notification .container p.notification-hours {
+                    text-align: center !important;
+                }
+
+                .banner-desktop {
+                    display: none;
+                }
+
+                .banner-mobile {
+
+                    text-align: center;
+                    margin: auto;
+                    display: block;
+
+                }
+
+                .banner-ad {
+                    margin-top: 40px;
+                    height: 589px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    /* background-image: url(../img/photos/bg-hero-booking.jpg); */
+                }
+
+                .consultation h3 {
+
+                    color: #008080 !important;
+                    font-size: 21px;
+                    font-weight: 500;
+
+                }
+
+                .consultation h2 {
+
+                    color: #1f1f1f;
+                    font-size: 48px;
+                    font-weight: 700;
+
+                }
+
+                .steps-list {
+                    counter-reset: section;
+                    list-style: none;
+                    position: relative;
+                    margin-left: unset;
+                    margin-right: unset;
+                    padding: unset;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                /* Mobile Styling */
+                .container.invisalign h2.section-heading {
+
+                    margin-left: 45px !important;
+                    margin-right: 45px !important;
+
+                }
+
+                .invisalign .steps-list {
+
+                    counter-reset: section;
+                    list-style: none;
+                    position: relative;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    padding: unset;
+
+                }
+
+                .invisalign-mobile-image {
+
+                    display: block;
+                    /* padding: unset !important; */
+                    /* padding: 20px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important; */
+                    width: 100% !important;
+
+                }
+
+                .invisalign-desktop-image {
+
+                    display: none !important;
+                    padding: 20px !important;
+                    width: 100% !important;
+                    margin-left: 50px;
+
+                }
+
+                .container.invisalign-mobile-image {
+
+                    background-color: #303A1A;
+
+                }
+
+                .invisalign-welcome {
+
+                    color: #fff;
+                    font-family: 'Roboto', sans serif;
+
+
+                    max-width: 340px;
+                    margin: auto;
+                    padding-bottom: 25px;
+
+
+                }
+
+                .invisalign-welcome p {
+
+                    color: #fff;
+                    font-size: 24px;
+                    line-height: 34px;
+                    font-weight: 500;
+
+                }
+
+                .invisalign-welcome .schedule-consultation {
+
+                    max-width: 100% !important;
+                    /* padding: 0; */
+                    width: unset;
+                    margin: 0;
+
+                }
+
+                .invisalign .schedule-consultation {
+
+                    float: none !important;
+                    text-align: center;
+                    margin: auto !important;
+                    max-width: 100%;
+                    display: block;
+                    font-size: 24px !important;
+                    text-transform: uppercase !important;
+                    padding: 9px;
+                    font-weight: 500 !important;
+                    background-color: #139FD9 !important;
+
+                }
+
+                .steps-list li:before {
+                    counter-increment: section;
+                    content: counter(section);
+                    color: #fff;
+                    font-size: 34px;
+                    font-weight: 400;
+                    position: absolute;
+                    width: 64px;
+                    left: unset !important;
+                    text-align: center;
+                    height: 64px;
+                    padding-top: 7px;
+                    background-image: url(data:image/svg+xml;utf8,<svg width='64' height='64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='32' width='64' height='64' style='fill: %23139FD9' /></svg>);
+                }
+
+                .steps-list .step-title {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 28px;
+                    padding-top: 7px;
+                    padding-left: 80px;
+                    min-height: 80px;
+                }
+
+            }
+
+            [id^="pw_map_"] iframe {
+                position: absolute !important;
+            }
+
+            @media(min-width:993px) {
+
+                .anchor {
+                    display: block;
+                    height: 165px;
+                    /*same height as header*/
+                    margin-top: -165px;
+                    /*same height as header*/
+                    visibility: hidden;
+                }
+
+                .notification .container p.desktop-notification {
+                    display: block;
+                }
+
+                .notification .container p.notification-hours {
+                    text-align: right !important;
+                }
+
+                .banner-desktop {
+
+                    display: block;
+                    background-image: none !important;
+                    position: relative;
+                    left: -150px;
+
+                }
+
+                #banner-ad {}
+
+                [id^="pw_map_"] iframe {
+                    position: absolute !important;
+                }
+
+                .banner-mobile {
+
+                    display: none;
+
+                }
+
+                .consultation h3 {
+
+                    color: #008080 !important;
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+
+                .consultation h2 {
+
+                    color: #1f1f1f;
+                    font-size: 64px;
+                    font-weight: 600;
+                    margin-bottom: 80px;
+
+                }
+
+                .invisalign-mobile-image {
+
+                    display: none;
+
+                }
+
+                .invisalign-desktop-image {
+
+                    display: block !important;
+
+                }
+
+                .invisalign-desktop-image .schedule-consultationz {
+
+                    width: 310px;
+                    font-size: 24px !important;
+                    text-transform: uppercase !important;
+                    padding: 9px;
+                    border-radius: 12px;
+                    font-weight: 500 !important;
+                    background-color: #139FD9 !important;
+
+
+                }
+
+                .container.invisalign h2.section-heading {
+
+                    margin-bottom: 52px !important;
+
+                }
+
+
+                .invisalign-welcome {
+
+                    color: #fff;
+                    font-family: 'Roboto', sans serif;
+                    font-weight: 500;
+                    text-align: right;
+                    font-size: 32px;
+                    line-height: 34px;
+                    width: 371px;
+                    float: right;
+                    margin-top: 15px;
+                    padding-bottom: 20px;
+
+                }
+
+            }
+
+                        
+            
+            @media(max-width:991px) {
+
+                #mainNav #phone-number .phone-number__text,
+                #mainNav .phone-number .phone-number__text {
+
+                    display: none !important;
+
+                }
+
+            }
+
+            @media(min-width:992px) {
+
+                #mainNav #phone-number .phone-number__text {
+
+                    font-family: acumin-pro-condensed, sans-serif !important;
+                    font-weight: 700 !important;
+                    font-size: 26px !important;
+
+
+                }
+
+            }
+
+                        
+            
+                #mainNav #phone-number .phone-number__text {
+
+                    font-family: acumin-pro-condensed, sans-serif !important;
+                    font-weight: 700 !important;
+                    font-size: 26px !important;
+
+                }
+
+                @media(max-width: 991px) {
+                    #mainNav .container>.nav-btn {
+
+                        display: block !important;
+
+                    }
+                }
+
+                #mainNav .navbar-nav .nav-item .nav-link {
+                    /* padding-left: 20px !important;
+                    padding-right: 20px !important; */
+                    text-transform: uppercase !important;
+                }
+
+                #mainNav .navbar-nav .nav-item .current_page_parent {
+                    background-image: none !important;
+                    color: #008080 !important;
+                    font-weight: 900 !important;
+                } 
+
+                #mainNav .navbar-nav .nav-item.current-menu-item,
+                #mainNav .navbar-nav .nav-item.current-menu-item a,
+                #mainNav .navbar-nav .nav-item.current-menu-item .nav-link  {
+                    background-image: none !important;
+                    color: #008080 !important;
+                }
+
+                .menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.current-menu-item.dropdown-item.p-1.pb-3.heading {
+                    background-image: none !important;
+                    color: #008080 !important;
+                }
+
+                /**
+                * Comment me
+                */
+                @media(max-width: 991px) {
+
+
+                    /**
+                    * Top Level MOBILE Nav items
+                    */
+
+
+                    #mainNav .navbar-nav .nav-item {
+
+                        line-height: 1.5 !important;
+                        padding-bottom: 0;
+                        margin-top: 0;
+                        border-bottom: 1px solid #D9D9D9 !important;
+                        margin-bottom: 0px !important;
+                        padding-bottom: 20px !important;
+
+                    }
+
+                    /**
+                    * Highlight top level Mobile
+                    */
+                    #mainNav .navbar-nav .nav-item.current_page_item .nav-link {
+                        padding-left: 0px !important;
+                        color: #008080 !important;
+                    }
+
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .current-menu-item.heading a {
+                        color: #008080 !important;
+                        font-weight: 900 !important;
+                    }
+
+                    /**
+                    * Second Level Mobile
+                    */
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .dropdown-item {
+                        line-height: 1.5 !important;
+                        border-top: 1px solid #D9D9D9 !important;
+                        margin-bottom: 0px !important;
+                        padding-bottom: 20px !important;
+                        padding-top: 20px !important;
+                    }
+
+                    #mainNav .dropdown:not(.mega) .dropdown-menu .nav-item:first-child {
+                        padding-top: 20px;
+                        margin-top: 20px;
+                        /* border-top: 0 !important; */
+                    }
+
+                    #mainNav .dropdown:not(.mega) .dropdown-menu .nav-item:last-child {
+
+                        border: 0 !important;
+                    }
+
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .heading a {
+
+                        margin: 0px !important;
+                        padding: 11px !important;
+                        padding-left: 0px !important;
+
+                    }
+
+                    /**
+                    * Second Level, non Mega Dropdown
+                    */
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown {
+                        padding-left: 15px !important;
+                    }
+
+                    #mainNav .navbar-nav .nav-item:not([type=heading]) {}
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown .nav-item {
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                        margin-bottom: 15px !important;
+                        line-height: 1 !important;
+                        border-top: 0px solid #D9D9D9 !important;
+                        border-bottom: 0px !important;
+                    }
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown .nav-item:first-child {
+
+                        border-top: 1px solid #D9D9D9 !important;
+
+                    }
+
+                    /**
+                    * 3rd level, Mobile 
+                    */
+                    .dropdown-menu .dropdown-item:not([type=heading]) {
+
+                        display: block;
+
+                    }
+
+                }
+
+                /**
+                * .navbar font control
+                */
+
+                .navbar {
+                    font-size: 14px !important;
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-weight: 500;
+                    font-style: normal;
+                    padding: 0;
+                    border: 1px solid;
+                    line-height: 48px;
+                }
+                .navbar a{
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+                .navbar-nav{
+                    
+                }
+                .dropdown-menu {
+                    font-size: 14px !important;
+                }
+                
+                .d-md-inline,
+                .ninja-forms-field option {
+
+                    text-transform: uppercase !important;
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-style: normal;
+                }
+
+                #mainNav .navbar-nav .nav-item .nav-link {
+                    /* font-size: 90%; */
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-style: normal;
+                    /* padding: 0.75em 0; */
+                    letter-spacing: normal !important;
+                    color: #fff;
+                    white-space: nowrap;
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+
+
+                
+
+                .navbar .navbar-nav>.nav-item>.dropdown-toggle {
+                    position: relative;
+                    width: 100%;
+                    text-transform: uppercase !important;
+                }
+
+                #mainNav .dropdown-menu .dropdown-item.heading a {
+
+                    font-family: acumin-pro-semi-condensed, sans-serif !important;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-transform: uppercase !important;
+
+                }
+
+                #mainNav .dropdown:not(.mega) .dropdown-menu .nav-link {
+
+                    text-transform: uppercase !important;
+
+                }
+
+                .dropdown-menu .row>div a {
+                    display: inline-block;
+                    margin-bottom: 10px;
+
+                }
+
+                        </style>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v28.1 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Your Smile, Our Priority. | Able Family Dental</title>
+	<link rel="canonical" href="https://ablefamilydental.com/smile/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Your Smile, Our Priority. | Able Family Dental" />
+	<meta property="og:description" content="Serving Lethbridge Families Since 2006 Comprehensive Dental Care for Every Stage of Life Proudly caring for Lethbridge families with compassionate, personalized dental care. From routine preventive care to Invisalign®, dental implants, and IV sedation, our team is here to help you smile with confidence. Book an Appointment Call Now Family Dentistry Invisalign® &amp; Braces Dental [&hellip;]" />
+	<meta property="og:url" content="https://ablefamilydental.com/smile/" />
+	<meta property="og:site_name" content="Able Family Dental" />
+	<meta property="article:modified_time" content="2026-07-23T18:54:24+00:00" />
+	<meta property="og:image" content="https://ablefamilydental.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-30-2026-11_21_34-AM.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/ablefamilydental.com\/smile\/","url":"https:\/\/ablefamilydental.com\/smile\/","name":"Your Smile, Our Priority. | Able Family Dental","isPartOf":{"@id":"https:\/\/ablefamilydental.com\/#website"},"primaryImageOfPage":{"@id":"https:\/\/ablefamilydental.com\/smile\/#primaryimage"},"image":{"@id":"https:\/\/ablefamilydental.com\/smile\/#primaryimage"},"thumbnailUrl":"https:\/\/ablefamilydental.com\/wp-content\/uploads\/2026\/06\/ChatGPT-Image-Jun-30-2026-11_21_34-AM.png","datePublished":"2026-06-30T20:28:20+00:00","dateModified":"2026-07-23T18:54:24+00:00","breadcrumb":{"@id":"https:\/\/ablefamilydental.com\/smile\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/ablefamilydental.com\/smile\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/ablefamilydental.com\/smile\/#primaryimage","url":"https:\/\/ablefamilydental.com\/wp-content\/uploads\/2026\/06\/ChatGPT-Image-Jun-30-2026-11_21_34-AM.png","contentUrl":"https:\/\/ablefamilydental.com\/wp-content\/uploads\/2026\/06\/ChatGPT-Image-Jun-30-2026-11_21_34-AM.png","width":1449,"height":1086},{"@type":"BreadcrumbList","@id":"https:\/\/ablefamilydental.com\/smile\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/ablefamilydental.com\/"},{"@type":"ListItem","position":2,"name":"Your Smile, Our Priority."}]},{"@type":"WebSite","@id":"https:\/\/ablefamilydental.com\/#website","url":"https:\/\/ablefamilydental.com\/","name":"Able Family Dental","description":"Family Dentistry &amp; Implants","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/ablefamilydental.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.optiopublishing.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://ablefamilydental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fablefamilydental.com%2Fsmile%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://ablefamilydental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fablefamilydental.com%2Fsmile%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://ablefamilydental.com/wp-includes/css/dist/block-library/common.min.css?ver=7.0.2' media='all' />
+<style id="wp-block-library-inline-css">
+/*wp_block_styles_on_demand_placeholder:6a676f808ef0d*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<link rel='stylesheet' id='section_block-cgb-style-css-css' href='https://ablefamilydental.com/wp-content/plugins/gutenberg-section-block-master/dist/blocks.style.build.css?ver=7.0.2' media='all' />
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='cds-boostrap-style-css' href='https://ablefamilydental.com/wp-content/themes/canadian-dental-services/vendor/bootstrap/css/bootstrap.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='cds-fontawesome-style-css' href='https://ablefamilydental.com/wp-content/themes/canadian-dental-services/vendor/fontawesome-free/css/all.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='cds-site-template-style-css' href='https://ablefamilydental.com/wp-content/themes/canadian-dental-services/css/cds.min.css?ver=1.0.08989111889988' media='all' />
+<link rel='stylesheet' id='custom-google-fonts-css' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&#038;ver=7.0.2' media='all' />
+<link rel='stylesheet' id='minimal-grid-css' href='https://ablefamilydental.com/wp-content/themes/canadian-dental-services/style.css?ver=7.0.2' media='all' />
+<script id="optio-api-js" async defer src="https://www.optiopublishing.com/api/js?ver=4.1"></script>
+<script id="jquery-core-js" src="https://ablefamilydental.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://ablefamilydental.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ablefamilydental.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.2" />
+<link rel='shortlink' href='https://ablefamilydental.com/?p=3839' />
+<style type="text/css">/* =Responsive Map fix
+-------------------------------------------------------------- */
+.pw_map_canvas img {
+	max-width: none;
+}</style><script async src="https://next-api.patientprism.com/v1/snippet/a1f15e1f-9604-45e9-a349-4f8c9f96c08d"></script>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"marketing"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NHTJF68');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->      <!--Customizer CSS--> 
+      <style type="text/css">
+            
+            
+                 </style> 
+      <!--/Customizer CSS-->
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDKQJSMBLW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GDKQJSMBLW');
+</script><link rel="icon" href="https://ablefamilydental.com/wp-content/uploads/2020/01/Able-favicon.ico" sizes="32x32" />
+<link rel="icon" href="https://ablefamilydental.com/wp-content/uploads/2020/01/Able-favicon.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://ablefamilydental.com/wp-content/uploads/2020/01/Able-favicon.ico" />
+<meta name="msapplication-TileImage" content="https://ablefamilydental.com/wp-content/uploads/2020/01/Able-favicon.ico" />
+<style id="wp-custom-css">
+ [id='221504455194251']{
+	
+	position:relative;
+	width: unset;
+    min-width: unset;
+    display: unset;
+    overflow: unset;
+    border: none;
+    height: unset;
+	
+}
+html .banner-ad :where(img) {
+    height: auto;
+    max-width: none !important;
+}
+
+#mainNav #book-button{
+	
+	background-color: #ff0000 !important;
+	
+}
+
+.overviews .overview #book-button{
+	
+	display: none !important;
+	
+}
+
+.page-id-3633 .get-touch-form {
+    background-color: #fff !important;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.25)  !important;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.25)  !important;
+    padding: 10px 10px  !important;
+}
+
+
+h3.book-now-heading {
+    color: #000000;
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+}
+
+a.book-now-button-body.btn.btn-lg {
+    background-color: #ff0000 !important;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px !important;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 7px;
+margin-top: 8px;
+}
+
+a.contact-us-button.btn.btn-teal.btn-lg.jb_button2 {
+    background-color: #008080 !important;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px !important;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+</style>
+<style> #mainNav #phone-number {
+    color: #008080 !important;
+
+}
+
+
+.carousel-home .carousel-item h1,
+.masthead-cover h1 {
+    color:  !important;
+    font-size: 48px;
+    line-height: 1;
+}
+
+@media(max-width: 450px) {
+/* JB JB */
+    .carousel-home .carousel-item h1{
+
+        font-size:  !important;
+
+    }
+
+}
+
+.btn-radio:not(.checked):hover {
+
+    border: 2px solid #008080 !important;
+    color: #008080 !important;
+
+}
+
+.notification {
+
+    background-color: #008080 !important;
+
+}
+
+.btn-teal, .btn-primary, .get-touch-form .nf-field-element .btn-primary{
+
+    background-color: #008080 !important;
+    color: #fff;
+
+}
+
+.btn-radio.checked, .get-touch-form .btn-radio.checked{
+
+
+    color: #008080 !important;
+    border: 2px solid #008080 !important;
+
+
+}
+
+#portfolio.portfolio-reverse-spaced .row:nth-of-type(odd) .portfolio-item:nth-child(odd) .portfolio-up:hover,
+#portfolio.portfolio-reverse-spaced .portfolio-item .portfolio-link .portfolio-up:hover,
+#portfolio.portfolio-reverse .row:nth-of-type(odd) .portfolio-item:nth-child(odd) .portfolio-up:hover,
+#portfolio.portfolio-reverse .portfolio-item .portfolio-link .portfolio-up:hover{
+
+    background-color: #008080b3 !important;
+
+}
+
+.primary-color{
+
+    color: #008080 !important;
+
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-up {
+
+    background-color: #008080 !important;
+
+}
+
+.social-feed {
+
+    border: 6px solid #008080 !important;
+
+}
+
+.accent:before {
+
+    background-color: #008080 !important;
+
+}
+
+.address h2:before {
+
+    background-color: #008080 !important;
+
+}
+
+.bg-teal {
+
+    background-color: #008080 !important;
+
+}
+
+.box-title {
+
+    color: #008080 !important;
+
+}
+
+.bg-teal--light{
+
+    background-color:  !important;
+
+}
+
+.carousel-control-prev-icon {
+    background: #008080 !important;
+}
+
+.primary-bg {
+    background:  !important;
+    background: -webkit-gradient(linear,left top,left bottom,from(),to()) !important;
+    background: linear-gradient(to bottom, 0, 100%) !important;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.25);
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.25);
+}
+
+.phone-number__icon path{
+
+    fill: #008080 !important;
+
+}
+
+@media (min-width: 992px) {
+
+#mainNav .navbar-nav .nav-item.current-menu-item {
+
+
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23008080' fill-rule='evenodd'/%3E%3C/svg%3E");
+color: #008080 !important;
+
+
+}
+#mainNav .navbar-nav .nav-item.current-menu-item .nav-link {
+    color: #008080 !important;
+}
+
+#mainNav .navbar-nav .nav-item .current_page_item {
+
+
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23008080' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+
+
+}
+
+#mainNav .navbar-nav .nav-item .current_page_parent {
+
+
+background-image: none !important; //url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23008080' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+color: #008080 !important;
+
+}
+
+#mainNav .navbar-nav .nav-item.mega .current_page_parent,
+a.dropdown-toggle.cds_current_post,
+.nav-item.dropdown.mega.cds_current_post,
+a.cds_current_post {
+
+    color: #008080 !important;
+    font-weight: 900 !important;
+    background: none !important;
+
+}
+
+
+#mainNav .navbar-nav .nav-item.mega .current_page_parent a,
+a.dropdown-toggle.cds_current_post a,
+.nav-item.dropdown.mega.cds_current_post a{
+
+    color: #008080 !important;
+
+}
+
+.menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.current-menu-item.dropdown-item.p-1.pb-3.heading a {
+    font-weight: 900 !important;
+    color: #008080 !important;
+      background-image: none !important;
+
+  }
+
+  .cds_current_post.menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.dropdown-item.p-1{
+    background:none !important;
+    margin-bottom: 0px !important;
+    //background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23008080' fill-rule='evenodd'/%3E%3C/svg%3E") !important;
+
+  }
+
+}
+
+
+
+.carousel-indicators li.active {
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Ccircle%20cx%3D%2710%27%20cy%3D%2710%27%20r%3D%278%27%20stroke%3D%27%23008080%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-indicators li {
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Ccircle%20cx%3D%2710%27%20cy%3D%2710%27%20r%3D%278%27%20stroke%3D%27%23979797%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-control-prev-icon {
+    background: #008080 url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M3.104%209.09H19.09a.91.91%200%200%201%200%201.82H3.104l7.539%207.538a.91.91%200%200%201-1.286%201.286l-9.09-9.091a.91.91%200%200%201%200-1.286l9.09-9.09a.91.91%200%201%201%201.286%201.285L3.103%20%0A9.09z%27%20fill%3D%27%23FFF%27%20fill-rule%3D%27nonzero%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-control-next-icon {
+    background: #008080 url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M16.896%209.09L9.357%201.553A.91.91%200%200%201%2010.643.266l9.09%209.091a.91.91%200%200%201%200%201.286l-9.09%209.09a.91.91%200%201%201-1.286-1.285l7.54-7.539H.908a.91.91%200%200%201%200-1.818h15.987z%27%20fill%3D%27%23FFF%27%20fill-rule%3D%27nonzero%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+select.form-control {
+
+    background-image: url("data:image/svg+xml,%3Csvg width=%2721%27 height=%2712%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M18.948.768a.904.904 0 0 1 1.286 0 .922.922 0 0 1 0 1.297l-9.091 9.167a.904.904 0 0 1-1.286 0L.767 2.065a.922.922 0 0 1 0-1.297.904.904 0 0 1 1.285 0L10.5 9.181 18.948.768z%27 fill=%27%23008080%27 fill-rule=%27nonzero%27/%3E%3C/svg%3E") !important;
+") !important;
+
+}
+
+
+
+.text-icon__icon {
+
+    background-image: url("data:image/svg+xml,%3Csvg width=%2711%27 height=%2720%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M.268 1.552a.904.904 0 0 1 0-1.286.922.922 0 0 1 1.297 0l9.167 9.091a.904.904 0 0 1 0 1.286l-9.167 9.09a.922.922 0 0 1-1.297 0 .904.904 0 0 1 0-1.285L8.681 10 .268 1.552z%27 fill=%27%23008080%27 fill-rule=%27nonzero%27/%3E%3C/svg%3E") !important;
+
+}
+
+.get-touch-form .nf-field-element .btn-primary:hover {
+
+    background-color: #008080 !important;
+
+}
+
+.flex-schedule-buttons>a:first-child button {
+    background-color: #fff!important;
+    color: #008080 !important;
+}
+
+
+</style>
+</head>
+
+<body class="wp-singular page-template-default page page-id-3839 wp-theme-canadian-dental-services" >
+
+
+
+    <div class="notification fixed-top">
+        <div class="container">
+
+                <div class="row">
+                    <div class="col-6"><p class="desktop-notification">We are accepting new patients!</p></div>
+                    <div class="col-12 col-lg-6"><p class="notification-hours">Evening and weekend appointments available <span class="phone-number"> | <a href="tel:403-327-7202" >403-327-7202</a></span></p></div>
+                </div>
+
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top white-bg justify-content-end" id="mainNav">
+
+
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="https://ablefamilydental.com"><img src="https://crowsnestdental.com/wp-content/uploads/2020/03/Able-Family-Dental-140px.png" /> </a>
+
+            <button class="navbar-toggler js-navbar-toggler" type="button" role="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler__lines"></span><div class="menu-button-text">MENU</div><div class="menu-button-close">close</div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav text-uppercase">
+
+                    <li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/about/">About</a></li>
+
+		
+
+
+
+    <!-- START Mega Wrapper -->
+    <div class="nav-item dropdown mega " data-toggle="popover" data-placement="right" data-content="615">
+
+    
+    <a data-toggle="collapse" href="#id_615" class="dropdown-toggle collapsed do-mega-drop menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><span class="d-collapsed-inline d-none d-md-inline">Dental Services<span class="mobile-expand"><?xml version="1.0" encoding="UTF-8"?>
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -391.000000)" fill="#999999" fill-rule="nonzero">
+                <path d="M973.768485,388.551915 C973.410505,388.196893 973.410505,387.621289 973.768485,387.266267 C974.126466,386.911244 974.706867,386.911244 975.064848,387.266267 L984.231515,396.357176 C984.589495,396.712198 984.589495,397.287802 984.231515,397.642824 L975.064848,406.733733 C974.706867,407.088756 974.126466,407.088756 973.768485,406.733733 C973.410505,406.378711 973.410505,405.803107 973.768485,405.448085 L982.180508,397 L973.768485,388.551915 Z" id="Arrow/Right/Green-Copy" transform="translate(979.000000, 397.000000) rotate(90.000000) translate(-979.000000, -397.000000) "></path>
+            </g>
+        </g>
+    </svg></span><span class="mobile-contract"><?xml version="1.0" encoding="UTF-8"?>
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -335.000000)" fill="#008080" fill-rule="nonzero">
+                <path d="M973.768485,332.551915 C973.410505,332.196893 973.410505,331.621289 973.768485,331.266267 C974.126466,330.911244 974.706867,330.911244 975.064848,331.266267 L984.231515,340.357176 C984.589495,340.712198 984.589495,341.287802 984.231515,341.642824 L975.064848,350.733733 C974.706867,351.088756 974.126466,351.088756 973.768485,350.733733 C973.410505,350.378711 973.410505,349.803107 973.768485,349.448085 L982.180508,341 L973.768485,332.551915 Z" id="Arrow/Right/Green" transform="translate(979.000000, 341.000000) rotate(90.000000) translate(-979.000000, -341.000000) "></path>
+            </g>
+        </g>
+    </svg></span></span></a>
+
+        
+        <!-- START Mega Wrapper and Columns --> 
+        
+        <div class="dropdown-menu shadow border-0" id="id_615">
+	
+
+            <!-- START P3 -->
+            <div class="p-3">
+		
+
+                <!-- START Tab Content -->
+                <div class="tab-content">
+			
+
+                    <!-- START Tab Pane -->
+                    <div class="tab-pane fade show active" id="nav-A" role="tabpanel">
+			
+
+                        <!-- START All Services Link -->
+                        <!-- <div class="row">
+
+                            <div class="dropdown-item p-1 pb-3 heading" type="heading 176">
+                            <a href="https://ablefamilydental.com/dental-services/">All Dental Services</a>
+                            </div>
+    
+                        </div> -->
+                        <!-- END All Services Link -->
+
+                        <!-- START Row -->
+                        <div class="row">
+			
+                            
+                            <!-- START 1st Column -->
+                            <div class="col-6 col-lg-4 col-xl-3">
+
+		<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading" type="heading"><a  data-previous-object_id="485"  data-this-count="0" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/dental-services/general-dentistry/">General Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="0" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/family-dentistry/">Family Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="1" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/dental-implants/">Dental Implants</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="2" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/dental-bridges/">Dental Bridges</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="3" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/root-canal-treatment/">Root Canal Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="4" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/dental-fillings/">Dental Fillings</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="5" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/crowns/">Crowns</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="6" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/dentistry-for-children/">Dentistry for Children</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="485"  data-this-count="7" data-previous-item_parent="0"  current-menu_parent="615"  data-siblings-index-key="0" data-siblings-index-count="3" href="https://ablefamilydental.com/services/restorative-and-cosmetic-dentistry/">Restorative and Cosmetic Dental Solutions</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=4-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="6"  data-this-count="0" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="1" data-siblings-index-count="3" href="https://ablefamilydental.com/dental-services/cosmetic-dentistry/">Cosmetic Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="6"  data-this-count="0" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="1" data-siblings-index-count="3" href="https://ablefamilydental.com/services/invisalign-treatment/">Invisalign® Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="6"  data-this-count="1" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="1" data-siblings-index-count="3" href="https://ablefamilydental.com/services/dental-crowns/">Dental Crowns</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="6"  data-this-count="2" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="1" data-siblings-index-count="3" href="https://ablefamilydental.com/services/bonding/">Bonding</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="6"  data-this-count="3" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="1" data-siblings-index-count="3" href="https://ablefamilydental.com/services/gum-contouring/">Gum Contouring</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="6"  data-this-count="4" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="1" data-siblings-index-count="3" href="https://ablefamilydental.com/services/teeth-whitening/">Teeth Whitening</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="6"  data-this-count="5" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="1" data-siblings-index-count="3" href="https://ablefamilydental.com/services/veneers/">Veneers</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=7-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="4"  data-this-count="0" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="2" data-siblings-index-count="3" href="https://ablefamilydental.com/dental-services/preventative-dentistry/">Preventative Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="4"  data-this-count="0" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="2" data-siblings-index-count="3" href="https://ablefamilydental.com/services/fluoride-treatment/">Fluoride Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="4"  data-this-count="1" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="2" data-siblings-index-count="3" href="https://ablefamilydental.com/services/oral-cancer-screening/">Oral Cancer Screening</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="4"  data-this-count="2" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="2" data-siblings-index-count="3" href="https://ablefamilydental.com/services/digital-x-rays/">Digital X-Rays</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="4"  data-this-count="3" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="2" data-siblings-index-count="3" href="https://ablefamilydental.com/services/cleaning-and-dental-exams/">Cleaning and Dental Exams</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="4"  data-this-count="4" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="2" data-siblings-index-count="3" href="https://ablefamilydental.com/services/dental-sealants/">Dental Sealants</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=10-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="7"  data-this-count="0" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/dental-services/dental-surgery-and-other-treatments/">Dental Surgery and other treatments</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="0" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/crown-lengthening/">Crown Lengthening</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="1" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/soft-tissue-grafting/">Soft tissue grafting</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="2" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/oral-surgery/">Oral Surgery  </a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="3" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/tooth-extraction/">Tooth Extractions</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="4" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/emergency-dental-care/">Emergency Dental Care</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="5" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/wisdom-teeth-extraction/">Wisdom Teeth Extraction</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="6" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/tmj-tmjd-treatment/">TMJ / TMJD Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="7" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/mouth-guards-sports-guards/">Mouth Guards / Sports Guards</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="8" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/gum-contouring-2/">Gum Contouring</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7"  data-this-count="9" data-previous-item_parent="615"  current-menu_parent="615"  data-siblings-index-key="3" data-siblings-index-count="3" href="https://ablefamilydental.com/services/sedation-dentistry/">Sedation Dentistry</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=426-->
+
+                             </div><!-- CLOSE ROW  for FINAL TAX ITEM nextITEM object id=426-->
+
+		                    <!-- start MEGA END -->         </div></div></div></div><!-- END MEGA END -->
+</div><!-- NORMAL START --><div class="nav-item dropdown  new_nav_style ">
+    <a class="  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-childrennav-link dropdown-toggle collapsed" href="#id_submenu427" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Patient Info<span class="mobile-expand"><?xml version="1.0" encoding="UTF-8"?>
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -391.000000)" fill="#999999" fill-rule="nonzero">
+                <path d="M973.768485,388.551915 C973.410505,388.196893 973.410505,387.621289 973.768485,387.266267 C974.126466,386.911244 974.706867,386.911244 975.064848,387.266267 L984.231515,396.357176 C984.589495,396.712198 984.589495,397.287802 984.231515,397.642824 L975.064848,406.733733 C974.706867,407.088756 974.126466,407.088756 973.768485,406.733733 C973.410505,406.378711 973.410505,405.803107 973.768485,405.448085 L982.180508,397 L973.768485,388.551915 Z" id="Arrow/Right/Green-Copy" transform="translate(979.000000, 397.000000) rotate(90.000000) translate(-979.000000, -397.000000) "></path>
+            </g>
+        </g>
+    </svg></span><span class="mobile-contract"><?xml version="1.0" encoding="UTF-8"?>
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -335.000000)" data-jb="" fill="#008080" fill-rule="nonzero">
+                <path d="M973.768485,332.551915 C973.410505,332.196893 973.410505,331.621289 973.768485,331.266267 C974.126466,330.911244 974.706867,330.911244 975.064848,331.266267 L984.231515,340.357176 C984.589495,340.712198 984.589495,341.287802 984.231515,341.642824 L975.064848,350.733733 C974.706867,351.088756 974.126466,351.088756 973.768485,350.733733 C973.410505,350.378711 973.410505,349.803107 973.768485,349.448085 L982.180508,341 L973.768485,332.551915 Z" id="Arrow/Right/Green" transform="translate(979.000000, 341.000000) rotate(90.000000) translate(-979.000000, -341.000000) "></path>
+            </g>
+        </g>
+    </svg></span></a>
+    <div class="dropdown-menu collapse" id="id_submenu427" style="">
+    <div class="dropdown">
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/digital-patient-forms/">Patient Forms</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/patient-info/">Patient Info</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/dental-tips/">Dental Tips</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/patient-referrals/">Referring a Patient to Able Family Dental</a></li>
+
+		<!-- start NORMAL END -->
+    </div>
+    </div><!-- END NORMAL END -->
+</div><!-- NORMAL START --><div class="nav-item dropdown  new_nav_style ">
+    <a class="  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-childrennav-link dropdown-toggle collapsed" href="#id_submenu3503" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Contact Us<span class="mobile-expand"><?xml version="1.0" encoding="UTF-8"?>
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -391.000000)" fill="#999999" fill-rule="nonzero">
+                <path d="M973.768485,388.551915 C973.410505,388.196893 973.410505,387.621289 973.768485,387.266267 C974.126466,386.911244 974.706867,386.911244 975.064848,387.266267 L984.231515,396.357176 C984.589495,396.712198 984.589495,397.287802 984.231515,397.642824 L975.064848,406.733733 C974.706867,407.088756 974.126466,407.088756 973.768485,406.733733 C973.410505,406.378711 973.410505,405.803107 973.768485,405.448085 L982.180508,397 L973.768485,388.551915 Z" id="Arrow/Right/Green-Copy" transform="translate(979.000000, 397.000000) rotate(90.000000) translate(-979.000000, -397.000000) "></path>
+            </g>
+        </g>
+    </svg></span><span class="mobile-contract"><?xml version="1.0" encoding="UTF-8"?>
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -335.000000)" data-jb="" fill="#008080" fill-rule="nonzero">
+                <path d="M973.768485,332.551915 C973.410505,332.196893 973.410505,331.621289 973.768485,331.266267 C974.126466,330.911244 974.706867,330.911244 975.064848,331.266267 L984.231515,340.357176 C984.589495,340.712198 984.589495,341.287802 984.231515,341.642824 L975.064848,350.733733 C974.706867,351.088756 974.126466,351.088756 973.768485,350.733733 C973.410505,350.378711 973.410505,349.803107 973.768485,349.448085 L982.180508,341 L973.768485,332.551915 Z" id="Arrow/Right/Green" transform="translate(979.000000, 341.000000) rotate(90.000000) translate(-979.000000, -341.000000) "></path>
+            </g>
+        </g>
+    </svg></span></a>
+    <div class="dropdown-menu collapse" id="id_submenu3503" style="">
+    <div class="dropdown">
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/patient-referrals/">Patient Referrals</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/contact/">Contact Us</a></li>
+
+		<!-- start NORMAL END -->
+    </div>
+    </div><!-- END NORMAL END -->
+</div><li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://ablefamilydental.com/financial-options/">Financial Options</a></li>
+
+		
+                    <!-- <a data-toggle="collapse" href="#id_search1" class="dropdown-toggle dropdown-toggle--search" aria-expanded="true"><i class="fa fa-search"></i>&nbsp;</a> -->
+
+                    <!-- DO not remove - Search Bar -->
+
+                    <!--
+
+                        <div class="nav-item nav-item--search">
+                            <a data-toggle="collapse" href="#id_search1" class="dropdown-toggle" aria-expanded="true"><i class="fa fa-search"></i>&nbsp;</a>
+
+                            <div class="nav-search dropdown-menu col-sm-5 col-lg-4 collapse" role="menu" id="id_search1" style="">
+                                <form class="p-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter your serach request" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    -->
+
+                </ul>
+
+                <a class="nav-btn btn btn-teal btn-lg js-scroll-trigger"   id="book-button" href="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X">BOOK NOW</a>
+            </div>
+
+            <a href="tel:403-327-7202" class="ml-auto primary-color phone-number" id="phone-number">
+<span class="phone-number__text">403-327-7202</span>
+<span class="phone-number__icon"><svg aria-hidn="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#008080" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg></span>
+</a>
+            <a class="nav-btn btn btn-teal btn-lg js-scroll-trigger"   id="book-button" href="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X">BOOK NOW</a>
+        </div>
+    </nav>
+
+
+<section style="width: 100%; background: linear-gradient(135deg,#ffffff 0%,#f7fbfb 55%,#e6f5f6 100%); padding: 80px 20px; font-family: Arial,Helvetica,sans-serif; box-sizing: border-box; overflow: hidden;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 55px;">
+    
+    <div style="flex: 1 1 500px; min-width: 300px;">
+      <div style="display: inline-block; background: #e4f5f6; color: #007b83; border: 1px solid #b7e4e7; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: bold; margin-bottom: 22px;">
+        Serving Lethbridge Families Since 2006
+      </div>
+
+      <h1 style="font-size: clamp(40px,5vw,66px); line-height: 1.05; margin: 0 0 24px; color: #111; font-weight: 800; letter-spacing: -1px;">
+        Comprehensive Dental Care for Every Stage of Life
+      </h1>
+
+      <p style="font-size: 20px; line-height: 1.6; color: #333; margin: 0 0 34px; max-width: 650px;">
+        Proudly caring for Lethbridge families with compassionate, personalized dental care. From routine preventive care to Invisalign®, dental implants, and IV sedation, our team is here to help you smile with confidence.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 34px; align-items: center;">
+        <a style="display: inline-flex; align-items: center; justify-content: center; height: 58px; padding: 0 34px; background: #008991; color: #ffffff; border-radius: 999px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 12px 28px rgba(0,137,145,.22); white-space: nowrap; box-sizing: border-box;" href="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X" target="_blank" rel="noopener">
+          Book an Appointment
+        </a>
+
+        <a style="display: inline-flex; align-items: center; justify-content: center; height: 58px; padding: 0 34px; background: #ffffff; color: #008991; border: 2px solid #008991; border-radius: 999px; text-decoration: none; font-weight: bold; font-size: 16px; white-space: nowrap; box-sizing: border-box;" href="tel:+15877017074">
+          Call Now
+        </a>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; max-width: 650px;">
+        <span style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; background: #fff; border: 1px solid #b7e4e7; padding: 0 18px; border-radius: 999px; font-weight: bold; box-sizing: border-box;">Family Dentistry</span>
+        <span style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; background: #fff; border: 1px solid #b7e4e7; padding: 0 18px; border-radius: 999px; font-weight: bold; box-sizing: border-box;">Invisalign® &amp; Braces</span>
+        <span style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; background: #fff; border: 1px solid #b7e4e7; padding: 0 18px; border-radius: 999px; font-weight: bold; box-sizing: border-box;">Dental Implants</span>
+        <span style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; background: #fff; border: 1px solid #b7e4e7; padding: 0 18px; border-radius: 999px; font-weight: bold; box-sizing: border-box;">IV Sedation</span>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 430px; min-width: 300px;">
+      <img decoding="async" style="width: 100%; height: auto; display: block; border-radius: 30px; border: 8px solid #fff; box-shadow: 0 22px 55px rgba(0,0,0,.16); box-sizing: border-box;" src="https://ablefamilydental.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-30-2026-11_21_34-AM.png" alt="Able Family Dental exterior">
+
+      <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 14px;">
+        <div style="flex: 1 1 190px; background: #fff; border-left: 6px solid #008991; border-radius: 18px; padding: 22px 20px; box-shadow: 0 12px 30px rgba(0,0,0,.10); box-sizing: border-box;">
+          <strong style="display: block; font-size: 18px; color: #111; margin-bottom: 8px;">Now Accepting CDCP</strong>
+          <span style="font-size: 14px; color: #444; line-height: 1.5;">Canadian Dental Care Plan</span>
+        </div>
+
+        <div style="flex: 1 1 190px; background: #008991; color: #fff; border-radius: 18px; padding: 22px 20px; box-shadow: 0 12px 30px rgba(0,137,145,.25); box-sizing: border-box;">
+          <strong style="display: block; font-size: 18px; margin-bottom: 8px;">Orthodontic Care Now Available at Able</strong>
+          <span style="font-size: 14px; line-height: 1.5;">Traditional Braces &amp; Invisalign, schedule a consultation today.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="afd-appointment-section">
+  <style>
+    .afd-appointment-section {
+      background: #f7fbfb;
+      padding: 80px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .afd-appointment-wrap {
+      max-width: 1280px;
+      margin: auto;
+    }
+
+    .afd-appointment-header {
+      max-width: 900px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .afd-eyebrow {
+      color: #008991;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+
+    .afd-appointment-header h2 {
+      font-size: clamp(38px, 5vw, 56px);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      color: #111;
+      font-weight: 800;
+    }
+
+    .afd-appointment-header p:last-child {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .afd-appointment-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 35px;
+      align-items: stretch;
+    }
+
+    .afd-form-card,
+    .afd-offer-card {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+    }
+
+    .afd-form-card {
+      padding: 22px;
+      overflow: hidden;
+    }
+
+    .afd-form-card iframe {
+      width: 100%;
+      height: 670px;
+      border: none;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .afd-offer-card {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .afd-offer-label {
+      margin: 0;
+      color: #008991;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+
+    .afd-offer-card h3 {
+      font-size: 34px;
+      line-height: 1.15;
+      margin: 18px 0;
+      color: #111;
+      font-weight: 800;
+    }
+
+    .afd-offer-card img {
+      width: 260px;
+      max-width: 100%;
+      margin: 10px auto 22px;
+      display: block;
+      height: auto;
+    }
+
+    .afd-promo-code {
+      background: linear-gradient(135deg, #008991, #00a3ad);
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 18px 20px;
+      margin: 0 auto 28px;
+      max-width: 310px;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 12px 28px rgba(0, 137, 145, .22);
+    }
+
+    .afd-promo-code span {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .afd-promo-code strong {
+      display: block;
+      font-size: 28px;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    .afd-offer-copy {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      margin: 0 0 28px;
+    }
+
+    .afd-benefits {
+      background: #eef9fa;
+      border-radius: 18px;
+      padding: 18px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+      text-align: left;
+    }
+
+    .afd-benefit {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .afd-benefit:last-child {
+      margin-bottom: 0;
+    }
+
+    .afd-benefit svg {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      margin-top: 3px;
+      color: #008991;
+    }
+
+    .afd-disclaimer {
+      font-size: 13px;
+      color: #777;
+      margin: 24px 0 0;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .afd-appointment-section {
+        padding: 60px 18px;
+      }
+
+      .afd-appointment-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .afd-form-card,
+      .afd-offer-card {
+        border-radius: 24px;
+      }
+
+      .afd-form-card {
+        padding: 16px;
+      }
+
+      .afd-form-card iframe {
+        height: 720px;
+        border-radius: 16px;
+      }
+
+      .afd-offer-card {
+        padding: 34px 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .afd-appointment-section {
+        padding: 50px 16px;
+      }
+
+      .afd-appointment-header {
+        margin-bottom: 36px;
+      }
+
+      .afd-eyebrow {
+        font-size: 13px;
+      }
+
+      .afd-appointment-header h2 {
+        font-size: 36px;
+      }
+
+      .afd-appointment-header p:last-child {
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      .afd-form-card {
+        padding: 12px;
+        border-radius: 20px;
+      }
+
+      .afd-form-card iframe {
+        height: 760px;
+        border-radius: 14px;
+      }
+
+      .afd-offer-card {
+        padding: 30px 20px;
+        border-radius: 20px;
+      }
+
+      .afd-offer-card h3 {
+        font-size: 28px;
+      }
+
+      .afd-promo-code {
+        padding: 16px 18px;
+        border-radius: 16px;
+      }
+
+      .afd-promo-code strong {
+        font-size: 24px;
+      }
+
+      .afd-offer-copy {
+        font-size: 16px;
+      }
+
+      .afd-benefits {
+        font-size: 14px;
+        padding: 16px;
+      }
+    }
+  </style>
+
+  <div class="afd-appointment-wrap">
+
+    <div class="afd-appointment-header">
+      <p class="afd-eyebrow">Now Accepting New Patients</p>
+
+      <h2>Request an Appointment</h2>
+
+      <p>
+        Whether you&#8217;re looking for a new family dentist, interested in Invisalign®, dental implants, or simply have questions about your oral health, our team is here to help.
+<p style="color: black;">Book your appointment <a href="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X" style="color: black; text-decoration: underline;">online</a> or request an appointment below.</p>
+      </p>
+    </div>
+
+    <div class="afd-appointment-grid">
+
+      <!-- FORM -->
+      <div class="afd-form-card">
+        <iframe id="JotFormIFrame-213275643171251" title="ABLE FAMILY DENTAL CONTACT US FORM" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/213275643171251" frameborder="0" scrolling="yes">
+        </iframe>
+
+        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+        <script>
+          window.jotformEmbedHandler("iframe[id='JotFormIFrame-213275643171251']", "https://form.jotform.com/");
+        </script>
+      </div>
+
+      <!-- OFFER -->
+      <div class="afd-offer-card">
+        <p class="afd-offer-label">New Patient Gift</p>
+
+        <h3>
+          Complimentary<br>
+          Wicked White PRO<br>
+          Whitening Pen
+        </h3>
+
+        <img decoding="async" src="https://ablefamilydental.com/wp-content/uploads/2026/07/whitening-pen.png" alt="Wicked White PRO Whitening Pen">
+
+        <div class="afd-promo-code">
+          <span>Use Promo Code</span>
+          <strong>SUMMER26</strong>
+        </div>
+
+        <p class="afd-offer-copy">
+          Eligible new patients receive a complimentary Wicked White PRO Whitening Pen after their first completed appointment. Mention promo code SUMMER26 when requesting your visit.*
+        </p>
+
+        <div class="afd-benefits">
+          <div class="afd-benefit">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <span>Professional take-home whitening</span>
+          </div>
+
+          <div class="afd-benefit">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <span>Easy to use</span>
+          </div>
+
+          <div class="afd-benefit">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <span>Included with eligible new patient appointments</span>
+          </div>
+        </div>
+
+        <p class="afd-disclaimer">
+          *Offer available for eligible new patients after their first new patient exam and hygiene appointment. One per patient. Mention promo code SUMMER26. Conditions may apply. Offer available while quantities last. 
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Font Awesome (only include once on your page) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<section style="padding:70px 20px;background:#f7fbfb;font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;">
+
+    <!-- Card -->
+    <div style="background:#fff;border-radius:22px;padding:36px 28px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.08);transition:.3s;">
+      <div style="width:78px;height:78px;background:#008991;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+        <i class="fa-solid fa-tooth" style="font-size:34px;color:#fff;"></i>
+      </div>
+
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:#183B3D;line-height:1.2;">
+        Comprehensive
+      </h3>
+
+      <p style="margin:10px 0 0;font-size:18px;color:#555;">
+        Dental Care
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div style="background:#fff;border-radius:22px;padding:36px 28px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.08);">
+      <div style="width:78px;height:78px;background:#008991;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+        <i class="fa-solid fa-hand-holding-heart" style="font-size:32px;color:#fff;"></i>
+      </div>
+
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:#183B3D;line-height:1.2;">
+        Friendly
+      </h3>
+
+      <p style="margin:10px 0 0;font-size:18px;color:#555;">
+        Comfortable Environment
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div style="background:#fff;border-radius:22px;padding:36px 28px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.08);">
+      <div style="width:78px;height:78px;background:#008991;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+        <i class="fa-solid fa-laptop-medical" style="font-size:32px;color:#fff;"></i>
+      </div>
+
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:#183B3D;line-height:1.2;">
+        Modern
+      </h3>
+
+      <p style="margin:10px 0 0;font-size:18px;color:#555;">
+        Technology
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div style="background:#fff;border-radius:22px;padding:36px 28px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.08);">
+      <div style="width:78px;height:78px;background:#008991;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+        <i class="fa-solid fa-credit-card" style="font-size:30px;color:#fff;"></i>
+      </div>
+
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:#183B3D;line-height:1.2;">
+        Direct Billing
+      </h3>
+
+      <p style="margin:10px 0 0;font-size:18px;color:#555;">
+        Available
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section style="padding:80px 20px;background:#f8fbfb;font-family:Arial,Helvetica,sans-serif;">
+
+<div style="max-width:1200px;margin:0 auto;">
+
+<div style="text-align:center;max-width:760px;margin:0 auto 50px;">
+
+<p style="color:#008991;font-size:15px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">
+Our Featured Services
+</p>
+
+<h2 style="font-size:48px;font-weight:800;color:#111;line-height:1.15;margin:0 0 18px;">
+Care Tailored to Your Needs
+</h2>
+
+<p style="font-size:19px;line-height:1.7;color:#555;margin:0;">
+Whether you&#8217;re visiting us for routine dental care or a more advanced treatment, our experienced team offers personalized solutions designed around your oral health goals.
+</p>
+
+</div>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:24px;
+">
+
+<!-- Invisalign -->
+
+<div style="
+background:#ffffff;
+border:2px solid #dceff0;
+border-radius:22px;
+padding:28px;
+transition:.3s;
+">
+
+<h3 style="
+margin:0 0 14px;
+font-size:24px;
+font-weight:700;
+color:#183B3D;
+">
+Invisalign®
+</h3>
+
+<p style="
+margin:0;
+font-size:16px;
+line-height:1.7;
+color:#666;
+">
+Straighten your smile with clear aligners designed to fit comfortably into your everyday lifestyle.
+</p>
+
+</div>
+
+<!-- Braces -->
+
+<div style="
+background:#ffffff;
+border:2px solid #dceff0;
+border-radius:22px;
+padding:28px;
+transition:.3s;
+">
+
+<h3 style="
+margin:0 0 14px;
+font-size:24px;
+font-weight:700;
+color:#183B3D;
+">
+Traditional Braces
+</h3>
+
+<p style="
+margin:0;
+font-size:16px;
+line-height:1.7;
+color:#666;
+">
+Comprehensive orthodontic treatment options for children, teens, and adults.
+</p>
+
+</div>
+
+<!-- Implants -->
+
+<div style="
+background:#ffffff;
+border:2px solid #dceff0;
+border-radius:22px;
+padding:28px;
+transition:.3s;
+">
+
+<h3 style="
+margin:0 0 14px;
+font-size:24px;
+font-weight:700;
+color:#183B3D;
+">
+Dental Implants
+</h3>
+
+<p style="
+margin:0;
+font-size:16px;
+line-height:1.7;
+color:#666;
+">
+Replace missing teeth with a durable, natural-looking solution that restores function and confidence.
+</p>
+
+</div>
+
+<!-- Sedation -->
+
+<div style="
+background:#ffffff;
+border:2px solid #dceff0;
+border-radius:22px;
+padding:28px;
+transition:.3s;
+">
+
+<h3 style="
+margin:0 0 14px;
+font-size:24px;
+font-weight:700;
+color:#183B3D;
+">
+IV Sedation
+</h3>
+
+<p style="
+margin:0;
+font-size:16px;
+line-height:1.7;
+color:#666;
+">
+Helping eligible patients enjoy a more relaxed and comfortable dental experience during treatment.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section style="width: 100%; background: #f7fbfb; padding: 70px 20px; font-family: Arial, Helvetica, sans-serif; box-sizing: border-box;">
+  <div style="max-width: 1100px; margin: 0 auto; background: #ffffff; border-radius: 28px; padding: 45px 28px; box-shadow: 0 15px 45px rgba(0,0,0,.08); box-sizing: border-box;">
+    
+    <div style="text-align: center; max-width: 760px; margin: 0 auto 34px;">
+      <p style="margin: 0 0 14px; color: #008991; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+        Online Booking
+      </p>
+
+      <h2 style="font-size: clamp(34px, 5vw, 52px); line-height: 1.1; margin: 0 0 18px; color: #111; font-weight: 800;">
+        Book Your Appointment Online
+      </h2>
+
+      <p style="font-size: 18px; line-height: 1.7; color: #555; margin: 0;">
+        Select a convenient appointment time with Able Family Dental using our secure online booking system.
+      </p>
+    </div>
+
+    <div style="width: 100%; overflow: hidden; border-radius: 20px; border: 1px solid #d9eeee; box-sizing: border-box; background: #ffffff;">
+      <iframe 
+        src="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X"
+        title="Able Family Dental Online Booking"
+        style="width: 100%; height: 760px; border: 0; display: block;"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <p style="font-size: 14px; color: #777; line-height: 1.5; margin: 24px 0 0; text-align: center;">
+      Having trouble booking online? Please call our team and we’ll be happy to help.
+    </p>
+
+  </div>
+</section>
+<p class="card-text text-white text-normal"></p>
+    
+
+
+
+<!-- Consultation Block Data
+
+
+<pre>Array
+(
+    [book_a_consultation_banner] => 1549
+    [_book_a_consultation_banner] => field_5ccaf4ec6f3ce
+    [link_and_text] => 184
+    [_link_and_text] => field_5ccaf52f6f3cf
+    [banner_text] => Book a Consultation
+    [_banner_text] => field_5ccaf7ee469e7
+    [
+				statistic_name		] => 
+    [_
+				statistic_name		] => field_5ca62bf2d0af8
+    [
+				statistic_number		] => 
+    [_
+				statistic_number		] => field_5ca62bffd0af9
+)
+</pre>
+
+
+END Block Data -->
+
+
+<!-- 1- -->
+<!-- 2- https://ablefamilydental.com/booking-->
+<!-- 3- https://ablefamilydental.com/booking/-->
+
+<section class="book cover white-bg d-flex align-items-center" id="book"  style="background-image: url( https://ablefamilydental.com/wp-content/uploads/2019/05/Able-Family-Dental-hero-homebottom-1.jpg ) !important;" >
+
+    <div class="container">
+
+        <a class="text-icon accent" href="https://ablefamilydental.com/booking/">
+            <span class="d-block-mobile">Book a Consultation</span><span class="text-icon__icon"></span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer class="footer" id="footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="d-sm-block d-md-none pt-50 pb-50">
+                        <a class="btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://ablefamilydental.com/services/emergency-dental-care/" title="Emergency Dental Care">Emergency Dental Care</a>                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-3 bg-left pt-50 pb-50">
+                            <a href="https://ablefamilydental.com"><img src="https://crowsnestdental.com/wp-content/uploads/2020/03/Able-Family-Dental-White2.png"></a>
+
+                            <div class="links-social">
+                                <a class="link-social" href="https://www.facebook.com/ablefamilydental/"><img src="https://ablefamilydental.com/wp-content/uploads/2019/05/facebook.svg" alt=""></a><a href="https://www.facebook.com/ablefamilydental/"><span class="text-white "> Follow us on <span class="font-weight-bold">Facebook</span></span></a><br><a class="link-social" href="https://www.instagram.com/ablefamilydental/"><img src="https://ablefamilydental.com/wp-content/uploads/2019/04/myinstagram.svg" alt=""></a><a href="https://www.instagram.com/ablefamilydental/"><span class="text-white "> Follow us on <span class="font-weight-bold">Instagram</span></span></a><br>                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-md-2 col-6 bg-left pt-50 pb-50">
+                            <p class="small text-white">
+
+                                <a href="https://ablefamilydental.com/about/">About</a><br>
+<a href="https://ablefamilydental.com/dental-services/">Services</a><br>
+<a href="https://ablefamilydental.com/financial-options/">Financial Options</a><br>
+<a href="https://ablefamilydental.com/contact/#CDSGetIntouchForm">Contact Us</a><br>
+<a href="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X">Book Now</a><br>
+<a href="https://ablefamilydental.com/join-our-team/">Join Our Team</a><br>
+
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-6 bg-left pt-50 pb-50">
+                            <div class="footer-text">
+
+                                <p><strong>Telephone:</strong> <a href="tel:403-327-7202">403-327-7202</a></p>
+<p><strong>Toll-Free:</strong> <a href="tel:1-877-627-7202">1-877-627-7202</a></p>
+<p><strong>Address:</strong><br />
+511 &#8211; 5th Street South<br />
+Lethbridge, Alberta</p>
+<p><span style="color: #ffffff;"><strong>Schedule</strong></span></p>
+<table>
+<tbody>
+<tr>
+<td style="padding-right: 10px;"><span style="color: #ffffff;">Monday</span></td>
+<td><span style="color: #ffffff;">8:00 am &#8211; 5:00 pm</span></td>
+</tr>
+<tr>
+<td style="padding-right: 10px;"><span style="color: #ffffff;">Tuesday</span></td>
+<td><span style="color: #ffffff;">8:00 am &#8211; 6:00 pm</span></td>
+</tr>
+<tr>
+<td style="padding-right: 10px;"><span style="color: #ffffff;">Wednesday</span></td>
+<td><span style="color: #ffffff;">7:00 am &#8211; 5:00 pm</span></td>
+</tr>
+<tr>
+<td style="padding-right: 10px;"><span style="color: #ffffff;">Thursday</span></td>
+<td><span style="color: #ffffff;">8:00 am &#8211; 6:00 pm</span></td>
+</tr>
+<tr>
+<td style="padding-right: 10px;"><span style="color: #ffffff;">Friday</span></td>
+<td><span style="color: #ffffff;">8:00 am &#8211; 5:00 pm</span></td>
+</tr>
+<tr>
+<td style="padding-right: 10px;"><span style="color: #ffffff;">Saturday</span></td>
+<td><span style="color: #ffffff;">9:00 am &#8211; 2:00 pm*</span></td>
+</tr>
+<tr>
+<td style="padding-right: 10px;"><span style="color: #ffffff;">Sunday</span></td>
+<td><span style="color: #ffffff;">Closed</span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left;">*Saturdays available by appointment only.<br />
+Call to inquire about which Saturdays we are open.</p>
+<p><a href="https://ablefamilydental.com/privacy-policy/"><em>Privacy Policy </em></a></p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 text-right d-none d-md-block bg-right pt-50 pb-50">
+
+                            <a class="btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://ablefamilydental.com/services/emergency-dental-care/" title="Emergency Dental Care">Emergency Dental Care</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p class="copyright-text mt-15">&copy;2026 Able Family Dental</p>
+
+                        <!-- <div class="copyright-links">
+                            <a class="copyright-link" href="#">Privacy Policy</a>
+                            <a class="copyright-link" href="#">Terms of Service</a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="footer-managing">
+                        <div class="footer-managing__text">
+                            <span class="d-block">Professionally</span>
+                            <span class="d-block">managed by</span>
+                        </div>
+
+                        <div class="footer-managing__img">
+                            
+                            <a href="http://www.canadiandentalservices.ca/" target="_blank">
+                                <img src="https://ablefamilydental.com/wp-content/themes/canadian-dental-services/img/assets/logo-cds.svg" alt="Canadian Dental Services">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/canadian-dental-services/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="gtm4wp-form-move-tracker-js" src="https://ablefamilydental.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.4"></script>
+<script id="jq-js" src="https://ablefamilydental.com/wp-content/themes/canadian-dental-services/vendor/jquery/jquery.min.js?ver=1.1"></script>
+<script id="bootstrap-js" src="https://ablefamilydental.com/wp-content/themes/canadian-dental-services/vendor/bootstrap/js/bootstrap.bundle.min.js?ver=1.1"></script>
+<script id="easing-js" src="https://ablefamilydental.com/wp-content/themes/canadian-dental-services/vendor/jquery-easing/jquery.easing.min.js?ver=1.1"></script>
+<script id="cds-mega-menu-js" src="https://ablefamilydental.com/wp-content/themes/canadian-dental-services/js/MegaNavbarBS4.min.js?ver=1.1"></script>
+<script id="cds-js-js" src="https://ablefamilydental.com/wp-content/themes/canadian-dental-services/js/cds.js?ver=1.1"></script>
+<script id="ninja-ajax-js-extra">
+var ninja_forms_ajax_object = {"ajaxurl":"https://ablefamilydental.com/wp-admin/admin-ajax.php"};
+//# sourceURL=ninja-ajax-js-extra
+</script>
+<script id="ninja-ajax-js" src="https://ablefamilydental.com/wp-content/themes/canadian-dental-services/js/ninja-forms-ajax.min.js?ver=1.1"></script>
+<script id="mediaelement-core-js-before">
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+//# sourceURL=mediaelement-core-js-before
+</script>
+<script id="mediaelement-core-js" src="https://ablefamilydental.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17"></script>
+<script id="mediaelement-migrate-js" src="https://ablefamilydental.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=7.0.2"></script>
+<script id="mediaelement-js-extra">
+var _wpmejsSettings = {"pluginPath":"/wp-includes/js/mediaelement/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+//# sourceURL=mediaelement-js-extra
+</script>
+
+
+  <script>
+$( document ).ready(function() {
+
+    $('.carousel').carousel({
+        interval: false
+    });
+
+    $(".js-navbar-toggler").click(function(event) {
+
+        event.preventDefault();
+
+        toggle_navigation();
+
+    })
+
+    // NAV TOGGLE
+    $(".js-navbar-toggler.close").click(function(event) {
+        event.preventDefault();
+        // search bar
+        // $('.search-popup-overlay').hide();
+    })
+
+    function toggle_navigation(){
+
+        $('main-navigation').toggleClass("toggled");
+        $('.navbar-toggler').toggleClass("close");
+        $(".navbar-mobile").toggleClass("is-open");
+        $('.search-popup-overlay').fadeToggle(0,'swing');
+
+    }
+
+  });
+
+</script>
+<script
+  src="https://cdn.maxassist.com/scripts/maxassist-booking.js"
+  data-server-url="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X">
+</script>
+
+<!-- this is production JB Monday March 6th -->
+</body>
+
+</html>

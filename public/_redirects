@@ -42,6 +42,7 @@
 /snoring-and-sleep-apnea-treatment/ /services/tmj/  301
 /sedation-dentistry/ /services/preventive/comfort/  301
 /schedule-a-dental-appointment/ /book/  301
+/booking/ /book/  301
 /patient-forms/ /new-patients/forms/  301
 /digital-patient-forms/ /new-patients/forms/  301
 /financial-options/ /new-patients/insurance-payment/  301
@@ -49,6 +50,9 @@
 /covid-form/ /new-patients/forms/  301
 /privacy-policy/ /privacy/  301
 /learn/ /blog/  301
+/patient-info/ /new-patients/  301
+/dental-tips/ /blog/  301
+/patient-referrals/ /refer/  301
 /patients/ /new-patients/  301
 /patients/book/ /book/  301
 /patients/new-patients/ /new-patients/  301
@@ -56,6 +60,43 @@
 /patients/financial-options/ /new-patients/insurance-payment/  301
 /patients/canadiandentalcareplan/ /new-patients/insurance-payment/  301
 /patients/faqs/ /new-patients/  301
+
+# ============================================================
+# Smile landing page nav (old WP /services/* & dental-services paths)
+# ============================================================
+
+/dental-services/general-dentistry/ /services/  301
+/dental-services/cosmetic-dentistry/ /services/cosmetic/  301
+/dental-services/preventative-dentistry/ /services/preventive/  301
+/dental-services/dental-surgery-and-other-treatments/ /services/oral-surgery/  301
+/services/family-dentistry/ /services/  301
+/services/dental-implants/ /services/oral-surgery/implants/  301
+/services/dental-bridges/ /services/restorative/crowns-bridges/  301
+/services/root-canal-treatment/ /services/endodontics/root-canal/  301
+/services/dental-fillings/ /services/restorative/fillings/  301
+/services/crowns/ /services/restorative/crowns-bridges/  301
+/services/dental-crowns/ /services/restorative/crowns-bridges/  301
+/services/dentistry-for-children/ /services/childrens/  301
+/services/restorative-and-cosmetic-dentistry/ /services/cosmetic/  301
+/services/invisalign-treatment/ /services/orthodontics/invisalign/  301
+/services/bonding/ /services/cosmetic/bonding/  301
+/services/gum-contouring/ /services/periodontal/  301
+/services/gum-contouring-2/ /services/periodontal/  301
+/services/teeth-whitening/ /services/cosmetic/whitening/  301
+/services/veneers/ /services/cosmetic/veneers/  301
+/services/fluoride-treatment/ /services/preventive/fluoride/  301
+/services/oral-cancer-screening/ /services/diagnostic/oral-cancer-screening/  301
+/services/digital-x-rays/ /services/diagnostic/x-rays/  301
+/services/cleaning-and-dental-exams/ /services/preventive/cleanings-exams/  301
+/services/dental-sealants/ /services/preventive/sealants/  301
+/services/crown-lengthening/ /services/periodontal/  301
+/services/soft-tissue-grafting/ /services/periodontal/  301
+/services/tooth-extraction/ /services/oral-surgery/extractions/  301
+/services/emergency-dental-care/ /services/emergency/  301
+/services/wisdom-teeth-extraction/ /services/oral-surgery/wisdom-teeth/  301
+/services/tmj-tmjd-treatment/ /services/tmj/  301
+/services/mouth-guards-sports-guards/ /services/preventive/guards/  301
+/services/sedation-dentistry/ /services/ivs/  301
 
 # ============================================================
 # Redirects from deleted/moved files

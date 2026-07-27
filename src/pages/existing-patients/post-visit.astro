@@ -102,7 +102,7 @@ const instructions = [
     <!-- Right-side image panel, desktop only -->
     <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[42%] pointer-events-none" aria-hidden="true">
       <img
-        src="/images/sourced/post-visit-hero.png"
+        src="/images/sourced/post-visit-hero.webp"
         alt=""
         width="800"
         height="600"
@@ -173,7 +173,7 @@ const instructions = [
               <div class="flex items-center gap-3 mb-4">
                 <div class="w-14 h-14 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center shrink-0 overflow-hidden">
                   {section.iconImg
-                    ? <img src={section.iconImg} alt="" aria-hidden="true" class="w-10 h-10 object-contain brightness-0 invert" />
+                    ? <img src={section.iconImg} alt="" aria-hidden="true" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 object-contain brightness-0 invert" />
                     : <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={section.icon} />
                   }
                 </div>

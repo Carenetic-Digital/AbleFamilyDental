@@ -177,10 +177,10 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
         </div>
         <div class="ig-grid">
           {[
-            { src: "/images/blog/ig-1.png", alt: "Able Family Dental team at a community event" },
-            { src: "/images/blog/ig-2.png", alt: "Able Family Dental staff dressed for a themed office day" },
-            { src: "/images/blog/ig-3.png", alt: "Invisalign aligner care at home" },
-            { src: "/images/blog/ig-4.png", alt: "Able Family Dental team with smile cookies" },
+            { src: "/images/blog/ig-1.webp", alt: "Able Family Dental team at a community event" },
+            { src: "/images/blog/ig-2.webp", alt: "Able Family Dental staff dressed for a themed office day" },
+            { src: "/images/blog/ig-3.webp", alt: "Invisalign aligner care at home" },
+            { src: "/images/blog/ig-4.webp", alt: "Able Family Dental team with smile cookies" },
           ].map(photo => (
             <div class="ig-photo">
               <img src={photo.src} alt={photo.alt} width="400" height="300" loading="lazy" decoding="async" />

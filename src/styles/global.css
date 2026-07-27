@@ -48,7 +48,7 @@
   --color-brand-accent: #007575;         /* Dark teal — links, eyebrows, focus (5.5:1 on white) */
   --color-brand-accent-btn: #008080;     /* Dark teal for buttons */
   --color-brand-accent-hover: #006b6b;   /* Deeper teal for hover/pressed states */
-  --color-brand-accent-soft: #64C7C3;    /* Light teal — soft fills, decorative */
+  --color-brand-accent-soft: #A3E4E1;    /* Soft teal — accents on dark (3.3:1 large-text AA on primary) */
   --color-brand-secondary: #ABADB0;      /* Light gray — borders, soft surface tints */
 
   /* Surfaces */

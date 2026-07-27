@@ -1,0 +1,74 @@
+
+ [id='221504455194251']{
+	
+	position:relative;
+	width: unset;
+    min-width: unset;
+    display: unset;
+    overflow: unset;
+    border: none;
+    height: unset;
+	
+}
+html .banner-ad :where(img) {
+    height: auto;
+    max-width: none !important;
+}
+
+#mainNav #book-button{
+	
+	background-color: #ff0000 !important;
+	
+}
+
+.overviews .overview #book-button{
+	
+	display: none !important;
+	
+}
+
+.page-id-3633 .get-touch-form {
+    background-color: #fff !important;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.25)  !important;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.25)  !important;
+    padding: 10px 10px  !important;
+}
+
+
+h3.book-now-heading {
+    color: #000000;
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+}
+
+a.book-now-button-body.btn.btn-lg {
+    background-color: #ff0000 !important;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px !important;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 7px;
+margin-top: 8px;
+}
+
+a.contact-us-button.btn.btn-teal.btn-lg.jb_button2 {
+    background-color: #008080 !important;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px !important;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 7px;
+}

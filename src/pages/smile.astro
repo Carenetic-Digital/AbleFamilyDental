@@ -29,13 +29,19 @@ const year = new Date().getFullYear();
     <meta name="theme-color" content="#008080" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Condensed:700&display=swap" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Magenta Schedule Appointment side tab (same widget as live site) -->
+    <script
+      is:inline
+      src="https://cdn.maxassist.com/scripts/maxassist-booking.js"
+      data-server-url="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X"
+    ></script>
     <style is:global>
       /* Reset — isolate from any leftover styles */
       *,
@@ -109,7 +115,7 @@ const year = new Date().getFullYear();
         }
       }
 
-      /* ===== Sticky white nav (CDS simplified) ===== */
+      /* ===== Sticky white nav (CDS match) ===== */
       .smile-nav {
         position: fixed;
         top: 30px;
@@ -125,70 +131,92 @@ const year = new Date().getFullYear();
         padding: 12px 15px;
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 8px;
+      }
+      .smile-nav .brand {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        padding-left: 0;
       }
       .smile-nav .brand img {
         display: block;
+        max-width: 100px;
         max-height: 48px;
         width: auto;
+        height: auto;
       }
       .smile-nav .nav-links {
         display: none;
         list-style: none;
         margin: 0 auto;
         padding: 0;
-        gap: 8px 18px;
         align-items: center;
       }
+      .smile-nav .nav-links li {
+        margin: 0;
+      }
       .smile-nav .nav-links a {
+        display: block;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 13px;
-        font-weight: 500;
-        color: #212529;
-        letter-spacing: 0.02em;
+        font-family: acumin-pro-semi-condensed, Roboto, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: normal;
+        color: #000 !important;
         white-space: nowrap;
+        padding: 0 1rem !important;
       }
       .smile-nav .nav-links a:hover {
-        color: #008080;
+        color: #008080 !important;
       }
       .smile-nav .phone {
         margin-left: auto;
-        color: #008080;
-        font-weight: 700;
+        color: #008080 !important;
         text-decoration: none;
-        font-size: 15px;
         white-space: nowrap;
+        display: none;
+      }
+      .smile-nav .phone .phone-number__text {
+        font-family: acumin-pro-condensed, "Roboto Condensed", Arial Narrow, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1;
       }
       .smile-nav .book-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background: #ff0000 !important;
+        background-color: #ff0000 !important;
         color: #fff !important;
-        font-weight: 700;
-        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        font-weight: 700 !important;
+        font-size: 14px !important;
         text-decoration: none;
-        text-transform: none;
-        padding: 12px 22px;
+        text-transform: none !important;
+        border: 0 !important;
         border-radius: 4px;
+        padding: 14.5px 11.5px !important;
         white-space: nowrap;
+        line-height: 1.2;
+        transition: background-color 0.25s ease-out, color 0.25s ease-out;
       }
       .smile-nav .book-btn:hover {
-        filter: brightness(0.92);
+        background-color: #e60000 !important;
+        color: #fff !important;
       }
       @media (min-width: 992px) {
         .smile-nav .nav-links {
           display: flex;
         }
-        .smile-nav .container {
-          padding-top: 18px;
-          padding-bottom: 18px;
-        }
-      }
-      @media (max-width: 991px) {
         .smile-nav .phone {
-          display: none;
+          display: inline-block;
+        }
+        .smile-nav .container {
+          padding-top: 25px;
+          padding-bottom: 25px;
         }
       }
 
@@ -198,7 +226,7 @@ const year = new Date().getFullYear();
       }
       @media (min-width: 992px) {
         .smile-page-body {
-          padding-top: 114px;
+          padding-top: 128px;
         }
       }
 
@@ -438,50 +466,118 @@ const year = new Date().getFullYear();
         max-width: 1140px;
         width: 100%;
         margin: 0 auto;
-        padding: 0 5%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: left;
       }
-      .smile-book-banner a {
+      /* Matches CDS .text-icon.accent */
+      .smile-book-banner a.text-icon.accent {
         display: inline-block;
         position: relative;
         width: auto;
+        padding-top: 15px;
         padding-right: 30px;
         color: #000;
         font-size: 34px;
         font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0;
         text-decoration: none;
         font-family: Roboto, Arial, sans-serif;
       }
-      .smile-book-banner a::after {
+      /* Teal bar above CTA */
+      .smile-book-banner a.text-icon.accent::before {
         content: '';
+        position: absolute;
+        width: 140px;
+        height: 5px;
+        top: 0;
+        left: 0;
+        border-radius: 2.5px;
+        background-color: #008080;
+      }
+      .smile-book-banner a.text-icon.accent .text-icon__icon {
         width: 11px;
         height: 20px;
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        margin-top: 7.5px;
         background-image: url("data:image/svg+xml,%3Csvg width='11' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.268 1.552a.904.904 0 0 1 0-1.286.922.922 0 0 1 1.297 0l9.167 9.091a.904.904 0 0 1 0 1.286l-9.167 9.09a.922.922 0 0 1-1.297 0 .904.904 0 0 1 0-1.285L8.681 10 .268 1.552z' fill='%23008080' fill-rule='nonzero'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: center;
       }
       @media (max-width: 768px) {
-        .smile-book-banner a {
+        .smile-book-banner a.text-icon.accent {
           font-size: 30px;
         }
+        .smile-book-banner .container {
+          padding-left: 35px;
+          padding-right: 35px;
+        }
+      }
+
+      /* ===== MaxAssist purple side tab — match live height ===== */
+      .MaxAssistBookButton {
+        min-height: 150px !important;
+        padding: 28px 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .MaxAssistBookButton .icon {
+        height: 56px !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .MaxAssistBookButton .content {
+        font-size: 20px !important;
+        line-height: 1.25 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+      }
+      .MaxAssistBookButton .content div {
+        font-size: 20px !important;
+        line-height: 1.25 !important;
       }
 
       /* ===== Footer (CDS) ===== */
       .smile-footer {
-        background: #1f1f1f;
         color: #fff;
         font-family: Roboto, Arial, sans-serif;
       }
-      .smile-footer .container {
+      .smile-footer .footer-main {
+        background: #1f1f1f;
+        position: relative;
+      }
+      .smile-footer .footer-main-inner {
         max-width: 1140px;
         margin: 0 auto;
-        padding: 50px 15px;
+        padding: 0 15px;
+      }
+      .smile-footer .footer-emergency-mobile {
+        display: none;
+        padding: 50px 0 0;
+      }
+      .smile-footer .footer-grid {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr 1.4fr 1.2fr;
-        gap: 30px;
+        grid-template-columns: 1.1fr 0.7fr 1.5fr 1fr;
+        gap: 0;
+        align-items: start;
+      }
+      .smile-footer .footer-col {
+        padding: 50px 20px 50px 0;
+      }
+      .smile-footer .footer-col-cta {
+        background: #181818;
+        padding: 50px 20px;
+        text-align: right;
+        min-height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
       }
       .smile-footer a {
         color: #fff;
@@ -504,16 +600,15 @@ const year = new Date().getFullYear();
         line-height: 1.9;
       }
       .smile-footer .social a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
+        display: inline;
       }
       .smile-footer .links {
         font-size: 16px;
         line-height: 2;
+        margin: 0;
       }
       .smile-footer .contact p,
-      .smile-footer .hours p {
+      .smile-footer .hours-block p {
         font-size: 14px;
         color: #fff;
         margin: 0 0 10px;
@@ -523,18 +618,44 @@ const year = new Date().getFullYear();
         border-collapse: collapse;
         font-size: 14px;
         color: #fff;
+        margin-bottom: 10px;
       }
       .smile-footer td {
         padding: 2px 10px 2px 0;
         vertical-align: top;
       }
       .smile-footer .hours-note {
-        font-size: 12px;
-        color: #ccc;
-        margin-top: 10px;
+        font-size: 13px;
+        color: #fff;
+        margin: 0 0 16px;
+      }
+      .smile-footer .privacy-link {
+        font-size: 14px;
+        font-style: italic;
+      }
+      .smile-footer .btn-emergency {
+        display: inline-block;
+        background-color: #008080;
+        color: #fff !important;
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 14px !important;
+        text-decoration: none !important;
+        text-transform: none;
+        border: 0;
+        border-radius: 4px;
+        padding: 19.5px 46px;
+        line-height: 1.2;
+        transition: background-color 0.25s ease-out;
+        text-align: center;
+      }
+      .smile-footer .btn-emergency:hover {
+        background-color: #009d9d;
+        color: #fff !important;
+        text-decoration: none !important;
       }
       .smile-footer-bottom {
-        background: #181818;
+        background: #fff;
         padding: 16px 15px;
       }
       .smile-footer-bottom .container {
@@ -544,24 +665,55 @@ const year = new Date().getFullYear();
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 10px;
-        font-size: 12px;
-        color: #aaa;
-        grid-template-columns: none;
+        align-items: center;
+        gap: 16px;
       }
-      .smile-footer-bottom a {
-        color: #aaa;
+      .smile-footer-bottom .copyright-text {
+        margin: 0;
+        font-size: 14px;
+        color: #181818;
       }
-      @media (max-width: 900px) {
-        .smile-footer .container {
+      .smile-footer-bottom .footer-managing {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+      }
+      .smile-footer-bottom .footer-managing__text {
+        font-size: 10px;
+        color: #181818;
+        line-height: 1.3;
+        text-align: right;
+      }
+      .smile-footer-bottom .footer-managing__img img {
+        display: block;
+        max-width: 120px;
+        height: auto;
+      }
+      @media (max-width: 991px) {
+        .smile-footer .footer-grid {
           grid-template-columns: 1fr 1fr;
+        }
+        .smile-footer .footer-col-cta {
+          display: none;
+        }
+        .smile-footer .footer-emergency-mobile {
+          display: block;
         }
       }
       @media (max-width: 600px) {
-        .smile-footer .container {
+        .smile-footer .footer-grid {
           grid-template-columns: 1fr;
-          padding-top: 35px;
-          padding-bottom: 35px;
+        }
+        .smile-footer .footer-col {
+          padding: 30px 0;
+        }
+        .smile-footer-bottom .container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .smile-footer-bottom .footer-managing {
+          justify-content: flex-start;
         }
       }
     </style>
@@ -590,8 +742,10 @@ const year = new Date().getFullYear();
           <li><a href="/new-patients/">Patient Info</a></li>
           <li><a href="/contact/">Contact Us</a></li>
         </ul>
-        <a class="phone" href="tel:403-327-7202">403-327-7202</a>
-        <a class="book-btn" href={bookingUrl} target="_blank" rel="noopener noreferrer">BOOK NOW</a>
+        <a class="phone" href="tel:403-327-7202" id="phone-number">
+          <span class="phone-number__text">403-327-7202</span>
+        </a>
+        <a class="book-btn" id="book-button" href={bookingUrl} target="_blank" rel="noopener noreferrer">BOOK NOW</a>
       </div>
     </nav>
 
@@ -941,85 +1095,106 @@ const year = new Date().getFullYear();
         style={`background-image: url(/images/marketing/smile-consultation-banner.jpg) !important;`}
       >
         <div class="container">
-          <a href="/book/">
-            <span>Book a Consultation</span>
+          <a class="text-icon accent" href="/book/">
+            <span class="d-block-mobile">Book a Consultation</span>
+            <span class="text-icon__icon" aria-hidden="true"></span>
           </a>
         </div>
       </section>
 
       <!-- ===== FOOTER ===== -->
       <footer class="smile-footer">
-        <div class="container">
-          <div>
-            <a class="logo" href="/">
-              <img
-                src="/images/marketing/able-logo-footer-white.png"
-                alt="Able Family Dental"
-                width="144"
-                height="91"
-              />
-            </a>
-            <div class="social">
-              <div>
-                <a href="https://www.facebook.com/ablefamilydental/" target="_blank" rel="noopener noreferrer">
-                  Follow us on <strong>Facebook</strong>
+        <div class="footer-main">
+          <div class="footer-main-inner">
+            <div class="footer-emergency-mobile">
+              <a class="btn-emergency" href="/services/emergency/" title="Emergency Dental Care">Emergency Dental Care</a>
+            </div>
+
+            <div class="footer-grid">
+              <div class="footer-col">
+                <a class="logo" href="/">
+                  <img
+                    src="/images/marketing/able-logo-footer-white.png"
+                    alt="Able Family Dental"
+                    width="144"
+                    height="91"
+                  />
                 </a>
+                <div class="social">
+                  <div>
+                    <a href="https://www.facebook.com/ablefamilydental/" target="_blank" rel="noopener noreferrer">
+                      Follow us on <strong>Facebook</strong>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.instagram.com/ablefamilydental/" target="_blank" rel="noopener noreferrer">
+                      Follow us on <strong>Instagram</strong>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div>
-                <a href="https://www.instagram.com/ablefamilydental/" target="_blank" rel="noopener noreferrer">
-                  Follow us on <strong>Instagram</strong>
-                </a>
+
+              <div class="footer-col">
+                <p class="links">
+                  <a href="/about/our-clinic/">About</a><br />
+                  <a href="/services/">Services</a><br />
+                  <a href="/new-patients/insurance-payment/">Financial Options</a><br />
+                  <a href="/contact/">Contact Us</a><br />
+                  <a href="/book/">Book Now</a><br />
+                  <a href="/about/careers/">Join Our Team</a>
+                </p>
+              </div>
+
+              <div class="footer-col contact hours-block">
+                <p><strong>Telephone:</strong> <a href="tel:403-327-7202">403-327-7202</a></p>
+                <p><strong>Toll-Free:</strong> <a href="tel:1-877-627-7202">1-877-627-7202</a></p>
+                <p>
+                  <strong>Address:</strong><br />
+                  511 – 5th Street South<br />
+                  Lethbridge, Alberta
+                </p>
+                <p><strong>Schedule</strong></p>
+                <table>
+                  <tbody>
+                    <tr><td>Monday</td><td>8:00 am – 5:00 pm</td></tr>
+                    <tr><td>Tuesday</td><td>8:00 am – 6:00 pm</td></tr>
+                    <tr><td>Wednesday</td><td>7:00 am – 5:00 pm</td></tr>
+                    <tr><td>Thursday</td><td>8:00 am – 6:00 pm</td></tr>
+                    <tr><td>Friday</td><td>8:00 am – 5:00 pm</td></tr>
+                    <tr><td>Saturday</td><td>9:00 am – 2:00 pm*</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                  </tbody>
+                </table>
+                <p class="hours-note">
+                  *Saturdays available by appointment only.<br />
+                  Call to inquire about which Saturdays we are open.
+                </p>
+                <p>
+                  <a class="privacy-link" href="/privacy/"><em>Privacy Policy</em></a>
+                </p>
+              </div>
+
+              <div class="footer-col-cta">
+                <a class="btn-emergency" href="/services/emergency/" title="Emergency Dental Care">Emergency Dental Care</a>
               </div>
             </div>
-          </div>
-
-          <div class="links">
-            <a href="/about/our-clinic/">About</a><br />
-            <a href="/services/">Services</a><br />
-            <a href="/new-patients/insurance-payment/">Financial Options</a><br />
-            <a href="/contact/">Contact Us</a><br />
-            <a href="/book/">Book Now</a><br />
-            <a href="/about/careers/">Join Our Team</a>
-          </div>
-
-          <div class="contact">
-            <p><strong>Telephone:</strong> <a href="tel:403-327-7202">403-327-7202</a></p>
-            <p><strong>Toll-Free:</strong> <a href="tel:1-877-627-7202">1-877-627-7202</a></p>
-            <p>
-              <strong>Address:</strong><br />
-              511 – 5th Street South<br />
-              Lethbridge, Alberta
-            </p>
-          </div>
-
-          <div class="hours">
-            <p><strong>Schedule</strong></p>
-            <table>
-              <tbody>
-                <tr><td>Monday</td><td>8:00 am – 5:00 pm</td></tr>
-                <tr><td>Tuesday</td><td>8:00 am – 6:00 pm</td></tr>
-                <tr><td>Wednesday</td><td>7:00 am – 5:00 pm</td></tr>
-                <tr><td>Thursday</td><td>8:00 am – 6:00 pm</td></tr>
-                <tr><td>Friday</td><td>8:00 am – 5:00 pm</td></tr>
-                <tr><td>Saturday</td><td>9:00 am – 2:00 pm*</td></tr>
-                <tr><td>Sunday</td><td>Closed</td></tr>
-              </tbody>
-            </table>
-            <p class="hours-note">
-              *Saturdays available by appointment only.<br />
-              Call to inquire about which Saturdays we are open.
-            </p>
           </div>
         </div>
 
         <div class="smile-footer-bottom">
           <div class="container">
-            <p style="margin:0;">
-              <a href="/privacy/">Privacy Policy</a>
-              &nbsp;·&nbsp;
-              <a href="/services/emergency/">Emergency Dental Care</a>
-            </p>
-            <p style="margin:0;">©{year} Able Family Dental</p>
+            <p class="copyright-text">©{year} Able Family Dental</p>
+            <div class="footer-managing">
+              <div class="footer-managing__text">
+                <span class="d-block">Professionally</span>
+                <span class="d-block">managed by</span>
+              </div>
+              <div class="footer-managing__img">
+                <a href="http://www.canadiandentalservices.ca/" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/marketing/logo-cds.svg" alt="Canadian Dental Services" width="120" height="40" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </footer>

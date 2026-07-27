@@ -82,15 +82,17 @@ const steps = [
 
   <!-- Slim landing header -->
   <header class="bg-white border-b border-[var(--color-border-soft)] sticky top-0 z-50">
-    <div class="container-wide flex items-center justify-between gap-4 py-3">
+    <div class="container-wide flex items-center justify-between gap-6 py-4">
       <a href="/" class="inline-flex items-center shrink-0" aria-label="Able Family Dental home">
         <img
           src="/images/logos/able-family-dental-logo-vertical.webp"
           alt="Able Family Dental"
           width="340"
           height="214"
-          class="h-[5.5rem] sm:h-[6rem] w-auto"
+          class="!h-[5.5rem] sm:!h-[6rem] w-auto max-w-none"
+          style="height: 6rem; width: auto; max-width: none;"
           loading="eager"
+          fetchpriority="high"
           decoding="async"
         />
       </a>

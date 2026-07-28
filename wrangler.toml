@@ -16,3 +16,7 @@ binding = "ASSETS"
 # Required: without this, asset requests bypass the Worker and keep ETags.
 run_worker_first = true
 not_found_handling = "404-page"
+
+# PR preview deploys (cf-review) — inherits main + assets from top level.
+[env.preview]
+name = "able-family-dental-preview"

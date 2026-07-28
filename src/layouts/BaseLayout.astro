@@ -5,6 +5,9 @@ import StructuredData from '../components/StructuredData.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PreFooter from '../components/PreFooter.astro';
+import SparkableHead from '@sparkable-cms/cms/runtime/SparkableHead.astro';
+import SparkableFooter from '@sparkable-cms/cms/runtime/SparkableFooter.astro';
+import { readSiteSettings } from '@sparkable-cms/cms/runtime';
 import { clinic, openingHoursSpecification } from '../data/clinic';
 interface Props {
   title: string;
@@ -18,10 +21,16 @@ interface Props {
   mobileRequestHref?: string;
 }
 
+// CMS-managed site settings (analytics scripts, noindex, default SEO). The
+// file is absent on a fresh install, so readSiteSettings() returns empty
+// defaults and the hard-coded fallbacks below remain in force.
+const siteSettings = readSiteSettings();
+
 const {
   title,
-  description = `Able Family Dental offers family dentistry and implants in Lethbridge, AB. We welcome new patients of all ages, call ${clinic.phoneDisplay} to book.`,
-  image = '/images/og-default.jpg',
+  description = siteSettings.defaultDescription
+    ?? `Able Family Dental offers family dentistry and implants in Lethbridge, AB. We welcome new patients of all ages, call ${clinic.phoneDisplay} to book.`,
+  image = siteSettings.defaultOgImage ?? '/images/og-default.jpg',
   noindex = true,
   showMobileBar = true,
   showPreFooter = true,
@@ -199,6 +208,9 @@ const breadcrumbData = {
       <StructuredData type="BreadcrumbList" data={breadcrumbData} />
     )}
 
+    <!-- CMS-managed head: noindex toggle + editor-added header scripts.
+         Renders nothing until an editor configures them. -->
+    <SparkableHead />
   </head>
   <body class="font-body text-[var(--color-text)] bg-[var(--color-surface)] antialiased overflow-x-hidden">
     <!-- Google Tag Manager (noscript) -->
@@ -287,5 +299,7 @@ const breadcrumbData = {
       })();
     </script>
 
+    <!-- CMS-managed footer scripts. Renders nothing until an editor adds them. -->
+    <SparkableFooter />
   </body>
 </html>

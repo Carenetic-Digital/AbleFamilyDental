@@ -3,15 +3,18 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "SPARKABLE_CMS=true astro dev",
+    "dev:nocms": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "test": "playwright test",
     "deploy": "astro build && wrangler deploy",
-    "postdeploy": "bash scripts/verify-approximated-fix.sh https://able-family-dental.spark0.io/"
+    "postdeploy": "bash scripts/verify-approximated-fix.sh https://able-family-dental.spark0.io/",
+    "cms:users": "npx tsx node_modules/@sparkable-cms/cms/scripts/manage-users.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
+    "@sparkable-cms/cms": "^0.22.2",
     "astro": "^7.1.4"
   },
   "devDependencies": {

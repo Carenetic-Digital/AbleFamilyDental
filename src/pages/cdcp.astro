@@ -276,16 +276,19 @@ const faqs = [
     <div class="container-wide">
       <div class="grid lg:grid-cols-[1fr_1.06fr] gap-14 items-center">
         <div class="rounded-2xl overflow-hidden" style="box-shadow: 0 18px 44px rgba(20,54,95,.12);">
-          <img
-            src="/images/services/content-consultation.jpg"
-            alt="Dentist consulting with a patient at Able Family Dental"
-            width="700"
-            height="500"
-            loading="lazy"
-            decoding="async"
-            class="w-full object-cover"
-            style="height: 440px;"
-          />
+          <picture>
+            <source srcset="/images/services/content-consultation.webp" type="image/webp" />
+            <img
+              src="/images/services/content-consultation.jpg"
+              alt="Dentist consulting with a patient at Able Family Dental"
+              width="700"
+              height="500"
+              loading="lazy"
+              decoding="async"
+              class="w-full object-cover"
+              style="height: 440px;"
+            />
+          </picture>
         </div>
         <div>
           <h2 class="font-display font-semibold text-[var(--color-brand-primary)] leading-tight" style="font-size: var(--text-4xl);">CDCP Care at<br />Able Family Dental</h2>

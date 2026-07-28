@@ -171,7 +171,7 @@ const breadcrumbData = {
       src="https://next-api.patientprism.com/v1/snippet/a1f15e1f-9604-45e9-a349-4f8c9f96c08d"
     ></script>
 
-    <!-- MaxAssist Online Booking, TODO: uncomment before launch -->
+    <!-- Optional MaxAssist booking launcher (kept disabled while /book/ uses direct RecallMax embed). -->
     <!-- <script src="https://cdn.maxassist.com/scripts/maxassist-booking.js" data-server-url="https://can3.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=t4ttSwyQ0NkQv9DLpa1kYRBbE_cNvZb54X" is:inline></script> -->
 
     <meta charset="UTF-8" />
@@ -237,6 +237,55 @@ const breadcrumbData = {
       </div>
       <div class="md:hidden h-16" aria-hidden="true"></div>
     )}
+
+    <div
+      id="cookie-consent-banner"
+      class="fixed inset-x-0 bottom-0 z-[70] border-t border-[var(--color-border)] bg-white/98 backdrop-blur p-4 shadow-[0_-6px_20px_rgba(30,51,82,0.14)]"
+      hidden
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <div class="container-wide flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <p class="text-sm text-[var(--color-text)] leading-relaxed">
+          We use cookies for analytics and site functionality. By continuing, you accept our use of cookies.
+          <a href="/privacy/" class="font-semibold text-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent-hover)]">Learn more</a>.
+        </p>
+        <button
+          id="cookie-consent-accept"
+          type="button"
+          class="btn btn-primary whitespace-nowrap"
+        >
+          Accept cookies
+        </button>
+      </div>
+    </div>
+
+    <script is:inline>
+      (() => {
+        const key = 'afd_cookie_consent_v1';
+        const banner = document.getElementById('cookie-consent-banner');
+        const accept = document.getElementById('cookie-consent-accept');
+        if (!banner || !accept) return;
+
+        try {
+          const existing = localStorage.getItem(key);
+          if (existing === 'accepted') return;
+        } catch {
+          // If storage is unavailable, still show banner for this visit.
+        }
+
+        banner.hidden = false;
+        accept.addEventListener('click', () => {
+          try {
+            localStorage.setItem(key, 'accepted');
+          } catch {
+            // Ignore storage errors and still dismiss.
+          }
+          banner.hidden = true;
+        });
+      })();
+    </script>
 
   </body>
 </html>

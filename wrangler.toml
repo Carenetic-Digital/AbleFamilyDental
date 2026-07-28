@@ -2,10 +2,17 @@ name = "able-family-dental"
 compatibility_date = "2025-01-01"
 account_id = "6ba8d559dd652da1003752c4674dfa6c"
 
+# Strips ETag/Last-Modified so the Approximated.app proxy can't serve its
+# buggy empty-body revalidation responses. See worker/index.js.
+main = "worker/index.js"
+
 routes = [
   { pattern = "able-family-dental.spark0.io/*", zone_id = "a304abff61171719fefd9ec2f1f37d68" }
 ]
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
+# Required: without this, asset requests bypass the Worker and keep ETags.
+run_worker_first = true
 not_found_handling = "404-page"

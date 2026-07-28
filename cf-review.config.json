@@ -1,0 +1,8 @@
+{
+  "cfProjectName": "able-family-dental",
+  "productionUrl": "https://ablefamilydental.com",
+  "previewUrlPattern": "https://able-family-dental-preview.carenetic-digital.workers.dev",
+  "routes": ["/", "/about", "/services", "/services/emergency", "/book", "/new-patients", "/existing-patients", "/contact", "/blog", "/faq", "/privacy"],
+  "screenshotWidths": [1280, 375],
+  "waitAfterDeploy": 10000
+}

@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /
-
-# Launch template:
-# User-agent: *
-# Allow: /
-# Sitemap: https://ablefamilydental.com/sitemap-index.xml

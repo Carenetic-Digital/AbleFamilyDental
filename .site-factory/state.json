@@ -1,61 +1,299 @@
 {
-  "phase": "homepage_pending_approval",
+  "phase": "complete",
   "created_at": "2026-05-13",
   "intake_processed_at": "2026-05-13",
   "homepage_generated_at": "2026-05-13",
-  "homepage_approved_at": null,
-  "pages_generated_at": null,
-  "completed_at": null,
+  "homepage_approved_at": "2026-06-26",
+  "pages_generated_at": "2026-06-29",
+  "completed_at": "2026-07-28",
   "reference_site": "https://wildwooddentalclinic.com/",
   "pages": {
     "discovered": [
-      { "path": "/", "title": "Home", "type": "home", "in_nav": true },
-      { "path": "/about-us/", "title": "About Us", "type": "about", "in_nav": true },
-      { "path": "/meet-the-team/", "title": "Meet the Team", "type": "about", "in_nav": true },
-      { "path": "/our-difference/", "title": "Our Difference", "type": "about", "in_nav": true },
-      { "path": "/office-tour/", "title": "Office Tour", "type": "about", "in_nav": true },
-      { "path": "/dental-technology/", "title": "Dental Technology", "type": "about", "in_nav": false },
-      { "path": "/join-our-team/", "title": "Join Our Team", "type": "about", "in_nav": true },
-      { "path": "/dental-services/", "title": "Dental Services", "type": "service", "in_nav": true },
-      { "path": "/preventive-dental-care/", "title": "Preventive Dental Care", "type": "service", "in_nav": false },
-      { "path": "/dental-cleanings-and-checkups/", "title": "Dental Cleanings & Checkups", "type": "service-detail", "in_nav": false },
-      { "path": "/dental-sealants/", "title": "Dental Sealants", "type": "service-detail", "in_nav": false },
-      { "path": "/fluoride-treatment/", "title": "Fluoride Treatment", "type": "service-detail", "in_nav": false },
-      { "path": "/diagnostic-imaging-digital-x-rays/", "title": "Diagnostic Imaging & X-Rays", "type": "service-detail", "in_nav": false },
-      { "path": "/periodontal-gum-disease-treatment/", "title": "Periodontal/Gum Disease Treatment", "type": "service-detail", "in_nav": false },
-      { "path": "/oral-cancer-screening/", "title": "Oral Cancer Screening", "type": "service-detail", "in_nav": false },
-      { "path": "/restorative-dental-care/", "title": "Restorative Dental Care", "type": "service", "in_nav": false },
-      { "path": "/dental-fillings/", "title": "Dental Fillings", "type": "service-detail", "in_nav": false },
-      { "path": "/dental-bridges/", "title": "Dental Bridges", "type": "service-detail", "in_nav": false },
-      { "path": "/dental-crowns/", "title": "Dental Crowns", "type": "service-detail", "in_nav": false },
-      { "path": "/ceramic-crowns/", "title": "Ceramic Crowns", "type": "service-detail", "in_nav": false, "note": "duplicates /dental-crowns/" },
-      { "path": "/full-and-partial-dentures/", "title": "Full & Partial Dentures", "type": "service-detail", "in_nav": false },
-      { "path": "/dental-implants/", "title": "Dental Implants", "type": "service-detail", "in_nav": false },
-      { "path": "/root-canal-treatment/", "title": "Root Canal Treatment", "type": "service-detail", "in_nav": false },
-      { "path": "/cosmetic-dentistry/", "title": "Cosmetic Dentistry", "type": "service", "in_nav": false },
-      { "path": "/teeth-whitening/", "title": "Teeth Whitening", "type": "service-detail", "in_nav": false },
-      { "path": "/porcelain-veneers/", "title": "Porcelain Veneers", "type": "service-detail", "in_nav": false },
-      { "path": "/dental-bonding/", "title": "Dental Bonding", "type": "service-detail", "in_nav": false },
-      { "path": "/tooth-reshaping-and-contouring/", "title": "Tooth Reshaping & Contouring", "type": "service-detail", "in_nav": false },
-      { "path": "/bite-correction/", "title": "Bite Correction", "type": "service-detail", "in_nav": false },
-      { "path": "/invisalign/", "title": "Invisalign", "type": "service-detail", "in_nav": false },
-      { "path": "/oral-surgery-and-other/", "title": "Oral Surgery & Other", "type": "service", "in_nav": false },
-      { "path": "/dental-care-for-children/", "title": "Dental Care for Children", "type": "service-detail", "in_nav": false },
-      { "path": "/emergency-dental-care/", "title": "Emergency Dental Care", "type": "service-detail", "in_nav": false },
-      { "path": "/wisdom-tooth-extraction/", "title": "Wisdom Tooth Extraction", "type": "service-detail", "in_nav": false },
-      { "path": "/tmj-tmjd-treatment-and-night-guards/", "title": "TMJ Treatment & Night Guards", "type": "service-detail", "in_nav": false },
-      { "path": "/mouth-and-sports-guards/", "title": "Mouth & Sports Guards", "type": "service-detail", "in_nav": false },
-      { "path": "/snoring-and-sleep-apnea-treatment/", "title": "Snoring & Sleep Apnea Treatment", "type": "service-detail", "in_nav": false },
-      { "path": "/sedation-dentistry/", "title": "Sedation Dentistry", "type": "service-detail", "in_nav": false },
-      { "path": "/schedule-a-dental-appointment/", "title": "Schedule an Appointment", "type": "patient-info", "in_nav": true },
-      { "path": "/patient-forms/", "title": "Patient Forms", "type": "patient-info", "in_nav": false },
-      { "path": "/digital-patient-forms/", "title": "Digital Patient Forms", "type": "patient-info", "in_nav": false },
-      { "path": "/financial-options/", "title": "Financial Options", "type": "patient-info", "in_nav": false },
-      { "path": "/faqs/", "title": "FAQs", "type": "patient-info", "in_nav": false },
-      { "path": "/covid-form/", "title": "COVID Form", "type": "form", "in_nav": false, "note": "deprecated" },
-      { "path": "/privacy-policy/", "title": "Privacy Policy", "type": "legal", "in_nav": false },
-      { "path": "/contact/", "title": "Contact", "type": "contact", "in_nav": true },
-      { "path": "/blog/", "title": "Blog", "type": "blog-index", "in_nav": true, "note": "dormant since 2018" }
+      {
+        "path": "/",
+        "title": "Home",
+        "type": "home",
+        "in_nav": true
+      },
+      {
+        "path": "/about-us/",
+        "title": "About Us",
+        "type": "about",
+        "in_nav": true
+      },
+      {
+        "path": "/meet-the-team/",
+        "title": "Meet the Team",
+        "type": "about",
+        "in_nav": true
+      },
+      {
+        "path": "/our-difference/",
+        "title": "Our Difference",
+        "type": "about",
+        "in_nav": true
+      },
+      {
+        "path": "/office-tour/",
+        "title": "Office Tour",
+        "type": "about",
+        "in_nav": true
+      },
+      {
+        "path": "/dental-technology/",
+        "title": "Dental Technology",
+        "type": "about",
+        "in_nav": false
+      },
+      {
+        "path": "/join-our-team/",
+        "title": "Join Our Team",
+        "type": "about",
+        "in_nav": true
+      },
+      {
+        "path": "/dental-services/",
+        "title": "Dental Services",
+        "type": "service",
+        "in_nav": true
+      },
+      {
+        "path": "/preventive-dental-care/",
+        "title": "Preventive Dental Care",
+        "type": "service",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-cleanings-and-checkups/",
+        "title": "Dental Cleanings & Checkups",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-sealants/",
+        "title": "Dental Sealants",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/fluoride-treatment/",
+        "title": "Fluoride Treatment",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/diagnostic-imaging-digital-x-rays/",
+        "title": "Diagnostic Imaging & X-Rays",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/periodontal-gum-disease-treatment/",
+        "title": "Periodontal/Gum Disease Treatment",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/oral-cancer-screening/",
+        "title": "Oral Cancer Screening",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/restorative-dental-care/",
+        "title": "Restorative Dental Care",
+        "type": "service",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-fillings/",
+        "title": "Dental Fillings",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-bridges/",
+        "title": "Dental Bridges",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-crowns/",
+        "title": "Dental Crowns",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/ceramic-crowns/",
+        "title": "Ceramic Crowns",
+        "type": "service-detail",
+        "in_nav": false,
+        "note": "duplicates /dental-crowns/"
+      },
+      {
+        "path": "/full-and-partial-dentures/",
+        "title": "Full & Partial Dentures",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-implants/",
+        "title": "Dental Implants",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/root-canal-treatment/",
+        "title": "Root Canal Treatment",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/cosmetic-dentistry/",
+        "title": "Cosmetic Dentistry",
+        "type": "service",
+        "in_nav": false
+      },
+      {
+        "path": "/teeth-whitening/",
+        "title": "Teeth Whitening",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/porcelain-veneers/",
+        "title": "Porcelain Veneers",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-bonding/",
+        "title": "Dental Bonding",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/tooth-reshaping-and-contouring/",
+        "title": "Tooth Reshaping & Contouring",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/bite-correction/",
+        "title": "Bite Correction",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/invisalign/",
+        "title": "Invisalign",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/oral-surgery-and-other/",
+        "title": "Oral Surgery & Other",
+        "type": "service",
+        "in_nav": false
+      },
+      {
+        "path": "/dental-care-for-children/",
+        "title": "Dental Care for Children",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/emergency-dental-care/",
+        "title": "Emergency Dental Care",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/wisdom-tooth-extraction/",
+        "title": "Wisdom Tooth Extraction",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/tmj-tmjd-treatment-and-night-guards/",
+        "title": "TMJ Treatment & Night Guards",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/mouth-and-sports-guards/",
+        "title": "Mouth & Sports Guards",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/snoring-and-sleep-apnea-treatment/",
+        "title": "Snoring & Sleep Apnea Treatment",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/sedation-dentistry/",
+        "title": "Sedation Dentistry",
+        "type": "service-detail",
+        "in_nav": false
+      },
+      {
+        "path": "/schedule-a-dental-appointment/",
+        "title": "Schedule an Appointment",
+        "type": "patient-info",
+        "in_nav": true
+      },
+      {
+        "path": "/patient-forms/",
+        "title": "Patient Forms",
+        "type": "patient-info",
+        "in_nav": false
+      },
+      {
+        "path": "/digital-patient-forms/",
+        "title": "Digital Patient Forms",
+        "type": "patient-info",
+        "in_nav": false
+      },
+      {
+        "path": "/financial-options/",
+        "title": "Financial Options",
+        "type": "patient-info",
+        "in_nav": false
+      },
+      {
+        "path": "/faqs/",
+        "title": "FAQs",
+        "type": "patient-info",
+        "in_nav": false
+      },
+      {
+        "path": "/covid-form/",
+        "title": "COVID Form",
+        "type": "form",
+        "in_nav": false,
+        "note": "deprecated"
+      },
+      {
+        "path": "/privacy-policy/",
+        "title": "Privacy Policy",
+        "type": "legal",
+        "in_nav": false
+      },
+      {
+        "path": "/contact/",
+        "title": "Contact",
+        "type": "contact",
+        "in_nav": true
+      },
+      {
+        "path": "/blog/",
+        "title": "Blog",
+        "type": "blog-index",
+        "in_nav": true,
+        "note": "dormant since 2018"
+      }
     ],
     "planned": [
       "/",
@@ -132,63 +370,323 @@
       "/privacy",
       "/terms"
     ],
-    "built": [],
+    "built": [
+      "/",
+      "/404",
+      "/about",
+      "/about/careers",
+      "/about/our-clinic",
+      "/about/our-team",
+      "/accessibility-statement",
+      "/blog",
+      "/blog/[slug]",
+      "/blog/page/[page]",
+      "/book",
+      "/cdcp",
+      "/contact",
+      "/existing-patients",
+      "/existing-patients/forms",
+      "/existing-patients/post-visit",
+      "/faq",
+      "/marketing",
+      "/new-patients",
+      "/new-patients/forms",
+      "/new-patients/insurance-payment",
+      "/new-patients/lendcare",
+      "/new-patients/what-to-expect",
+      "/news/new-website-launch",
+      "/privacy",
+      "/refer",
+      "/services",
+      "/services/childrens",
+      "/services/childrens/comfort",
+      "/services/childrens/exams-cleanings",
+      "/services/childrens/fluoride",
+      "/services/childrens/infant-oral-care",
+      "/services/childrens/sealants",
+      "/services/childrens/space-maintainers",
+      "/services/childrens/x-rays",
+      "/services/cosmetic",
+      "/services/cosmetic/bonding",
+      "/services/cosmetic/smile-makeovers",
+      "/services/cosmetic/veneers",
+      "/services/cosmetic/whitening",
+      "/services/diagnostic",
+      "/services/diagnostic/diagnostic-images",
+      "/services/diagnostic/intraoral-cameras",
+      "/services/diagnostic/oral-cancer-screening",
+      "/services/diagnostic/x-rays",
+      "/services/emergency",
+      "/services/emergency/appointments",
+      "/services/emergency/broken-tooth",
+      "/services/emergency/knocked-out-tooth",
+      "/services/emergency/same-day",
+      "/services/emergency/toothache",
+      "/services/endodontics",
+      "/services/endodontics/cracked-tooth",
+      "/services/endodontics/internal-bleaching",
+      "/services/endodontics/root-canal",
+      "/services/endodontics/traumatic-injuries",
+      "/services/ivs",
+      "/services/ivs/monitoring",
+      "/services/ivs/relaxation",
+      "/services/ivs/sensitive-teeth",
+      "/services/ivs/stress-free",
+      "/services/oral-surgery",
+      "/services/oral-surgery/extractions",
+      "/services/oral-surgery/implants",
+      "/services/oral-surgery/wisdom-teeth",
+      "/services/orthodontics",
+      "/services/orthodontics/invisalign",
+      "/services/orthodontics/retainers-braces",
+      "/services/periodontal",
+      "/services/periodontal/gum-disease",
+      "/services/preventive",
+      "/services/preventive/cleanings-exams",
+      "/services/preventive/comfort",
+      "/services/preventive/fluoride",
+      "/services/preventive/guards",
+      "/services/preventive/sealants",
+      "/services/prosthodontics",
+      "/services/prosthodontics/crowns-bridges",
+      "/services/prosthodontics/dentures",
+      "/services/prosthodontics/implant-restorations",
+      "/services/prosthodontics/inlays-onlays",
+      "/services/prosthodontics/replacement",
+      "/services/restorative",
+      "/services/restorative/crowns-bridges",
+      "/services/restorative/fillings",
+      "/services/restorative/inlays-onlays",
+      "/services/tmj",
+      "/services/tmj/bite-correction",
+      "/services/tmj/botox",
+      "/services/tmj/diagnosis",
+      "/services/tmj/night-guards",
+      "/smile",
+      "/terms"
+    ],
     "redirects": [
-      { "from": "/about-us/", "to": "/about" },
-      { "from": "/meet-the-team/", "to": "/about/our-team" },
-      { "from": "/our-difference/", "to": "/about/our-clinic" },
-      { "from": "/office-tour/", "to": "/about/our-clinic" },
-      { "from": "/dental-technology/", "to": "/about/our-clinic" },
-      { "from": "/join-our-team/", "to": "/about/careers" },
-      { "from": "/dental-services/", "to": "/services" },
-      { "from": "/preventive-dental-care/", "to": "/services/preventive" },
-      { "from": "/dental-cleanings-and-checkups/", "to": "/services/preventive/cleanings-exams" },
-      { "from": "/dental-sealants/", "to": "/services/preventive/sealants" },
-      { "from": "/fluoride-treatment/", "to": "/services/preventive/fluoride" },
-      { "from": "/diagnostic-imaging-digital-x-rays/", "to": "/services/diagnostic/x-rays" },
-      { "from": "/periodontal-gum-disease-treatment/", "to": "/services/periodontal/gum-disease" },
-      { "from": "/oral-cancer-screening/", "to": "/services/diagnostic/oral-cancer-screening" },
-      { "from": "/restorative-dental-care/", "to": "/services/restorative" },
-      { "from": "/dental-fillings/", "to": "/services/restorative/fillings" },
-      { "from": "/dental-bridges/", "to": "/services/restorative/crowns-bridges" },
-      { "from": "/dental-crowns/", "to": "/services/restorative/crowns-bridges" },
-      { "from": "/ceramic-crowns/", "to": "/services/restorative/crowns-bridges" },
-      { "from": "/full-and-partial-dentures/", "to": "/services/restorative" },
-      { "from": "/dental-implants/", "to": "/services/oral-surgery/implants" },
-      { "from": "/root-canal-treatment/", "to": "/services/endodontics/root-canal" },
-      { "from": "/cosmetic-dentistry/", "to": "/services/cosmetic" },
-      { "from": "/teeth-whitening/", "to": "/services/cosmetic/whitening" },
-      { "from": "/porcelain-veneers/", "to": "/services/cosmetic/veneers" },
-      { "from": "/dental-bonding/", "to": "/services/cosmetic/bonding" },
-      { "from": "/tooth-reshaping-and-contouring/", "to": "/services/cosmetic" },
-      { "from": "/bite-correction/", "to": "/services/tmj/bite-correction" },
-      { "from": "/invisalign/", "to": "/services/orthodontics/invisalign" },
-      { "from": "/oral-surgery-and-other/", "to": "/services/oral-surgery" },
-      { "from": "/dental-care-for-children/", "to": "/services/childrens" },
-      { "from": "/emergency-dental-care/", "to": "/services/emergency" },
-      { "from": "/wisdom-tooth-extraction/", "to": "/services/oral-surgery/wisdom-teeth" },
-      { "from": "/tmj-tmjd-treatment-and-night-guards/", "to": "/services/tmj" },
-      { "from": "/mouth-and-sports-guards/", "to": "/services/preventive/guards" },
-      { "from": "/snoring-and-sleep-apnea-treatment/", "to": "/services/tmj" },
-      { "from": "/sedation-dentistry/", "to": "/services/preventive/comfort" },
-      { "from": "/schedule-a-dental-appointment/", "to": "/book" },
-      { "from": "/patient-forms/", "to": "/new-patients/forms" },
-      { "from": "/digital-patient-forms/", "to": "/new-patients/forms" },
-      { "from": "/financial-options/", "to": "/new-patients/insurance-payment" },
-      { "from": "/faqs/", "to": "/new-patients" },
-      { "from": "/covid-form/", "to": "/new-patients/forms" },
-      { "from": "/privacy-policy/", "to": "/privacy" },
-      { "from": "/blog/", "to": "/blog" },
-      { "from": "/learn/", "to": "/blog" },
-      { "from": "/patients/", "to": "/new-patients" },
-      { "from": "/patients/book/", "to": "/book" },
-      { "from": "/patients/new-patients/", "to": "/new-patients" },
-      { "from": "/patients/forms/", "to": "/new-patients/forms" },
-      { "from": "/patients/financial-options/", "to": "/new-patients/insurance-payment" },
-      { "from": "/patients/canadiandentalcareplan/", "to": "/new-patients/insurance-payment" },
-      { "from": "/patients/faqs/", "to": "/new-patients" }
+      {
+        "from": "/about-us/",
+        "to": "/about"
+      },
+      {
+        "from": "/meet-the-team/",
+        "to": "/about/our-team"
+      },
+      {
+        "from": "/our-difference/",
+        "to": "/about/our-clinic"
+      },
+      {
+        "from": "/office-tour/",
+        "to": "/about/our-clinic"
+      },
+      {
+        "from": "/dental-technology/",
+        "to": "/about/our-clinic"
+      },
+      {
+        "from": "/join-our-team/",
+        "to": "/about/careers"
+      },
+      {
+        "from": "/dental-services/",
+        "to": "/services"
+      },
+      {
+        "from": "/preventive-dental-care/",
+        "to": "/services/preventive"
+      },
+      {
+        "from": "/dental-cleanings-and-checkups/",
+        "to": "/services/preventive/cleanings-exams"
+      },
+      {
+        "from": "/dental-sealants/",
+        "to": "/services/preventive/sealants"
+      },
+      {
+        "from": "/fluoride-treatment/",
+        "to": "/services/preventive/fluoride"
+      },
+      {
+        "from": "/diagnostic-imaging-digital-x-rays/",
+        "to": "/services/diagnostic/x-rays"
+      },
+      {
+        "from": "/periodontal-gum-disease-treatment/",
+        "to": "/services/periodontal/gum-disease"
+      },
+      {
+        "from": "/oral-cancer-screening/",
+        "to": "/services/diagnostic/oral-cancer-screening"
+      },
+      {
+        "from": "/restorative-dental-care/",
+        "to": "/services/restorative"
+      },
+      {
+        "from": "/dental-fillings/",
+        "to": "/services/restorative/fillings"
+      },
+      {
+        "from": "/dental-bridges/",
+        "to": "/services/restorative/crowns-bridges"
+      },
+      {
+        "from": "/dental-crowns/",
+        "to": "/services/restorative/crowns-bridges"
+      },
+      {
+        "from": "/ceramic-crowns/",
+        "to": "/services/restorative/crowns-bridges"
+      },
+      {
+        "from": "/full-and-partial-dentures/",
+        "to": "/services/restorative"
+      },
+      {
+        "from": "/dental-implants/",
+        "to": "/services/oral-surgery/implants"
+      },
+      {
+        "from": "/root-canal-treatment/",
+        "to": "/services/endodontics/root-canal"
+      },
+      {
+        "from": "/cosmetic-dentistry/",
+        "to": "/services/cosmetic"
+      },
+      {
+        "from": "/teeth-whitening/",
+        "to": "/services/cosmetic/whitening"
+      },
+      {
+        "from": "/porcelain-veneers/",
+        "to": "/services/cosmetic/veneers"
+      },
+      {
+        "from": "/dental-bonding/",
+        "to": "/services/cosmetic/bonding"
+      },
+      {
+        "from": "/tooth-reshaping-and-contouring/",
+        "to": "/services/cosmetic"
+      },
+      {
+        "from": "/bite-correction/",
+        "to": "/services/tmj/bite-correction"
+      },
+      {
+        "from": "/invisalign/",
+        "to": "/services/orthodontics/invisalign"
+      },
+      {
+        "from": "/oral-surgery-and-other/",
+        "to": "/services/oral-surgery"
+      },
+      {
+        "from": "/dental-care-for-children/",
+        "to": "/services/childrens"
+      },
+      {
+        "from": "/emergency-dental-care/",
+        "to": "/services/emergency"
+      },
+      {
+        "from": "/wisdom-tooth-extraction/",
+        "to": "/services/oral-surgery/wisdom-teeth"
+      },
+      {
+        "from": "/tmj-tmjd-treatment-and-night-guards/",
+        "to": "/services/tmj"
+      },
+      {
+        "from": "/mouth-and-sports-guards/",
+        "to": "/services/preventive/guards"
+      },
+      {
+        "from": "/snoring-and-sleep-apnea-treatment/",
+        "to": "/services/tmj"
+      },
+      {
+        "from": "/sedation-dentistry/",
+        "to": "/services/preventive/comfort"
+      },
+      {
+        "from": "/schedule-a-dental-appointment/",
+        "to": "/book"
+      },
+      {
+        "from": "/patient-forms/",
+        "to": "/new-patients/forms"
+      },
+      {
+        "from": "/digital-patient-forms/",
+        "to": "/new-patients/forms"
+      },
+      {
+        "from": "/financial-options/",
+        "to": "/new-patients/insurance-payment"
+      },
+      {
+        "from": "/faqs/",
+        "to": "/new-patients"
+      },
+      {
+        "from": "/covid-form/",
+        "to": "/new-patients/forms"
+      },
+      {
+        "from": "/privacy-policy/",
+        "to": "/privacy"
+      },
+      {
+        "from": "/blog/",
+        "to": "/blog"
+      },
+      {
+        "from": "/learn/",
+        "to": "/blog"
+      },
+      {
+        "from": "/patients/",
+        "to": "/new-patients"
+      },
+      {
+        "from": "/patients/book/",
+        "to": "/book"
+      },
+      {
+        "from": "/patients/new-patients/",
+        "to": "/new-patients"
+      },
+      {
+        "from": "/patients/forms/",
+        "to": "/new-patients/forms"
+      },
+      {
+        "from": "/patients/financial-options/",
+        "to": "/new-patients/insurance-payment"
+      },
+      {
+        "from": "/patients/canadiandentalcareplan/",
+        "to": "/new-patients/insurance-payment"
+      },
+      {
+        "from": "/patients/faqs/",
+        "to": "/new-patients"
+      }
     ]
   },
-  "test_results": null,
+  "test_results": {
+    "run_at": "2026-07-28",
+    "suite": "playwright",
+    "passed": 5,
+    "skipped": 1,
+    "failed": 0,
+    "csp_violations": 0
+  },
   "seo_issues": []
 }

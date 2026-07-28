@@ -1,0 +1,15 @@
+{
+  "siteName": "Able Family Dental",
+  "tagline": "Family dentistry and implants in Lethbridge, AB",
+  "defaultDescription": "Able Family Dental offers family dentistry and implants in Lethbridge, AB. We welcome new patients of all ages, call 403.327.7202 to book.",
+  "noindex": false,
+  "sitemapUrl": "https://ablefamilydental.com/sitemap-index.xml",
+  "headerScripts": [],
+  "footerScripts": [],
+  "blog": {
+    "enabled": true,
+    "basePath": "/blog",
+    "postsPerPage": 9,
+    "collectionName": "blog"
+  }
+}

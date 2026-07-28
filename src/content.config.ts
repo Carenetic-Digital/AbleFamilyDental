@@ -1,21 +1,15 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { blogSchema } from '@sparkable-cms/cms/content';
+import { resolveBlogFields } from '@sparkable-cms/cms/runtime';
 
+// The post shape is driven by site-settings.json → blog.fields (or the CMS
+// default set when none is declared — which matches this site's original
+// hand-rolled schema exactly). resolveBlogFields() reads that list so the
+// content collection validates exactly the fields the editor writes.
 const blog = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/blog' }),
-  schema: z.object({
-    title: z.string().min(1),
-    description: z.string().default(''),
-    headline: z.string().optional(),
-    category: z.string().default('Uncategorized'),
-    categoryStyle: z.enum(['blue', 'green', 'amber']).catch('blue'),
-    date: z.coerce.date(),
-    featuredImage: z.object({ src: z.string().default(''), alt: z.string().default('') }).default({ src: '', alt: '' }),
-    readTime: z.string().default(''),
-    related: z.array(z.string()).default([]),
-    body: z.string().default(''),
-    draft: z.boolean().default(false),
-  }),
+  schema: blogSchema(z, resolveBlogFields()),
 });
 
 export const collections = { blog };

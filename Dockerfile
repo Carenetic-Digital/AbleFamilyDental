@@ -1,4 +1,7 @@
-FROM node:20-slim
+# Astro 7 requires node >=22.12 (node 20 makes astro hard-exit at startup →
+# machine restart loop). node:22-slim also has better-sqlite3 prebuilds, which
+# skips the 15-25 min source compile on first volume install (gotcha #8).
+FROM node:22-slim
 
 RUN apt-get update && apt-get install -y git python3 make g++ && rm -rf /var/lib/apt/lists/*
 

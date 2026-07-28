@@ -43,4 +43,8 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["npm", "run", "dev"]
+# dev:fly = astro dev --ignore-lock. Astro 7's dev-server lockfile persists on
+# the volume across container restarts; without --ignore-lock a reboot after a
+# crash refuses to start ("Another astro dev server is already running") and
+# the machine crash-loops. Foreground-only — fly supervises the process.
+CMD ["npm", "run", "dev:fly"]

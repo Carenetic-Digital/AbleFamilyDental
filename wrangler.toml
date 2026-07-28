@@ -6,9 +6,11 @@ account_id = "6ba8d559dd652da1003752c4674dfa6c"
 # buggy empty-body revalidation responses. See worker/index.js.
 main = "worker/index.js"
 
-routes = [
-  { pattern = "able-family-dental.spark0.io/*", zone_id = "a304abff61171719fefd9ec2f1f37d68" }
-]
+# NOTE: the able-family-dental.spark0.io/* zone route exists on the zone but is
+# deliberately NOT declared here — the shared CI CLOUDFLARE_API_TOKEN is
+# account-scoped and a declared route makes `wrangler deploy` call the zone
+# routes API, which 401s (code 10000). Manage the route in the CF dashboard
+# (or a locally-authed `wrangler triggers deploy`) instead.
 
 [assets]
 directory = "./dist"

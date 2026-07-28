@@ -1,21 +1,16 @@
 import type { APIRoute } from 'astro';
 
 /**
- * Staging currently blocks all crawlers (pairs with BaseLayout noindex=true).
- * Before launch:
- *  1. Set BaseLayout `noindex` default to false
- *  2. Replace this robots.txt with Allow + Sitemap
- *  3. Confirm AI crawlers (GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended) are not blocked in Cloudflare
+ * Live/indexing robots.txt (flipped at launch, 2026-07-28, together with
+ * BaseLayout noindex=false). Remember: AI crawlers (GPTBot, OAI-SearchBot,
+ * PerplexityBot, ClaudeBot, Google-Extended) must not be blocked in Cloudflare.
  */
 const getRobotsTxt = () =>
   [
     'User-agent: *',
-    'Disallow: /',
+    'Allow: /',
     '',
-    '# Launch-ready template (uncomment when indexing):',
-    '# User-agent: *',
-    '# Allow: /',
-    '# Sitemap: https://ablefamilydental.com/sitemap-index.xml',
+    'Sitemap: https://ablefamilydental.com/sitemap-index.xml',
   ].join('\n');
 
 export const GET: APIRoute = () => {

@@ -6,6 +6,13 @@ account_id = "6ba8d559dd652da1003752c4674dfa6c"
 # buggy empty-body revalidation responses. See worker/index.js.
 main = "worker/index.js"
 
+# CRITICAL: Approximated's proxy target for ablefamilydental.com is the
+# workers.dev URL. Wrangler disables workers.dev on deploy whenever routes
+# are declared and this line is absent (this took crestwooddental.ca down
+# on 2026-08-06). Keep it explicit so adding a route here can never
+# silently deactivate production. Do not remove.
+workers_dev = true
+
 # NOTE: the able-family-dental.spark0.io/* zone route exists on the zone but is
 # deliberately NOT declared here — the shared CI CLOUDFLARE_API_TOKEN is
 # account-scoped and a declared route makes `wrangler deploy` call the zone

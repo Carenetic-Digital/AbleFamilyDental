@@ -123,7 +123,22 @@ import { clinic } from '../data/clinic';
           <p class="mb-6 text-sm text-[var(--color-text-muted)] leading-relaxed">
             Please include as much clinical detail as possible so our team can triage the referral appropriately.
           </p>
-          <script is:inline type="text/javascript" src="https://form.jotform.com/jsform/230925045692256"></script>
+          <iframe
+            id="JotFormIFrame-230925045692256"
+            title="Able Family Dental Patient Referral Form"
+            allowtransparency="true"
+            allowfullscreen="true"
+            allow="geolocation; microphone; camera"
+            src="https://hipaa.jotform.com/230925045692256"
+            frameborder="0"
+            class="w-full border-0 block"
+            style="min-width:100%;max-width:100%;min-height:2800px;height:2800px;border:none;"
+            scrolling="yes"
+          ></iframe>
+          <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" is:inline></script>
+          <script is:inline>
+            window.jotformEmbedHandler("iframe[id='JotFormIFrame-230925045692256']", "https://hipaa.jotform.com/")
+          </script>
           <p class="mt-4 text-sm text-[var(--color-text-muted)] leading-relaxed">
             For urgent concerns, please call us directly at{' '}
             <a href={`tel:${clinic.phoneTel}`} class="font-semibold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">{clinic.phoneDisplay}</a>.

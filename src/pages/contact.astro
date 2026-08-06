@@ -128,7 +128,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] mb-6">
             Send Us a Message
           </h2>
-          <script is:inline type="text/javascript" src="https://form.jotform.com/jsform/213275643171251"></script>
+          <iframe
+            id="JotFormIFrame-213275643171251"
+            title="Able Family Dental Contact Us Form"
+            allowtransparency="true"
+            allowfullscreen="true"
+            allow="geolocation; microphone; camera"
+            src="https://hipaa.jotform.com/213275643171251"
+            frameborder="0"
+            class="w-full border-0 block"
+            style="min-width:100%;max-width:100%;min-height:1400px;height:1400px;border:none;"
+            scrolling="yes"
+          ></iframe>
+          <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" is:inline></script>
+          <script is:inline>
+            window.jotformEmbedHandler("iframe[id='JotFormIFrame-213275643171251']", "https://hipaa.jotform.com/")
+          </script>
           <p class="mt-4 text-sm text-[var(--color-text-muted)] leading-relaxed">
             For urgent dental concerns, please call us directly at{' '}
             <a href="tel:+14033277202" class="font-semibold text-[var(--color-brand-primary)] hover:text-[var(--color-brand-accent-hover)]">403.327.7202</a>.

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clinic } from '../data/clinic';
+---
+
+<BaseLayout
+  title="Thank You | Able Family Dental"
+  description="Thank you for contacting Able Family Dental. We'll get back to you as soon as we can."
+  noindex={true}
+  showPreFooter={false}
+>
+
+  <section class="bg-[var(--color-brand-primary)] relative overflow-hidden">
+    <div class="container-wide relative py-16 lg:py-24">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-on-dark-muted)] mb-5" aria-label="Breadcrumb">
+        <a href="/" class="text-white hover:text-white/80 transition-colors">Home</a>
+        <span aria-hidden="true">›</span>
+        <span class="text-white">Thank You</span>
+      </nav>
+      <p class="eyebrow" style="color: white;">Message Received</p>
+      <h1 class="mt-3 font-display font-semibold text-[length:var(--text-5xl)] leading-tight text-white max-w-2xl">
+        Thank you!
+      </h1>
+      <p class="mt-4 text-lg text-[var(--color-text-on-dark-muted)] leading-relaxed max-w-xl">
+        Thank you for contacting Able Family Dental. We’ll get back to you as soon as we can.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-y bg-white">
+    <div class="container-wide">
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="w-16 h-16 rounded-full bg-[var(--color-brand-primary)] flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h2 class="font-display font-semibold text-[length:var(--text-3xl)] text-[var(--color-brand-primary)] leading-tight">
+          We’ve received your submission
+        </h2>
+        <p class="mt-4 text-lg text-[var(--color-text)] leading-relaxed">
+          Our team reviews messages during office hours and will follow up shortly. If your concern is urgent, please call us now.
+        </p>
+        <p class="mt-6 text-[var(--color-text-muted)] leading-relaxed">
+          {clinic.streetAddress}<br />
+          {clinic.city}, {clinic.regionAbbr} {clinic.postalCode}
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href={`tel:${clinic.phoneTel}`} class="btn btn-primary btn-lg tabular-nums">
+            Call {clinic.phoneDisplay}
+          </a>
+          <a href="/book/" class="btn btn-outline btn-lg">Book Appointment</a>
+          <a href="/" class="btn btn-lg border border-[var(--color-border-soft)] text-[var(--color-brand-primary)] hover:bg-[var(--color-surface-cool)] transition-colors">
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -28,8 +28,8 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
 ---
 
 <BaseLayout
-  title="Blog | Able Family Dental | Lethbridge"
-  description="Helpful advice, treatment information, and oral health tips from the Able Family Dental team in Lethbridge."
+  title="All Articles | Able Family Dental Blog | Lethbridge"
+  description="Browse all patient education articles and oral health tips from the Able Family Dental team in Lethbridge."
 >
 
   <section class="blog-hero relative overflow-hidden">
@@ -51,7 +51,9 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
         <nav class="flex items-center gap-2 mb-6" aria-label="Breadcrumb">
           <a href="/" class="text-white/60 hover:text-white transition-colors text-sm">Home</a>
           <span class="text-white/35 text-sm" aria-hidden="true">/</span>
-          <span class="text-white text-sm">Blog</span>
+          <a href="/blog/" class="text-white/60 hover:text-white transition-colors text-sm">Blog</a>
+          <span class="text-white/35 text-sm" aria-hidden="true">/</span>
+          <span class="text-white text-sm">All Articles</span>
         </nav>
         <p class="eyebrow">Patient Education &amp; Resources</p>
         <h1 class="mt-3 font-display font-bold text-white" style="font-size:60px;letter-spacing:-.01em;line-height:1.08;">
@@ -102,27 +104,16 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
   <section style="padding-bottom:64px;">
     <div class="container-wide">
       <div class="latest-head">
-        <span class="kicker">Latest Articles</span>
-        <a href="/blog/all/" class="readlink">
-          View All Articles
+        <span class="kicker">All Articles</span>
+        <a href="/blog/" class="readlink">
+          Back to Blog
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
-
-      <div class="blog-carousel" aria-roledescription="carousel" aria-label="Latest articles">
-        <button type="button" class="blog-carousel-btn" id="blog-carousel-prev" aria-label="Previous articles">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="blog-carousel-viewport" id="blog-carousel-viewport">
-          <div class="blog-carousel-track" id="blog-carousel-track">
-            {articles.map((article) => (
-              <BlogCard {...article} />
-            ))}
-          </div>
-        </div>
-        <button type="button" class="blog-carousel-btn" id="blog-carousel-next" aria-label="Next articles">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
+      <div class="cards-grid">
+        {articles.map((article) => (
+          <BlogCard {...article} />
+        ))}
       </div>
     </div>
   </section>
@@ -179,52 +170,3 @@ const articles = (await getCollection('blog', (post) => !post.data.draft))
   </section>
 
 </BaseLayout>
-
-<script is:inline>
-  (function () {
-    var track = document.getElementById('blog-carousel-track');
-    var viewport = document.getElementById('blog-carousel-viewport');
-    var prev = document.getElementById('blog-carousel-prev');
-    var next = document.getElementById('blog-carousel-next');
-    if (!track || !viewport || !prev || !next) return;
-
-    var index = 0;
-
-    function visibleCount() {
-      var w = window.innerWidth;
-      if (w <= 960) return 1;
-      if (w <= 1100) return 2;
-      return 3;
-    }
-
-    function maxIndex() {
-      return Math.max(0, track.children.length - visibleCount());
-    }
-
-    function step() {
-      var card = track.children[0];
-      if (!card) return 0;
-      var gap = parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap) || 30;
-      return card.getBoundingClientRect().width + gap;
-    }
-
-    function update() {
-      index = Math.min(index, maxIndex());
-      track.style.transform = 'translateX(-' + (index * step()) + 'px)';
-      prev.disabled = index <= 0;
-      next.disabled = index >= maxIndex();
-    }
-
-    prev.addEventListener('click', function () {
-      index = Math.max(0, index - 1);
-      update();
-    });
-    next.addEventListener('click', function () {
-      index = Math.min(maxIndex(), index + 1);
-      update();
-    });
-
-    window.addEventListener('resize', update);
-    update();
-  })();
-</script>
